@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnetiz.ai — AI Agents That Work in Production</title>
+  <meta name="description" content="Evaluation-first frameworks. Production-ready in 6-8 weeks. Reliable long-term. If we can't show a clear path to ROI, you don't pay.">
+  <meta property="og:title" content="Magnetiz.ai — AI Agents That Work in Production">
+  <meta property="og:description" content="Evaluation-first frameworks. Production-ready in 6-8 weeks. Reliable long-term.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Editor Gutter — scrolling line numbers -->
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="#" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#services" class="nav-dropdown-trigger">
+            AI Services <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="#services">AI Audit</a>
+            <a href="#services">AI Agent MVP</a>
+            <a href="#services">AI Agent Implementation</a>
+            <a href="#services">AI Agents</a>
+          </div>
+        </li>
+        <li><a href="#solution">How It Works</a></li>
+        <li><a href="#manifesto">About</a></li>
+        <li><a href="#">Content</a></li>
+      </ul>
+
+      <a href="#cta" class="nav-cta">Schedule Call</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services">AI Services</a>
+    <a href="#solution">How It Works</a>
+    <a href="#manifesto">About</a>
+    <a href="#">Content</a>
+    <a href="#cta">Schedule Call</a>
+  </div>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <!-- Left: Copy -->
+      <div class="hero-content">
+        <div class="section-label">// Evaluation-First AI Engineering</div>
+        <h1 class="hero-headline">
+          We build AI agents that work<br>in <span class="accent">production</span>
+        </h1>
+        <p class="hero-sub">
+          Evaluation-first frameworks. Production-ready in 6–8 weeks. Reliable long-term.
+        </p>
+        <p class="hero-guarantee">
+          If we can't show a clear path to ROI — you don't pay.
+        </p>
+        <div class="hero-ctas">
+          <a href="#cta" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Schedule Call
+          </a>
+          <a href="#solution" class="btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            See How It Works
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Animated Terminal -->
+      <div class="hero-terminal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">agent.py &mdash; magnetiz</span>
+          </div>
+          <div class="terminal-body">
+            <div class="line-numbers" id="hero-line-numbers"></div>
+            <div id="hero-code-content"></div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready" id="hero-status">READY</span></span>
+              <span>BRANCH: <span style="color:var(--accent-blue)">main</span></span>
+              <span>BUILD: <span class="status-ready">PASSING</span></span>
+            </div>
+            <span id="hero-pos">Ln 1, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       THE PROBLEM SECTION
+       ============================================ -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The Problem</div>
+        <h2 class="section-title">AI agents fail when evaluation<br>frameworks are missing.</h2>
+      </div>
+
+      <div class="problem-terminal reveal reveal-delay-1">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">diagnostics.log &mdash; production</span>
+          </div>
+          <div class="terminal-body problem-logs">
+            <div class="problem-log warning">
+              <span class="log-icon">&#9888;</span>
+              <div class="log-content">
+                <span class="log-stat coral" data-count="95" data-suffix="%">0%</span>
+                <span class="log-text">of enterprises run AI pilots. Only <strong>11%</strong> reach production.</span>
+              </div>
+            </div>
+            <div class="problem-log warning">
+              <span class="log-icon">&#9888;</span>
+              <div class="log-content">
+                <span class="log-stat coral" data-count="70" data-suffix="%">0%</span>
+                <span class="log-text">accuracy in production means babysitting agents, not reclaiming capacity.</span>
+              </div>
+            </div>
+            <div class="problem-log warning">
+              <span class="log-icon">&#9888;</span>
+              <div class="log-content">
+                <span class="log-stat coral" data-count="40" data-suffix="%">0%</span>
+                <span class="log-text">will scrap agentic AI projects by 2027 for unclear business value.</span>
+              </div>
+            </div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-amber">3 WARNINGS</span></span>
+              <span>SOURCE: <span style="color:var(--accent-coral)">Gartner, Deloitte</span></span>
+            </div>
+            <span>evaluation_missing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       THE SOLUTION SECTION
+       ============================================ -->
+  <section class="process" id="solution">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The Solution</div>
+        <h2 class="section-title">How we deploy production-ready<br>AI agents</h2>
+      </div>
+
+      <div class="process-terminal reveal reveal-delay-1">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">pipeline/ &mdash; magnetiz</span>
+          </div>
+          <div class="process-list">
+            <!-- Step 1 -->
+            <div class="process-item">
+              <span class="process-number">1</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  01_Agent_Value_Assessment.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">We identify evaluation gaps and model realistic ROI gains to determine go/no-go for production deployment.</p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="process-item">
+              <span class="process-number">2</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  02_Agent_Eval_Framework.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">We deploy automated testing infrastructure to catch edge cases, data quality issues, and confidence problems before launch.</p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="process-item">
+              <span class="process-number">3</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  03_Agent_Operations.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">We deploy your agent with weekly monitoring, so it stays consistent in production and improves over time.</p>
+              </div>
+            </div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready">READY</span></span>
+              <span>BRANCH: <span style="color:var(--accent-blue)">main</span></span>
+              <span>BUILD: <span class="status-ready">PASSING</span></span>
+            </div>
+            <span>3 modules loaded</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       SERVICES SECTION
+       ============================================ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">// Get Started</div>
+        <h2 class="section-title">Three ways to start fast and<br>scale with impact.</h2>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1: AI Design Sprint -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          </div>
+          <h3>AI Design Sprint&trade;</h3>
+          <p>Our AI Design Sprint method takes your team from start to prototype in under 30 days. It's the quickest, most reliable way to automate manual work.</p>
+          <span class="service-tag">// concept to prototype in 30 days</span>
+        </div>
+
+        <!-- Card 2: AI Implementation -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 8 4 4-4 4"/></svg>
+          </div>
+          <h3>AI Implementation</h3>
+          <p>Custom project consulting using our workflow-first framework and ROI model so your AI automation projects deliver the business impact you want.</p>
+          <span class="service-tag">// workflow-first framework</span>
+        </div>
+
+        <!-- Card 3: AI Agent Implementation -->
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6"/><path d="m19.07 4.93-4.24 4.24M9.17 14.83l-4.24 4.24"/><path d="M1 12h6m6 0h6"/><path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24"/></svg>
+          </div>
+          <h3>AI Agent Implementation</h3>
+          <p>Enterprise-grade AI agents with evaluation frameworks, monitoring, and guardrails built in. Production-ready in 6–8 weeks.</p>
+          <span class="service-tag">// production-grade agents</span>
+        </div>
+
+        <!-- Card 4: AI Agents -->
+        <div class="service-card reveal reveal-delay-4">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2m16 0h2m-7-1v2m-6-2v2"/></svg>
+          </div>
+          <h3>AI Agents</h3>
+          <p>AI agents designed, built, and governed to run inside your existing operations — not around them. Real capacity back for your team without changing your stack.</p>
+          <span class="service-tag">// deploy &amp; govern</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       TESTIMONIALS SECTION
+       ============================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Trusted by Leaders</div>
+        <h2 class="section-title">Leaders share their experience with<br>the evaluation-first approach.</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-quote">
+            <span class="syn-st">"The evaluation framework approach is critical — we were stuck for 6 months. Magnetiz helped us deploy our first production agent in 7 weeks."</span>
+          </div>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Sarah Chen</span>
+            <span class="testimonial-role">// VP of Operations</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-quote">
+            <span class="syn-st">"The AI Design Sprint&trade; is truly a powerful tool to ideate, prototype, and align with both business and IT on new AI concepts."</span>
+          </div>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Jeroen den Uijl</span>
+            <span class="testimonial-role">// Design &amp; Innovation Strategist, Avanade</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-quote">
+            <span class="syn-st">"Before working with Magnetiz, our agents broke in production. The evaluation-first method caught edge cases we never would have found."</span>
+          </div>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Marcus Johnson</span>
+            <span class="testimonial-role">// Head of Process Innovation</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-4">
+          <div class="testimonial-quote">
+            <span class="syn-st">"The weekly eval monitoring and trace records catch drift before anyone even notices issues."</span>
+          </div>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Priya Patel</span>
+            <span class="testimonial-role">// Director of Operations Technology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       MANIFESTO SECTION
+       ============================================ -->
+  <section class="manifesto" id="manifesto">
+    <div class="manifesto-inner">
+      <div class="reveal">
+        <div class="section-label">// The Manifesto</div>
+        <h2 class="section-title">What We Believe</h2>
+      </div>
+
+      <div class="manifesto-list">
+        <div class="manifesto-row reveal reveal-delay-1">
+          <span class="manifesto-good">Evidence-Based Engineering</span>
+          <span class="manifesto-arrow">&gt;</span>
+          <span class="manifesto-bad">'Vibes'</span>
+        </div>
+        <div class="manifesto-row reveal reveal-delay-1">
+          <span class="manifesto-good">Evaluation Frameworks</span>
+          <span class="manifesto-arrow">&gt;</span>
+          <span class="manifesto-bad">Prompt Tweaking</span>
+        </div>
+        <div class="manifesto-row reveal reveal-delay-2">
+          <span class="manifesto-good">Working Prototypes</span>
+          <span class="manifesto-arrow">&gt;</span>
+          <span class="manifesto-bad">Slide Decks</span>
+        </div>
+        <div class="manifesto-row reveal reveal-delay-2">
+          <span class="manifesto-good">Measured ROI</span>
+          <span class="manifesto-arrow">&gt;</span>
+          <span class="manifesto-bad">AI Hype</span>
+        </div>
+        <div class="manifesto-row reveal reveal-delay-3">
+          <span class="manifesto-good">Domain Experts</span>
+          <span class="manifesto-arrow">&gt;</span>
+          <span class="manifesto-bad">Outsourced Guesswork</span>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-4">
+        <p class="manifesto-tagline">The Model is NOT the Product.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       NEWSLETTER SECTION
+       ============================================ -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter-inner reveal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">subscribe &mdash; magnetiz</span>
+          </div>
+          <div class="newsletter-body">
+            <h3 class="newsletter-title">AI Evaluation Insights.</h3>
+            <p class="newsletter-desc">Weekly insights on building production-ready AI agents.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();">
+              <input type="email" placeholder="Email Address" class="newsletter-input" required>
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="section-label">// Deploy</div>
+        <h2 class="section-title" style="margin-bottom:32px">Ready to Build?</h2>
+      </div>
+
+      <div class="cta-terminal reveal reveal-delay-1">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">terminal &mdash; magnetiz</span>
+          </div>
+          <div class="cta-prompt">
+            <span class="path">magnetiz.ai</span>
+            <span class="dollar">&nbsp;$&nbsp;</span>
+            <span id="cta-typed"></span>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready">READY</span></span>
+              <span>BRANCH: <span style="color:var(--accent-blue)">main</span></span>
+            </div>
+            <span>awaiting input...</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="cta-text reveal reveal-delay-2">
+        If we can't show a clear path to ROI — you don't pay.<br>
+        Schedule a call to see where evaluation-first AI fits your business.
+      </p>
+
+      <div class="reveal reveal-delay-3">
+        <a href="#" class="btn-primary" style="font-size:16px; padding:16px 36px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>Evaluation-first frameworks. Production-ready AI agents in 6–8 weeks. Reliable long-term.</p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">AI Design Sprint&trade;</a></li>
+            <li><a href="#services">AI Implementation</a></li>
+            <li><a href="#services">AI Agent Implementation</a></li>
+            <li><a href="#services">AI Agents</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Content Hub</a></li>
+            <li><a href="#">AI Ops Lab</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">AI Bootcamp</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai &mdash; All rights reserved. AI Design Sprint is a trademark of 33A.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
