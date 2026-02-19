@@ -1008,8 +1008,6 @@ img { max-width: 100%; display: block; }
     text-align: center;
   }
 
-  .testimonials-grid { grid-template-columns: 1fr; }
-
   .problem-log { flex-direction: column; gap: 8px; }
   .log-stat { font-size: 32px; }
   .newsletter-form { flex-direction: column; }
@@ -1162,65 +1160,131 @@ img { max-width: 100%; display: block; }
 }
 
 /* ==========================================================
-   TESTIMONIALS SECTION
+   TESTIMONIALS — Infinite Ticker Carousel
+   Git-commit-styled cards scrolling horizontally.
+   Pure CSS animation, duplicated cards for seamless loop.
    ========================================================== */
 .testimonials {
   position: relative;
-  padding: 120px 24px;
+  padding: 120px 0;
   z-index: 2;
+  overflow: hidden;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.testimonials .container { margin-bottom: 56px; }
+
+/* --- Ticker track --- */
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  /* Fade edges so cards appear/disappear smoothly */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.ticker-track {
+  display: flex;
   gap: 24px;
-  margin-top: 56px;
+  width: max-content;
+  animation: ticker-scroll 40s linear infinite;
 }
 
-.testimonial-card {
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* --- Individual card --- */
+.ticker-card {
+  flex-shrink: 0;
+  width: 420px;
   background: var(--bg-surface);
   border: 1px solid var(--border-default);
   border-radius: var(--radius);
-  padding: 32px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease;
+  gap: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-card:hover {
+.ticker-card:hover {
   border-color: var(--border-accent);
-  box-shadow: var(--glow-sm);
+  box-shadow: var(--glow-md);
 }
 
-.testimonial-quote {
+/* Commit-style header */
+.ticker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.ticker-hash {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 12px;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.ticker-ts {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Quote */
+.ticker-quote {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
   line-height: 1.75;
-  margin-bottom: 24px;
-}
-
-.testimonial-quote .syn-st {
   color: var(--accent-green);
+  flex: 1;
 }
 
-.testimonial-author {
+/* Author */
+.ticker-author {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
 }
 
-.testimonial-name {
+.ticker-name {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
-.testimonial-role {
+.ticker-role {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-muted);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .ticker-card { width: 300px; }
+  .ticker-track { gap: 16px; }
+  .testimonials { padding: 80px 0; }
 }
 
 /* ==========================================================
