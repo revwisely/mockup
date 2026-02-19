@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "ai-agent-performance",
+    "title": "Where to Start When Your AI Agent Isn't Performing",
+    "date": "2026-02-15",
+    "author": "Jason D.",
+    "excerpt": "A practical guide to diagnosing underperforming AI agents. Before you retrain, rebuild, or blame the model, start with your evaluation framework.",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    "tags": ["agents", "operations"],
+    "featured": true
+  },
+  {
+    "slug": "align-ai-objectives",
+    "title": "How to Align AI Objectives with Business KPIs",
+    "date": "2026-02-08",
+    "author": "Jason D.",
+    "excerpt": "Most AI projects fail not because the tech doesn't work, but because nobody tied the agent's success metrics to what the business actually cares about.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    "tags": ["strategy", "operations"],
+    "featured": true
+  },
+  {
+    "slug": "evaluation-frameworks-101",
+    "title": "Evaluation Frameworks 101: Why Vibes Don't Scale",
+    "date": "2026-01-30",
+    "author": "Jason D.",
+    "excerpt": "If you can't measure it, you can't improve it. Here's how to build an evaluation framework that catches failures before production does.",
+    "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80",
+    "tags": ["evaluation", "engineering"],
+    "featured": true
+  },
+  {
+    "slug": "production-readiness-checklist",
+    "title": "The Production Readiness Checklist for AI Agents",
+    "date": "2026-01-22",
+    "author": "Jason D.",
+    "excerpt": "Shipping an AI agent to production isn't a deploy button. It's a system of checks, monitors, and fallbacks. Here's our checklist.",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+    "tags": ["agents", "engineering"],
+    "featured": true
+  },
+  {
+    "slug": "ai-design-sprint-method",
+    "title": "The AI Design Sprint: From Concept to Prototype in 30 Days",
+    "date": "2026-01-15",
+    "author": "Jason D.",
+    "excerpt": "How the AI Design Sprint method compresses months of ambiguity into 30 days of focused validation, prototyping, and alignment.",
+    "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&q=80",
+    "tags": ["strategy", "design-sprint"],
+    "featured": true
+  },
+  {
+    "slug": "why-ai-pilots-fail",
+    "title": "Why 89% of AI Pilots Never Reach Production",
+    "date": "2026-01-08",
+    "author": "Jason D.",
+    "excerpt": "The gap between demo and production isn't technical. It's structural. Here's what the data says and how evaluation-first engineering closes the gap.",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+    "tags": ["strategy", "operations"],
+    "featured": false
+  },
+  {
+    "slug": "monitoring-ai-agents-in-production",
+    "title": "Monitoring AI Agents in Production: What to Track and Why",
+    "date": "2025-12-28",
+    "author": "Jason D.",
+    "excerpt": "Deploying is the easy part. Keeping agents reliable over time requires monitoring the right signals. Here's our production monitoring playbook.",
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80",
+    "tags": ["agents", "monitoring"],
+    "featured": false
+  },
+  {
+    "slug": "workflow-mapping-for-ai",
+    "title": "Workflow Mapping for AI: Finding the Right Automation Targets",
+    "date": "2025-12-20",
+    "author": "Jason D.",
+    "excerpt": "Not every workflow should be automated. Here's how to map your operations and identify where AI agents will deliver the highest ROI.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    "tags": ["operations", "strategy"],
+    "featured": false
+  },
+  {
+    "slug": "guardrails-for-ai-agents",
+    "title": "Guardrails for AI Agents: Safety Without Slowing Down",
+    "date": "2025-12-12",
+    "author": "Jason D.",
+    "excerpt": "Guardrails aren't about limiting your AI. They're about giving it a clear lane so it can move fast and stay safe. Here's how we design them.",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80",
+    "tags": ["agents", "engineering"],
+    "featured": false
+  },
+  {
+    "slug": "roi-model-ai-agents",
+    "title": "Building an ROI Model for AI Agent Projects",
+    "date": "2025-12-05",
+    "author": "Jason D.",
+    "excerpt": "Stop guessing at value. Here's the framework we use to model ROI for agent deployments before a single line of code is written.",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+    "tags": ["strategy", "operations"],
+    "featured": false
+  },
+  {
+    "slug": "edge-cases-in-ai",
+    "title": "Handling Edge Cases in AI: The 5% That Breaks Everything",
+    "date": "2025-11-28",
+    "author": "Jason D.",
+    "excerpt": "Your agent works 95% of the time. The other 5% is where trust dies. Here's how to find, categorize, and handle the long tail of edge cases.",
+    "image": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=800&q=80",
+    "tags": ["evaluation", "engineering"],
+    "featured": false
+  },
+  {
+    "slug": "human-in-the-loop-design",
+    "title": "Human-in-the-Loop Design Patterns for AI Agents",
+    "date": "2025-11-20",
+    "author": "Jason D.",
+    "excerpt": "Full automation isn't always the goal. Sometimes the best AI system knows when to ask a human. Here are the design patterns that make it work.",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+    "tags": ["agents", "design-sprint"],
+    "featured": false
+  },
+  {
+    "slug": "data-quality-for-agents",
+    "title": "Data Quality for AI Agents: Garbage In, Garbage Out Still Applies",
+    "date": "2025-11-12",
+    "author": "Jason D.",
+    "excerpt": "The model is only as good as its inputs. Here's how to audit data quality before your agent ever sees production traffic.",
+    "image": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80",
+    "tags": ["evaluation", "operations"],
+    "featured": false
+  },
+  {
+    "slug": "agent-adoption-playbook",
+    "title": "The Agent Adoption Playbook: Getting Teams to Actually Use AI",
+    "date": "2025-11-05",
+    "author": "Jason D.",
+    "excerpt": "Building the agent is half the battle. Getting your team to trust and use it daily is the other half. Here's our adoption framework.",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+    "tags": ["operations", "strategy"],
+    "featured": false
+  },
+  {
+    "slug": "prompt-engineering-vs-evaluation",
+    "title": "Prompt Engineering vs. Evaluation Engineering: Know the Difference",
+    "date": "2025-10-28",
+    "author": "Jason D.",
+    "excerpt": "Prompt engineering gets you demos. Evaluation engineering gets you production. Here's why the shift matters and how to make it.",
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80",
+    "tags": ["evaluation", "engineering"],
+    "featured": false
+  }
+]
