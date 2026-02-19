@@ -1,0 +1,340 @@
+/* ==========================================================
+   AI SOLUTIONS PAGE — Styles specific to ai-solutions.html
+   Extends the terminal design system from terminal.css
+   ========================================================== */
+
+/* --- Section subtitle (reusable) --- */
+.section-sub {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* ==========================================================
+   PAIN POINTS — Warning cards
+   ========================================================== */
+.pain-section {
+  position: relative;
+  padding: 120px 24px;
+  z-index: 2;
+}
+
+.pain-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 56px auto 0;
+}
+
+.pain-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--accent-amber);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.35s ease;
+}
+
+.pain-card:hover {
+  border-color: var(--accent-amber);
+  box-shadow: 0 0 20px rgba(229, 192, 123, 0.06);
+}
+
+.pain-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(229, 192, 123, 0.08);
+  border-radius: 10px;
+  color: var(--accent-amber);
+}
+
+.pain-content {
+  flex: 1;
+}
+
+.pain-flag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.pain-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.pain-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ==========================================================
+   GUARANTEE BANNER
+   ========================================================== */
+.guarantee-section {
+  position: relative;
+  padding: 80px 24px;
+  z-index: 2;
+}
+
+.guarantee-body {
+  padding: 36px 32px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.guarantee-icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(152, 195, 121, 0.08);
+  border-radius: 16px;
+  color: var(--accent-green);
+}
+
+.guarantee-text {
+  flex: 1;
+}
+
+.guarantee-text h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.guarantee-text p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.guarantee-body .btn-primary {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   OUTCOMES — Stat cards
+   ========================================================== */
+.outcomes-section {
+  position: relative;
+  padding: 120px 24px;
+  z-index: 2;
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+  align-items: stretch;
+}
+
+.outcome-card,
+.outcome-card .terminal {
+  height: 100%;
+}
+
+.outcome-card .terminal {
+  display: flex;
+  flex-direction: column;
+}
+
+.outcome-card .outcome-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.outcome-body {
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.outcome-stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.outcome-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.outcome-direction {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.outcome-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.outcome-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* ==========================================================
+   TESTIMONIAL QUOTE
+   ========================================================== */
+.quote-section {
+  position: relative;
+  padding: 80px 24px;
+  z-index: 2;
+}
+
+.quote-block {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-body {
+  padding: 40px 36px;
+  position: relative;
+}
+
+.quote-mark {
+  color: var(--accent-blue);
+  opacity: 0.15;
+  position: absolute;
+  top: 24px;
+  left: 28px;
+}
+
+blockquote {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  font-style: italic;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.quote-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-blue-dim);
+  color: var(--accent-blue);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quote-author strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.quote-author span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================
+   PARTNERS
+   ========================================================== */
+.partners-section {
+  position: relative;
+  padding: 80px 24px;
+  z-index: 2;
+}
+
+.partners-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.partner-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  padding: 32px 48px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.partner-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--glow-md);
+}
+
+.partner-logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 1024px) {
+  .outcomes-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+  .guarantee-body { flex-direction: column; text-align: center; }
+  .guarantee-body .btn-primary { margin-top: 8px; }
+}
+
+@media (max-width: 768px) {
+  .pain-section,
+  .outcomes-section { padding: 80px 20px; }
+
+  .guarantee-section,
+  .quote-section,
+  .partners-section { padding: 60px 20px; }
+
+  .pain-card { padding: 20px; gap: 14px; }
+  .guarantee-body { padding: 24px 20px; }
+  .quote-body { padding: 28px 24px; }
+
+  .outcome-number { font-size: 40px; }
+  blockquote { font-size: 17px; }
+
+  .partners-grid { flex-direction: column; align-items: center; }
+  .partner-card { width: 100%; max-width: 280px; }
+}

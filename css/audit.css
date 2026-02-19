@@ -1,0 +1,228 @@
+/* ==========================================================
+   AI AUDIT PAGE — Styles specific to ai-audit.html
+   Extends the terminal design system from terminal.css
+   ========================================================== */
+
+/* --- Section subtitle (reusable) --- */
+.section-sub {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* ==========================================================
+   PILLARS — 3-column feature cards
+   ========================================================== */
+.pillars {
+  position: relative;
+  padding: 120px 24px;
+  z-index: 2;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.pillar-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.pillar-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--glow-md);
+  transform: translateY(-4px);
+}
+
+.pillar-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-blue-dim);
+  border-radius: 14px;
+  margin: 0 auto 20px;
+  color: var(--accent-blue);
+}
+
+.pillar-card h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.pillar-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================
+   LAB OVERVIEW — Two terminal cards side by side
+   ========================================================== */
+.lab-overview {
+  position: relative;
+  padding: 120px 24px;
+  z-index: 2;
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 56px;
+}
+
+/* --- Checklist inside terminal --- */
+.checklist-body {
+  padding: 28px;
+}
+
+.checklist-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checklist-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent-green);
+  background: rgba(152, 195, 121, 0.1);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.checklist-item strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.check {
+  color: var(--accent-green);
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.req-icon {
+  color: var(--accent-blue);
+  flex-shrink: 0;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+.req-questions {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-default);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.req-q {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.req-q .syn-cm { font-style: normal; }
+
+/* ==========================================================
+   WHO SHOULD APPLY — Shell-script styled criteria
+   ========================================================== */
+.who-section {
+  position: relative;
+  padding: 120px 24px;
+  z-index: 2;
+}
+
+.who-terminal {
+  max-width: 720px;
+  margin: 56px auto 0;
+}
+
+.who-body {
+  padding: 28px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.who-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-primary);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.who-item:last-of-type { border-bottom: none; }
+
+.who-flag {
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.who-detail {
+  color: var(--text-muted);
+}
+
+.who-result {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-accent);
+  font-size: 14px;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 1024px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+  .lab-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .pillars, .lab-overview, .who-section { padding: 80px 20px; }
+  .who-body { font-size: 13px; }
+  .checklist-body { padding: 20px; }
+}

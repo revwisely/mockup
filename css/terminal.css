@@ -400,6 +400,7 @@ img { max-width: 100%; display: block; }
 .syn-bi { color: var(--accent-cyan); }
 .syn-nr { color: var(--accent-orange); }
 .syn-op { color: var(--accent-coral); }
+.syn-am { color: var(--accent-amber); }
 
 /* --- Blinking Cursor --- */
 .cursor {
