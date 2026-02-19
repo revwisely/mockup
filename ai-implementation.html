@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Implementation — Magnetiz.ai</title>
+  <meta name="description" content="End-to-end AI project leadership. Only 1% achieve transformative AI systems. We help you skip the hype and build what actually propels the business forward.">
+  <meta property="og:title" content="AI Implementation — Magnetiz.ai">
+  <meta property="og:description" content="End-to-end AI project leadership from use case prioritization to solution rollout.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/implementation.css">
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Editor Gutter -->
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html#services" class="nav-dropdown-trigger">
+            AI Services <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="ai-audit.html">AI Audit</a>
+            <a href="ai-solutions.html">AI Solution Concepts</a>
+            <a href="ai-implementation.html">AI Implementation</a>
+            <a href="index.html#services">AI Agents</a>
+          </div>
+        </li>
+        <li><a href="index.html#solution">How It Works</a></li>
+        <li><a href="index.html#manifesto">About</a></li>
+        <li><a href="#">Content</a></li>
+      </ul>
+
+      <a href="#cta" class="nav-cta">Schedule Call</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services">AI Services</a>
+    <a href="index.html#solution">How It Works</a>
+    <a href="index.html#manifesto">About</a>
+    <a href="#">Content</a>
+    <a href="#cta">Schedule Call</a>
+  </div>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="section-label">// AI Implementation</div>
+        <h1 class="hero-headline">
+          AI is everywhere.<br>Transformation is <span class="accent">not</span>.
+        </h1>
+        <p class="hero-sub">
+          Only 1% achieve transformative AI systems. We help you skip the hype and build what actually propels the business forward.
+        </p>
+        <div class="hero-ctas">
+          <a href="#cta" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Schedule Call
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Implementation Terminal -->
+      <div class="hero-terminal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">implement &mdash; magnetiz</span>
+          </div>
+          <div class="terminal-body">
+            <div class="line-numbers" id="hero-line-numbers"></div>
+            <div id="hero-code-content"></div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready" id="hero-status">PLANNING</span></span>
+              <span>PHASE: <span style="color:var(--accent-blue)">strategy</span></span>
+            </div>
+            <span id="hero-pos">Ln 1, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       PROBLEM CALLOUT
+       ============================================ -->
+  <section class="problem-callout" id="problem">
+    <div class="container">
+      <div class="callout-terminal reveal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">reality_check.log</span>
+          </div>
+          <div class="callout-body">
+            <div class="callout-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <p class="callout-text">
+              Most AI projects fail because <strong>no one really owns them</strong>, the goals are fuzzy, and the solution doesn't fit the workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       SERVICES — End-to-end leadership
+       ============================================ -->
+  <section class="impl-services" id="services">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// What We Deliver</div>
+        <h2 class="section-title">End-to-end AI<br>project <span class="accent">leadership</span></h2>
+      </div>
+
+      <div class="impl-grid">
+        <div class="impl-card reveal reveal-delay-1">
+          <div class="impl-number">01</div>
+          <div class="impl-content">
+            <h3>Use Case Prioritization</h3>
+            <p>Identify and rank high-ROI, low-risk opportunities through our AI Design Sprint&trade;.</p>
+          </div>
+        </div>
+
+        <div class="impl-card reveal reveal-delay-1">
+          <div class="impl-number">02</div>
+          <div class="impl-content">
+            <h3>Roadmap Development</h3>
+            <p>Define strategy, metrics, and a delivery plan grounded in business value and technical feasibility.</p>
+          </div>
+        </div>
+
+        <div class="impl-card reveal reveal-delay-2">
+          <div class="impl-number">03</div>
+          <div class="impl-content">
+            <h3>Stakeholder Alignment</h3>
+            <p>Get early buy-in across business, product, and technical teams.</p>
+          </div>
+        </div>
+
+        <div class="impl-card reveal reveal-delay-2">
+          <div class="impl-number">04</div>
+          <div class="impl-content">
+            <h3>Design Sprint Planning</h3>
+            <p>Translate strategy into clear PRDs, timelines, and sprint plans to guide smooth delivery.</p>
+          </div>
+        </div>
+
+        <div class="impl-card reveal reveal-delay-3">
+          <div class="impl-number">05</div>
+          <div class="impl-content">
+            <h3>Feasibility Management</h3>
+            <p>Assess tech stack, data readiness, and resourcing constraints&mdash;before committing to build.</p>
+          </div>
+        </div>
+
+        <div class="impl-card reveal reveal-delay-3">
+          <div class="impl-number">06</div>
+          <div class="impl-content">
+            <h3>Execution Oversight</h3>
+            <p>Manage delivery, resolve blockers, and keep momentum through launch.</p>
+          </div>
+        </div>
+
+        <div class="impl-card impl-card-full reveal reveal-delay-3">
+          <div class="impl-number">07</div>
+          <div class="impl-content">
+            <h3>Solution Rollout</h3>
+            <p>Deliver team training, documentation, and a smooth go-live plan to ensure adoption.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="section-label">// Get Started</div>
+        <h2 class="section-title" style="margin-bottom:16px">Turn AI ambition into transformation.</h2>
+      </div>
+
+      <div class="cta-terminal reveal reveal-delay-1">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">terminal &mdash; magnetiz</span>
+          </div>
+          <div class="cta-prompt">
+            <span class="path">magnetiz.ai</span>
+            <span class="dollar">&nbsp;$&nbsp;</span>
+            <span id="cta-typed"></span>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready">READY</span></span>
+              <span>MODE: <span style="color:var(--accent-blue)">implement</span></span>
+            </div>
+            <span>awaiting input...</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="cta-text reveal reveal-delay-2">
+        End-to-end AI project leadership.<br>
+        From use case prioritization to solution rollout.
+      </p>
+
+      <div class="reveal reveal-delay-3">
+        <a href="#" class="btn-primary" style="font-size:16px; padding:16px 36px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>Evaluation-first frameworks. Production-ready AI agents in 6&ndash;8 weeks. Reliable long-term.</p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="ai-audit.html">AI Audit</a></li>
+            <li><a href="ai-solutions.html">AI Solution Concepts</a></li>
+            <li><a href="ai-implementation.html">AI Implementation</a></li>
+            <li><a href="index.html#services">AI Agents</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Content Hub</a></li>
+            <li><a href="#">AI Ops Lab</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">AI Bootcamp</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai &mdash; All rights reserved. AI Design Sprint is a trademark of 33A.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/implementation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

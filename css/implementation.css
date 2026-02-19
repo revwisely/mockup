@@ -1,0 +1,136 @@
+/* ==========================================================
+   AI IMPLEMENTATION PAGE — Styles specific to ai-implementation.html
+   Extends the terminal design system from terminal.css
+   ========================================================== */
+
+/* ==========================================================
+   PROBLEM CALLOUT
+   ========================================================== */
+.problem-callout {
+  position: relative;
+  padding: 80px 24px;
+  z-index: 2;
+}
+
+.callout-terminal {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.callout-body {
+  padding: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.callout-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(224, 108, 117, 0.08);
+  border-radius: 12px;
+  color: var(--accent-coral);
+}
+
+.callout-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.callout-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ==========================================================
+   IMPLEMENTATION SERVICES — 2-column card grid
+   ========================================================== */
+.impl-services {
+  position: relative;
+  padding: 120px 24px;
+  z-index: 2;
+}
+
+.impl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 56px;
+}
+
+.impl-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.35s ease;
+}
+
+.impl-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--glow-md);
+  transform: translateY(-2px);
+}
+
+.impl-card-full {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 10px);
+  margin: 0 auto;
+}
+
+.impl-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-blue);
+  background: var(--accent-blue-dim);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.impl-content h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.impl-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 1024px) {
+  .impl-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impl-card-full {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .impl-services { padding: 80px 20px; }
+  .problem-callout { padding: 60px 20px; }
+  .callout-body { padding: 24px 20px; flex-direction: column; }
+  .callout-text { font-size: 16px; }
+  .impl-card { padding: 22px 20px; }
+}
