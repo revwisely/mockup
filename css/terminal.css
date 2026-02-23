@@ -566,6 +566,9 @@ img { max-width: 100%; display: block; }
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .service-card::after {
