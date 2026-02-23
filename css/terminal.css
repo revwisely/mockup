@@ -1036,7 +1036,23 @@ img { max-width: 100%; display: block; }
 
   .problem-log { flex-direction: column; gap: 8px; }
   .log-stat { font-size: 32px; }
+
+  .process-content { min-width: 0; }
+  .process-filename { flex-wrap: wrap; font-size: 14px; }
   .newsletter-form { flex-direction: column; }
+
+  .terminal-status {
+    height: auto;
+    min-height: var(--status-h);
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+
+  .terminal-status .status-group {
+    gap: 10px;
+  }
 }
 
 /* ==========================================================
