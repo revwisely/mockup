@@ -555,7 +555,7 @@
   <script>
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a');
-      if (link && /Schedule\s*Call|^Contact$/i.test(link.textContent.trim())) {
+      if (link && /Schedule\s*Call|Book\s*a\s*Free\s*Consultation|^Contact$/i.test(link.textContent.trim())) {
         e.preventDefault();
         Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
       }
