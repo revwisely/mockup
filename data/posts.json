@@ -1,5 +1,15 @@
 [
   {
+    "slug": "your-ai-agents-have-a-trust-problem",
+    "title": "Your AI Agents Have a Trust Problem",
+    "date": "2026-02-25",
+    "author": "Magnetiz.ai",
+    "excerpt": "Every operations leader wants autonomous AI agents that can reason, plan, and execute. But recent research reveals fundamental security flaws that most vendor conversations never mention.",
+    "image": "assets/images/posts/your-ai-agents-have-a-trust-problem-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "how-most-teams-get-ai-evals-wrong",
     "title": "How Most Teams Get AI Evals Wrong",
     "date": "2026-02-12",
@@ -57,7 +67,7 @@
     "excerpt": "Your sales team spends only 30% of their time actually selling. The other 70%? It vanishes into admin work, data entry, and internal meetings. This isn't a...",
     "image": "assets/images/posts/why-your-sales-team-isnt-underperforming-hero.png",
     "tags": [],
-    "featured": true
+    "featured": false
   },
   {
     "slug": "why-ai-safety-theater-must-end",
