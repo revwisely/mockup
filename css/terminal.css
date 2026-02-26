@@ -1392,6 +1392,29 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 
+.newsletter-success {
+  padding: 20px 0;
+  animation: newsletterFadeIn 0.4s ease;
+}
+
+.newsletter-success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(152, 195, 121, 0.12);
+  color: var(--accent-green);
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+@keyframes newsletterFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* --- Additional responsive overrides for new sections --- */
 @media (max-width: 768px) {
   .problem, .testimonials, .newsletter { padding: 80px 20px; }

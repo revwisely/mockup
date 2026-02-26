@@ -483,12 +483,19 @@
             <span class="terminal-title">subscribe &mdash; magnetiz</span>
           </div>
           <div class="newsletter-body">
-            <h3 class="newsletter-title">AI Evaluation Insights.</h3>
-            <p class="newsletter-desc">Weekly insights on building production-ready AI agents.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault();">
-              <input type="email" placeholder="Email Address" class="newsletter-input" required>
-              <button type="submit" class="btn-primary">Subscribe</button>
-            </form>
+            <div class="newsletter-content" id="newsletter-content">
+              <h3 class="newsletter-title">AI Evaluation Insights.</h3>
+              <p class="newsletter-desc">Weekly insights on building production-ready AI agents.</p>
+              <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Email Address" class="newsletter-input" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+              </form>
+            </div>
+            <div class="newsletter-success" id="newsletter-success" style="display:none;">
+              <span class="newsletter-success-icon">&#10003;</span>
+              <h3 class="newsletter-title">You&rsquo;re in.</h3>
+              <p class="newsletter-desc">Thanks for subscribing. Watch your inbox for weekly AI evaluation insights.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -597,6 +604,19 @@
   <!-- Scripts -->
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Newsletter form handler -->
+  <script>
+    (function() {
+      var form = document.getElementById('newsletter-form');
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('newsletter-content').style.display = 'none';
+        document.getElementById('newsletter-success').style.display = '';
+      });
+    })();
+  </script>
 
   <!-- Calendly popup -->
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
