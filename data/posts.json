@@ -1,5 +1,15 @@
 [
   {
+    "slug": "ai-isnt-broken-your-deployment-strategy-is",
+    "title": "AI Isn't Broken. Your Deployment Strategy Is.",
+    "date": "2026-03-04",
+    "author": "Magnetiz.ai",
+    "excerpt": "Only 2% of enterprises have AI agents fully deployed at scale. The technology works. The failure is happening in infrastructure, governance, data readiness, and how companies structure deployment itself.",
+    "image": "assets/images/posts/ai-isnt-broken-your-deployment-strategy-is-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "your-ai-agents-have-a-trust-problem",
     "title": "Your AI Agents Have a Trust Problem",
     "date": "2026-02-25",
@@ -57,7 +67,7 @@
     "excerpt": "Your ops team has a Jira ticket sitting in \"To Do\" for a reporting dashboard. It's been there for four months. Engineering keeps pushing it to next sprint. You...",
     "image": "assets/images/posts/the-ops-leader-who-builds-hero.png",
     "tags": [],
-    "featured": true
+    "featured": false
   },
   {
     "slug": "why-your-sales-team-isnt-underperforming",
