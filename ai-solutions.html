@@ -99,6 +99,10 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             Book a Free Consultation
           </a>
+          <button class="btn-ghost" id="video-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            See How It Works
+          </button>
         </div>
       </div>
 
@@ -503,6 +507,19 @@
   </section>
 
   <!-- ============================================
+       VIDEO MODAL
+       ============================================ -->
+  <div class="video-modal" id="video-modal">
+    <div class="video-modal-backdrop" id="video-modal-backdrop"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="video-modal-close" aria-label="Close video">&times;</button>
+      <video id="video-player" controls playsinline>
+        <source src="assets/videos/magnetiz_hero.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- ============================================
        FOOTER (identical to homepage)
        ============================================ -->
   <footer class="footer">
@@ -554,6 +571,24 @@
   <script src="js/animations.js"></script>
   <script src="js/solutions.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Video modal handler -->
+  <script>
+    (function() {
+      var btn = document.getElementById('video-cta');
+      var modal = document.getElementById('video-modal');
+      var video = document.getElementById('video-player');
+      var backdrop = document.getElementById('video-modal-backdrop');
+      var close = document.getElementById('video-modal-close');
+      if (!btn || !modal) return;
+      function openModal() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; video.play(); }
+      function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; video.pause(); video.currentTime = 0; }
+      btn.addEventListener('click', openModal);
+      backdrop.addEventListener('click', closeModal);
+      close.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+    })();
+  </script>
 
   <!-- Calendly popup -->
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
