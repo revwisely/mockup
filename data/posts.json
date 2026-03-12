@@ -1,5 +1,15 @@
 [
   {
+    "slug": "ai-hacked-mckinsey-in-two-hours",
+    "title": "AI Hacked McKinsey in Two Hours",
+    "date": "2026-03-11",
+    "author": "Magnetiz.ai",
+    "excerpt": "A security startup pointed an autonomous AI agent at McKinsey's internal AI platform and walked away with 46.5 million confidential chat messages. No stolen passwords. No insider help. Two hours.",
+    "image": "assets/images/posts/ai-hacked-mckinsey-in-two-hours-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "ai-isnt-broken-your-deployment-strategy-is",
     "title": "AI Isn't Broken. Your Deployment Strategy Is.",
     "date": "2026-03-04",
@@ -57,7 +67,7 @@
     "excerpt": "Dozens of AI agents launched in 2025. Most were designed for developers or personal productivity. None were designed around how operations teams actually work...",
     "image": "assets/images/posts/ai-agents-meet-operations-work-hero.png",
     "tags": [],
-    "featured": true
+    "featured": false
   },
   {
     "slug": "the-ops-leader-who-builds",
