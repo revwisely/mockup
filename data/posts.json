@@ -1,5 +1,15 @@
 [
   {
+    "slug": "mcp-changed-everything-nobodys-governing-it",
+    "title": "MCP Changed Everything. Nobody's Governing It.",
+    "date": "2026-03-18",
+    "author": "Magnetiz.ai",
+    "excerpt": "The Model Context Protocol went from 100,000 downloads to 8 million in five months. By early 2026, it became the default integration layer for agentic AI. And most organizations adopting it have zero oversight framework in place.",
+    "image": "assets/images/posts/mcp-changed-everything-nobodys-governing-it-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "ai-hacked-mckinsey-in-two-hours",
     "title": "AI Hacked McKinsey in Two Hours",
     "date": "2026-03-11",
