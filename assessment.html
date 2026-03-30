@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Agents Blog — Evaluation Frameworks &amp; Operations Insights | Magnetiz.ai</title>
-  <meta name="description" content="Practical insights on AI agents, evaluation frameworks, and production operations. Weekly articles for operations leaders building with AI.">
-  <meta property="og:title" content="AI Agents Blog — Evaluation Frameworks &amp; Operations Insights | Magnetiz.ai">
-  <meta property="og:description" content="Practical insights on AI agents, evaluation frameworks, and production operations. Weekly articles for operations leaders building with AI.">
+  <title>AI Readiness Assessment — How Ready Is Your Revenue Team? | Magnetiz.ai</title>
+  <meta name="description" content="8 questions. 2 minutes. Find out how ready your revenue team is for AI agents — and get a personalized recommendation.">
+  <meta property="og:title" content="AI Readiness Assessment — How Ready Is Your Revenue Team? | Magnetiz.ai">
+  <meta property="og:description" content="8 questions. 2 minutes. Find out how ready your revenue team is for AI agents — and get a personalized recommendation.">
   <meta property="og:type" content="website">
 
   <!-- Fonts -->
@@ -24,9 +24,9 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
   <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
-  <!-- Custom Terminal CSS -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/terminal.css">
-  <link rel="stylesheet" href="css/content.css">
+  <link rel="stylesheet" href="css/assessment.css">
 
   <!-- Calendly -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -53,19 +53,13 @@
 </head>
 <body>
 
-  <!-- Grid Background -->
   <div class="grid-bg" aria-hidden="true"></div>
-
-  <!-- Editor Gutter -->
   <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
 
-  <!-- ============================================
-       NAVIGATION
-       ============================================ -->
+  <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-inner container">
       <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
-
       <ul class="nav-links">
         <li class="nav-dropdown">
           <a href="index.html#services" class="nav-dropdown-trigger">
@@ -80,16 +74,13 @@
         </li>
         <li><a href="content.html">Content</a></li>
       </ul>
-
-      <a href="index.html#cta" class="nav-cta">Schedule Call</a>
-
+      <a href="#cta" class="nav-cta">Schedule Call</a>
       <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
     <a href="index.html#services">AI Services</a>
     <a href="ai-agents.html" class="mobile-sub">AI Agents</a>
@@ -97,41 +88,70 @@
     <a href="ai-implementation.html" class="mobile-sub">AI Implementation</a>
     <a href="ai-audit.html" class="mobile-sub">AI Audit</a>
     <a href="content.html">Content</a>
-    <a href="index.html#cta">Schedule Call</a>
+    <a href="#cta">Schedule Call</a>
   </div>
 
-  <!-- ============================================
-       CONTENT HUB
-       ============================================ -->
-  <section class="content-hub">
-    <div class="container">
-      <div class="reveal" style="text-align:center; margin-bottom:56px;">
-        <div class="section-label">// Content Hub</div>
-        <h1 class="section-title">Insights on AI for<br>Business Operations</h1>
+  <!-- Hero -->
+  <section class="assessment-hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="assessment-hero-inner">
+      <div class="section-label">// AI Readiness Assessment</div>
+      <h1>How ready is your revenue team for <span class="accent">AI agents</span>?</h1>
+      <p class="hero-sub">8 questions. 2 minutes. No email required to see results.</p>
+
+      <a href="assessment-quiz.html" class="btn-primary" id="start-assessment">
+        magnetiz.ai $ start --assessment
+      </a>
+
+      <div class="trust-signals">
+        <span>No email required to view results.</span>
+        <span>Takes approximately 2 minutes.</span>
+        <span>Used by ops leaders at 100+ tech companies.</span>
       </div>
-
-      <!-- Hero: Latest Post + Featured Sidebar (JS-rendered) -->
-      <div id="content-hero" class="content-hero"></div>
-
-      <div class="glow-line" style="margin-bottom:64px;"></div>
-
-      <!-- Blog Grid (JS-rendered) -->
-      <div class="blog-grid-section" id="blog-grid-section">
-        <div class="blog-grid-header">
-          <span class="blog-grid-label">// All Posts</span>
-          <span class="blog-grid-count" id="blog-grid-count"></span>
-        </div>
-        <div class="blog-grid" id="blog-grid"></div>
-      </div>
-
-      <!-- Pagination (JS-rendered) -->
-      <div class="pagination" id="blog-pagination"></div>
     </div>
   </section>
 
-  <!-- ============================================
-       FOOTER
-       ============================================ -->
+  <!-- Outcome Promises -->
+  <section class="outcome-promises">
+    <div class="container">
+      <div class="outcome-card reveal">
+        <div class="outcome-number">01</div>
+        <h3>See Your Blind Spots</h3>
+        <p>Most ops teams think they know where they stand on AI. The gap between perception and reality is where margin leaks.</p>
+      </div>
+
+      <div class="outcome-card reveal reveal-delay-1">
+        <div class="outcome-number">02</div>
+        <h3>Get Your Tier Recommendation</h3>
+        <p>One agent, a coordinated system, or the full fleet &mdash; find out what your operation actually needs.</p>
+      </div>
+
+      <div class="outcome-card reveal reveal-delay-2">
+        <div class="outcome-number">03</div>
+        <h3>Walk Into the Call Prepared</h3>
+        <p>Your consultation will be focused on your specific results. No discovery. No generic pitch. Just your situation.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="section-label">// Ready?</div>
+        <h2 class="section-title" style="margin-bottom:32px">Find out where you <span class="accent">stand</span></h2>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <a href="assessment-quiz.html" class="btn-primary" style="font-size:15px; padding:16px 36px;">
+          magnetiz.ai $ start --assessment
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -139,7 +159,6 @@
           <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
           <p>Evaluation-first frameworks. Production-ready AI agents in less than 30 days. Reliable long-term.</p>
         </div>
-
         <div>
           <h4>Services</h4>
           <ul class="footer-links">
@@ -149,7 +168,6 @@
             <li><a href="ai-agents.html">AI Agents</a></li>
           </ul>
         </div>
-
         <div>
           <h4>Resources</h4>
           <ul class="footer-links">
@@ -157,7 +175,6 @@
             <li><a href="our-ai-agents.html">Our AI Agents</a></li>
           </ul>
         </div>
-
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
@@ -166,7 +183,6 @@
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>&copy; 2026 Magnetiz.ai (Revwisely LLC) &mdash; All rights reserved. AI Design Sprint is a trademark of 33A.</p>
         <div class="footer-socials">
@@ -178,17 +194,22 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/animations.js"></script>
-  <script src="js/content.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Analytics: quiz_start -->
+  <script>
+    document.getElementById('start-assessment').addEventListener('click', function() {
+      if (typeof gtag === 'function') gtag('event', 'quiz_start');
+    });
+  </script>
 
   <!-- Calendly popup -->
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a');
-      if (link && /Schedule\s*Call|^Contact$/i.test(link.textContent.trim())) {
+      if (link && /Schedule\s*Call|Book\s*a\s*Free\s*Consultation|^Contact$/i.test(link.textContent.trim())) {
         e.preventDefault();
         Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
       }

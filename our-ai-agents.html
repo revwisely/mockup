@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our AI Agents — The Production System Behind Maestro | Magnetiz.ai</title>
+  <meta name="description" content="A living view of the AI agents we run in production. 33 agents across strategy, content, creative, quality, and analytics — built on the Maestro AI Revenue System.">
+  <meta property="og:title" content="Our AI Agents — The Production System Behind Maestro | Magnetiz.ai">
+  <meta property="og:description" content="A living view of the AI agents we run in production. 33 agents across strategy, content, creative, quality, and analytics — built on the Maestro AI Revenue System.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/our-ai-agents.css">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Editor Gutter -->
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html#services" class="nav-dropdown-trigger">
+            AI Services <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="ai-agents.html">AI Agents</a>
+            <a href="ai-solutions.html">AI Solution Concepts</a>
+            <a href="ai-implementation.html">AI Implementation</a>
+            <a href="ai-audit.html">AI Audit</a>
+          </div>
+        </li>
+        <li><a href="content.html">Content</a></li>
+      </ul>
+
+      <a href="#cta" class="nav-cta">Schedule Call</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services">AI Services</a>
+    <a href="ai-agents.html" class="mobile-sub">AI Agents</a>
+    <a href="ai-solutions.html" class="mobile-sub">AI Solution Concepts</a>
+    <a href="ai-implementation.html" class="mobile-sub">AI Implementation</a>
+    <a href="ai-audit.html" class="mobile-sub">AI Audit</a>
+    <a href="content.html">Content</a>
+    <a href="#cta">Schedule Call</a>
+  </div>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner hero-centered">
+      <div class="hero-content hero-content-centered">
+        <div class="section-label">// Our Production System</div>
+        <h1 class="hero-headline">
+          AI Agents We Use in Our <span class="accent">Production Environment</span>
+        </h1>
+        <p class="hero-sub">
+          We&rsquo;re often asked which AI agents we actually use in production. This list is our answer&mdash;a living view of the system we run. We update it continuously as agents improve, new capabilities are added, and the system evolves.
+        </p>
+        <p class="hero-sub" style="margin-top:16px;">
+          These agents are built on the same architecture that underpins the Maestro AI Revenue System&trade;. Each agent owns a specific part of the workflow&mdash;from strategy to execution to quality to analytics&mdash;so nothing slips, nothing stalls, and every action compounds.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       STRATEGY TEAM
+       ============================================ -->
+  <section class="team-section team-strategy" id="strategy">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Strategy Team</div>
+        <h2 class="section-title">Agents that define the <span class="accent">playbook</span></h2>
+        <div class="agent-count">7 agents</div>
+      </div>
+
+      <div class="agent-grid">
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">01</span>
+            <h3>Brand Voice</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Defines and enforces a consistent tone, style, and language across all content and channels.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">02</span>
+            <h3>Positioning Angles</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Generates differentiated messaging angles that make your product stand out to specific audiences.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">03</span>
+            <h3>Keyword Research</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Identifies high-intent search terms that align with your ICP and drive qualified traffic.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">04</span>
+            <h3>Direct Response</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Crafts conversion-focused messaging designed to drive immediate action from prospects.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">05</span>
+            <h3>Lead Magnet</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Creates high-value assets that capture attention and convert visitors into leads.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">06</span>
+            <h3>Discovery Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Extracts customer insights, pains, and use cases from calls, notes, and data to inform strategy.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-3">
+          <div class="agent-card-header">
+            <span class="agent-number">07</span>
+            <h3>Community Seeding Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Identifies and places content into relevant communities to spark awareness and early engagement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       CONTENT TEAM
+       ============================================ -->
+  <section class="team-section team-content" id="content-team">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Content Team</div>
+        <h2 class="section-title">Agents that create and <span class="accent">distribute</span></h2>
+        <div class="agent-count">12 agents</div>
+      </div>
+
+      <div class="agent-grid">
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">08</span>
+            <h3>SEO Content</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Produces search-optimized articles designed to rank, attract, and convert inbound traffic.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">09</span>
+            <h3>Email Sequences</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Builds automated email flows that nurture leads and move them toward conversion.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">10</span>
+            <h3>Newsletter</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Creates consistent, high-value content that builds audience trust and ongoing engagement.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">11</span>
+            <h3>Content Atomizer</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Breaks long-form content into multiple short-form assets for distribution across channels.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">12</span>
+            <h3>Technical SEO Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Optimizes site structure, indexing, and performance to improve search visibility.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">13</span>
+            <h3>Blog Publishing Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Formats, uploads, and publishes content with proper structure, metadata, and SEO standards.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-3">
+          <div class="agent-card-header">
+            <span class="agent-number">14</span>
+            <h3>AEO Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Optimizes content for AI-driven answer engines to increase visibility in generated responses.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-3">
+          <div class="agent-card-header">
+            <span class="agent-number">15</span>
+            <h3>Landing Page Builder Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Designs and deploys conversion-optimized landing pages aligned to specific campaigns.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-3">
+          <div class="agent-card-header">
+            <span class="agent-number">16</span>
+            <h3>Comparison Page Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Creates competitive comparison pages that position your offering clearly against alternatives.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">17</span>
+            <h3>Inbound Attribution Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Tracks and attributes inbound conversions to the channels and content that drove them.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">18</span>
+            <h3>Social Scheduling Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Distributes content across platforms at the right time and cadence for maximum reach.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">19</span>
+            <h3>Content Refresh Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Updates existing content to improve rankings, accuracy, and ongoing performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       CREATIVE TEAM
+       ============================================ -->
+  <section class="team-section team-creative" id="creative">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Creative Team</div>
+        <h2 class="section-title">Agents that bring ideas to <span class="accent">life</span></h2>
+        <div class="agent-count">8 agents</div>
+      </div>
+
+      <div class="agent-grid">
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">20</span>
+            <h3>Creative Strategist</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Defines the creative direction and concepts that guide content and campaign execution.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">21</span>
+            <h3>Image Gen</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Generates on-brand visual assets to support content, campaigns, and product storytelling.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">22</span>
+            <h3>Social Graphics</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Creates platform-specific visuals designed to increase engagement and shareability.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">23</span>
+            <h3>Product Photo</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Produces clean, compelling product imagery for use across marketing and sales assets.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">24</span>
+            <h3>Product Video</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Creates video content that demonstrates product value and drives understanding.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">25</span>
+            <h3>Talking Head</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Generates or enhances human-led video content for authority, trust, and storytelling.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-3">
+          <div class="agent-card-header">
+            <span class="agent-number">26</span>
+            <h3>Ad Creative Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Develops and iterates ad creatives designed to capture attention and drive clicks.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-3">
+          <div class="agent-card-header">
+            <span class="agent-number">27</span>
+            <h3>Ad Performance Agent</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Analyzes ad performance and continuously optimizes creative and targeting for ROI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       QUALITY GATE
+       ============================================ -->
+  <section class="team-section team-quality" id="quality">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Quality Gate</div>
+        <h2 class="section-title">Agents that enforce <span class="accent">standards</span></h2>
+        <div class="agent-count">4 agents</div>
+      </div>
+
+      <div class="agent-grid">
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">28</span>
+            <h3>Visual QA</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Ensures all visual assets meet brand, quality, and formatting standards before publishing.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">29</span>
+            <h3>Brand Voice QA</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Validates that all content aligns with defined brand voice and messaging guidelines.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">30</span>
+            <h3>Fact-Check / Claims QA</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Verifies accuracy of statements, data, and claims to reduce risk and maintain credibility.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-2">
+          <div class="agent-card-header">
+            <span class="agent-number">31</span>
+            <h3>Platform Compliance QA</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Ensures content meets platform-specific rules, policies, and advertising requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       ANALYTICS TEAM
+       ============================================ -->
+  <section class="team-section team-analytics" id="analytics">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Analytics Team</div>
+        <h2 class="section-title">Agents that measure and <span class="accent">optimize</span></h2>
+        <div class="agent-count">2 agents</div>
+      </div>
+
+      <div class="agent-grid">
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">32</span>
+            <h3>CRO Analytics</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Analyzes user behavior and conversion data to identify and improve performance bottlenecks.</p>
+          </div>
+        </div>
+
+        <div class="agent-card reveal reveal-delay-1">
+          <div class="agent-card-header">
+            <span class="agent-number">33</span>
+            <h3>Competitor Intel</h3>
+          </div>
+          <div class="agent-card-body">
+            <p>Monitors competitor activity, messaging, and positioning to inform strategy and differentiation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="section-label">// Revenue Systems That Scale</div>
+        <h2 class="section-title" style="margin-bottom:16px">We are passionate about how AI Agents<br>can power <span class="accent">workflows</span>.</h2>
+      </div>
+
+      <p class="reveal reveal-delay-1" style="font-size:17px;color:var(--text-secondary);max-width:600px;margin:0 auto 32px;line-height:1.7;">
+        You can grow faster, operate more efficiently, and reduce reliance on headcount. Schedule a free consultation.
+      </p>
+
+      <div class="reveal reveal-delay-2">
+        <a href="#" class="btn-primary" style="font-size:16px; padding:16px 36px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>Evaluation-first frameworks. Production-ready AI agents in less than 30 days. Reliable long-term.</p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="ai-audit.html">AI Audit</a></li>
+            <li><a href="ai-solutions.html">AI Solution Concepts</a></li>
+            <li><a href="ai-implementation.html">AI Implementation</a></li>
+            <li><a href="ai-agents.html">AI Agents</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="content.html">Content Hub</a></li>
+            <li><a href="our-ai-agents.html">Our AI Agents</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC) &mdash; All rights reserved. AI Design Sprint is a trademark of 33A.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Calendly popup -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && /Schedule\s*Call|Book\s*a\s*Free\s*Consultation|^Contact$/i.test(link.textContent.trim())) {
+        e.preventDefault();
+        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+      }
+    });
+  </script>
+</body>
+</html>

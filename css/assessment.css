@@ -1,0 +1,544 @@
+/* ==========================================================
+   ASSESSMENT — Landing, Quiz, and Results pages
+   ========================================================== */
+
+/* --- Landing Page --- */
+.assessment-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  z-index: 2;
+  text-align: center;
+}
+
+.assessment-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.assessment-hero .section-label {
+  margin-bottom: 20px;
+}
+
+.assessment-hero h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+.assessment-hero h1 .accent { color: var(--accent-blue); }
+
+.assessment-hero .hero-sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+  max-width: 100%;
+}
+
+/* --- Outcome Promises --- */
+.outcome-promises {
+  position: relative;
+  padding: 0 24px 120px;
+  z-index: 2;
+}
+
+.outcome-promises .container {
+  max-width: 640px;
+}
+
+.outcome-card {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.outcome-card:first-child {
+  border-top: 1px solid var(--border-default);
+}
+
+.outcome-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.outcome-card h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.outcome-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* --- Landing CTA --- */
+.assessment-cta {
+  text-align: center;
+  padding: 0 24px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.assessment-cta .btn-primary {
+  font-size: 15px;
+  padding: 16px 36px;
+}
+
+.trust-signals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 24px;
+}
+
+.trust-signals span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================
+   QUIZ PAGE
+   ========================================================== */
+.quiz-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px 60px;
+  z-index: 2;
+}
+
+.quiz-container {
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* --- Progress --- */
+.quiz-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.quiz-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(74, 158, 206, 0.15);
+  border-radius: 2px;
+  margin-bottom: 48px;
+  overflow: hidden;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  background: var(--accent-blue);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Question --- */
+.quiz-question {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.quiz-question.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quiz-question.exit-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.quiz-question.exit-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.quiz-question h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* --- Answer Options (Terminal-themed) --- */
+.quiz-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-answer {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.quiz-answer:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--glow-sm);
+}
+
+.quiz-answer.selected {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 20px rgba(74, 158, 206, 0.2);
+}
+
+.quiz-answer-header {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 14px;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-default);
+  gap: 8px;
+}
+
+.quiz-answer-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.quiz-answer-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.quiz-answer-dot.red { background: #FF5F56; }
+.quiz-answer-dot.yellow { background: #FFBD2E; }
+.quiz-answer-dot.green { background: #27C93F; }
+
+.quiz-answer.selected .quiz-answer-dot.red,
+.quiz-answer.selected .quiz-answer-dot.yellow { opacity: 0.4; }
+.quiz-answer.selected .quiz-answer-dot.green { background: #27C93F; }
+
+.quiz-answer-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.quiz-answer.selected .quiz-answer-label {
+  color: var(--accent-blue);
+}
+
+.quiz-answer-body {
+  padding: 14px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.quiz-answer.selected .quiz-answer-body {
+  color: var(--text-primary);
+}
+
+.quiz-answer-body .prompt {
+  color: var(--accent-green);
+  margin-right: 6px;
+}
+
+.quiz-answer.selected .quiz-answer-body .prompt {
+  color: var(--accent-blue);
+}
+
+/* --- Back Button --- */
+.quiz-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-top: 32px;
+  transition: color 0.2s ease;
+}
+
+.quiz-back:hover {
+  color: var(--accent-blue);
+}
+
+.quiz-back svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ==========================================================
+   RESULTS PAGE
+   ========================================================== */
+.results-page {
+  position: relative;
+  padding: 120px 24px 80px;
+  z-index: 2;
+}
+
+.results-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Results Terminal Header --- */
+.results-terminal {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--glow-md);
+  margin-bottom: 48px;
+}
+
+.results-terminal .terminal-header {
+  display: flex;
+  align-items: center;
+  height: var(--header-h);
+  padding: 0 16px;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.results-terminal .terminal-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.results-terminal .terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.results-terminal .terminal-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  flex: 1;
+  text-align: center;
+  margin-right: 52px;
+}
+
+.results-terminal-body {
+  padding: 28px 28px 28px 28px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.results-comment {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.results-tier-label {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.results-tier-label .accent { color: var(--accent-blue); }
+
+.results-score {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.results-summary {
+  color: var(--text-secondary);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.results-terminal .terminal-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--status-h);
+  padding: 0 16px;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border-default);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* --- Results Sections --- */
+.results-section {
+  margin-bottom: 48px;
+}
+
+.results-section h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-green);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.results-section p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.results-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.results-section ul li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding-left: 20px;
+  position: relative;
+}
+
+.results-section ul li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+
+/* --- Consultation Checklist --- */
+.results-section ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: consult;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.results-section ol li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  padding-left: 28px;
+  position: relative;
+  counter-increment: consult;
+}
+
+.results-section ol li::before {
+  content: counter(consult, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+/* --- Results CTA --- */
+.results-cta {
+  text-align: center;
+  padding: 48px 0 0;
+  border-top: 1px solid var(--border-default);
+}
+
+.results-cta .btn-primary {
+  font-size: 15px;
+  padding: 16px 36px;
+  margin-bottom: 16px;
+}
+
+.results-retake {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+}
+
+.results-retake:hover {
+  color: var(--accent-blue);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 768px) {
+  .assessment-hero {
+    padding: 100px 20px 60px;
+    min-height: auto;
+  }
+
+  .outcome-promises {
+    padding: 0 20px 80px;
+  }
+
+  .quiz-page {
+    padding: 80px 16px 40px;
+    align-items: flex-start;
+  }
+
+  .quiz-question h2 {
+    font-size: 18px;
+  }
+
+  .quiz-answer-body {
+    font-size: 12px;
+    padding: 12px 14px;
+  }
+
+  .results-page {
+    padding: 100px 20px 60px;
+  }
+
+  .results-terminal-body {
+    padding: 20px;
+  }
+}

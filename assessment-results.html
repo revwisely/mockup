@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Magnetiz.ai</title>
-  <meta name="description" content="Insights on building production-ready AI agents.">
-  <meta property="og:title" content="Blog — Magnetiz.ai">
-  <meta property="og:description" content="Insights on building production-ready AI agents.">
-  <meta property="og:type" content="article">
+  <title>Your AI Readiness Results | Magnetiz.ai</title>
+  <meta name="description" content="Your personalized AI readiness assessment results and tier recommendation from Magnetiz.ai.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,15 +15,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
-  <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
-  <link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
-  <!-- Custom Terminal CSS -->
-  <link rel="stylesheet" href="/css/terminal.css">
-  <link rel="stylesheet" href="/css/blog-post.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/assessment.css">
 
   <!-- Calendly -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -53,98 +50,83 @@
 </head>
 <body>
 
-  <!-- Grid Background -->
   <div class="grid-bg" aria-hidden="true"></div>
-
-  <!-- Editor Gutter -->
   <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
 
-  <!-- ============================================
-       NAVIGATION
-       ============================================ -->
+  <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-inner container">
-      <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
-
+      <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
       <ul class="nav-links">
         <li class="nav-dropdown">
-          <a href="/index.html#services" class="nav-dropdown-trigger">
+          <a href="index.html#services" class="nav-dropdown-trigger">
             AI Services <span class="chevron">&#9662;</span>
           </a>
           <div class="nav-dropdown-menu">
-            <a href="/ai-agents.html">AI Agents</a>
-            <a href="/ai-solutions.html">AI Solution Concepts</a>
-            <a href="/ai-implementation.html">AI Implementation</a>
-            <a href="/ai-audit.html">AI Audit</a>
+            <a href="ai-agents.html">AI Agents</a>
+            <a href="ai-solutions.html">AI Solution Concepts</a>
+            <a href="ai-implementation.html">AI Implementation</a>
+            <a href="ai-audit.html">AI Audit</a>
           </div>
         </li>
-        <li><a href="/content.html">Content</a></li>
+        <li><a href="content.html">Content</a></li>
       </ul>
-
-      <a href="/index.html#cta" class="nav-cta">Schedule Call</a>
-
+      <a href="#cta" class="nav-cta">Schedule Call</a>
       <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
-    <a href="/index.html#services">AI Services</a>
-    <a href="/ai-agents.html" class="mobile-sub">AI Agents</a>
-    <a href="/ai-solutions.html" class="mobile-sub">AI Solution Concepts</a>
-    <a href="/ai-implementation.html" class="mobile-sub">AI Implementation</a>
-    <a href="/ai-audit.html" class="mobile-sub">AI Audit</a>
-    <a href="/content.html">Content</a>
-    <a href="/index.html#cta">Schedule Call</a>
+    <a href="index.html#services">AI Services</a>
+    <a href="ai-agents.html" class="mobile-sub">AI Agents</a>
+    <a href="ai-solutions.html" class="mobile-sub">AI Solution Concepts</a>
+    <a href="ai-implementation.html" class="mobile-sub">AI Implementation</a>
+    <a href="ai-audit.html" class="mobile-sub">AI Audit</a>
+    <a href="content.html">Content</a>
+    <a href="#cta">Schedule Call</a>
   </div>
 
-  <!-- ============================================
-       BLOG ARTICLE (JS-rendered)
-       ============================================ -->
-  <article class="blog-article" id="blog-article">
-    <div class="post-loading">// Loading post</div>
-  </article>
+  <!-- Results -->
+  <section class="results-page">
+    <div class="results-container" id="results-container">
+      <!-- Populated by JS -->
+    </div>
+  </section>
 
-  <!-- ============================================
-       FOOTER
-       ============================================ -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
           <p>Evaluation-first frameworks. Production-ready AI agents in less than 30 days. Reliable long-term.</p>
         </div>
-
         <div>
           <h4>Services</h4>
           <ul class="footer-links">
-            <li><a href="/ai-audit.html">AI Audit</a></li>
-            <li><a href="/ai-solutions.html">AI Solution Concepts</a></li>
-            <li><a href="/ai-implementation.html">AI Implementation</a></li>
-            <li><a href="/ai-agents.html">AI Agents</a></li>
+            <li><a href="ai-audit.html">AI Audit</a></li>
+            <li><a href="ai-solutions.html">AI Solution Concepts</a></li>
+            <li><a href="ai-implementation.html">AI Implementation</a></li>
+            <li><a href="ai-agents.html">AI Agents</a></li>
           </ul>
         </div>
-
         <div>
           <h4>Resources</h4>
           <ul class="footer-links">
-            <li><a href="/content.html">Content Hub</a></li>
+            <li><a href="content.html">Content Hub</a></li>
             <li><a href="our-ai-agents.html">Our AI Agents</a></li>
           </ul>
         </div>
-
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="/ai-code-of-conduct.html">AI Code of Conduct</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="ai-code-of-conduct.html">AI Code of Conduct</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>&copy; 2026 Magnetiz.ai (Revwisely LLC) &mdash; All rights reserved. AI Design Sprint is a trademark of 33A.</p>
         <div class="footer-socials">
@@ -156,17 +138,15 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="/js/animations.js"></script>
-  <script src="/js/blog-post.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assessment-results.js"></script>
 
   <!-- Calendly popup -->
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a');
-      if (link && /Schedule\s*Call|^Contact$/i.test(link.textContent.trim())) {
+      if (link && /Schedule\s*Call|Book\s*a\s*Free\s*Consultation|^Contact$/i.test(link.textContent.trim())) {
         e.preventDefault();
         Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
       }

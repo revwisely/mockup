@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Readiness Quiz | Magnetiz.ai</title>
+  <meta name="description" content="Take the AI Readiness Assessment — 8 questions to find out how ready your revenue team is for AI agents.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/assessment.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+</head>
+<body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- Minimal Nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html#services" class="nav-dropdown-trigger">
+            AI Services <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="ai-agents.html">AI Agents</a>
+            <a href="ai-solutions.html">AI Solution Concepts</a>
+            <a href="ai-implementation.html">AI Implementation</a>
+            <a href="ai-audit.html">AI Audit</a>
+          </div>
+        </li>
+        <li><a href="content.html">Content</a></li>
+      </ul>
+      <a href="assessment.html" class="nav-cta" style="font-size:12px; padding:8px 16px;">Exit Quiz</a>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services">AI Services</a>
+    <a href="ai-agents.html" class="mobile-sub">AI Agents</a>
+    <a href="ai-solutions.html" class="mobile-sub">AI Solution Concepts</a>
+    <a href="ai-implementation.html" class="mobile-sub">AI Implementation</a>
+    <a href="ai-audit.html" class="mobile-sub">AI Audit</a>
+    <a href="content.html">Content</a>
+    <a href="assessment.html">Exit Quiz</a>
+  </div>
+
+  <!-- Quiz -->
+  <section class="quiz-page">
+    <div class="quiz-container">
+      <div class="quiz-meta" id="quiz-meta">Question 1 / 8</div>
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="quiz-progress" style="width: 12.5%"></div>
+      </div>
+
+      <div id="quiz-question-area">
+        <!-- Questions rendered by JS -->
+      </div>
+
+      <button class="quiz-back" id="quiz-back" style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </button>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script src="js/assessment-quiz.js"></script>
+</body>
+</html>
