@@ -1,5 +1,135 @@
 [
   {
+    "slug": "salesforce-counted-the-90-after-launch",
+    "title": "Salesforce Counted the 90% After Launch",
+    "date": "2026-06-24",
+    "author": "Magnetiz.ai",
+    "excerpt": "Salesforce's CPO of Agentforce says 90 percent of agent work happens after go-live. Across more than 20,000 deployments. The Agent Build Lifecycle is architected for the half most teams never budget for.",
+    "image": "assets/images/posts/salesforce-counted-the-90-after-launch-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "tiered-governance-the-architectural-answer-to-gartners-warning",
+    "title": "Tiered Governance. The Architectural Answer to Gartner's Warning.",
+    "date": "2026-06-17",
+    "author": "Magnetiz.ai",
+    "excerpt": "Gartner's new research note maps four AI agent autonomy levels. The Agent Build Lifecycle absorbs the taxonomy by parameterizing the governance phase per tier.",
+    "image": "assets/images/posts/tiered-governance-the-architectural-answer-to-gartners-warning-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "five-questions-that-separate-production-ai-partners-from-demo-shops",
+    "title": "Five Questions That Separate Production AI Partners From Demo Shops",
+    "date": "2026-06-10",
+    "author": "Magnetiz.ai",
+    "excerpt": "The buyer's diagnostic for evaluating AI implementation partners.",
+    "image": "assets/images/posts/five-questions-that-separate-production-ai-partners-from-demo-shops-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "rules-first-agents-for-the-residual",
+    "title": "Rules First. Agents for the Residual.",
+    "date": "2026-06-03",
+    "author": "Magnetiz.ai",
+    "excerpt": "The workflow audit decides what gets built before the cost telemetry measures what's running.",
+    "image": "assets/images/posts/rules-first-agents-for-the-residual-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "the-cost-crisis-is-a-telemetry-crisis",
+    "title": "The Cost Crisis Is a Telemetry Crisis",
+    "date": "2026-05-27",
+    "author": "Magnetiz.ai",
+    "excerpt": "Token cost discipline as the second contract every production AI agent earns.",
+    "image": "assets/images/posts/the-cost-crisis-is-a-telemetry-crisis-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "the-agent-build-lifecycle",
+    "title": "The Agent Build Lifecycle",
+    "date": "2026-05-20",
+    "author": "Magnetiz.ai",
+    "excerpt": "Seven phases for shipping production AI agents.",
+    "image": "assets/images/posts/the-agent-build-lifecycle-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "the-memory-wars-in-ai-agents",
+    "title": "The Memory Wars in AI Agents",
+    "date": "2026-05-13",
+    "author": "Magnetiz.ai",
+    "excerpt": "Why production agents burn compute on rediscovery, and what to do instead.",
+    "image": "assets/images/posts/the-memory-wars-in-ai-agents-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "the-5-stages-of-ai-agent-maturity-in-gtm",
+    "title": "The 5 Stages of AI Agent Maturity in GTM",
+    "date": "2026-05-06",
+    "author": "Magnetiz.ai",
+    "excerpt": "Where 195 B2B GTM teams sit on the curve, and what moves them to the next stage.",
+    "image": "assets/images/posts/the-5-stages-of-ai-agent-maturity-in-gtm-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "an-ai-agent-deleted-a-production-database-in-9-seconds",
+    "title": "An AI Agent Deleted a Production Database in 9 Seconds.",
+    "date": "2026-04-29",
+    "author": "Magnetiz.ai",
+    "excerpt": "Three layers failed at once. The fix lives where the model can't override it.",
+    "image": "assets/images/posts/an-ai-agent-deleted-a-production-database-in-9-seconds-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "salesforce-goes-headless-the-ui-is-dead",
+    "title": "Salesforce Goes Headless. The UI Is Dead.",
+    "date": "2026-04-22",
+    "author": "Magnetiz.ai",
+    "excerpt": "Salesforce announced Headless 360 at TDX 2026. Every capability in the platform is now exposed as an API, an MCP tool, or a CLI command. For operations leaders, this changes how your team works, what you're accountable for, and where the risk lives.",
+    "image": "assets/images/posts/salesforce-goes-headless-the-ui-is-dead-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "ai-readiness-assessment-most-ops-teams-would-fail",
+    "title": "The AI Readiness Assessment Most Ops Teams Would Fail",
+    "date": "2026-04-15",
+    "author": "Magnetiz.ai",
+    "excerpt": "74% of leaders think they're AI-ready. Only 22% have proof. Here's where the readiness gap hides — and how to find yours.",
+    "image": "assets/images/posts/ai-readiness-assessment-most-ops-teams-would-fail-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "6-ways-attackers-are-targeting-your-ai-agents",
+    "title": "The 6 Ways Attackers Are Targeting Your AI Agents",
+    "date": "2026-04-08",
+    "author": "Magnetiz.ai",
+    "excerpt": "Google DeepMind mapped every trap. Here's what ops teams deploying agents need to know.",
+    "image": "assets/images/posts/6-ways-attackers-are-targeting-your-ai-agents-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "your-ai-is-making-revenue-decisions-nobody-approved",
+    "title": "Your AI Is Making Revenue Decisions Nobody Approved",
+    "date": "2026-03-31",
+    "author": "Magnetiz.ai",
+    "excerpt": "Most RevOps teams grant their AI agents more autonomy than they'd give a new hire. No approval matrix. No audit trail. No AI governance framework. Here's what that costs when it goes wrong.",
+    "image": "assets/images/posts/your-ai-is-making-revenue-decisions-nobody-approved-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "your-next-ops-hire-isnt-an-ops-person",
     "title": "Your Next Ops Hire Isn't an Ops Person",
     "date": "2026-03-25",
