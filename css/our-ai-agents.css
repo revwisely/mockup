@@ -102,12 +102,14 @@
 .team-creative .agent-number { background: var(--accent-purple); }
 .team-quality .agent-number { background: var(--accent-amber); color: var(--bg-deep); }
 .team-analytics .agent-number { background: var(--accent-cyan); color: var(--bg-deep); }
+.team-gtm .agent-number { background: var(--accent-coral); }
 
 .team-strategy .agent-card:hover { border-color: rgba(74, 158, 206, 0.4); }
 .team-content .agent-card:hover { border-color: rgba(152, 195, 121, 0.4); }
 .team-creative .agent-card:hover { border-color: rgba(198, 120, 221, 0.4); }
 .team-quality .agent-card:hover { border-color: rgba(229, 192, 123, 0.4); }
 .team-analytics .agent-card:hover { border-color: rgba(86, 182, 194, 0.4); }
+.team-gtm .agent-card:hover { border-color: rgba(224, 108, 117, 0.4); }
 
 /* --- Team label colors --- */
 .team-strategy .section-label { color: var(--accent-blue) !important; }
@@ -115,6 +117,7 @@
 .team-creative .section-label { color: var(--accent-purple) !important; }
 .team-quality .section-label { color: var(--accent-amber) !important; }
 .team-analytics .section-label { color: var(--accent-cyan) !important; }
+.team-gtm .section-label { color: var(--accent-coral) !important; }
 
 /* --- Agent count badge in section header --- */
 .agent-count {

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter — AI Evaluation Insights | Magnetiz.ai</title>
+  <meta name="description" content="Weekly insights on building production-ready AI agents. Subscribe to the Magnetiz.ai newsletter — no spam, just signal.">
+  <meta property="og:title" content="Newsletter — AI Evaluation Insights | Magnetiz.ai">
+  <meta property="og:description" content="Weekly insights on building production-ready AI agents. Subscribe to the Magnetiz.ai newsletter — no spam, just signal.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Editor Gutter -->
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html#services" class="nav-dropdown-trigger">
+            AI Services <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="ai-agents.html">AI Agents</a>
+            <a href="ai-solutions.html">AI Solution Concepts</a>
+            <a href="ai-implementation.html">AI Implementation</a>
+            <a href="ai-audit.html">AI Audit</a>
+          </div>
+        </li>
+        <li><a href="content.html">Content</a></li>
+      </ul>
+
+      <a href="#cta" class="nav-cta">Schedule Call</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services">AI Services</a>
+    <a href="ai-agents.html" class="mobile-sub">AI Agents</a>
+    <a href="ai-solutions.html" class="mobile-sub">AI Solution Concepts</a>
+    <a href="ai-implementation.html" class="mobile-sub">AI Implementation</a>
+    <a href="ai-audit.html" class="mobile-sub">AI Audit</a>
+    <a href="content.html">Content</a>
+    <a href="#cta">Schedule Call</a>
+  </div>
+
+  <!-- ============================================
+       NEWSLETTER SIGNUP
+       ============================================ -->
+  <section class="newsletter" id="newsletter" style="min-height:70vh;display:flex;align-items:center;">
+    <div class="container">
+      <div class="newsletter-inner reveal" style="max-width:600px;margin:0 auto;">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">subscribe &mdash; magnetiz</span>
+          </div>
+          <div class="newsletter-body">
+            <h1 class="newsletter-title" style="font-size:24px;">AI Evaluation Insights.</h1>
+            <p class="newsletter-desc" style="margin-bottom:8px;">Weekly insights on building production-ready AI agents. No spam, just signal.</p>
+            <p class="newsletter-desc" style="font-size:12px;color:var(--text-muted);margin-bottom:20px;">Join revenue and ops leaders who get actionable AI intelligence every week.</p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" placeholder="Email Address" class="newsletter-input" id="newsletter-email" required>
+              <button type="submit" class="btn-primary" id="newsletter-btn">Subscribe</button>
+            </form>
+            <div id="newsletter-status" style="margin-top:12px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       CTA SECTION
+       ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="section-label">// Revenue Systems That Scale</div>
+        <h2 class="section-title" style="margin-bottom:16px">Want to talk about AI agents<br>for your <span class="accent">revenue team</span>?</h2>
+      </div>
+
+      <p class="reveal reveal-delay-1" style="font-size:17px;color:var(--text-secondary);max-width:600px;margin:0 auto 32px;line-height:1.7;">
+        Schedule a free consultation to see where evaluation-first AI fits your business.
+      </p>
+
+      <div class="reveal reveal-delay-2">
+        <a href="#" class="btn-primary" style="font-size:16px; padding:16px 36px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>Evaluation-first frameworks. Production-ready AI agents in less than 30 days. Reliable long-term.</p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="ai-audit.html">AI Audit</a></li>
+            <li><a href="ai-solutions.html">AI Solution Concepts</a></li>
+            <li><a href="ai-implementation.html">AI Implementation</a></li>
+            <li><a href="ai-agents.html">AI Agents</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="content.html">Content Hub</a></li>
+            <li><a href="our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="assessment.html">AI Readiness Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="talent.html">Talent</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC) &mdash; All rights reserved. AI Design Sprint is a trademark of 33A.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Newsletter subscribe handler -->
+  <script>
+    (function() {
+      var form = document.getElementById('newsletter-form');
+      var input = document.getElementById('newsletter-email');
+      var btn = document.getElementById('newsletter-btn');
+      var status = document.getElementById('newsletter-status');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email) return;
+
+        btn.disabled = true;
+        btn.textContent = 'Subscribing...';
+        status.innerHTML = '';
+
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        })
+        .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
+        .then(function(result) {
+          if (result.ok) {
+            form.innerHTML = '<p class="newsletter-success"><span class="newsletter-success-icon">&#10003;</span> You\'re in. Look for the newsletter every Thursday.</p>';
+          } else {
+            status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">' + (result.data.error || 'Something went wrong. Please try again.') + '</p>';
+            btn.disabled = false;
+            btn.textContent = 'Subscribe';
+          }
+        })
+        .catch(function() {
+          status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">Connection error. Please try again.</p>';
+          btn.disabled = false;
+          btn.textContent = 'Subscribe';
+        });
+      });
+    })();
+  </script>
+
+  <!-- Calendly popup -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && /Schedule\s*Call|Book\s*a\s*Free\s*Consultation|^Contact$/i.test(link.textContent.trim())) {
+        e.preventDefault();
+        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+      }
+    });
+  </script>
+</body>
+</html>

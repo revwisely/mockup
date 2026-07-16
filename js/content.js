@@ -57,7 +57,7 @@
       return '<li class="featured-item">' +
         '<span class="featured-item-icon">&rsaquo;</span>' +
         '<div class="featured-item-content">' +
-          '<a href="blog-post.html?slug=' + p.slug + '" class="featured-item-title">' + p.title + '</a>' +
+          '<a href="/blog/' + p.slug + '" class="featured-item-title">' + p.title + '</a>' +
           '<span class="featured-item-date">' + formatDate(p.date) + '</span>' +
         '</div>' +
       '</li>';
@@ -71,10 +71,10 @@
             '<span class="latest-post-date">' + formatDate(latest.date) + '</span>' +
             '<span>' + latest.author + '</span>' +
           '</div>' +
-          '<h2><a href="blog-post.html?slug=' + latest.slug + '">' + latest.title + '</a></h2>' +
+          '<h2><a href="/blog/' + latest.slug + '">' + latest.title + '</a></h2>' +
           '<p class="latest-post-excerpt">' + latest.excerpt + '</p>' +
           '<div class="latest-post-tags">' + renderTags(latest.tags, 'tag-badge') + '</div>' +
-          '<a href="blog-post.html?slug=' + latest.slug + '" class="read-link">Read</a>' +
+          '<a href="/blog/' + latest.slug + '" class="read-link">Read</a>' +
         '</div>' +
       '</div>' +
       '<div class="featured-sidebar reveal reveal-delay-1">' +
@@ -123,7 +123,7 @@
     gridContainer.innerHTML = pagePosts.map(function (post, i) {
       var delay = Math.min(Math.floor(i / 3) + 1, 4);
       return '<article class="blog-card reveal reveal-delay-' + delay + '">' +
-        '<a href="blog-post.html?slug=' + post.slug + '">' +
+        '<a href="/blog/' + post.slug + '">' +
           '<img src="' + post.image + '" alt="' + post.title + '" class="blog-card-image" loading="lazy">' +
         '</a>' +
         '<div class="blog-card-body">' +
@@ -131,7 +131,7 @@
             '<span class="blog-card-date">' + formatDate(post.date) + '</span>' +
             '<span>' + post.author + '</span>' +
           '</div>' +
-          '<h3><a href="blog-post.html?slug=' + post.slug + '">' + post.title + '</a></h3>' +
+          '<h3><a href="/blog/' + post.slug + '">' + post.title + '</a></h3>' +
           '<p class="blog-card-excerpt">' + post.excerpt + '</p>' +
           '<div class="blog-card-tags">' + renderTags(post.tags, 'tag-badge') + '</div>' +
         '</div>' +

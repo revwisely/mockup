@@ -1,5 +1,25 @@
 [
   {
+    "slug": "when-the-meeting-becomes-the-workflow",
+    "title": "When the Meeting Becomes the Workflow",
+    "date": "2026-07-15",
+    "author": "Magnetiz.ai",
+    "excerpt": "How Maestro PM turns a conversation into executed work, and what stays with people.",
+    "image": "assets/images/posts/when-the-meeting-becomes-the-workflow-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
+    "slug": "why-ai-consulting-should-charge-for-outcomes-not-hours",
+    "title": "Why AI Consulting Should Charge for Outcomes, Not Hours",
+    "date": "2026-07-08",
+    "author": "Magnetiz.ai",
+    "excerpt": "The commercial model for AI-native work. You pay on the outcomes we ship, not the hours behind them.",
+    "image": "assets/images/posts/why-ai-consulting-should-charge-for-outcomes-not-hours-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "how-ai-keeps-your-buying-signals-fresh",
     "title": "How AI Keeps Your Buying Signals Fresh",
     "date": "2026-07-01",

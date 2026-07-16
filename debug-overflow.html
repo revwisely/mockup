@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><title>Overflow Debug</title></head>
+<body style="margin:0;background:#111;color:#0f0;font-family:monospace;font-size:13px;padding:20px;">
+<h2 style="color:#fff;">Mobile Overflow Debug (430px viewport)</h2>
+<p>Loading index.html in 430px iframe...</p>
+<iframe id="frame" src="/index.html" style="width:430px;height:600px;border:2px solid red;display:block;margin:20px 0;"></iframe>
+<pre id="results" style="background:#222;padding:15px;border-radius:8px;"></pre>
+<script>
+document.getElementById('frame').addEventListener('load', function() {
+  const doc = this.contentDocument;
+  const vw = 430;
+  const results = [];
+
+  doc.querySelectorAll('*').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.right > vw + 2) {
+      const cs = doc.defaultView.getComputedStyle(el);
+      results.push({
+        tag: el.tagName.toLowerCase(),
+        cls: (el.className || '').toString().substring(0, 50),
+        id: el.id || '',
+        right: Math.round(rect.right),
+        width: Math.round(rect.width),
+        overflow: Math.round(rect.right - vw),
+        display: cs.display,
+        position: cs.position,
+        whiteSpace: cs.whiteSpace
+      });
+    }
+  });
+
+  results.sort((a,b) => b.overflow - a.overflow);
+
+  const pre = document.getElementById('results');
+  pre.textContent = `Found ${results.length} overflowing elements:\n\n`;
+  results.slice(0, 25).forEach((r, i) => {
+    pre.textContent += `#${i+1} +${r.overflow}px overflow\n`;
+    pre.textContent += `   <${r.tag}> class="${r.cls}" id="${r.id}"\n`;
+    pre.textContent += `   width=${r.width}px right=${r.right}px\n`;
+    pre.textContent += `   display=${r.display} position=${r.position} white-space=${r.whiteSpace}\n\n`;
+  });
+});
+</script>
+</body>
+</html>

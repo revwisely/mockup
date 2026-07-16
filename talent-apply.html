@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultant Profile &mdash; Apply to Join Magnetiz.ai</title>
+  <meta name="description" content="Complete your consultant profile to join the Magnetiz talent community. We match senior practitioners with high-impact, project-based revenue work.">
+  <meta property="og:title" content="Consultant Profile &mdash; Apply to Join Magnetiz.ai">
+  <meta property="og:description" content="Complete your consultant profile to join the Magnetiz talent community.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/talent-apply.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+</head>
+<body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html#services" class="nav-dropdown-trigger">
+            AI Services <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="ai-agents.html">AI Agents</a>
+            <a href="ai-solutions.html">AI Solution Concepts</a>
+            <a href="ai-implementation.html">AI Implementation</a>
+            <a href="ai-audit.html">AI Audit</a>
+          </div>
+        </li>
+        <li><a href="content.html">Content</a></li>
+      </ul>
+      <a href="talent.html" class="nav-cta" style="font-size:12px; padding:8px 16px;">Back to Talent</a>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services">AI Services</a>
+    <a href="ai-agents.html" class="mobile-sub">AI Agents</a>
+    <a href="ai-solutions.html" class="mobile-sub">AI Solution Concepts</a>
+    <a href="ai-implementation.html" class="mobile-sub">AI Implementation</a>
+    <a href="ai-audit.html" class="mobile-sub">AI Audit</a>
+    <a href="content.html">Content</a>
+    <a href="talent.html">Back to Talent</a>
+  </div>
+
+  <!-- Application Form -->
+  <section class="apply-page">
+    <div class="apply-container">
+
+      <div class="apply-header">
+        <div class="section-label">// Consultant Profile</div>
+        <h1>Tell us about <span class="accent">yourself</span></h1>
+        <p>Complete your profile so we can match you with the right opportunities. Fields marked with <span style="color:var(--accent-coral)">*</span> are required.</p>
+      </div>
+
+      <form id="consultant-form" novalidate>
+
+        <!-- ========== PERSONAL INFORMATION ========== -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <div class="form-section-dots">
+              <span class="form-section-dot red"></span>
+              <span class="form-section-dot yellow"></span>
+              <span class="form-section-dot green"></span>
+            </div>
+            <span class="form-section-title">01_personal_info.py</span>
+          </div>
+          <div class="form-section-body">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First name <span class="required">*</span></label>
+                <input type="text" id="first-name" name="first_name" class="form-input" placeholder="Jane" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last name <span class="required">*</span></label>
+                <input type="text" id="last-name" name="last_name" class="form-input" placeholder="Doe" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="jane@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="location">Location <span class="required">*</span></label>
+                <input type="text" id="location" name="location" class="form-input" placeholder="City, State / Country" required>
+              </div>
+              <div class="form-group">
+                <label for="linkedin">LinkedIn URL</label>
+                <input type="url" id="linkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/...">
+              </div>
+            </div>
+
+          </div>
+          <div class="form-status">
+            <span>SECTION: <span style="color:var(--accent-blue)">personal_info</span></span>
+            <span>6 fields</span>
+          </div>
+        </div>
+
+        <!-- ========== WORK HISTORY & REQUIREMENTS ========== -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <div class="form-section-dots">
+              <span class="form-section-dot red"></span>
+              <span class="form-section-dot yellow"></span>
+              <span class="form-section-dot green"></span>
+            </div>
+            <span class="form-section-title">02_work_history.py</span>
+          </div>
+          <div class="form-section-body">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="current-role">Current role / title <span class="required">*</span></label>
+                <input type="text" id="current-role" name="current_role" class="form-input" placeholder="e.g. Sr. RevOps Consultant" required>
+              </div>
+              <div class="form-group">
+                <label for="years-experience">Years of experience <span class="required">*</span></label>
+                <select id="years-experience" name="years_experience" class="form-select" required>
+                  <option value="" disabled selected>Select...</option>
+                  <option value="3-5">3&ndash;5 years</option>
+                  <option value="5-10">5&ndash;10 years</option>
+                  <option value="10-15">10&ndash;15 years</option>
+                  <option value="15+">15+ years</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="profile-type">Profile type <span class="required">*</span></label>
+                <select id="profile-type" name="profile_type" class="form-select" required>
+                  <option value="" disabled selected>Select...</option>
+                  <option value="strategy_process">Senior Strategy &amp; Process Consultant</option>
+                  <option value="business_data_analyst">Business &amp; Data Analyst</option>
+                  <option value="gtm_engineer">Full-Stack GTM Engineer</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="availability">Availability <span class="required">*</span></label>
+                <select id="availability" name="availability" class="form-select" required>
+                  <option value="" disabled selected>Select...</option>
+                  <option value="immediately">Immediately</option>
+                  <option value="2_weeks">Within 2 weeks</option>
+                  <option value="1_month">Within 1 month</option>
+                  <option value="flexible">Flexible / exploring</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="engagement-type">Preferred engagement</label>
+                <select id="engagement-type" name="engagement_type" class="form-select">
+                  <option value="" disabled selected>Select...</option>
+                  <option value="full_time_contract">Full-time contract</option>
+                  <option value="part_time_contract">Part-time contract</option>
+                  <option value="project_based">Project-based</option>
+                  <option value="open">Open to any</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="rate-range">Rate expectation (USD/hr)</label>
+                <select id="rate-range" name="rate_range" class="form-select">
+                  <option value="" disabled selected>Select...</option>
+                  <option value="100-150">$100&ndash;$150/hr</option>
+                  <option value="150-200">$150&ndash;$200/hr</option>
+                  <option value="200-250">$200&ndash;$250/hr</option>
+                  <option value="250+">$250+/hr</option>
+                  <option value="discuss">Prefer to discuss</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row full">
+              <div class="form-group">
+                <label for="work-summary">Brief summary of your most relevant work <span class="required">*</span></label>
+                <textarea id="work-summary" name="work_summary" class="form-textarea" placeholder="What kind of problems have you solved? What environments have you worked in? What are you known for?" required></textarea>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-status">
+            <span>SECTION: <span style="color:var(--accent-blue)">work_history</span></span>
+            <span>7 fields</span>
+          </div>
+        </div>
+
+        <!-- ========== EXPERTISE ========== -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <div class="form-section-dots">
+              <span class="form-section-dot red"></span>
+              <span class="form-section-dot yellow"></span>
+              <span class="form-section-dot green"></span>
+            </div>
+            <span class="form-section-title">03_expertise.py</span>
+          </div>
+          <div class="form-section-body">
+
+            <div class="form-group" style="margin-bottom:16px">
+              <label>Areas of expertise <span class="required">*</span></label>
+              <p style="font-size:12px; color:var(--text-muted); margin-bottom:12px;">Select all that apply.</p>
+              <div class="checkbox-grid" id="expertise-grid">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="revenue_operations">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Revenue Operations</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="sales_operations">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Sales Operations</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="marketing_operations">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Marketing Operations</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="gtm_strategy">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">GTM Strategy</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="crm_administration">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">CRM Administration</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="data_analytics">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Data &amp; Analytics</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="workflow_automation">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Workflow Automation</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="ai_ml">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">AI / Machine Learning</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="systems_integration">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Systems Integration</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="process_design">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Process Design</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="change_management">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Change Management</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="expertise" value="data_engineering">
+                  <span class="checkbox-marker">&#10003;</span>
+                  <span class="checkbox-label">Data Engineering</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row full">
+              <div class="form-group">
+                <label for="tools">Tools &amp; platforms you know well</label>
+                <input type="text" id="tools" name="tools" class="form-input" placeholder="e.g. Salesforce, HubSpot, n8n, dbt, Snowflake, Python...">
+              </div>
+            </div>
+
+            <div class="form-row full">
+              <div class="form-group">
+                <label for="industries">Industries you&rsquo;ve worked in</label>
+                <input type="text" id="industries" name="industries" class="form-input" placeholder="e.g. B2B SaaS, FinTech, Healthcare, Professional Services...">
+              </div>
+            </div>
+
+          </div>
+          <div class="form-status">
+            <span>SECTION: <span style="color:var(--accent-blue)">expertise</span></span>
+            <span>14 fields</span>
+          </div>
+        </div>
+
+        <!-- ========== RESUME UPLOAD ========== -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <div class="form-section-dots">
+              <span class="form-section-dot red"></span>
+              <span class="form-section-dot yellow"></span>
+              <span class="form-section-dot green"></span>
+            </div>
+            <span class="form-section-title">04_resume.py</span>
+          </div>
+          <div class="form-section-body">
+
+            <div class="form-group">
+              <label>Resume / CV</label>
+              <div class="file-upload" id="file-upload">
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                <div class="file-upload-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <div class="file-upload-text" id="file-upload-text">Drag and drop or click to upload</div>
+                <div class="file-upload-hint">PDF, DOC, or DOCX &mdash; max 10MB</div>
+              </div>
+            </div>
+
+            <div class="form-row full" style="margin-top:16px">
+              <div class="form-group">
+                <label for="portfolio">Portfolio or personal site URL</label>
+                <input type="url" id="portfolio" name="portfolio" class="form-input" placeholder="https://...">
+              </div>
+            </div>
+
+            <div class="form-row full">
+              <div class="form-group">
+                <label for="anything-else">Anything else we should know?</label>
+                <textarea id="anything-else" name="anything_else" class="form-textarea" placeholder="Certifications, side projects, what you're looking for next..."></textarea>
+              </div>
+            </div>
+
+          </div>
+          <div class="form-status">
+            <span>SECTION: <span style="color:var(--accent-blue)">resume</span></span>
+            <span>3 fields</span>
+          </div>
+        </div>
+
+        <!-- ========== SUBMIT ========== -->
+        <div class="form-submit">
+          <button type="submit" class="btn-primary" id="submit-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Submit consultant profile
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Success state (hidden by default) -->
+      <div class="form-success" id="form-success" style="display:none">
+        <div class="form-success-icon">&#10003;</div>
+        <h2>Profile submitted</h2>
+        <p>Thanks for completing your consultant profile. Our team will review your information and reach out if there&rsquo;s a strong match with an upcoming engagement.</p>
+        <a href="talent.html" class="btn-ghost">Back to Talent</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>Evaluation-first frameworks. Production-ready AI agents in less than 30 days. Reliable long-term.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="ai-audit.html">AI Audit</a></li>
+            <li><a href="ai-solutions.html">AI Solution Concepts</a></li>
+            <li><a href="ai-implementation.html">AI Implementation</a></li>
+            <li><a href="ai-agents.html">AI Agents</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="content.html">Content Hub</a></li>
+            <li><a href="our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="assessment.html">AI Readiness Assessment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="talent.html">Talent</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC) &mdash; All rights reserved. AI Design Sprint is a trademark of 33A.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/talent-apply.js"></script>
+</body>
+</html>

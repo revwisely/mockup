@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Magnetiz.ai — AI Agents That Work in Production</title>
-  <meta name="description" content="Evaluation-first frameworks. Production-ready in less than 30 days. Reliable long-term. If we can't show a clear path to ROI, you don't pay.">
+  <meta name="description" content="Evaluation-first frameworks. Production-ready in less than 30 days. Reliable long-term. Our Outcome Pricing™ model means you pay for results, not hours worked.">
   <meta property="og:title" content="Magnetiz.ai — AI Agents That Work in Production">
   <meta property="og:description" content="Evaluation-first frameworks. Production-ready in less than 30 days. Reliable long-term.">
   <meta property="og:type" content="website">
@@ -115,7 +115,7 @@
           Evaluation-first frameworks. Production-ready in less than 30 days.
         </p>
         <p class="hero-guarantee">
-          If we can't show a clear path to ROI — you don't pay.
+          Our <a href="outcome-pricing.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(152,195,121,0.5);">Outcome Pricing&trade;</a> model means you pay for results, not hours worked.
         </p>
         <div class="hero-ctas">
           <a href="#cta" class="btn-primary">
@@ -364,7 +364,6 @@
           </div>
           <p class="ticker-quote">"The evaluation framework approach is critical — we were stuck for 6 months. Magnetiz helped us deploy our first production agent in 7 weeks."</p>
           <div class="ticker-author">
-            <span class="ticker-name">Sarah Chen</span>
             <span class="ticker-role">VP of Operations</span>
           </div>
         </div>
@@ -375,7 +374,6 @@
           </div>
           <p class="ticker-quote">"The AI Design Sprint&trade; is truly a powerful tool to ideate, prototype, and align with both business and IT on new AI concepts."</p>
           <div class="ticker-author">
-            <span class="ticker-name">Jeroen den Uijl</span>
             <span class="ticker-role">Design &amp; Innovation Strategist, Avanade</span>
           </div>
         </div>
@@ -386,7 +384,6 @@
           </div>
           <p class="ticker-quote">"Before working with Magnetiz, our agents broke in production. The evaluation-first method caught edge cases we never would have found."</p>
           <div class="ticker-author">
-            <span class="ticker-name">Marcus Johnson</span>
             <span class="ticker-role">Head of Process Innovation</span>
           </div>
         </div>
@@ -397,7 +394,6 @@
           </div>
           <p class="ticker-quote">"The weekly eval monitoring and trace records catch drift before anyone even notices issues."</p>
           <div class="ticker-author">
-            <span class="ticker-name">Priya Patel</span>
             <span class="ticker-role">Director of Operations Technology</span>
           </div>
         </div>
@@ -409,7 +405,6 @@
           </div>
           <p class="ticker-quote">"The evaluation framework approach is critical — we were stuck for 6 months. Magnetiz helped us deploy our first production agent in 7 weeks."</p>
           <div class="ticker-author">
-            <span class="ticker-name">Sarah Chen</span>
             <span class="ticker-role">VP of Operations</span>
           </div>
         </div>
@@ -420,7 +415,6 @@
           </div>
           <p class="ticker-quote">"The AI Design Sprint&trade; is truly a powerful tool to ideate, prototype, and align with both business and IT on new AI concepts."</p>
           <div class="ticker-author">
-            <span class="ticker-name">Jeroen den Uijl</span>
             <span class="ticker-role">Design &amp; Innovation Strategist, Avanade</span>
           </div>
         </div>
@@ -431,7 +425,6 @@
           </div>
           <p class="ticker-quote">"Before working with Magnetiz, our agents broke in production. The evaluation-first method caught edge cases we never would have found."</p>
           <div class="ticker-author">
-            <span class="ticker-name">Marcus Johnson</span>
             <span class="ticker-role">Head of Process Innovation</span>
           </div>
         </div>
@@ -442,7 +435,6 @@
           </div>
           <p class="ticker-quote">"The weekly eval monitoring and trace records catch drift before anyone even notices issues."</p>
           <div class="ticker-author">
-            <span class="ticker-name">Priya Patel</span>
             <span class="ticker-role">Director of Operations Technology</span>
           </div>
         </div>
@@ -516,10 +508,11 @@
           <div class="newsletter-body">
             <h3 class="newsletter-title">AI Evaluation Insights.</h3>
             <p class="newsletter-desc">Weekly insights on building production-ready AI agents.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault();">
-              <input type="email" placeholder="Email Address" class="newsletter-input" required>
-              <button type="submit" class="btn-primary">Subscribe</button>
+            <form class="newsletter-form" id="homepage-newsletter-form">
+              <input type="email" placeholder="Email Address" class="newsletter-input" id="homepage-newsletter-email" required>
+              <button type="submit" class="btn-primary" id="homepage-newsletter-btn">Subscribe</button>
             </form>
+            <div id="homepage-newsletter-status" style="margin-top:12px;"></div>
           </div>
         </div>
       </div>
@@ -564,7 +557,7 @@
       </div>
 
       <p class="cta-text reveal reveal-delay-2">
-        If we can't show a clear path to ROI — you don't pay.<br>
+        Our Outcome Pricing&trade; model means you pay for results, not hours worked.<br>
         Schedule a call to see where evaluation-first AI fits your business.
       </p>
 
@@ -616,12 +609,15 @@
           <ul class="footer-links">
             <li><a href="content.html">Content Hub</a></li>
             <li><a href="our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="assessment.html">AI Readiness Assessment</a></li>
           </ul>
         </div>
 
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
+            <li><a href="outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="talent.html">Talent</a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li><a href="ai-code-of-conduct.html">AI Code of Conduct</a></li>
           </ul>
@@ -658,6 +654,48 @@
       backdrop.addEventListener('click', closeModal);
       close.addEventListener('click', closeModal);
       document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+    })();
+  </script>
+
+  <!-- Homepage newsletter subscribe handler -->
+  <script>
+    (function() {
+      var form = document.getElementById('homepage-newsletter-form');
+      if (!form) return;
+      var input = document.getElementById('homepage-newsletter-email');
+      var btn = document.getElementById('homepage-newsletter-btn');
+      var status = document.getElementById('homepage-newsletter-status');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email) return;
+
+        btn.disabled = true;
+        btn.textContent = 'Subscribing...';
+        status.innerHTML = '';
+
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        })
+        .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
+        .then(function(result) {
+          if (result.ok) {
+            form.innerHTML = '<p class="newsletter-success"><span class="newsletter-success-icon">&#10003;</span> You\'re in. Look for the newsletter every Thursday.</p>';
+          } else {
+            status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">' + (result.data.error || 'Something went wrong.') + '</p>';
+            btn.disabled = false;
+            btn.textContent = 'Subscribe';
+          }
+        })
+        .catch(function() {
+          status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">Connection error. Please try again.</p>';
+          btn.disabled = false;
+          btn.textContent = 'Subscribe';
+        });
+      });
     })();
   </script>
 

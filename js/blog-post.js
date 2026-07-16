@@ -31,6 +31,15 @@
     }).join('');
   }
 
+  // Posts store image paths relative (e.g. "assets/images/posts/x.jpeg").
+  // On a clean /blog/:slug URL those would resolve to /blog/assets/... and 404,
+  // so normalize to a root-absolute path. Leave full URLs untouched.
+  function toAbsolute(path) {
+    if (!path) return path;
+    if (/^https?:\/\//.test(path) || path.charAt(0) === '/') return path;
+    return '/' + path;
+  }
+
   function renderPost(post) {
     // Update page title and meta
     document.title = post.title + ' — Magnetiz.ai';
@@ -53,7 +62,7 @@
             '<span class="post-meta-date">' + formatDate(post.date) + '</span>' +
           '</div>' +
         '</div>' +
-        '<img src="' + post.image + '" alt="' + post.title + '" class="post-featured-image" loading="lazy">' +
+        '<img src="' + toAbsolute(post.image) + '" alt="' + post.title + '" class="post-featured-image" loading="lazy">' +
         '<div class="post-body">' + post.content + '</div>' +
         '<div class="post-footer">' +
           '<a href="/content.html" class="post-footer-back">Back to Content Hub</a>' +

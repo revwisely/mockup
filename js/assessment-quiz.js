@@ -11,9 +11,9 @@
       key: 'department',
       text: 'What department do you work in?',
       answers: [
-        { label: 'Sales', points: 1, param: 'sales' },
+        { label: 'Rev Ops', points: 3, param: 'rev_ops' },
         { label: 'Marketing', points: 2, param: 'marketing' },
-        { label: 'Rev Ops', points: 3, param: 'rev_ops' }
+        { label: 'Sales', points: 1, param: 'sales' }
       ]
     },
     {

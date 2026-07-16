@@ -1,0 +1,382 @@
+/* ==========================================================
+   TALENT APPLICATION — Consultant Profile Form
+   ========================================================== */
+
+/* --- Page Layout --- */
+.apply-page {
+  position: relative;
+  padding: 120px 24px 80px;
+  z-index: 2;
+}
+
+.apply-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.apply-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.apply-header h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.apply-header h1 .accent { color: var(--accent-blue); }
+
+.apply-header p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* --- Form Sections (Terminal-themed) --- */
+.form-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 24px;
+  transition: box-shadow 0.35s ease;
+}
+
+.form-section:hover {
+  box-shadow: var(--glow-sm);
+}
+
+.form-section-header {
+  display: flex;
+  align-items: center;
+  height: var(--header-h);
+  padding: 0 16px;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.form-section-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.form-section-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.form-section-dot.red { background: #FF5F56; }
+.form-section-dot.yellow { background: #FFBD2E; }
+.form-section-dot.green { background: #27C93F; }
+
+.form-section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  flex: 1;
+  text-align: center;
+  margin-right: 52px;
+}
+
+.form-section-body {
+  padding: 28px 24px;
+}
+
+/* --- Form Fields --- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-row.full {
+  grid-template-columns: 1fr;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+}
+
+.form-group label .required {
+  color: var(--accent-coral);
+  margin-left: 2px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 12px 14px;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(74, 158, 206, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23484F58' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.form-select option {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* --- Checkbox Group --- */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-item:hover {
+  border-color: var(--border-accent);
+}
+
+.checkbox-item.checked {
+  border-color: var(--accent-blue);
+  background: rgba(74, 158, 206, 0.06);
+}
+
+.checkbox-item input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-marker {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-default);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  color: transparent;
+  font-size: 12px;
+}
+
+.checkbox-item.checked .checkbox-marker {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #fff;
+}
+
+.checkbox-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.checkbox-item.checked .checkbox-label {
+  color: var(--text-primary);
+}
+
+/* --- File Upload --- */
+.file-upload {
+  position: relative;
+  padding: 32px 24px;
+  background: var(--bg-deep);
+  border: 2px dashed var(--border-default);
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.file-upload:hover {
+  border-color: var(--accent-blue);
+  background: rgba(74, 158, 206, 0.04);
+}
+
+.file-upload.has-file {
+  border-color: var(--accent-green);
+  border-style: solid;
+  background: rgba(152, 195, 121, 0.06);
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-icon {
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.file-upload.has-file .file-upload-icon {
+  color: var(--accent-green);
+}
+
+.file-upload-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.file-upload.has-file .file-upload-text {
+  color: var(--accent-green);
+}
+
+.file-upload-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* --- Submit Button --- */
+.form-submit {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.form-submit .btn-primary {
+  font-size: 15px;
+  padding: 16px 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+.form-submit .btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* --- Status Bar --- */
+.form-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--status-h);
+  padding: 0 16px;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border-default);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* --- Success State --- */
+.form-success {
+  text-align: center;
+  padding: 60px 24px;
+  animation: fadeSlideIn 0.5s ease;
+}
+
+.form-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(152, 195, 121, 0.12);
+  color: var(--accent-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.form-success h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.form-success p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 768px) {
+  .apply-page { padding: 100px 16px 60px; }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section-body {
+    padding: 20px 16px;
+  }
+}
