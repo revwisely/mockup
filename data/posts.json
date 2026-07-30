@@ -1,5 +1,15 @@
 [
   {
+    "slug": "human-in-the-loop-ai-workflow",
+    "title": "Where Does a Human Belong in an AI Workflow That Runs Itself?",
+    "date": "2026-07-30",
+    "author": "Magnetiz.ai",
+    "excerpt": "Autonomous AI agents drift into trouble when nobody governs what they may do alone. Here is where the human belongs, and the tier boundary that keeps a self-running workflow safe.",
+    "image": "assets/images/posts/human-in-the-loop-ai-workflow-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "what-gartners-234-billion-warning-means-for-your-gtm-stack",
     "title": "What Gartner's $234 Billion Warning Means for Your GTM Stack",
     "date": "2026-07-22",

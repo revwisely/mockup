@@ -40,6 +40,18 @@
     return '/' + path;
   }
 
+  // Posts may carry an optional `heroVideo` (new video-in-post style). When present,
+  // render a click-to-play <video> with the hero image as poster; otherwise the static image.
+  function renderHero(post) {
+    if (post.heroVideo) {
+      return '<video class="post-featured-video" controls preload="metadata" playsinline ' +
+               'poster="' + toAbsolute(post.image) + '">' +
+               '<source src="' + toAbsolute(post.heroVideo) + '" type="video/mp4">' +
+             '</video>';
+    }
+    return '<img src="' + toAbsolute(post.image) + '" alt="' + post.title + '" class="post-featured-image" loading="lazy">';
+  }
+
   function renderPost(post) {
     // Update page title and meta
     document.title = post.title + ' — Magnetiz.ai';
@@ -62,7 +74,7 @@
             '<span class="post-meta-date">' + formatDate(post.date) + '</span>' +
           '</div>' +
         '</div>' +
-        '<img src="' + toAbsolute(post.image) + '" alt="' + post.title + '" class="post-featured-image" loading="lazy">' +
+        renderHero(post) +
         '<div class="post-body">' + post.content + '</div>' +
         '<div class="post-footer">' +
           '<a href="/content.html" class="post-footer-back">Back to Content Hub</a>' +

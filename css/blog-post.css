@@ -89,6 +89,17 @@
   margin-bottom: 48px;
 }
 
+.post-featured-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-default);
+  background: #000;
+  margin-bottom: 48px;
+}
+
 /* --- Article Body — Prose Typography --- */
 .post-body {
   font-size: 17px;
