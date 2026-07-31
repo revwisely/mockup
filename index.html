@@ -8,6 +8,42 @@
   <meta property="og:title" content="Magnetiz.ai — AI Agents That Work in Production">
   <meta property="og:description" content="Evaluation-first frameworks. Production-ready in less than 30 days. Reliable long-term.">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://www.magnetiz.ai/">
+
+  <!-- Structured data. This is how an answer engine resolves Magnetiz as an
+       entity rather than inferring it from prose. Organization and WebSite are
+       site-level facts, so they belong on the homepage rather than on every
+       page. Per-article BlogPosting is emitted server-side in api/og.js. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.magnetiz.ai/#organization",
+        "name": "Magnetiz.ai",
+        "url": "https://www.magnetiz.ai/",
+        "description": "Magnetiz builds and runs production AI agents for revenue and operations teams. Evaluation-first frameworks, production-ready in less than 30 days.",
+        "knowsAbout": [
+          "AI agents",
+          "Agent evaluation",
+          "Revenue operations",
+          "Go-to-market automation",
+          "AI implementation",
+          "Business process automation"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.magnetiz.ai/#website",
+        "url": "https://www.magnetiz.ai/",
+        "name": "Magnetiz.ai",
+        "publisher": { "@id": "https://www.magnetiz.ai/#organization" },
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
