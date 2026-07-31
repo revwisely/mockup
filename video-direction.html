@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Studio Process for AI-Made Brand Videos | Magnetiz.ai</title>
+  <meta name="description" content="video-direction is a free Claude Code plugin that puts a full studio process behind AI-made brand videos. Run a 15-minute brand interview once, then every video ships in your look instead of the model's statistical average.">
+  <meta property="og:title" content="A Studio Process for AI-Made Brand Videos | Magnetiz.ai">
+  <meta property="og:description" content="A free Claude Code plugin that directs your brand videos. One 15-minute brand interview, then every video ships in your look, not the model's statistical average.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+
+  <!-- Page-scoped styles (self-contained; no shared CSS touched) -->
+  <style>
+    .vd-cmd {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      line-height: 1.9;
+      color: #E6EDF3;
+      padding: 20px 22px;
+      overflow-x: auto;
+    }
+    .vd-cmd .prompt { color: #4A9ECE; user-select: none; }
+    .vd-cmd .cmd { color: #E6EDF3; }
+    .vd-stage {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      padding: 12px 22px;
+      border-bottom: 1px solid #21262D;
+    }
+    .vd-stage:last-child { border-bottom: none; }
+    .vd-stage .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #4A9ECE;
+      min-width: 26px;
+    }
+    .vd-stage .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: #E6EDF3;
+      min-width: 116px;
+    }
+    .vd-stage .desc { color: #8B949E; font-size: 15px; }
+    .vd-moves { display: grid; gap: 30px; margin: 36px auto 0; max-width: 820px; }
+    .vd-move h3 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 19px;
+      color: #E6EDF3;
+      margin-bottom: 10px;
+    }
+    .vd-move p { color: #8B949E; line-height: 1.7; max-width: 760px; }
+    .vd-move code, .vd-body code {
+      font-family: 'JetBrains Mono', monospace;
+      color: #4A9ECE;
+      font-size: 0.92em;
+    }
+    .vd-video {
+      border-radius: 0 0 10px 10px;
+      overflow: hidden;
+      background: #0D1117;
+    }
+    .vd-video video { display: block; width: 100%; height: auto; }
+    .vd-get { display: grid; gap: 2px; margin-top: 28px; }
+    .vd-get .item { padding: 16px 22px; border-bottom: 1px solid #21262D; }
+    .vd-get .item:last-child { border-bottom: none; }
+    .vd-get .item strong {
+      font-family: 'JetBrains Mono', monospace;
+      color: #E6EDF3;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .vd-get .item span { color: #8B949E; }
+    .vd-get .item code { font-family: 'JetBrains Mono', monospace; color: #4A9ECE; }
+    .vd-reqs { list-style: none; padding: 20px 22px; margin: 0; }
+    .vd-reqs li {
+      padding: 8px 0;
+      color: #8B949E;
+      font-size: 15px;
+      border-bottom: 1px solid #21262D;
+    }
+    .vd-reqs li:last-child { border-bottom: none; }
+    .vd-reqs li strong { color: #E6EDF3; }
+    .vd-reqs li code, .vd-note code { font-family: 'JetBrains Mono', monospace; color: #4A9ECE; }
+    .vd-note { color: #8B949E; line-height: 1.7; max-width: 760px; margin: 22px auto 0; text-align: center; }
+    .vd-faq { display: grid; gap: 2px; }
+    .vd-faq .qa { padding: 22px; border-bottom: 1px solid #21262D; }
+    .vd-faq .qa:last-child { border-bottom: none; }
+    .vd-faq .q {
+      font-family: 'JetBrains Mono', monospace;
+      color: #E6EDF3;
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    .vd-faq .a { color: #8B949E; line-height: 1.7; }
+    .vd-faq .a code { font-family: 'JetBrains Mono', monospace; color: #4A9ECE; }
+    .vd-prose { color: #8B949E; line-height: 1.75; max-width: 760px; margin-left: auto; margin-right: auto; }
+    .vd-prose + .vd-prose { margin-top: 18px; }
+
+    /* Section classes that live only in page-specific CSS on sibling pages,
+       replicated here so this page depends on terminal.css alone. */
+    .section-sub { font-size: 17px; color: #8B949E; margin-top: 16px; line-height: 1.6; }
+    .pain-section { position: relative; padding: 120px 24px; z-index: 2; }
+    .quote-section { position: relative; padding: 80px 24px; z-index: 2; }
+    .quote-block { max-width: 800px; margin: 0 auto; }
+    @media (max-width: 768px) {
+      .pain-section, .quote-section { padding: 60px 20px; }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Editor Gutter -->
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION (identical to homepage)
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="index.html#services" class="nav-dropdown-trigger">
+            AI Services <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="ai-agents.html">AI Agents</a>
+            <a href="ai-solutions.html">AI Solution Concepts</a>
+            <a href="ai-implementation.html">AI Implementation</a>
+            <a href="ai-audit.html">AI Audit</a>
+          </div>
+        </li>
+        <li><a href="content.html">Content</a></li>
+      </ul>
+
+      <a href="#get-started" class="nav-cta">Get the Plugin</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html#services">AI Services</a>
+    <a href="ai-agents.html" class="mobile-sub">AI Agents</a>
+    <a href="ai-solutions.html" class="mobile-sub">AI Solution Concepts</a>
+    <a href="ai-implementation.html" class="mobile-sub">AI Implementation</a>
+    <a href="ai-audit.html" class="mobile-sub">AI Audit</a>
+    <a href="content.html">Content</a>
+    <a href="#get-started">Get the Plugin</a>
+  </div>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="section-label">// video-direction</div>
+        <h1 class="hero-headline">
+          Every AI video looks <span class="accent">the same</span>.
+        </h1>
+        <p class="hero-sub">
+          video-direction is a free Claude Code plugin that acts as the director for your brand videos. Run a 15-minute brand interview once, then every video you make ships in your look instead of the model's statistical average.
+        </p>
+        <div class="hero-ctas">
+          <a href="#get-started" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Get the plugin
+          </a>
+          <a href="https://github.com/revwisely/video-direction-plugin" target="_blank" rel="noopener" class="btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Install Terminal -->
+      <div class="hero-terminal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">install.sh</span>
+          </div>
+          <div class="vd-cmd">
+            <div><span class="prompt">$</span> <span class="cmd">/plugin marketplace add revwisely/video-direction-plugin</span></div>
+            <div><span class="prompt">$</span> <span class="cmd">/plugin install video-direction@video-direction</span></div>
+            <div><span class="prompt">$</span> <span class="cmd">/brand-init</span></div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready">READY</span></span>
+              <span>COST: <span style="color:var(--accent-blue)">free</span></span>
+            </div>
+            <span>runs on your machine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       THE PROBLEM
+       ============================================ -->
+  <section class="pain-section" id="problem">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The Problem</div>
+        <h2 class="section-title">The problem is not the render.<br>It is the <span class="accent">direction</span>.</h2>
+      </div>
+      <div class="reveal reveal-delay-1" style="margin-top:32px">
+        <p class="vd-prose">AI made video cheap enough to ship at volume. It did not make it yours. Prompt a tool for a launch clip and you get something competent and completely anonymous, because nothing in that minute made a look decision. The model shipped its statistical average and put your logo on it.</p>
+        <p class="vd-prose">Run a whole content calendar that way and every clip drifts to the same fonts, the same motion, the same synthetic gloss. The brand you spent real money building shows up nowhere in the feed. A motion designer fixes this and cannot be justified for weekly clips. Shipping no video is the option most brands take instead. Neither works when the video is cheap and the look is the entire point.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       HOW IT WORKS
+       ============================================ -->
+  <section class="process" id="how-it-works">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// How It Works</div>
+        <h2 class="section-title">A full studio process,<br>on the <span class="accent">record</span>.</h2>
+        <p class="section-sub reveal reveal-delay-1">Three moves put the director's seat back into the loop that one-shot prompting skips.</p>
+      </div>
+
+      <div class="vd-moves">
+        <!-- Move 1 -->
+        <div class="vd-move reveal reveal-delay-1">
+          <h3>1. It starts with a brand interview</h3>
+          <p>Run <code>/brand-init</code> once. A short taste-by-comparison interview, mostly A/B picks across world, type, accent, audio, and delivery, about 15 minutes. It writes your <code>motion-brand.md</code>, the single source of truth for every video, and renders one proof frame in your new brand so you see your look before you make a real video.</p>
+        </div>
+
+        <!-- Move 2 -->
+        <div class="vd-move reveal reveal-delay-2">
+          <h3>2. Then it directs, in six stages</h3>
+          <p style="margin-bottom:20px">Ask for a video in plain language and point it at real content, a page, a post, a launch note. The director runs six stages with a gate at each one.</p>
+          <div class="terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <span class="terminal-title">video-direction/stages.log</span>
+            </div>
+            <div style="padding:8px 0">
+              <div class="vd-stage"><span class="num">01</span><span class="name">treatment</span><span class="desc">sets the idea and the message type.</span></div>
+              <div class="vd-stage"><span class="num">02</span><span class="name">style</span><span class="desc">locks the look to your motion-brand.md.</span></div>
+              <div class="vd-stage"><span class="num">03</span><span class="name">boards</span><span class="desc">block the shots beat by beat.</span></div>
+              <div class="vd-stage"><span class="num">04</span><span class="name">styleframes</span><span class="desc">render a pair, and you pick A or B.</span></div>
+              <div class="vd-stage"><span class="num">05</span><span class="name">build</span><span class="desc">composes the piece and runs the critics.</span></div>
+              <div class="vd-stage"><span class="num">06</span><span class="name">QC</span><span class="desc">renders and returns the file with a summary.</span></div>
+            </div>
+            <div class="terminal-status">
+              <div class="status-group">
+                <span>STATUS: <span class="status-ready">READY</span></span>
+                <span>GATES: <span style="color:var(--accent-blue)">6</span></span>
+              </div>
+              <span>you approve every stage</span>
+            </div>
+          </div>
+          <p style="margin-top:18px">The look, the timing, and the sound become decisions you approve, not defaults the model chose. It can generate a voiceover and a music bed and mix them into the render, so the video ships as a film, not a silent slideshow. It directs. A local rendering framework does the rendering.</p>
+        </div>
+
+        <!-- Move 3 -->
+        <div class="vd-move reveal reveal-delay-3">
+          <h3>3. And it keeps a ledger, so nothing repeats</h3>
+          <p>Every shipped video writes a row to your <code>style-ledger.md</code>. Video two reads it and varies the variant axes on purpose, so your feed stays on-brand without every clip looking like the last one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       THE PROOF
+       ============================================ -->
+  <section class="quote-section" id="proof">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The Proof</div>
+        <h2 class="section-title">The proof is our<br>own <span class="accent">brand</span>.</h2>
+        <p class="section-sub reveal reveal-delay-1" style="max-width:720px;margin-left:auto;margin-right:auto">The plugin directed this end to end in the Magnetiz brand. The world, the accent, the type, and the score all came out of the same <code style="font-family:'JetBrains Mono',monospace;color:var(--accent-blue)">/brand-init</code> interview you would run.</p>
+      </div>
+
+      <div class="quote-block reveal reveal-delay-1" style="margin-top:36px">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">magnetiz-brand.mp4</span>
+          </div>
+          <div class="vd-video">
+            <video autoplay muted loop playsinline controls preload="metadata">
+              <source src="assets/videos/govern-the-deciding-16x9.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>BRAND: <span style="color:var(--accent-blue)">magnetiz</span></span>
+              <span>AUDIO: <span class="status-ready">voiceover + music</span></span>
+            </div>
+            <span>made with video-direction</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="reveal reveal-delay-2" style="text-align:center;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#4A9ECE;">// unmute to hear the voiceover and music the plugin generated</p>
+
+      <p class="vd-note reveal reveal-delay-2">This is not a silent slideshow. The plugin generated the voiceover and the music bed and mixed them into the render. Run the same process on your brand and the output is unmistakably yours, not ours, and not the model's.</p>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       WHAT YOU GET
+       ============================================ -->
+  <section class="process" id="what-you-get">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// What You Get</div>
+        <h2 class="section-title">Everything the director<br>needs, <span class="accent">included</span>.</h2>
+      </div>
+
+      <div class="reveal reveal-delay-1" style="max-width:820px;margin:0 auto">
+        <div class="terminal" style="margin-top:12px">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">contents.md</span>
+          </div>
+          <div class="vd-get">
+            <div class="item"><strong>The video-direction skill</strong><span>The staged studio process, gate by gate.</span></div>
+            <div class="item"><strong><code>/brand-init</code></strong><span>The brand interview that writes your <code>motion-brand.md</code> and renders a proof frame in your look.</span></div>
+            <div class="item"><strong>A reference deck</strong><span>The archetypes and craft the director works from, so the taste is built in.</span></div>
+            <div class="item"><strong>Templates</strong><span>Motion-brand, style-ledger, production, and delivery, ready to fill.</span></div>
+            <div class="item"><strong>A worked example</strong><span>A full brand run start to finish, so you can read the whole loop before you run it.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       HONEST REQUIREMENTS
+       ============================================ -->
+  <section class="pain-section" id="requirements">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Honest Requirements</div>
+        <h2 class="section-title">Free, and it stays on<br>your <span class="accent">machine</span>.</h2>
+      </div>
+
+      <div class="reveal reveal-delay-1" style="max-width:760px;margin:32px auto 0">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">requirements.txt</span>
+          </div>
+          <ul class="vd-reqs">
+            <li><strong>Claude Code</strong>, since this is a Claude Code plugin.</li>
+            <li><strong>Node 22+</strong> and <strong>ffmpeg</strong> for rendering.</li>
+            <li><strong>HyperFrames</strong>, the rendering framework, fetched on demand. Nothing to install ahead of time.</li>
+          </ul>
+        </div>
+        <p class="vd-note">Run <code>npx hyperframes doctor</code> once and it names the exact fix for anything missing. The install copies everything into your own Claude Code config and runs against your own compute and your own Claude subscription. No account with us, no key handed over, no cost per video. A brand that looks like itself at volume is worth more to the whole field than a paywall would be to us.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       FAQ
+       ============================================ -->
+  <section class="quote-section" id="faq">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// FAQ</div>
+        <h2 class="section-title">Questions, <span class="accent">answered</span>.</h2>
+      </div>
+
+      <div class="reveal reveal-delay-1" style="max-width:820px;margin:32px auto 0">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">faq.md</span>
+          </div>
+          <div class="vd-faq">
+            <div class="qa">
+              <div class="q">What is video-direction?</div>
+              <div class="a">video-direction is a free Claude Code plugin that puts a full studio process behind AI-made brand videos. Instead of one-shot prompting a video, you run a 15-minute brand interview once and every video after that ships in your look, through six directed stages with a gate at each.</div>
+            </div>
+            <div class="qa">
+              <div class="q">Do I need Claude Code to use it?</div>
+              <div class="a">Yes. video-direction is a Claude Code plugin, so it installs and runs inside Claude Code on your own machine. It uses HyperFrames for rendering, fetched automatically the first time you render.</div>
+            </div>
+            <div class="qa">
+              <div class="q">How is this different from an AI video generator?</div>
+              <div class="a">An AI video generator renders. video-direction directs. It forces the look, timing, and sound decisions that one-shot prompting skips, records them in a <code>motion-brand.md</code>, and applies them to every video so your feed stops looking like everyone else's.</div>
+            </div>
+            <div class="qa">
+              <div class="q">Will it actually match my brand?</div>
+              <div class="a">The <code>/brand-init</code> interview builds your <code>motion-brand.md</code> from your own choices across world, type, accent, audio, and delivery, then renders a proof frame in that brand before you commit. Every later video reads that file, so the brand holds across the whole calendar.</div>
+            </div>
+            <div class="qa">
+              <div class="q">Does it add voiceover and music?</div>
+              <div class="a">Yes. video-direction can generate a voiceover and a music bed and mix them into the render, so your video ships scored, not as a silent slideshow. You can drop in your own track instead, and studio-grade voice and music are available when you bring your own key.</div>
+            </div>
+            <div class="qa">
+              <div class="q">Is it really free?</div>
+              <div class="a">Yes. It runs on your own machine, your own compute, and your own Claude subscription. There is no paid tier and no cost per video.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       GET STARTED (CTA)
+       ============================================ -->
+  <section class="cta-section" id="get-started">
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="section-label">// Get Started</div>
+        <h2 class="section-title" style="margin-bottom:16px">Make your first branded video</h2>
+      </div>
+
+      <div class="cta-terminal reveal reveal-delay-1">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">get-started.sh</span>
+          </div>
+          <div class="vd-cmd">
+            <div><span class="prompt">$</span> <span class="cmd">/plugin marketplace add revwisely/video-direction-plugin</span></div>
+            <div><span class="prompt">$</span> <span class="cmd">/plugin install video-direction@video-direction</span></div>
+            <div><span class="prompt">$</span> <span class="cmd">/brand-init</span></div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready">READY</span></span>
+              <span>COST: <span style="color:var(--accent-blue)">free</span></span>
+            </div>
+            <span>~15 min to set up your brand</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="cta-text reveal reveal-delay-2">
+        Two commands inside Claude Code, then answer the interview.<br>
+        Fifteen minutes later your brand is on the record, and every video you ask for ships in your look.
+      </p>
+
+      <div class="reveal reveal-delay-3">
+        <a href="https://github.com/revwisely/video-direction-plugin" target="_blank" rel="noopener" class="btn-primary" style="font-size:16px; padding:16px 36px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          View the repo on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER (identical to homepage)
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>Evaluation-first frameworks. Production-ready AI agents in less than 30 days. Reliable long-term.</p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="ai-audit.html">AI Audit</a></li>
+            <li><a href="ai-solutions.html">AI Solution Concepts</a></li>
+            <li><a href="ai-implementation.html">AI Implementation</a></li>
+            <li><a href="index.html#services">AI Agents</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="content.html">Content Hub</a></li>
+            <li><a href="our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="assessment.html">AI Readiness Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="talent.html">Talent</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC) &mdash; All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (shared only) -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
