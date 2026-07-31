@@ -53,6 +53,15 @@
   }
 
   function renderPost(post) {
+    // api/og.js renders the article server-side and marks the container with
+    // data-ssr. When that has happened the DOM is already correct, and
+    // re-rendering would only cause a visible flash while replacing markup with
+    // identical markup. The ?slug= fallback path has no server render, so this
+    // function still does the work there.
+    if (articleContainer && articleContainer.getAttribute('data-ssr') === '1') {
+      return;
+    }
+
     // Update page title and meta
     document.title = post.title + ' — Magnetiz.ai';
     var metaDesc = document.querySelector('meta[name="description"]');
