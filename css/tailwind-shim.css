@@ -1,0 +1,30 @@
+/* ============================================================
+   tailwind-shim.css — replaces the Tailwind play CDN entirely.
+
+   WHY. Every page loaded https://cdn.tailwindcss.com in the <head>, render-blocking.
+   That is 407KB of JavaScript which downloads a compiler and generates CSS in the
+   browser on every page view, before anything can paint. Tailwind's own docs say the
+   play CDN is for development only, never production. Clarity measured LCP at 5.73s
+   on 2026-08-04, firmly in Google's "poor" band, and this was the dominant cause.
+
+   WHAT IT COST US. An audit of all 18 pages that loaded the CDN found the site uses
+   exactly THREE Tailwind utilities in total: container, hidden, sm:block. Everything
+   else is our own terminal.css. So 407KB of render-blocking JavaScript was shipping
+   to deliver the rules below.
+
+   No build step, no dependency, no config. Three rules, copied verbatim from what
+   Tailwind 3.4.17 generates, so nothing shifts visually. If real Tailwind usage ever
+   grows past a handful of utilities, replace this with a proper CLI build rather than
+   reinstating the CDN.
+   ============================================================ */
+
+.container { width: 100%; }
+@media (min-width: 640px)  { .container { max-width: 640px; } }
+@media (min-width: 768px)  { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+@media (min-width: 1536px) { .container { max-width: 1536px; } }
+
+.hidden { display: none; }
+
+@media (min-width: 640px) { .sm\:block { display: block; } }
