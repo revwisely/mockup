@@ -1,5 +1,15 @@
 [
   {
+    "slug": "ai-brand-video-direction",
+    "title": "Why Does Every AI Made Video Look the Same?",
+    "date": "2026-08-06",
+    "author": "Magnetiz.ai",
+    "excerpt": "AI made video cheap enough to ship weekly. It did not make it yours. The generic look is a briefing failure, and here is the direction layer that fixes it, given away free.",
+    "image": "assets/images/posts/ai-brand-video-direction-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "human-in-the-loop-ai-workflow",
     "title": "Where Does a Human Belong in an AI Workflow That Runs Itself?",
     "date": "2026-07-30",
