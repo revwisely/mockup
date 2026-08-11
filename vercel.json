@@ -10,5 +10,25 @@
     { "source": "/a/data/:path*", "destination": "/data/:path*" },
     { "source": "/a/outcome", "destination": "/outcome-pricing.html" },
     { "source": "/a/:campaign", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(css|js)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=604800"
+        }
+      ]
+    }
   ]
 }
