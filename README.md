@@ -250,3 +250,28 @@ For issues or customizations:
 **Generated**: February 24, 2026  
 **Format**: PPTX (16:9, 17 slides, 356 KB)  
 **Status**: Complete & Ready for Use
+
+## Ad attribution paths (/a/<campaign>)
+
+RB2B strips query strings from Captured URL, so UTM-based ad attribution is
+impossible. Instead every LinkedIn ad links to `/a/<campaign>` (for example
+`/a/outcome`). These are Vercel REWRITES, not redirects: the browser URL stays
+`/a/<campaign>`, so RB2B captures the campaign in the path and every identified
+visitor carries its campaign forever. A 301 would lose the path (the RB2B
+script runs on the destination page), which is why the original 301 design in
+scoring-diagnosis-2026-08-04.md does not work as written.
+
+Rules in vercel.json, in order:
+- `.html` paths under `/a/` REDIRECT out (nav clicks from a rewritten page
+  resolve relative, e.g. `/a/outcome-pricing.html`; the redirect sends the
+  user to the real page so only the landing hit stays in `/a/` space).
+- `/a/css|js|assets|data/*` rewrite to the real asset dirs (pages use
+  relative asset paths, which resolve under `/a/` after a rewrite).
+- One explicit rewrite per campaign, mapping it to its landing page
+  (`/a/outcome` -> `/outcome-pricing.html`). ADD NEW CAMPAIGNS HERE.
+- Catch-all `/a/:campaign` -> homepage, so an unmapped campaign never 404s a
+  paid click.
+
+Campaign names must not end in `.html` and must not be `css`, `js`, `assets`,
+or `data`. To add a campaign: add its rewrite above the catch-all, deploy,
+then use `https://www.magnetiz.ai/a/<campaign>` as the ad's destination URL.
