@@ -149,6 +149,147 @@
 .m-own-item h4 { color: var(--text-primary); font-size: 1rem; margin: 10px 0 8px; }
 .m-own-item p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
 
+/* --- Rotating switcher (tabs + panel) -------------------------------
+   Reusable. Left rail of tabs auto-advances while in view; clicking a
+   tab jumps and resets the timer. Used by "What changes". ---------- */
+.m-switch {
+  display: grid;
+  grid-template-columns: minmax(260px, 400px) 1fr;
+  gap: 24px;
+  margin-top: 48px;
+  align-items: start;
+}
+
+.m-switch-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.m-switch-tab {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 16px 18px 16px 22px;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.m-switch-tab::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: var(--border-default);
+  border-radius: 2px;
+  transition: background .25s ease;
+}
+
+.m-switch-tab:hover { color: var(--text-secondary); }
+
+.m-switch-tab.is-active {
+  background: var(--bg-card);
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}
+
+.m-switch-tab.is-active::before {
+  background: var(--accent-blue);
+  box-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* Timer fill on the active tab */
+.m-switch-tab .m-switch-progress {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 2px;
+  height: 0;
+  background: var(--accent-green);
+  border-radius: 2px;
+}
+
+.m-switch-tab.is-active .m-switch-progress {
+  animation: m-switch-fill var(--m-switch-duration, 7s) linear forwards;
+}
+
+@keyframes m-switch-fill {
+  from { height: 0; }
+  to { height: calc(100% - 24px); }
+}
+
+.m-switch-panels { position: relative; }
+
+.m-switch-panel {
+  display: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  padding: 34px;
+}
+
+.m-switch-panel.is-active {
+  display: block;
+  animation: m-switch-in .4s ease both;
+}
+
+@keyframes m-switch-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.m-switch-panel h3 {
+  color: var(--text-primary);
+  font-size: 1.35rem;
+  margin: 10px 0 12px;
+}
+
+.m-switch-panel > p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.m-switch-points { list-style: none; display: grid; gap: 10px; }
+
+.m-switch-points li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  padding: 13px 20px;
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+}
+
+.m-switch-points .check {
+  color: var(--accent-green);
+  font-family: 'JetBrains Mono', monospace;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m-switch-tab.is-active .m-switch-progress { animation: none; height: calc(100% - 24px); }
+  .m-switch-panel.is-active { animation: none; }
+}
+
 /* --- Two entry points --- */
 .m-tiers {
   display: grid;

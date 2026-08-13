@@ -401,26 +401,60 @@
        ============================================ -->
   <section class="m-section alt" id="what-changes">
     <div class="container">
-      <div class="reveal" style="text-align:center">
-        <div class="section-label">// What Changes</div>
-        <h2 class="section-title">Three shifts, and they<br>arrive in that <span class="accent">order</span>.</h2>
+      <div class="reveal">
+        <div class="section-label">// The Outcomes</div>
+        <h2 class="section-title">What changes when<br>Maestro is <span class="accent">in place</span>.</h2>
       </div>
 
-      <div class="m-own reveal reveal-delay-1">
-        <div class="m-own-item">
-          <span class="n">01</span>
-          <h4>Signal detection improves</h4>
-          <p>The system monitors continuously and surfaces meaningful change on its own. Teams stop discovering problems during the pipeline review.</p>
+      <div class="m-switch reveal reveal-delay-1" data-switch style="--m-switch-duration:7s">
+        <div class="m-switch-nav" role="tablist" aria-label="Outcomes">
+          <button class="m-switch-tab is-active" role="tab" aria-selected="true" aria-controls="outcome-0" id="tab-0" data-i="0">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Signal detection improves
+          </button>
+          <button class="m-switch-tab" role="tab" aria-selected="false" aria-controls="outcome-1" id="tab-1" data-i="1">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Execution becomes consistent
+          </button>
+          <button class="m-switch-tab" role="tab" aria-selected="false" aria-controls="outcome-2" id="tab-2" data-i="2">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Teams gain leverage
+          </button>
         </div>
-        <div class="m-own-item">
-          <span class="n">02</span>
-          <h4>Execution becomes consistent</h4>
-          <p>Workflows become structured and repeatable. Every request follows the same rules, checks, and documentation, regardless of who is on shift.</p>
-        </div>
-        <div class="m-own-item">
-          <span class="n">03</span>
-          <h4>Teams gain leverage</h4>
-          <p>Revenue scales without scaling headcount at the same rate. The organization gets more coordinated as it grows instead of less.</p>
+
+        <div class="m-switch-panels">
+          <div class="m-switch-panel is-active" role="tabpanel" id="outcome-0" aria-labelledby="tab-0" data-i="0">
+            <div class="section-label">// Outcome</div>
+            <h3>Signal detection improves.</h3>
+            <p>The system surfaces what matters before it turns into a problem or a closed window.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Continuous monitoring across accounts and systems</li>
+              <li><span class="check">&#10003;</span> Account changes surfaced automatically</li>
+              <li><span class="check">&#10003;</span> Risk and opportunity visible before the pipeline review</li>
+            </ul>
+          </div>
+
+          <div class="m-switch-panel" role="tabpanel" id="outcome-1" aria-labelledby="tab-1" data-i="1">
+            <div class="section-label">// Outcome</div>
+            <h3>Execution becomes consistent.</h3>
+            <p>Every rep, every account, every motion runs the same way, whoever is having a good month.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Structured, repeatable workflows</li>
+              <li><span class="check">&#10003;</span> Same rules, checks, and documentation every time</li>
+              <li><span class="check">&#10003;</span> Coordinated across every account</li>
+            </ul>
+          </div>
+
+          <div class="m-switch-panel" role="tabpanel" id="outcome-2" aria-labelledby="tab-2" data-i="2">
+            <div class="section-label">// Outcome</div>
+            <h3>Teams gain leverage.</h3>
+            <p>Revenue scales without scaling headcount at the same rate.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Revenue grows without proportional hiring</li>
+              <li><span class="check">&#10003;</span> A more coordinated organization as it grows</li>
+              <li><span class="check">&#10003;</span> Faster execution from the same team</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -716,6 +750,7 @@
 
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/maestro.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     document.addEventListener('click', function(e) {
