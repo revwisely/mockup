@@ -144,8 +144,23 @@
         <h2 class="section-title">What operations leaders are<br>actually dealing with</h2>
         <p class="m-lede"><strong style="color:var(--text-primary)">You cannot see across the teams you are accountable for.</strong></p>
       </div>
-      <div class="m-body reveal reveal-delay-1" style="margin-top:32px">
-        <p>Work moves through tickets, threads, and meetings. Approvals sit because the person who can grant them never saw the request. The weekly status is a reconstruction, assembled by hand, out of date by the time it is read.</p>
+      <div class="m-deliver reveal reveal-delay-1">
+        <div class="m-deliver-item">
+          <span class="check" style="color:var(--accent-coral)">&#10005;</span>
+          <p>Work moves through tickets, threads, and standing meetings</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check" style="color:var(--accent-coral)">&#10005;</span>
+          <p>Approvals sit because whoever can grant them never saw the request</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check" style="color:var(--accent-coral)">&#10005;</span>
+          <p>Handoffs between teams depend on someone remembering to make them</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check" style="color:var(--accent-coral)">&#10005;</span>
+          <p>The weekly status is a reconstruction, out of date before it is read</p>
+        </div>
       </div>
     </div>
   </section>
@@ -161,22 +176,70 @@
         <p class="m-lede"><strong style="color:var(--text-primary)">The meeting becomes the workflow.</strong></p>
       </div>
 
-      <div class="m-deliver reveal reveal-delay-1">
-        <div class="m-deliver-item">
-          <span class="check">&#9656;</span>
-          <p><strong>From conversation to executed work.</strong> A transcript extractor pulls the decisions, commitments, blockers, and dependencies out of a meeting in the words people used. A prioritizer separates the real commitments from passing ideas and gives each one an owner and a done-condition.</p>
+      <div class="m-switch reveal reveal-delay-1" data-switch style="--m-switch-duration:8s">
+        <div class="m-switch-nav" role="tablist" aria-label="Operations agents">
+          <button class="m-switch-tab is-active" role="tab" aria-selected="true" aria-controls="ops-0" id="opstab-0" data-i="0">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            The meeting
+          </button>
+          <button class="m-switch-tab" role="tab" aria-selected="false" aria-controls="ops-1" id="opstab-1" data-i="1">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            The systems of record
+          </button>
+          <button class="m-switch-tab" role="tab" aria-selected="false" aria-controls="ops-2" id="opstab-2" data-i="2">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            The follow-through
+          </button>
+          <button class="m-switch-tab" role="tab" aria-selected="false" aria-controls="ops-3" id="opstab-3" data-i="3">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Underneath it
+          </button>
         </div>
-        <div class="m-deliver-item">
-          <span class="check">&#9656;</span>
-          <p><strong>Written to the systems of record.</strong> A CRM executor writes outcomes where the business keeps them. A task executor creates the internal work and deduplicates against what is open, so a recurring topic updates one item instead of spawning copies.</p>
-        </div>
-        <div class="m-deliver-item">
-          <span class="check">&#9656;</span>
-          <p><strong>Follow-through.</strong> Follow-up communications drafted and held for review before anything sends. Status assembled from the live state of the work, so the next meeting starts from current reality.</p>
-        </div>
-        <div class="m-deliver-item">
-          <span class="check">&#9656;</span>
-          <p><strong>Underneath it.</strong> CRM data quality, workflow automation, attribution, and forecasting inputs maintained continuously.</p>
+
+        <div class="m-switch-panels">
+          <div class="m-switch-panel is-active" role="tabpanel" id="ops-0" aria-labelledby="opstab-0" data-i="0">
+            <div class="section-label">// Extract</div>
+            <h3>The meeting becomes the work.</h3>
+            <p>Decisions, commitments, blockers, and dependencies pulled out of the transcript in the words people used.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Real commitments separated from passing ideas</li>
+              <li><span class="check">&#10003;</span> Every item gets an owner and a done-condition</li>
+              <li><span class="check">&#10003;</span> Dependencies mapped, so nothing waits silently</li>
+            </ul>
+          </div>
+
+          <div class="m-switch-panel" role="tabpanel" id="ops-1" aria-labelledby="opstab-1" data-i="1">
+            <div class="section-label">// Write</div>
+            <h3>Straight into the systems you already keep.</h3>
+            <p>Outcomes land where the business records them, without anyone retyping a thing.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> CRM updated from what the room decided</li>
+              <li><span class="check">&#10003;</span> Internal tasks created in your tracker</li>
+              <li><span class="check">&#10003;</span> Recurring topics update one item instead of spawning copies</li>
+            </ul>
+          </div>
+
+          <div class="m-switch-panel" role="tabpanel" id="ops-2" aria-labelledby="opstab-2" data-i="2">
+            <div class="section-label">// Close</div>
+            <h3>The loop closes without chasing.</h3>
+            <p>Follow-ups drafted and held for review. Status assembled from the live state of the work.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Nothing sends before a human approves it</li>
+              <li><span class="check">&#10003;</span> The next meeting starts from current reality</li>
+              <li><span class="check">&#10003;</span> No one rebuilds the status by hand</li>
+            </ul>
+          </div>
+
+          <div class="m-switch-panel" role="tabpanel" id="ops-3" aria-labelledby="opstab-3" data-i="3">
+            <div class="section-label">// Maintain</div>
+            <h3>The layer that keeps it true.</h3>
+            <p>Running underneath all of it, continuously, so the picture stays current.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> CRM data quality</li>
+              <li><span class="check">&#10003;</span> Workflow automation across teams</li>
+              <li><span class="check">&#10003;</span> Attribution and forecasting inputs</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -341,6 +404,7 @@
 
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/maestro.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     document.addEventListener('click', function(e) {

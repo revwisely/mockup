@@ -144,8 +144,22 @@
         <h2 class="section-title">What sales leaders are<br>actually dealing with</h2>
         <p class="m-lede"><strong style="color:var(--text-primary)">The forecast changes and nobody can say which deals moved it.</strong></p>
       </div>
-      <div class="m-body reveal reveal-delay-1" style="margin-top:32px">
-        <p>Pipeline visibility depends on what reps remembered to update. Forecasting accuracy depends on the same. Buying signals fire publicly, in hiring pages and earnings calls and leadership changes, and nobody is watching them. Follow-up happens when someone has time.</p>
+      <div class="m-own reveal reveal-delay-1">
+        <div class="m-own-item">
+          <span class="n">BLIND SPOT 01</span>
+          <h4>The pipeline is a memory test</h4>
+          <p>Visibility depends on what reps remembered to update, and so does the forecast built on top of it.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">BLIND SPOT 02</span>
+          <h4>The signals are public</h4>
+          <p>Hiring pages, earnings calls, leadership changes. Your accounts announce their intent and nobody is watching.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">BLIND SPOT 03</span>
+          <h4>Follow-up waits for a gap</h4>
+          <p>The next touch happens when a rep has time, which is rarely the moment it would have mattered.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -161,22 +175,65 @@
         <p class="m-lede"><strong style="color:var(--text-primary)">Signals in, scored, routed to an owner with the context attached.</strong></p>
       </div>
 
-      <div class="m-deliver reveal reveal-delay-1">
-        <div class="m-deliver-item">
-          <span class="check">&#9656;</span>
-          <p><strong>Signal capture.</strong> Website visitors identified, hiring activity, leadership changes, funding, product usage, and what your accounts say publicly on earnings calls and in press.</p>
-        </div>
-        <div class="m-deliver-item">
-          <span class="check">&#9656;</span>
-          <p><strong>Enrichment.</strong> Deduplication against existing records, contact and company data filled from a provider waterfall, verification before anything gets used.</p>
-        </div>
-        <div class="m-deliver-item">
-          <span class="check">&#9656;</span>
-          <p><strong>Scoring and routing.</strong> A 100-point model across title fit, company fit, signal strength, and engagement, producing a three-tier routing decision. High scores go to outreach, middle scores go to nurture, the rest stay monitored.</p>
-        </div>
-        <div class="m-deliver-item">
-          <span class="check">&#9656;</span>
-          <p><strong>Execution.</strong> Account research and summaries, outbound drafted against the triggering signal, meeting preparation, and proposal generation. Every send passes an evaluation gate before it reaches the approval queue.</p>
+      <div class="process-terminal reveal reveal-delay-1">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">signal_to_pipeline/ &mdash; magnetiz</span>
+          </div>
+          <div class="process-list">
+            <div class="process-item">
+              <span class="process-number">1</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  01_Capture.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">Visitors identified, hiring activity, leadership changes, funding, product usage, and what your accounts say on earnings calls.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <span class="process-number">2</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  02_Enrich.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">Deduplicated against your records, filled from a provider waterfall, verified before anything gets used.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <span class="process-number">3</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  03_Score.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">A 100-point model across title fit, company fit, signal strength, and engagement. High scores route to outreach, middle to nurture, the rest stay monitored.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <span class="process-number">4</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  04_Execute.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">Account summaries, outbound drafted against the triggering signal, meeting prep, proposals. Every send clears an eval gate first.</p>
+              </div>
+            </div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready">READY</span></span>
+              <span>ROUTING: <span style="color:var(--accent-blue)">3 tiers</span></span>
+            </div>
+            <span>4 modules loaded</span>
+          </div>
         </div>
       </div>
 
