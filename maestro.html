@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maestro AI Revenue System &mdash; AI Agents That Run Revenue Operations | Magnetiz.ai</title>
+  <meta name="description" content="Maestro turns fragmented revenue workflows into a coordinated system where AI agents execute the operational work and your team designs the strategy. Built to run in production, with the evaluation frameworks that prove it holds.">
+  <meta property="og:title" content="Maestro AI Revenue System &mdash; AI Agents That Run Revenue Operations | Magnetiz.ai">
+  <meta property="og:description" content="Maestro turns fragmented revenue workflows into a coordinated system where AI agents execute the operational work and your team designs the strategy.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://www.magnetiz.ai/maestro.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="css/tailwind-shim.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/maestro.css">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Editor Gutter -->
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="maestro.html" class="nav-dropdown-trigger">
+            Maestro <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="maestro-marketing.html">Maestro for Marketing</a>
+            <a href="maestro-sales.html">Maestro for Sales</a>
+            <a href="maestro-operations.html">Maestro for Operations</a>
+          </div>
+        </li>
+        <li><a href="content.html">Content</a></li>
+      </ul>
+
+      <a href="ai-audit.html" class="nav-cta">Get Your Audit</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="maestro.html">Maestro</a>
+    <a href="maestro-marketing.html" class="mobile-sub">Maestro for Marketing</a>
+    <a href="maestro-sales.html" class="mobile-sub">Maestro for Sales</a>
+    <a href="maestro-operations.html" class="mobile-sub">Maestro for Operations</a>
+    <a href="content.html">Content</a>
+    <a href="ai-audit.html">Get Your Audit</a>
+  </div>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="section-label">// Maestro AI Revenue System&trade;</div>
+        <h1 class="hero-headline">
+          Scale revenue without adding <span class="accent">headcount</span>.
+        </h1>
+        <p class="hero-sub">
+          The Maestro AI Revenue System&trade; turns fragmented GTM workflows into a coordinated revenue engine where AI agents execute and humans focus on strategy, relationships, and growth.
+        </p>
+        <div class="hero-ctas">
+          <a href="ai-audit.html" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Get Your Audit
+          </a>
+          <button class="btn-ghost" id="video-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Watch Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-terminal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">maestro.py &mdash; magnetiz</span>
+          </div>
+          <div class="terminal-body">
+            <div class="line-numbers" id="hero-line-numbers"></div>
+            <div id="hero-code-content"></div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready" id="hero-status">RUNNING</span></span>
+              <span>EVALS: <span style="color:var(--accent-green)">PASSING</span></span>
+            </div>
+            <span id="hero-pos">Ln 1, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       THE OLD WAY
+       ============================================ -->
+  <section class="m-section" id="old-way">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The Old Way</div>
+        <h2 class="section-title">Revenue organizations grew by<br><span class="accent">adding people</span>.</h2>
+        <p class="m-lede">Marketing hires specialists. Sales hires reps. RevOps hires analysts. Before long a revenue organization carries twenty or more specialized roles across three functions.</p>
+      </div>
+
+      <div class="m-video reveal reveal-delay-1">
+        <video src="assets/videos/maestro-old-way.mp4" muted loop playsinline preload="metadata" aria-label="Animation showing a revenue organization growing to more than twenty specialized roles"></video>
+      </div>
+
+      <div class="m-cols reveal reveal-delay-2">
+        <div class="m-col">
+          <h4>Marketing</h4>
+          <ul>
+            <li>CMO</li>
+            <li>Product Marketing</li>
+            <li>Demand Generation</li>
+            <li>Content Marketing</li>
+            <li>Digital / Performance</li>
+            <li>Marketing Operations</li>
+            <li>Field Marketing</li>
+            <li>Partner Marketing</li>
+          </ul>
+        </div>
+        <div class="m-col">
+          <h4>Sales</h4>
+          <ul>
+            <li>CRO</li>
+            <li>Account Executives</li>
+            <li>SDRs</li>
+            <li>Sales Engineers</li>
+            <li>Account Managers</li>
+            <li>Sales Managers</li>
+            <li>Partner Sales</li>
+          </ul>
+        </div>
+        <div class="m-col">
+          <h4>Revenue Operations</h4>
+          <ul>
+            <li>RevOps Leader</li>
+            <li>Sales Operations</li>
+            <li>Marketing Operations</li>
+            <li>Revenue Analytics</li>
+            <li>Systems Architecture</li>
+            <li>Deal Desk</li>
+            <li>Enablement</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="m-body reveal reveal-delay-3" style="margin-top:40px;text-align:center">
+        <p>Every function executes tasks. Every team works inside its own systems. Every new hire becomes another line item. The teams still struggle with fragmented systems, delayed insights, inconsistent execution, and pipeline managed after the fact.</p>
+        <p><strong>In this model, growth means adding more people to handle more complexity.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       THE NEW WAY
+       ============================================ -->
+  <section class="m-section alt" id="new-way">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The New Way</div>
+        <h2 class="section-title">Agents execute.<br>Humans <span class="accent">design</span>.</h2>
+        <p class="m-lede">Many of those workflows can now be handled by specialized AI agents operating inside a coordinated system. A central orchestrator moves work across systems, data, and teams. Around it, agents support each revenue function.</p>
+      </div>
+
+      <div class="m-video accent reveal reveal-delay-1">
+        <video src="assets/videos/maestro-new-way.mp4" muted loop playsinline preload="metadata" aria-label="Animation showing a revenue orchestrator coordinating marketing, sales, and operations agents"></video>
+      </div>
+
+      <div class="m-cols reveal reveal-delay-2">
+        <div class="m-col">
+          <h4>Marketing Agents</h4>
+          <ul>
+            <li>Demand creation</li>
+            <li>Audience segmentation</li>
+            <li>Content production</li>
+            <li>Campaign execution</li>
+            <li>Lead qualification</li>
+            <li>Conversion optimization</li>
+          </ul>
+        </div>
+        <div class="m-col">
+          <h4>Sales Agents</h4>
+          <ul>
+            <li>Prospecting and account research</li>
+            <li>Outbound messaging</li>
+            <li>Account intelligence</li>
+            <li>Meeting preparation</li>
+            <li>Deal coaching</li>
+            <li>Proposal generation</li>
+          </ul>
+        </div>
+        <div class="m-col">
+          <h4>Operations Agents</h4>
+          <ul>
+            <li>CRM data quality</li>
+            <li>Workflow automation</li>
+            <li>Attribution and analytics</li>
+            <li>Forecasting</li>
+            <li>Deal desk support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="m-body reveal reveal-delay-3" style="margin-top:40px;text-align:center">
+        <p>Your people keep the work that compounds. Revenue strategy and resource allocation, system design, product narrative and positioning, customer relationships, expansion and retention.</p>
+        <p><strong>A smaller team designs and guides the system. The system does the executing.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHERE MAESTRO RUNS
+       ============================================ -->
+  <section class="m-section" id="services">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Where It Runs</div>
+        <h2 class="section-title">One system. Pointed at the work<br>your team <span class="accent">already owns</span>.</h2>
+      </div>
+
+      <div class="services-grid" style="margin-top:44px">
+        <a href="maestro-marketing.html" class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+          </div>
+          <h3>Maestro for Marketing</h3>
+          <p>Demand creation, segmentation, content production, and campaign execution against a record that stays clean because the system maintains it.</p>
+          <span class="service-tag">// demand &amp; content</span>
+        </a>
+
+        <a href="maestro-sales.html" class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <h3>Maestro for Sales</h3>
+          <p>Signals scored and routed to an owner, with the outreach drafted against what actually happened at the account.</p>
+          <span class="service-tag">// signal &amp; pipeline</span>
+        </a>
+
+        <a href="maestro-operations.html" class="service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Maestro for Operations</h3>
+          <p>Cross-team visibility, coordination that runs without a status meeting, and results written back to the systems of record.</p>
+          <span class="service-tag">// coordination &amp; visibility</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHAT MAESTRO IS
+       ============================================ -->
+  <section class="m-section alt" id="what-it-is">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The Missing Piece</div>
+        <h2 class="section-title">The missing piece is<br><span class="accent">architecture</span>.</h2>
+      </div>
+
+      <div class="m-body reveal reveal-delay-1" style="margin-top:36px">
+        <p>Most companies experimenting with agents deploy tools, test workflows, and automate small tasks. Nothing connects. Without an architecture, agents stay isolated experiments.</p>
+        <p>Pilot to production is the single largest problem this category gets hired to solve, at 16% of stated problems across 36 surveyed providers.</p>
+        <p><strong>Maestro is an AI-enabled revenue architecture.</strong> It defines how data moves across systems, how signals get detected, how agents analyze activity, how insights get generated, and how teams execute against them.</p>
+        <p>It creates one operational layer across marketing, sales, and operations, so revenue stops depending on individual heroics and starts running as a designed system.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HOW IT WORKS
+       ============================================ -->
+  <section class="process" id="how-it-works">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// How It Works</div>
+        <h2 class="section-title">Three layers,<br><span class="accent">connected</span>.</h2>
+        <p class="section-sub reveal reveal-delay-1" style="max-width:640px;margin:16px auto 0;">Signals come in, decisions get made, work gets executed, and every step is logged.</p>
+      </div>
+
+      <div class="process-terminal reveal reveal-delay-1">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">maestro_pipeline/ &mdash; magnetiz</span>
+          </div>
+          <div class="process-list">
+            <div class="process-item">
+              <span class="process-number">1</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  01_Signal_Layer.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">The system watches for change across your accounts and market. CRM activity, product usage, pipeline movement, marketing engagement, hiring, leadership changes, funding, and what the companies you sell to say publicly.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <span class="process-number">2</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  02_Intelligence_Layer.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">Signals get enriched and scored against a 100-point model covering title fit, company fit, signal strength, and engagement. Scoring produces a routing decision with an owner attached instead of another dashboard.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <span class="process-number">3</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  03_Execution_Layer.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">Work gets routed, drafted, and written back to the system of record. Account summaries, prioritized queues, outreach drafts, CRM updates. Humans approve anything carrying brand or revenue risk.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <span class="process-number">4</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  04_Eval_Gate.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">Every output is scored against binary pass or fail tests before it ships. Gating thresholds stop a failing run before it reaches a customer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready">READY</span></span>
+              <span>BUILD: <span style="color:var(--accent-green)">PASSING</span></span>
+            </div>
+            <span>4 modules loaded</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="m-body reveal reveal-delay-2" style="margin-top:36px;text-align:center">
+        <p><strong>Every action is logged with the signal and the score that triggered it.</strong> Anything the system did can be traced back to why it did it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHAT CHANGES
+       ============================================ -->
+  <section class="m-section alt" id="what-changes">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// What Changes</div>
+        <h2 class="section-title">Three shifts, and they<br>arrive in that <span class="accent">order</span>.</h2>
+      </div>
+
+      <div class="m-own reveal reveal-delay-1">
+        <div class="m-own-item">
+          <span class="n">01</span>
+          <h4>Signal detection improves</h4>
+          <p>The system monitors continuously and surfaces meaningful change on its own. Teams stop discovering problems during the pipeline review.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">02</span>
+          <h4>Execution becomes consistent</h4>
+          <p>Workflows become structured and repeatable. Every request follows the same rules, checks, and documentation, regardless of who is on shift.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">03</span>
+          <h4>Teams gain leverage</h4>
+          <p>Revenue scales without scaling headcount at the same rate. The organization gets more coordinated as it grows instead of less.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHAT MAGNETIZ DELIVERS
+       ============================================ -->
+  <section class="m-section" id="delivers">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// What We Deliver</div>
+        <h2 class="section-title">Workflows running in your<br><span class="accent">production environment</span>.</h2>
+        <p class="m-lede">And the evaluation frameworks that keep them correct.</p>
+      </div>
+
+      <div class="m-deliver reveal reveal-delay-1">
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Revenue workflows built and running in production, inside your existing stack</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Evaluation frameworks with gating thresholds on every run, so a failing output does not reach a customer</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Signal detection and scoring wired into your systems of record</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>CRM and data integration across the tools you already own</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Capability transfer to a named owner on your team</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Documentation your engineers can work from after we leave</p>
+        </div>
+      </div>
+
+      <div class="m-body reveal reveal-delay-2" style="margin-top:36px;text-align:center">
+        <p><strong>Magnetiz builds the system and runs it in production. Your team ends up able to operate it without us.</strong></p>
+        <p>LangChain surveyed more than 1,300 practitioners in 2026. 89% had implemented observability. 52% had adopted evals. Teams bought watching their agents and stopped short of proving them. Every Maestro workflow ships with binary pass or fail tests written against the ways that workflow actually breaks, drawn from real production traces, plus regression testing when models, prompts, or upstream data change.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       OWNERSHIP
+       ============================================ -->
+  <section class="m-section alt" id="ownership">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Ownership</div>
+        <h2 class="section-title">Your team runs it<br>when we <span class="accent">leave</span>.</h2>
+        <p class="m-lede">Gartner projects that roughly seven in ten enterprises will abandon agentic AI projects for lack of the internal skills to maintain them. A system nobody on your team can operate is a system nobody keeps.</p>
+      </div>
+
+      <div class="m-own reveal reveal-delay-1">
+        <div class="m-own-item">
+          <span class="n">MILESTONE 01</span>
+          <h4>The first eval cycle</h4>
+          <p>Your named owner runs the first independent evaluation cycle while we are still there.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">MILESTONE 02</span>
+          <h4>The first incident</h4>
+          <p>Your team handles the first production incident without us.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">MILESTONE 03</span>
+          <h4>The first change</h4>
+          <p>Your engineers review and approve changes to the workflow.</p>
+        </div>
+      </div>
+
+      <div class="m-body reveal reveal-delay-2" style="margin-top:36px;text-align:center">
+        <p><strong>Attendance at a training session is not one of these.</strong></p>
+        <p>Capability transfer is included in every engagement. Firms that sell it on its own price a cohort between $15,000 and $50,000. It appears in your proposal as a line with a value attached, so you can see what it is worth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TWO WAYS TO RUN IT
+       ============================================ -->
+  <section class="m-section" id="engage">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Engagement</div>
+        <h2 class="section-title">Two ways to <span class="accent">run it</span>.</h2>
+        <p class="m-lede">Same architecture, same evaluation layer, same ownership terms. Two sizes.</p>
+      </div>
+
+      <div class="m-tiers reveal reveal-delay-1">
+        <div class="m-tier">
+          <h3>Maestro Workflows</h3>
+          <div class="m-tier-sub">// build &amp; transfer</div>
+          <ul>
+            <li>Start with the workflows carrying the most manual load</li>
+            <li>Evaluation frameworks on every one</li>
+            <li>Capability transfer to a named owner</li>
+            <li>Your team operates it afterward</li>
+          </ul>
+          <div class="m-tier-shape">Half at the start, half when the outcome lands.</div>
+        </div>
+
+        <div class="m-tier">
+          <h3>Maestro System</h3>
+          <div class="m-tier-sub">// install &amp; operate</div>
+          <ul>
+            <li>The full architecture installed across your stack</li>
+            <li>Signal, intelligence, and execution connected end to end</li>
+            <li>Governance reporting and an accountability cadence</li>
+            <li>Operated by Magnetiz, with your systems where they are</li>
+          </ul>
+          <div class="m-tier-shape">Install fee, then monthly operations.</div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2" style="text-align:center;margin-top:56px">
+        <h2 class="section-title" style="font-size:1.6rem">How you pay</h2>
+      </div>
+
+      <dl class="m-pay reveal reveal-delay-2">
+        <div class="m-pay-row">
+          <dt>The split</dt>
+          <dd>Half is due at kickoff. The second half is due when the outcome is delivered and accepted.</dd>
+        </div>
+        <div class="m-pay-row">
+          <dt>The outcome</dt>
+          <dd>Defined in the statement of work before anything gets built, in numbers your team already tracks. Manual hours returned. Time from signal to action. Error and discrepancy rates in the workflows we touch.</dd>
+        </div>
+        <div class="m-pay-row">
+          <dt>Who verifies it</dt>
+          <dd>You do, in your own system of record. Magnetiz does not grade its own work.</dd>
+        </div>
+        <div class="m-pay-row">
+          <dt>The first milestone</dt>
+          <dd>First workflow in production within 30 days of kickoff.</dd>
+        </div>
+        <div class="m-pay-row">
+          <dt>What we need</dt>
+          <dd>A named owner on your side, written into the agreement. The system needs someone who can approve, decide, and take handover. This is the condition that makes the second half safe to promise.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHO THIS IS FOR
+       ============================================ -->
+  <section class="m-section alt" id="who">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Fit</div>
+        <h2 class="section-title">Who this is <span class="accent">for</span>.</h2>
+        <p class="m-lede">Companies that made AI a priority and have no path from experiment to operation.</p>
+      </div>
+
+      <ul class="m-who reveal reveal-delay-1">
+        <li>US public companies, roughly $75M to $250M in revenue and 200 to 700 employees</li>
+        <li>A revenue or operations leader who owns a number and can name the manual work behind it</li>
+        <li>Existing systems worth keeping, since Maestro runs inside your stack instead of replacing it</li>
+        <li>Willingness to assign a named owner for the length of the engagement</li>
+      </ul>
+
+      <div class="m-body reveal reveal-delay-2" style="margin-top:32px;text-align:center">
+        <p>If pilots have been running for six months without shipping, that is the condition this was built for.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA
+       ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="reveal">
+        <div class="section-label">// Diagnose</div>
+        <h2 class="section-title" style="margin-bottom:16px">Start with a diagnosis</h2>
+      </div>
+
+      <div class="cta-terminal reveal reveal-delay-1">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">terminal &mdash; magnetiz</span>
+          </div>
+          <div class="cta-prompt">
+            <span class="path">magnetiz.ai</span>
+            <span class="dollar">&nbsp;$&nbsp;</span>
+            <span id="cta-typed"></span>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group">
+              <span>STATUS: <span class="status-ready">READY</span></span>
+              <span>SLOTS: <span style="color:var(--accent-blue)">8 / month</span></span>
+            </div>
+            <span>awaiting input...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-text reveal reveal-delay-2">
+        <p>Thirty minutes, your production traces, and a written recommendation inside 24 hours. Failure modes documented from real runs, the realistic efficiency gain calculated, and a clear go or no-go that includes killing the pilot.</p>
+        <p>If nothing is running yet, take the readiness assessment. Eight questions, two minutes, no email required to see your result.</p>
+      </div>
+
+      <div class="hero-ctas reveal reveal-delay-3" style="justify-content:center">
+        <a href="ai-audit.html" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Get Your Audit
+        </a>
+        <a href="assessment.html" class="btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Take the Assessment
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div class="video-modal" id="video-modal">
+    <div class="video-modal-backdrop" id="video-modal-backdrop"></div>
+    <div class="video-modal-content">
+      <button class="video-modal-close" id="video-modal-close" aria-label="Close video">&times;</button>
+      <video id="video-player" controls playsinline preload="none">
+        <source src="assets/videos/maestro-demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>AI workflows built into production, with the evaluation frameworks that keep them correct.</p>
+        </div>
+
+        <div>
+          <h4>Maestro</h4>
+          <ul class="footer-links">
+            <li><a href="maestro.html">Maestro AI Revenue System</a></li>
+            <li><a href="maestro-marketing.html">Maestro for Marketing</a></li>
+            <li><a href="maestro-sales.html">Maestro for Sales</a></li>
+            <li><a href="maestro-operations.html">Maestro for Operations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="content.html">Content Hub</a></li>
+            <li><a href="our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="assessment.html">AI Readiness Assessment</a></li>
+            <li><a href="ai-audit.html">AI Audit</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="talent.html">Talent</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC). All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Autoplay the old-way / new-way loops only while in view.
+    (function () {
+      var vids = document.querySelectorAll('.m-video video');
+      if (!('IntersectionObserver' in window)) {
+        vids.forEach(function (v) { v.play().catch(function(){}); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.play().catch(function(){}); }
+          else { e.target.pause(); }
+        });
+      }, { threshold: 0.35 });
+      vids.forEach(function (v) { io.observe(v); });
+    })();
+  </script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && /Schedule\s*Call|^Contact$/i.test(link.textContent.trim())) {
+        e.preventDefault();
+        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+      }
+    });
+  </script>
+  <script src="js/linkedin-insight.js" async></script>
+  <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
+</body>
+</html>
