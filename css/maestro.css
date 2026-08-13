@@ -157,17 +157,18 @@
   grid-template-columns: minmax(260px, 400px) 1fr;
   gap: 24px;
   margin-top: 48px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .m-switch-nav {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 8px;
   background: var(--bg-elevated);
   border: 1px solid var(--border-default);
   border-radius: var(--radius);
-  padding: 16px;
+  padding: 24px 16px;
 }
 
 .m-switch-tab {
@@ -232,18 +233,25 @@
   to { height: calc(100% - 24px); }
 }
 
-.m-switch-panels { position: relative; }
+/* All panels occupy the same grid cell, so the block is always as tall as
+   the tallest panel and the layout does not jump as it rotates. */
+.m-switch-panels { display: grid; }
 
 .m-switch-panel {
-  display: none;
+  grid-area: 1 / 1;
   background: var(--bg-card);
   border: 1px solid var(--border-default);
   border-radius: var(--radius);
   padding: 34px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .m-switch-panel.is-active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
   animation: m-switch-in .4s ease both;
 }
 
