@@ -149,11 +149,11 @@
         <p class="m-lede">Marketing hires specialists. Sales hires reps. RevOps hires analysts. Before long a revenue organization carries twenty or more specialized roles across three functions.</p>
       </div>
 
-      <div class="m-video reveal reveal-delay-1">
-        <video src="assets/videos/maestro-old-way.mp4" muted loop playsinline preload="metadata" aria-label="Animation showing a revenue organization growing to more than twenty specialized roles"></video>
-      </div>
+      <!-- TODO: Magnetiz-branded "old way" loop goes here. The RevWisely clip was
+           removed because it duplicated the columns below and carried their brand.
+           Markup pattern is kept in css/maestro.css under .m-video. -->
 
-      <div class="m-cols reveal reveal-delay-2">
+      <div class="m-cols reveal reveal-delay-1">
         <div class="m-col">
           <h4>Marketing</h4>
           <ul>
@@ -193,7 +193,7 @@
         </div>
       </div>
 
-      <div class="m-body reveal reveal-delay-3" style="margin-top:40px;text-align:center">
+      <div class="m-body reveal reveal-delay-2" style="margin-top:40px;text-align:center">
         <p>Every function executes tasks. Every team works inside its own systems. Every new hire becomes another line item. The teams still struggle with fragmented systems, delayed insights, inconsistent execution, and pipeline managed after the fact.</p>
         <p><strong>In this model, growth means adding more people to handle more complexity.</strong></p>
       </div>
@@ -211,11 +211,11 @@
         <p class="m-lede">Many of those workflows can now be handled by specialized AI agents operating inside a coordinated system. A central orchestrator moves work across systems, data, and teams. Around it, agents support each revenue function.</p>
       </div>
 
-      <div class="m-video accent reveal reveal-delay-1">
-        <video src="assets/videos/maestro-new-way.mp4" muted loop playsinline preload="metadata" aria-label="Animation showing a revenue orchestrator coordinating marketing, sales, and operations agents"></video>
-      </div>
+      <!-- TODO: Magnetiz-branded "new way" loop goes here. The RevWisely clip was
+           removed because it duplicated the columns below and carried their brand
+           on the orchestrator pill. -->
 
-      <div class="m-cols reveal reveal-delay-2">
+      <div class="m-cols reveal reveal-delay-1">
         <div class="m-col">
           <h4>Marketing Agents</h4>
           <ul>
@@ -250,7 +250,7 @@
         </div>
       </div>
 
-      <div class="m-body reveal reveal-delay-3" style="margin-top:40px;text-align:center">
+      <div class="m-body reveal reveal-delay-2" style="margin-top:40px;text-align:center">
         <p>Your people keep the work that compounds. Revenue strategy and resource allocation, system design, product narrative and positioning, customer relationships, expansion and retention.</p>
         <p><strong>A smaller team designs and guides the system. The system does the executing.</strong></p>
       </div>
@@ -716,23 +716,6 @@
 
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    // Autoplay the old-way / new-way loops only while in view.
-    (function () {
-      var vids = document.querySelectorAll('.m-video video');
-      if (!('IntersectionObserver' in window)) {
-        vids.forEach(function (v) { v.play().catch(function(){}); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.play().catch(function(){}); }
-          else { e.target.pause(); }
-        });
-      }, { threshold: 0.35 });
-      vids.forEach(function (v) { io.observe(v); });
-    })();
-  </script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     document.addEventListener('click', function(e) {

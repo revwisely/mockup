@@ -36,7 +36,10 @@
 .m-body p { margin-bottom: 16px; }
 .m-body strong { color: var(--text-primary); font-weight: 600; }
 
-/* --- Old way / new way video panels --- */
+/* --- Old way / new way video panels ---
+   Currently unused. The RevWisely clips were pulled because they carried
+   their branding and duplicated the role columns. Kept so the Magnetiz
+   versions drop straight in when they are made. */
 .m-video {
   margin: 40px auto 0;
   max-width: 940px;
