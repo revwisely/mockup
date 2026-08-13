@@ -1,5 +1,15 @@
 [
   {
+    "slug": "crm-data-quality-ai-agents",
+    "title": "What Is Your AI Agent Reading Before It Acts?",
+    "date": "2026-08-13",
+    "author": "Magnetiz.ai",
+    "excerpt": "Agent evaluation grades the output. The record the agent read before it acted gets graded by nobody. Here is where the trust gap actually sits, and the two numbers that measure it.",
+    "image": "assets/images/posts/crm-data-quality-ai-agents-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "ai-brand-video-direction",
     "title": "Why Does Every AI Made Video Look the Same?",
     "date": "2026-08-06",
