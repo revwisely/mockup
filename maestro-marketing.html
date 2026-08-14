@@ -69,7 +69,7 @@
         <li><a href="content.html">Content</a></li>
       </ul>
 
-      <a href="#cta" class="nav-cta">Time Your Workflow</a>
+      <a href="#cta" class="nav-cta">Schedule Call</a>
 
       <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -83,7 +83,7 @@
     <a href="maestro-sales.html" class="mobile-sub">Maestro for Sales</a>
     <a href="maestro-operations.html" class="mobile-sub">Maestro for Operations</a>
     <a href="content.html">Content</a>
-    <a href="#cta">Time Your Workflow</a>
+    <a href="#cta">Schedule Call</a>
   </div>
 
   <!-- ============================================
@@ -98,8 +98,8 @@
         <p class="hero-sub">Maestro runs demand creation, segmentation, content production, and campaign execution as connected agents, against a record that stays clean because the system maintains it.</p>
         <div class="hero-ctas">
           <a href="#cta" class="btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            Time Your Workflow
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Schedule Call
           </a>
           <a href="maestro.html" class="btn-ghost">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
@@ -324,8 +324,8 @@
   <section class="cta-section" id="cta">
     <div class="cta-inner">
       <div class="reveal">
-        <div class="section-label">// Start Here</div>
-        <h2 class="section-title" style="margin-bottom:16px">We&rsquo;ll time your worst workflow</h2>
+        <div class="section-label">// Get Started</div>
+        <h2 class="section-title" style="margin-bottom:16px">Let&rsquo;s look at your workflows</h2>
       </div>
 
       <div class="cta-terminal reveal reveal-delay-1">
@@ -341,12 +341,12 @@
           <div class="cta-prompt">
             <span class="path">magnetiz.ai</span>
             <span class="dollar">&nbsp;$&nbsp;</span>
-            <span id="cta-typed" data-cmd="start --timed-baseline"></span>
+            <span id="cta-typed" data-cmd="schedule --call"></span>
           </div>
           <div class="terminal-status">
             <div class="status-group">
               <span>STATUS: <span class="status-ready">READY</span></span>
-              <span>SESSION: <span style="color:var(--accent-blue)">45 min</span></span>
+              <span>MODE: <span style="color:var(--accent-blue)">maestro</span></span>
             </div>
             <span>awaiting input...</span>
           </div>
@@ -354,13 +354,13 @@
       </div>
 
       <div class="cta-text reveal reveal-delay-2">
-        <p>Pick the process that eats the most time. We sit with whoever runs it and time one pass. You keep the number either way.</p>
+        <p>Thirty minutes. Bring the process that eats the most time and we will tell you whether it is worth automating.</p>
       </div>
 
       <div class="hero-ctas reveal reveal-delay-3" style="justify-content:center">
         <a href="#cta" class="btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          Time Your Workflow
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule Call
         </a>
         <a href="maestro.html" class="btn-ghost">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
@@ -429,7 +429,7 @@
   <script>
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a');
-      if (link && /Schedule\s*Call|Time\s*Your\s*Workflow|^Contact$/i.test(link.textContent.trim())) {
+      if (link && /Schedule\s*Call|^Contact$/i.test(link.textContent.trim())) {
         e.preventDefault();
         Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
       }
