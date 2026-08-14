@@ -507,3 +507,20 @@
   .m-switch { grid-template-columns: 1fr; }
   .m-banner-inner { flex-direction: column; align-items: flex-start; }
 }
+
+/* --- Product video in the hero terminal frame ---------------------
+   YC pattern: a product visual above the fold so someone understands
+   what this is without reading. Short silent loop cut from the demo,
+   full version still behind the Watch Demo button. ---------------- */
+.m-hero-video {
+  padding: 0 !important;
+  overflow: hidden;
+  background: #000;
+}
+
+.m-hero-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
