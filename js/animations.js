@@ -257,7 +257,8 @@ function initCtaPrompt() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const typer = new PromptTyper(promptEl, 'start --ai-audit', 65);
+          const cmd = promptEl.dataset.cmd || 'start --ai-audit';
+          const typer = new PromptTyper(promptEl, cmd, 65);
           typer.start();
           observer.unobserve(entry.target);
         }
