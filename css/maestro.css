@@ -10,10 +10,6 @@
   position: relative;
 }
 
-.m-section.alt {
-  background: var(--bg-surface);
-}
-
 .m-lede {
   max-width: 720px;
   margin: 18px auto 0;
