@@ -160,6 +160,14 @@ img { max-width: 100%; display: block; }
   gap: 36px;
 }
 
+/* The dropdown trigger is display:flex while its sibling holds a plain
+   inline link, so the two list items resolved to different box heights
+   and the labels sat at different offsets. Lay both out the same way. */
+.nav-links > li {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links a {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
