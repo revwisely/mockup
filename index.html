@@ -3,51 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magnetiz.ai — AI Agents That Work in Production</title>
-  <meta name="description" content="Evaluation-first frameworks. Production-ready in less than 30 days. Reliable long-term. Our Outcome Pricing™ model means you pay for results, not hours worked.">
-  <meta property="og:title" content="Magnetiz.ai — AI Agents That Work in Production">
-  <meta property="og:description" content="Evaluation-first frameworks. Production-ready in less than 30 days. Reliable long-term.">
+  <title>Maestro AI Revenue System &mdash; AI Agents That Run Revenue Operations | Magnetiz.ai</title>
+  <meta name="description" content="Maestro takes the manual work out of your GTM, running it inside the systems you already own, with the evaluation frameworks that prove it holds.">
+  <meta property="og:title" content="Maestro AI Revenue System &mdash; AI Agents That Run Revenue Operations | Magnetiz.ai">
+  <meta property="og:description" content="Maestro takes the manual work out of your GTM, running it inside the systems you already own.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://www.magnetiz.ai/">
 
-  <!-- Structured data. This is how an answer engine resolves Magnetiz as an
-       entity rather than inferring it from prose. Organization and WebSite are
-       site-level facts, so they belong on the homepage rather than on every
-       page. Per-article BlogPosting is emitted server-side in api/og.js. -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.magnetiz.ai/#organization",
-        "name": "Magnetiz.ai",
-        "url": "https://www.magnetiz.ai/",
-        "description": "Magnetiz builds and runs production AI agents for revenue and operations teams. Evaluation-first frameworks, production-ready in less than 30 days.",
-        "knowsAbout": [
-          "AI agents",
-          "Agent evaluation",
-          "Revenue operations",
-          "Go-to-market automation",
-          "AI implementation",
-          "Business process automation"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.magnetiz.ai/#website",
-        "url": "https://www.magnetiz.ai/",
-        "name": "Magnetiz.ai",
-        "publisher": { "@id": "https://www.magnetiz.ai/#organization" },
-        "inLanguage": "en"
-      }
-    ]
-  }
-  </script>
-
   <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="css/tailwind-shim.css">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
@@ -57,8 +26,11 @@
   <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
   <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/maestro.css">
 
   <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
   <script>
@@ -67,1960 +39,13 @@
     gtag('js', new Date());
     gtag('config', 'G-2NB89Q3REZ');
   </script>
-
-  <!-- RB2B -->
-  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
-
-  <!-- Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "rfeny36y07");
-  </script>
-  <script>
-    // Calendly's widget CSS is only needed once the booking UI opens; loading
-    // it render-blocking cost ~1.2s of mobile FCP (PSI 2026-08-11). Fetch it
-    // after load instead.
-    window.addEventListener('load', function () {
-      var l = document.createElement('link');
-      l.rel = 'stylesheet';
-      l.href = 'https://assets.calendly.com/assets/external/widget.css';
-      document.head.appendChild(l);
-    });
-  </script>
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/dmsans-v17-rP2Fp2ywxg089UriCZa4Hz-DJF4e8A.woff2" crossorigin>
-  <!-- Inlined critical CSS (#154 mobile LCP). Fonts are self-hosted
-       variable woff2 (source: assets/fonts/, regenerate via Google css2 if
-       families change). tailwind-shim.css and terminal.css are inlined to
-       remove two ~650ms Slow-4G round trips; THE FILES IN css/ REMAIN THE
-       SOURCE OF TRUTH for other pages. If you edit them, re-inline here. -->
-  <style>
-/* latin-ext */
-@font-face {
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url(/assets/fonts/dmsans-v17-rP2Fp2ywxg089UriCZa4ET-DJF4e8BH9.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url(/assets/fonts/dmsans-v17-rP2Fp2ywxg089UriCZa4Hz-DJF4e8A.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url(/assets/fonts/dmsans-v17-rP2Hp2ywxg089UriCZ2IHTWEBlwu8Q.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url(/assets/fonts/dmsans-v17-rP2Hp2ywxg089UriCZOIHTWEBlw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(/assets/fonts/jetbrainsmono-v24-tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* ============================================================
-   tailwind-shim.css — replaces the Tailwind play CDN entirely.
-
-   WHY. Every page loaded https://cdn.tailwindcss.com in the <head>, render-blocking.
-   That is 407KB of JavaScript which downloads a compiler and generates CSS in the
-   browser on every page view, before anything can paint. Tailwind's own docs say the
-   play CDN is for development only, never production. Clarity measured LCP at 5.73s
-   on 2026-08-04, firmly in Google's "poor" band, and this was the dominant cause.
-
-   WHAT IT COST US. An audit of all 18 pages that loaded the CDN found the site uses
-   exactly THREE Tailwind utilities in total: container, hidden, sm:block. Everything
-   else is our own terminal.css. So 407KB of render-blocking JavaScript was shipping
-   to deliver the rules below.
-
-   No build step, no dependency, no config. Three rules, copied verbatim from what
-   Tailwind 3.4.17 generates, so nothing shifts visually. If real Tailwind usage ever
-   grows past a handful of utilities, replace this with a proper CLI build rather than
-   reinstating the CDN.
-   ============================================================ */
-
-.container { width: 100%; }
-@media (min-width: 640px)  { .container { max-width: 640px; } }
-@media (min-width: 768px)  { .container { max-width: 768px; } }
-@media (min-width: 1024px) { .container { max-width: 1024px; } }
-@media (min-width: 1280px) { .container { max-width: 1280px; } }
-@media (min-width: 1536px) { .container { max-width: 1536px; } }
-
-.hidden { display: none; }
-
-@media (min-width: 640px) { .sm\:block { display: block; } }
-
-/* ==========================================================
-   MAGNETIZ.AI — Terminal Design System
-   Dark IDE / Engineering Terminal Aesthetic
-   ========================================================== */
-
-/* --- Design Tokens --- */
-:root {
-  --bg-deep: #0d1117;
-  --bg-surface: #161b22;
-  --bg-elevated: #1c2333;
-  --bg-card: #21262d;
-
-  --accent-blue: #4A9ECE;
-  --accent-blue-dim: rgba(74, 158, 206, 0.12);
-  --accent-blue-glow: rgba(74, 158, 206, 0.08);
-  --accent-coral: #E06C75;
-  --accent-green: #98C379;
-  --accent-amber: #E5C07B;
-  --accent-purple: #C678DD;
-  --accent-cyan: #56B6C2;
-  --accent-orange: #D19A66;
-
-  --text-primary: #E6EDF3;
-  --text-secondary: #8B949E;
-  --text-muted: #484F58;
-
-  --border-default: #30363d;
-  --border-accent: rgba(74, 158, 206, 0.25);
-
-  --glow-sm: 0 0 15px rgba(74, 158, 206, 0.08);
-  --glow-md: 0 0 30px rgba(74, 158, 206, 0.12), 0 0 60px rgba(74, 158, 206, 0.04);
-  --glow-lg: 0 0 40px rgba(74, 158, 206, 0.2), 0 0 80px rgba(74, 158, 206, 0.06);
-
-  --radius: 12px;
-  --header-h: 40px;
-  --status-h: 28px;
-}
-
-/* --- Base Reset --- */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: clip;
-}
-
-body {
-  font-family: 'DM Sans', system-ui, sans-serif;
-  background: var(--bg-deep);
-  color: var(--text-primary);
-  min-height: 100vh;
-  overflow-x: clip;
-  line-height: 1.6;
-}
-
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-img { max-width: 100%; display: block; }
-
-::selection {
-  background: rgba(74, 158, 206, 0.3);
-  color: var(--text-primary);
-}
-
-/* --- Grid Background --- */
-.grid-bg {
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(circle, rgba(74, 158, 206, 0.07) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* --- Hero Atmosphere Glow --- */
-.hero-glow {
-  position: absolute;
-  top: -300px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1000px;
-  max-width: 100vw;
-  height: 800px;
-  background: radial-gradient(ellipse, rgba(74, 158, 206, 0.06) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* --- Utility --- */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.section-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  color: var(--accent-green);
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-
-.section-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.15;
-}
-
-.glow-line {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
-  opacity: 0.2;
-}
-
-/* ==========================================================
-   NAVIGATION
-   ========================================================== */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  padding: 18px 0;
-  transition: all 0.35s ease;
-}
-
-.nav.scrolled {
-  background: rgba(13, 17, 23, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-default);
-  padding: 12px 0;
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-logo {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.5px;
-}
-
-.nav-logo .accent { color: var(--accent-blue); }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-}
-
-.nav-links a {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
-  position: relative;
-}
-
-.nav-links a:hover { color: var(--accent-blue); }
-
-/* Nav Dropdown */
-.nav-dropdown { position: relative; }
-
-.nav-dropdown-trigger {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.nav-dropdown-trigger .chevron {
-  transition: transform 0.2s ease;
-  font-size: 10px;
-}
-
-.nav-dropdown:hover .chevron { transform: rotate(180deg); }
-
-.nav-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-default);
-  border-radius: 10px;
-  padding: 8px;
-  min-width: 220px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
-.nav-dropdown:hover .nav-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-.nav-dropdown-menu a {
-  display: block;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-size: 13px;
-  color: var(--text-secondary);
-  transition: all 0.15s ease;
-}
-
-.nav-dropdown-menu a:hover {
-  background: var(--accent-blue-dim);
-  color: var(--accent-blue);
-}
-
-/* Nav CTA */
-.nav-cta {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 10px 22px;
-  background: var(--accent-blue);
-  color: #fff;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.nav-cta:hover {
-  background: #5ab0de;
-  box-shadow: 0 0 20px rgba(74, 158, 206, 0.3);
-}
-
-/* Mobile Toggle */
-.mobile-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.mobile-toggle span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text-primary);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.mobile-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.mobile-toggle.active span:nth-child(2) { opacity: 0; }
-.mobile-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Mobile Menu */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 280px;
-  height: 100vh;
-  background: var(--bg-surface);
-  border-left: 1px solid var(--border-default);
-  padding: 80px 32px 32px;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  z-index: 99;
-}
-
-.mobile-menu.open { transform: translateX(0); }
-
-.mobile-menu a {
-  display: block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
-  color: var(--text-secondary);
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border-default);
-  transition: color 0.2s ease;
-}
-
-.mobile-menu a:hover { color: var(--accent-blue); }
-
-.mobile-menu a.mobile-sub {
-  padding-left: 16px;
-  font-size: 13px;
-  color: var(--text-muted);
-  border-bottom-color: rgba(48, 54, 61, 0.5);
-}
-
-.mobile-menu a.mobile-sub:hover { color: var(--accent-blue); }
-
-/* ==========================================================
-   TERMINAL CHROME (reusable component)
-   ========================================================== */
-.terminal {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--glow-md);
-  transition: box-shadow 0.4s ease;
-}
-
-.terminal:hover {
-  box-shadow: var(--glow-lg);
-}
-
-.terminal-header {
-  display: flex;
-  align-items: center;
-  height: var(--header-h);
-  padding: 0 16px;
-  background: var(--bg-elevated);
-  border-bottom: 1px solid var(--border-default);
-}
-
-.terminal-dots {
-  display: flex;
-  gap: 8px;
-}
-
-.terminal-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.terminal-dot.red { background: #FF5F56; }
-.terminal-dot.yellow { background: #FFBD2E; }
-.terminal-dot.green { background: #27C93F; }
-
-.terminal-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--text-muted);
-  flex: 1;
-  text-align: center;
-  margin-right: 52px;
-}
-
-.terminal-body {
-  position: relative;
-  padding: 20px 20px 20px 60px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  line-height: 1.75;
-  min-height: 200px;
-}
-
-.terminal-body .line-numbers {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 48px;
-  padding: 20px 12px 20px 0;
-  text-align: right;
-  color: var(--text-muted);
-  font-size: 12px;
-  line-height: 1.75;
-  user-select: none;
-  border-right: 1px solid var(--border-default);
-  pointer-events: none;
-}
-
-.terminal-status {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--status-h);
-  padding: 0 16px;
-  background: var(--bg-elevated);
-  border-top: 1px solid var(--border-default);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--text-muted);
-}
-
-.terminal-status .status-group {
-  display: flex;
-  gap: 20px;
-}
-
-.status-ready { color: var(--accent-green); }
-.status-amber { color: var(--accent-amber); }
-
-/* --- Syntax Colors --- */
-.syn-kw { color: var(--accent-purple); }
-.syn-st { color: var(--accent-green); }
-.syn-fn { color: var(--accent-blue); }
-.syn-cm { color: var(--text-muted); font-style: italic; }
-.syn-cl { color: var(--accent-amber); }
-.syn-sf { color: var(--accent-coral); }
-.syn-bi { color: var(--accent-cyan); }
-.syn-nr { color: var(--accent-orange); }
-.syn-op { color: var(--accent-coral); }
-.syn-am { color: var(--accent-amber); }
-
-/* --- Blinking Cursor --- */
-.cursor {
-  display: inline-block;
-  width: 8px;
-  height: 17px;
-  background: var(--accent-blue);
-  animation: cursor-blink 1s step-end infinite;
-  vertical-align: text-bottom;
-  margin-left: 2px;
-}
-
-@keyframes cursor-blink {
-  50% { opacity: 0; }
-}
-
-/* --- Code Line --- */
-.code-line {
-  white-space: pre;
-  min-height: 1.75em;
-}
-
-/* ==========================================================
-   BUTTONS
-   ========================================================== */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  background: var(--accent-blue);
-  color: #fff;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.btn-primary:hover {
-  background: #5ab0de;
-  box-shadow: 0 0 24px rgba(74, 158, 206, 0.35);
-  transform: translateY(-2px);
-}
-
-.btn-primary svg { width: 18px; height: 18px; }
-
-.btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  background: transparent;
-  color: var(--text-primary);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  font-weight: 500;
-  border: 1px solid var(--border-default);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.btn-ghost:hover {
-  border-color: var(--accent-blue);
-  color: var(--accent-blue);
-  box-shadow: 0 0 15px rgba(74, 158, 206, 0.1);
-  transform: translateY(-2px);
-}
-
-.btn-ghost svg { width: 18px; height: 18px; }
-
-/* ==========================================================
-   HERO SECTION
-   ========================================================== */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 120px 24px 80px;
-  z-index: 2;
-}
-
-.hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 64px;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-content { position: relative; z-index: 2; }
-
-.hero-headline {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(32px, 4.5vw, 54px);
-  font-weight: 800;
-  line-height: 1.08;
-  margin-bottom: 24px;
-  letter-spacing: -1px;
-}
-
-.hero-headline .accent { color: var(--accent-blue); }
-
-.hero-sub {
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin-bottom: 40px;
-  max-width: 480px;
-}
-
-.hero-sub .vibes {
-  color: var(--accent-coral);
-  text-decoration: line-through;
-  opacity: 0.7;
-}
-
-.hero-sub .evidence {
-  color: var(--accent-green);
-  font-weight: 600;
-}
-
-.hero-ctas {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.hero-terminal { position: relative; z-index: 2; }
-
-.hero-terminal .terminal-body {
-  min-height: 380px;
-  font-size: 13px;
-}
-
-/* ==========================================================
-   SERVICES SECTION
-   ========================================================== */
-.services {
-  position: relative;
-  padding: 120px 24px;
-  z-index: 2;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 56px;
-}
-
-.service-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius);
-  padding: 36px 32px;
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.service-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
-.service-card:hover {
-  border-color: var(--border-accent);
-  box-shadow: var(--glow-md);
-  transform: translateY(-4px);
-}
-
-.service-card:hover::after { opacity: 1; }
-
-.service-icon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-blue-dim);
-  border-radius: 12px;
-  margin-bottom: 20px;
-  color: var(--accent-blue);
-}
-
-.service-icon svg { width: 24px; height: 24px; }
-
-.service-card h3 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.service-card p {
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--text-secondary);
-}
-
-.service-tag {
-  display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--accent-green);
-  background: rgba(152, 195, 121, 0.1);
-  padding: 4px 14px;
-  border-radius: 4px;
-  margin-top: 20px;
-}
-
-/* ==========================================================
-   PROCESS / PLAYBOOK SECTION
-   ========================================================== */
-.process {
-  position: relative;
-  padding: 120px 24px;
-  z-index: 2;
-}
-
-.process-terminal {
-  max-width: 800px;
-  margin: 56px auto 0;
-}
-
-.process-list { padding: 8px 0; }
-
-.process-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 24px 28px;
-  border-bottom: 1px solid var(--border-default);
-  transition: background 0.2s ease;
-}
-
-.process-item:last-child { border-bottom: none; }
-
-.process-item:hover { background: rgba(74, 158, 206, 0.03); }
-
-.process-number {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  color: var(--text-muted);
-  min-width: 28px;
-  padding-top: 2px;
-  user-select: none;
-}
-
-.process-content { flex: 1; }
-
-.process-filename {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--accent-blue);
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.process-filename .tag {
-  font-size: 11px;
-  color: var(--text-muted);
-  background: var(--bg-card);
-  padding: 2px 8px;
-  border-radius: 3px;
-  font-weight: 400;
-}
-
-.process-desc {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.55;
-}
-
-/* ==========================================================
-   STATS SECTION
-   ========================================================== */
-.stats {
-  position: relative;
-  padding: 120px 24px;
-  z-index: 2;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 56px;
-}
-
-.stat-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius);
-  padding: 48px 32px;
-  text-align: center;
-  position: relative;
-}
-
-.stat-number {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(48px, 7vw, 80px);
-  font-weight: 800;
-  line-height: 1;
-  margin-bottom: 16px;
-}
-
-.stat-number.blue { color: var(--accent-blue); }
-.stat-number.coral { color: var(--accent-coral); }
-.stat-number.green { color: var(--accent-green); }
-
-.stat-label {
-  font-size: 16px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ==========================================================
-   MANIFESTO SECTION
-   ========================================================== */
-.manifesto {
-  position: relative;
-  padding: 120px 24px;
-  z-index: 2;
-}
-
-.manifesto-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.manifesto-list {
-  margin: 56px 0 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.manifesto-row {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(16px, 2.8vw, 26px);
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-.manifesto-good { color: var(--text-primary); }
-
-.manifesto-arrow {
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
-.manifesto-bad {
-  color: var(--accent-coral);
-  text-decoration: line-through;
-  text-decoration-thickness: 2px;
-  opacity: 0.55;
-}
-
-.manifesto-tagline {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(20px, 3vw, 32px);
-  font-weight: 800;
-  color: var(--accent-coral);
-  margin-top: 48px;
-}
-
-/* ==========================================================
-   CTA SECTION
-   ========================================================== */
-.cta-section {
-  position: relative;
-  padding: 120px 24px;
-  z-index: 2;
-}
-
-.cta-inner {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.cta-terminal {
-  margin-bottom: 40px;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-prompt {
-  padding: 20px 24px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
-
-.cta-prompt .path { color: var(--accent-green); }
-.cta-prompt .dollar { color: var(--text-muted); margin: 0 8px; }
-.cta-prompt .cmd { color: var(--accent-blue); }
-.cta-prompt .flag { color: var(--accent-coral); }
-
-.cta-text {
-  font-size: 18px;
-  color: var(--text-secondary);
-  margin-bottom: 32px;
-  line-height: 1.6;
-}
-
-/* ==========================================================
-   FOOTER
-   ========================================================== */
-.footer {
-  position: relative;
-  border-top: 1px solid var(--border-default);
-  padding: 64px 24px 32px;
-  z-index: 2;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 48px;
-}
-
-.footer-brand .nav-logo { margin-bottom: 16px; display: inline-block; }
-
-.footer-brand p {
-  color: var(--text-secondary);
-  font-size: 14px;
-  line-height: 1.65;
-  max-width: 300px;
-}
-
-.footer h4 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--text-primary);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 20px;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-links a {
-  font-size: 14px;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
-}
-
-.footer-links a:hover { color: var(--accent-blue); }
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 32px;
-  border-top: 1px solid var(--border-default);
-}
-
-.footer-bottom p {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-.footer-socials {
-  display: flex;
-  gap: 16px;
-}
-
-.footer-socials a {
-  color: var(--text-muted);
-  transition: color 0.2s ease;
-}
-
-.footer-socials a:hover { color: var(--accent-blue); }
-.footer-socials svg { width: 20px; height: 20px; }
-
-/* ==========================================================
-   SCROLL REVEAL ANIMATIONS
-   ========================================================== */
-.reveal {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
-@media (max-width: 1024px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .hero-terminal .terminal-body { min-height: 320px; }
-
-  .services-grid { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: 1fr; }
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .nav-cta { display: none; }
-  .mobile-toggle { display: flex; }
-
-  .hero { padding: 100px 20px 60px; min-height: auto; }
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero-terminal {
-    overflow: hidden;
-    min-width: 0;
-  }
-
-  .hero-headline {
-    font-size: 28px;
-    letter-spacing: -0.5px;
-  }
-
-  .hero-sub { font-size: 15px; }
-
-  .hero-ctas {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-ctas .btn-primary,
-  .hero-ctas .btn-ghost {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-terminal .terminal-body {
-    font-size: 11px;
-    padding: 16px 16px 16px 48px;
-    min-height: 280px;
-  }
-
-  .hero-terminal .line-numbers {
-    width: 36px;
-    font-size: 10px;
-    padding: 16px 8px 16px 0;
-  }
-
-  .services, .process, .stats, .manifesto, .cta-section {
-    padding: 80px 20px;
-  }
-
-  .manifesto-row {
-    flex-direction: column;
-    gap: 4px;
-    font-size: 16px;
-  }
-
-  .manifesto-arrow { transform: rotate(90deg); }
-
-  .stat-card { padding: 32px 24px; }
-
-  .process-item { padding: 20px 16px; }
-
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-
-  .problem-log { flex-direction: column; gap: 8px; }
-  .log-stat { font-size: 32px; }
-
-  .process-content { min-width: 0; }
-  .process-filename { flex-wrap: wrap; font-size: 14px; }
-  .newsletter-form { flex-direction: column; }
-
-  .terminal-status {
-    height: auto;
-    min-height: var(--status-h);
-    flex-wrap: wrap;
-    gap: 4px 12px;
-    padding: 6px 12px;
-    font-size: 10px;
-  }
-
-  .terminal-status .status-group {
-    gap: 10px;
-  }
-}
-
-/* ==========================================================
-   EDITOR GUTTER — Scrolling line numbers
-   Fixed column on left edge, updates on scroll
-   ========================================================== */
-.editor-gutter {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 52px;
-  z-index: 50;
-  pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 0 10px 0 0;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  line-height: 22px;
-  color: var(--text-muted);
-  border-right: 1px solid var(--border-default);
-  overflow: hidden;
-  opacity: 0.45;
-  transition: opacity 0.3s ease;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0,0,0,0.4) 8%,
-    black 20%,
-    black 80%,
-    rgba(0,0,0,0.4) 92%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0,0,0,0.4) 8%,
-    black 20%,
-    black 80%,
-    rgba(0,0,0,0.4) 92%,
-    transparent 100%
-  );
-}
-
-.editor-gutter:hover { opacity: 0.7; }
-
-.editor-gutter .gutter-line {
-  height: 22px;
-  text-align: right;
-  white-space: nowrap;
-  transition: color 0.15s ease;
-  flex-shrink: 0;
-}
-
-.editor-gutter .gutter-line.active {
-  color: var(--accent-blue);
-  opacity: 1;
-}
-
-/* Shift content right on desktop to make room for gutter */
-@media (min-width: 1024px) {
-  body { padding-left: 52px; }
-  .nav { padding-left: 52px; }
-  .grid-bg { left: 52px; }
-  .editor-gutter { display: flex; }
-}
-
-@media (max-width: 1023px) {
-  .editor-gutter { display: none; }
-  body { padding-left: 0; }
-}
-
-/* ==========================================================
-   HERO GUARANTEE LINE
-   ========================================================== */
-.hero-guarantee {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  color: var(--accent-green);
-  margin-bottom: 36px;
-  padding: 10px 16px;
-  background: rgba(152, 195, 121, 0.08);
-  border-left: 3px solid var(--accent-green);
-  border-radius: 0 6px 6px 0;
-}
-
-/* ==========================================================
-   PROBLEM SECTION — Warning logs terminal
-   ========================================================== */
-.problem {
-  position: relative;
-  padding: 120px 24px;
-  z-index: 2;
-}
-
-.problem-terminal {
-  max-width: 800px;
-  margin: 56px auto 0;
-}
-
-.problem-logs {
-  padding: 8px 20px !important;
-  min-height: auto !important;
-}
-
-.problem-log {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border-default);
-}
-
-.problem-log:last-child { border-bottom: none; }
-
-.log-icon {
-  font-size: 20px;
-  color: var(--accent-amber);
-  flex-shrink: 0;
-}
-
-.log-content {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.log-stat {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 42px;
-  font-weight: 800;
-  color: var(--accent-coral);
-  line-height: 1;
-}
-
-.log-text {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-.log-text strong {
-  color: var(--text-primary);
-  font-weight: 700;
-}
-
-/* ==========================================================
-   TESTIMONIALS — Infinite Ticker Carousel
-   Git-commit-styled cards scrolling horizontally.
-   Pure CSS animation, duplicated cards for seamless loop.
-   ========================================================== */
-.testimonials {
-  position: relative;
-  padding: 120px 0;
-  z-index: 2;
-  overflow: clip;
-  max-width: 100vw;
-}
-
-.testimonials .container { margin-bottom: 56px; }
-
-/* --- Ticker track --- */
-.ticker {
-  width: 100%;
-  overflow: hidden;
-  max-width: 100vw;
-  /* Fade edges so cards appear/disappear smoothly */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-}
-
-.ticker-track {
-  display: flex;
-  gap: 24px;
-  width: max-content;
-  animation: ticker-scroll 40s linear infinite;
-}
-
-.ticker-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes ticker-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* --- Individual card --- */
-.ticker-card {
-  flex-shrink: 0;
-  width: 420px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius);
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ticker-card:hover {
-  border-color: var(--border-accent);
-  box-shadow: var(--glow-md);
-}
-
-/* Commit-style header */
-.ticker-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border-default);
-}
-
-.ticker-hash {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--accent-blue);
-  font-weight: 600;
-}
-
-.ticker-ts {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--text-muted);
-}
-
-/* Quote */
-.ticker-quote {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  line-height: 1.75;
-  color: var(--accent-green);
-  flex: 1;
-}
-
-/* Author */
-.ticker-author {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-
-.ticker-avatar {
-  width: 34px;
-  height: 34px;
-  min-width: 34px;
-  min-height: 34px;
-  max-width: 34px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  object-fit: cover;
-  border: 1px solid var(--border-default);
-  background: var(--accent-blue-dim);
-}
-
-.ticker-avatar-fallback {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--accent-blue);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.ticker-author-text {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  min-width: 0;
-}
-
-.ticker-name {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.ticker-role {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--text-muted);
-}
-
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .ticker-card { width: 300px; }
-  .ticker-track { gap: 16px; }
-  .testimonials { padding: 80px 0; }
-}
-
-/* ==========================================================
-   NEWSLETTER SECTION
-   ========================================================== */
-.newsletter {
-  position: relative;
-  padding: 80px 24px;
-  z-index: 2;
-}
-
-.newsletter-inner {
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.newsletter-body {
-  padding: 40px 32px;
-  text-align: center;
-}
-
-.newsletter-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.newsletter-desc {
-  font-size: 15px;
-  color: var(--text-secondary);
-  margin-bottom: 28px;
-}
-
-.newsletter-form {
-  display: flex;
-  gap: 12px;
-  max-width: 440px;
-  margin: 0 auto;
-}
-
-.newsletter-input {
-  flex: 1;
-  padding: 12px 16px;
-  background: var(--bg-deep);
-  border: 1px solid var(--border-default);
-  border-radius: 8px;
-  color: var(--text-primary);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-.newsletter-input:focus {
-  border-color: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(74, 158, 206, 0.1);
-}
-
-.newsletter-input::placeholder {
-  color: var(--text-muted);
-}
-
-.newsletter-success {
-  padding: 20px 0;
-  animation: newsletterFadeIn 0.4s ease;
-}
-
-.newsletter-success-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(152, 195, 121, 0.12);
-  color: var(--accent-green);
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-@keyframes newsletterFadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ==========================================================
-   VIDEO MODAL
-   ========================================================== */
-.video-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-modal.open {
-  display: flex;
-}
-
-.video-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  animation: modalFadeIn 0.25s ease;
-}
-
-.video-modal-content {
-  position: relative;
-  width: 90%;
-  max-width: 900px;
-  z-index: 1;
-  animation: modalSlideIn 0.3s ease;
-}
-
-.video-modal-content video {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 0 40px rgba(74, 158, 206, 0.15);
-  background: #000;
-}
-
-.video-modal-close {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  font-size: 28px;
-  cursor: pointer;
-  transition: color 0.2s ease;
-  line-height: 1;
-}
-
-.video-modal-close:hover {
-  color: var(--text-primary);
-}
-
-@keyframes modalFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes modalSlideIn {
-  from { opacity: 0; transform: scale(0.95) translateY(12px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-/* --- Additional responsive overrides for new sections --- */
-@media (max-width: 768px) {
-  .problem, .testimonials, .newsletter { padding: 80px 20px; }
-  .newsletter-body { padding: 28px 20px; }
-}
-
-  </style>
 </head>
 <body>
 
   <!-- Grid Background -->
   <div class="grid-bg" aria-hidden="true"></div>
 
-  <!-- Editor Gutter — scrolling line numbers -->
+  <!-- Editor Gutter -->
   <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
 
   <!-- ============================================
@@ -2032,7 +57,7 @@ img { max-width: 100%; display: block; }
 
       <ul class="nav-links">
         <li class="nav-dropdown">
-          <a href="maestro.html" class="nav-dropdown-trigger">
+          <a href="index.html" class="nav-dropdown-trigger">
             Maestro <span class="chevron">&#9662;</span>
           </a>
           <div class="nav-dropdown-menu">
@@ -2052,9 +77,8 @@ img { max-width: 100%; display: block; }
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
-    <a href="maestro.html">Maestro</a>
+    <a href="index.html">Maestro</a>
     <a href="maestro-marketing.html" class="mobile-sub">Maestro for Marketing</a>
     <a href="maestro-sales.html" class="mobile-sub">Maestro for Sales</a>
     <a href="maestro-operations.html" class="mobile-sub">Maestro for Operations</a>
@@ -2063,36 +87,34 @@ img { max-width: 100%; display: block; }
   </div>
 
   <!-- ============================================
-       HERO SECTION
+       HERO
        ============================================ -->
   <section class="hero" id="hero">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="hero-inner">
-      <!-- Left: Copy -->
       <div class="hero-content">
-        <div class="section-label">// Evaluation-First AI Engineering</div>
+        <div class="section-label">// Maestro AI Revenue System&trade;</div>
         <h1 class="hero-headline">
-          We build AI agents that work <br class="hidden sm:block">in <span class="accent">production</span>
+          Take the <span class="accent">manual work</span> out of your GTM.
         </h1>
         <p class="hero-sub">
-          Evaluation-first frameworks. Production-ready in less than 30 days.
+          Maestro runs it inside the systems you already own, so your team keeps the decisions and stops doing the data entry.
         </p>
         <p class="hero-guarantee">
-          Our <a href="outcome-pricing.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(152,195,121,0.5);">Outcome Pricing&trade;</a> model means you pay for results, not hours worked.
+          Our <a href="outcome-pricing.html" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(152,195,121,0.5);">Outcome Pricing&trade;</a> model means you don&rsquo;t pay in full unless the work takes less time.
         </p>
         <div class="hero-ctas">
           <a href="#cta" class="btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             Schedule Call
           </a>
           <button class="btn-ghost" id="video-cta">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            See How It Works
+            Watch Demo
           </button>
         </div>
       </div>
 
-      <!-- Right: Animated Terminal -->
       <div class="hero-terminal">
         <div class="terminal">
           <div class="terminal-header">
@@ -2101,7 +123,7 @@ img { max-width: 100%; display: block; }
               <span class="terminal-dot yellow"></span>
               <span class="terminal-dot green"></span>
             </div>
-            <span class="terminal-title">agent.py &mdash; magnetiz</span>
+            <span class="terminal-title">maestro.py &mdash; magnetiz</span>
           </div>
           <div class="terminal-body">
             <div class="line-numbers" id="hero-line-numbers"></div>
@@ -2109,9 +131,8 @@ img { max-width: 100%; display: block; }
           </div>
           <div class="terminal-status">
             <div class="status-group">
-              <span>STATUS: <span class="status-ready" id="hero-status">READY</span></span>
-              <span>BRANCH: <span style="color:var(--accent-blue)">main</span></span>
-              <span>BUILD: <span class="status-ready">PASSING</span></span>
+              <span>STATUS: <span class="status-ready" id="hero-status">RUNNING</span></span>
+              <span>EVALS: <span style="color:var(--accent-green)">PASSING</span></span>
             </div>
             <span id="hero-pos">Ln 1, Col 1</span>
           </div>
@@ -2123,7 +144,7 @@ img { max-width: 100%; display: block; }
   <div class="glow-line container"></div>
 
   <!-- ============================================
-       TESTIMONIALS SECTION
+       PROOF
        ============================================ -->
   <section class="testimonials" id="testimonials">
     <div class="container">
@@ -2312,56 +333,109 @@ img { max-width: 100%; display: block; }
 
   <div class="glow-line container"></div>
 
+
   <!-- ============================================
-       THE PROBLEM SECTION
+       THE PROBLEM
        ============================================ -->
-  <section class="problem" id="problem">
+  <section class="m-section" id="problem">
     <div class="container">
       <div class="reveal" style="text-align:center">
         <div class="section-label">// The Problem</div>
-        <h2 class="section-title">AI agents fail when evaluation<br>frameworks are missing.</h2>
+        <h2 class="section-title">Nobody trusts<br>the <span class="accent">number</span>.</h2>
+        <p class="m-lede">Three teams describing the same wound from three seats.</p>
       </div>
 
-      <div class="problem-terminal reveal reveal-delay-1">
-        <div class="terminal">
-          <div class="terminal-header">
-            <div class="terminal-dots">
-              <span class="terminal-dot red"></span>
-              <span class="terminal-dot yellow"></span>
-              <span class="terminal-dot green"></span>
-            </div>
-            <span class="terminal-title">diagnostics.log &mdash; production</span>
-          </div>
-          <div class="terminal-body problem-logs">
-            <div class="problem-log warning">
-              <span class="log-icon">&#9888;</span>
-              <div class="log-content">
-                <span class="log-stat coral" data-count="95" data-suffix="%">0%</span>
-                <span class="log-text">of enterprises run AI pilots. Only <strong>11%</strong> reach production.</span>
-              </div>
-            </div>
-            <div class="problem-log warning">
-              <span class="log-icon">&#9888;</span>
-              <div class="log-content">
-                <span class="log-stat coral" data-count="70" data-suffix="%">0%</span>
-                <span class="log-text">accuracy in production means babysitting agents, not reclaiming capacity.</span>
-              </div>
-            </div>
-            <div class="problem-log warning">
-              <span class="log-icon">&#9888;</span>
-              <div class="log-content">
-                <span class="log-stat coral" data-count="40" data-suffix="%">0%</span>
-                <span class="log-text">will scrap agentic AI projects by 2027 for unclear business value.</span>
-              </div>
-            </div>
-          </div>
-          <div class="terminal-status">
-            <div class="status-group">
-              <span>STATUS: <span class="status-amber">3 WARNINGS</span></span>
-              <span>SOURCE: <span style="color:var(--accent-coral)">Gartner, Deloitte</span></span>
-            </div>
-            <span>evaluation_missing</span>
-          </div>
+      <div class="m-own reveal reveal-delay-1">
+        <div class="m-own-item">
+          <span class="n">SALES</span>
+          <h4>The forecast you can&rsquo;t trust</h4>
+          <p>Outdated close dates and stalled deals move the number, and nobody can say which ones did it.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">MARKETING</span>
+          <h4>Sales says the leads are bad</h4>
+          <p>And you cannot prove which campaigns influenced which deals, so you cannot argue back.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">OPERATIONS</span>
+          <h4>Leadership stopped believing it</h4>
+          <p>Department heads manage from separate dashboards, and your team reconciles numbers instead of interpreting them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ============================================
+       OUTCOME PRICING BANNER
+       ============================================ -->
+  <section class="m-banner">
+    <div class="container m-banner-inner reveal">
+      <div class="m-banner-copy">
+        <div class="section-label">// Outcome Pricing&trade;</div>
+        <h3>You don&rsquo;t pay in full unless<br>the work takes less time.</h3>
+        <p>The target is decided before we build. You verify it in your own systems.</p>
+      </div>
+      <div class="m-banner-cta">
+        <a href="outcome-pricing.html" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          How Outcome Pricing works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       THE OLD WAY
+       ============================================ -->
+  <section class="m-section" id="old-way">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The Old Way</div>
+        <h2 class="section-title">Revenue organizations grew by<br><span class="accent">adding people</span>.</h2>
+        <p class="m-lede">Marketing hires specialists. Sales hires reps. RevOps hires analysts. Before long a revenue organization carries twenty or more specialized roles across three functions.</p>
+      </div>
+
+      <!-- TODO: Magnetiz-branded "old way" loop goes here. The RevWisely clip was
+           removed because it duplicated the columns below and carried their brand.
+           Markup pattern is kept in css/maestro.css under .m-video. -->
+
+      <div class="m-cols reveal reveal-delay-1">
+        <div class="m-col">
+          <h4>Marketing</h4>
+          <ul>
+            <li>CMO</li>
+            <li>Product Marketing</li>
+            <li>Demand Generation</li>
+            <li>Content Marketing</li>
+            <li>Digital / Performance</li>
+            <li>Marketing Operations</li>
+            <li>Field Marketing</li>
+            <li>Partner Marketing</li>
+          </ul>
+        </div>
+        <div class="m-col">
+          <h4>Sales</h4>
+          <ul>
+            <li>CRO</li>
+            <li>Account Executives</li>
+            <li>SDRs</li>
+            <li>Sales Engineers</li>
+            <li>Account Managers</li>
+            <li>Sales Managers</li>
+            <li>Partner Sales</li>
+          </ul>
+        </div>
+        <div class="m-col">
+          <h4>Revenue Operations</h4>
+          <ul>
+            <li>RevOps Leader</li>
+            <li>Sales Operations</li>
+            <li>Marketing Operations</li>
+            <li>Revenue Analytics</li>
+            <li>Systems Architecture</li>
+            <li>Deal Desk</li>
+            <li>Enablement</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -2370,13 +444,131 @@ img { max-width: 100%; display: block; }
   <div class="glow-line container"></div>
 
   <!-- ============================================
-       THE SOLUTION SECTION
+       THE NEW WAY
        ============================================ -->
-  <section class="process" id="solution">
+  <section class="m-section" id="new-way">
     <div class="container">
       <div class="reveal" style="text-align:center">
-        <div class="section-label">// The Solution</div>
-        <h2 class="section-title">How we deploy production-ready<br>AI agents</h2>
+        <div class="section-label">// The New Way</div>
+        <h2 class="section-title">Agents execute.<br>Humans <span class="accent">design</span>.</h2>
+        <p class="m-lede">Most of that work is repetitive, and repetitive work can be handed to software that does it the same way every time. Your people keep the judgement.</p>
+      </div>
+
+      <!-- TODO: Magnetiz-branded "new way" loop goes here. The RevWisely clip was
+           removed because it duplicated the columns below and carried their brand
+           on the orchestrator pill. -->
+
+      <div class="m-cols reveal reveal-delay-1">
+        <div class="m-col">
+          <h4>Marketing Agents</h4>
+          <ul>
+            <li>Demand creation</li>
+            <li>Audience segmentation</li>
+            <li>Content production</li>
+            <li>Campaign execution</li>
+            <li>Lead qualification</li>
+            <li>Conversion optimization</li>
+          </ul>
+        </div>
+        <div class="m-col">
+          <h4>Sales Agents</h4>
+          <ul>
+            <li>Prospecting and account research</li>
+            <li>Outbound messaging</li>
+            <li>Account intelligence</li>
+            <li>Meeting preparation</li>
+            <li>Deal coaching</li>
+            <li>Proposal generation</li>
+          </ul>
+        </div>
+        <div class="m-col">
+          <h4>Operations Agents</h4>
+          <ul>
+            <li>CRM data quality</li>
+            <li>Workflow automation</li>
+            <li>Attribution and analytics</li>
+            <li>Forecasting</li>
+            <li>Deal desk support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       WHERE MAESTRO RUNS
+       ============================================ -->
+  <section class="m-section" id="services">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Where It Runs</div>
+        <h2 class="section-title">One system. Pointed at the work<br>your team <span class="accent">already owns</span>.</h2>
+      </div>
+
+      <div class="services-grid" style="margin-top:44px">
+        <a href="maestro-marketing.html" class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+          </div>
+          <h3>Maestro for Marketing</h3>
+          <p>Demand creation, segmentation, content production, and campaign execution against a record that stays clean because the system maintains it.</p>
+          <span class="service-tag">// demand &amp; content</span>
+        </a>
+
+        <a href="maestro-sales.html" class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+          <h3>Maestro for Sales</h3>
+          <p>Signals scored and routed to an owner, with the outreach drafted against what actually happened at the account.</p>
+          <span class="service-tag">// signal &amp; pipeline</span>
+        </a>
+
+        <a href="maestro-operations.html" class="service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Maestro for Operations</h3>
+          <p>Cross-team visibility, coordination that runs without a status meeting, and results written back to the systems of record.</p>
+          <span class="service-tag">// coordination &amp; visibility</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       WHAT MAESTRO IS
+       ============================================ -->
+  <section class="m-section" id="what-it-is">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// The Missing Piece</div>
+        <h2 class="section-title">The missing piece is<br><span class="accent">architecture</span>.</h2>
+      </div>
+
+      <div class="m-body reveal reveal-delay-1" style="margin-top:36px">
+        <p>You deployed tools. You tested workflows. You automated a few tasks. Nothing connects, so every agent stays an isolated experiment and none of it reaches production.</p>
+        <p><strong>Maestro is the layer that connects them.</strong> It decides what data moves where, what counts as worth acting on, and who gets told.</p>
+        <p>One layer across marketing, sales, and operations, so the number in the report and the work behind it stop drifting apart.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       HOW IT WORKS
+       ============================================ -->
+  <section class="process" id="how-it-works">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// How It Works</div>
+        <h2 class="section-title">Three layers,<br><span class="accent">connected</span>.</h2>
+        <p class="section-sub reveal reveal-delay-1" style="max-width:640px;margin:16px auto 0;">Signals come in, decisions get made, work gets executed, and every step is logged.</p>
       </div>
 
       <div class="process-terminal reveal reveal-delay-1">
@@ -2387,98 +579,125 @@ img { max-width: 100%; display: block; }
               <span class="terminal-dot yellow"></span>
               <span class="terminal-dot green"></span>
             </div>
-            <span class="terminal-title">pipeline/ &mdash; magnetiz</span>
+            <span class="terminal-title">maestro_pipeline/ &mdash; magnetiz</span>
           </div>
           <div class="process-list">
-            <!-- Step 1 -->
             <div class="process-item">
               <span class="process-number">1</span>
               <div class="process-content">
                 <div class="process-filename">
-                  01_Agent_Value_Assessment.py
+                  01_Signal_Layer.py
                   <span class="tag">&lt;/&gt;</span>
                 </div>
-                <p class="process-desc">We identify evaluation gaps and model realistic ROI gains to determine go/no-go for production deployment.</p>
+                <p class="process-desc">The system watches for change across your accounts and market. CRM activity, product usage, pipeline movement, marketing engagement, hiring, leadership changes, funding, and what the companies you sell to say publicly.</p>
               </div>
             </div>
-            <!-- Step 2 -->
             <div class="process-item">
               <span class="process-number">2</span>
               <div class="process-content">
                 <div class="process-filename">
-                  02_Agent_Eval_Framework.py
+                  02_Intelligence_Layer.py
                   <span class="tag">&lt;/&gt;</span>
                 </div>
-                <p class="process-desc">We deploy automated testing infrastructure to catch edge cases, data quality issues, and confidence problems before launch.</p>
+                <p class="process-desc">Signals get enriched and scored against a 100-point model covering title fit, company fit, signal strength, and engagement. Scoring produces a routing decision with an owner attached instead of another dashboard.</p>
               </div>
             </div>
-            <!-- Step 3 -->
             <div class="process-item">
               <span class="process-number">3</span>
               <div class="process-content">
                 <div class="process-filename">
-                  03_Agent_Operations.py
+                  03_Execution_Layer.py
                   <span class="tag">&lt;/&gt;</span>
                 </div>
-                <p class="process-desc">We deploy your agent with weekly monitoring, so it stays consistent in production and improves over time.</p>
+                <p class="process-desc">Work gets routed, drafted, and written back to the system of record. Account summaries, prioritized queues, outreach drafts, CRM updates. Humans approve anything carrying brand or revenue risk.</p>
+              </div>
+            </div>
+            <div class="process-item">
+              <span class="process-number">4</span>
+              <div class="process-content">
+                <div class="process-filename">
+                  04_Eval_Gate.py
+                  <span class="tag">&lt;/&gt;</span>
+                </div>
+                <p class="process-desc">Every output is scored against binary pass or fail tests before it ships. Gating thresholds stop a failing run before it reaches a customer.</p>
               </div>
             </div>
           </div>
           <div class="terminal-status">
             <div class="status-group">
               <span>STATUS: <span class="status-ready">READY</span></span>
-              <span>BRANCH: <span style="color:var(--accent-blue)">main</span></span>
-              <span>BUILD: <span class="status-ready">PASSING</span></span>
+              <span>BUILD: <span style="color:var(--accent-green)">PASSING</span></span>
             </div>
-            <span>3 modules loaded</span>
+            <span>4 modules loaded</span>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
   <div class="glow-line container"></div>
 
   <!-- ============================================
-       SERVICES SECTION
+       WHAT CHANGES
        ============================================ -->
-  <section class="services" id="services">
+  <section class="m-section" id="what-changes">
     <div class="container">
       <div class="reveal">
-        <div class="section-label">// Get Started</div>
-        <h2 class="section-title">Three ways to start fast and<br>scale with impact.</h2>
+        <div class="section-label">// The Outcomes</div>
+        <h2 class="section-title">What changes when<br>Maestro is <span class="accent">in place</span>.</h2>
       </div>
 
-      <div class="services-grid">
-        <!-- Card 1: AI Design Sprint -->
-        <a href="ai-solutions.html" class="service-card reveal reveal-delay-1">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-          </div>
-          <h3>AI Design Sprint&trade;</h3>
-          <p>Our AI Design Sprint method takes your team from start to prototype in under 30 days. It's the quickest, most reliable way to automate manual work.</p>
-          <span class="service-tag">// concept to prototype in 30 days</span>
-        </a>
+      <div class="m-switch reveal reveal-delay-1" data-switch style="--m-switch-duration:7s">
+        <div class="m-switch-nav" role="tablist" aria-label="Outcomes">
+          <button class="m-switch-tab is-active" role="tab" aria-selected="true" aria-controls="outcome-0" id="tab-0" data-i="0">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Signal detection improves
+          </button>
+          <button class="m-switch-tab" role="tab" aria-selected="false" aria-controls="outcome-1" id="tab-1" data-i="1">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Execution becomes consistent
+          </button>
+          <button class="m-switch-tab" role="tab" aria-selected="false" aria-controls="outcome-2" id="tab-2" data-i="2">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Teams gain leverage
+          </button>
+        </div>
 
-        <!-- Card 2: AI Implementation -->
-        <a href="ai-implementation.html" class="service-card reveal reveal-delay-2">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 8 4 4-4 4"/></svg>
+        <div class="m-switch-panels">
+          <div class="m-switch-panel is-active" role="tabpanel" id="outcome-0" aria-labelledby="tab-0" data-i="0">
+            <div class="section-label">// Outcome</div>
+            <h3>Signal detection improves.</h3>
+            <p>The system surfaces what matters before it turns into a problem or a closed window.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Continuous monitoring across accounts and systems</li>
+              <li><span class="check">&#10003;</span> Account changes surfaced automatically</li>
+              <li><span class="check">&#10003;</span> Risk and opportunity visible before the pipeline review</li>
+            </ul>
           </div>
-          <h3>AI Implementation</h3>
-          <p>Custom project consulting using our workflow-first framework and ROI model so your AI automation projects deliver the business impact you want.</p>
-          <span class="service-tag">// workflow-first framework</span>
-        </a>
 
-        <!-- Card 4: AI Agents -->
-        <a href="ai-agents.html" class="service-card reveal reveal-delay-3">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2m16 0h2m-7-1v2m-6-2v2"/></svg>
+          <div class="m-switch-panel" role="tabpanel" id="outcome-1" aria-labelledby="tab-1" data-i="1">
+            <div class="section-label">// Outcome</div>
+            <h3>Execution becomes consistent.</h3>
+            <p>Every rep, every account, every motion runs the same way, whoever is having a good month.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Structured, repeatable workflows</li>
+              <li><span class="check">&#10003;</span> Same rules, checks, and documentation every time</li>
+              <li><span class="check">&#10003;</span> Coordinated across every account</li>
+            </ul>
           </div>
-          <h3>AI Agents</h3>
-          <p>AI agents designed, built, and governed to run inside your existing operations — not around them. Real capacity back for your team without changing your stack.</p>
-          <span class="service-tag">// deploy &amp; govern</span>
-        </a>
+
+          <div class="m-switch-panel" role="tabpanel" id="outcome-2" aria-labelledby="tab-2" data-i="2">
+            <div class="section-label">// Outcome</div>
+            <h3>Teams gain leverage.</h3>
+            <p>Revenue scales without scaling headcount at the same rate.</p>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Revenue grows without proportional hiring</li>
+              <li><span class="check">&#10003;</span> A more coordinated organization as it grows</li>
+              <li><span class="check">&#10003;</span> Faster execution from the same team</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -2486,54 +705,127 @@ img { max-width: 100%; display: block; }
   <div class="glow-line container"></div>
 
   <!-- ============================================
-       MANIFESTO SECTION
+       WHAT MAGNETIZ DELIVERS
        ============================================ -->
-  <section class="manifesto" id="manifesto">
-    <div class="manifesto-inner">
-      <div class="reveal">
-        <div class="section-label">// The Manifesto</div>
-        <h2 class="section-title">What We Believe</h2>
+  <section class="m-section" id="delivers">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// What We Deliver</div>
+        <h2 class="section-title">Workflows running in your<br><span class="accent">production environment</span>.</h2>
+        <p class="m-lede">And the evaluation frameworks that keep them correct.</p>
       </div>
 
-      <div class="manifesto-list">
-        <div class="manifesto-row reveal reveal-delay-1">
-          <span class="manifesto-good">Evidence-Based Engineering</span>
-          <span class="manifesto-arrow">&gt;</span>
-          <span class="manifesto-bad">'Vibes'</span>
+      <div class="m-deliver reveal reveal-delay-1">
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Revenue workflows built and running in production, inside your existing stack</p>
         </div>
-        <div class="manifesto-row reveal reveal-delay-1">
-          <span class="manifesto-good">Evaluation Frameworks</span>
-          <span class="manifesto-arrow">&gt;</span>
-          <span class="manifesto-bad">Prompt Tweaking</span>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Evaluation frameworks with gating thresholds on every run, so a failing output does not reach a customer</p>
         </div>
-        <div class="manifesto-row reveal reveal-delay-2">
-          <span class="manifesto-good">Working Prototypes</span>
-          <span class="manifesto-arrow">&gt;</span>
-          <span class="manifesto-bad">Slide Decks</span>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Signal detection and scoring wired into your systems of record</p>
         </div>
-        <div class="manifesto-row reveal reveal-delay-2">
-          <span class="manifesto-good">Measured ROI</span>
-          <span class="manifesto-arrow">&gt;</span>
-          <span class="manifesto-bad">AI Hype</span>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>CRM and data integration across the tools you already own</p>
         </div>
-        <div class="manifesto-row reveal reveal-delay-3">
-          <span class="manifesto-good">Domain Experts</span>
-          <span class="manifesto-arrow">&gt;</span>
-          <span class="manifesto-bad">Outsourced Guesswork</span>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Capability transfer to a named owner on your team</p>
+        </div>
+        <div class="m-deliver-item">
+          <span class="check">&#10003;</span>
+          <p>Documentation your engineers can work from after we leave</p>
         </div>
       </div>
 
-      <div class="reveal reveal-delay-4">
-        <p class="manifesto-tagline">The Model is NOT the Product.</p>
-      </div>
     </div>
   </section>
 
   <div class="glow-line container"></div>
 
   <!-- ============================================
-       NEWSLETTER SECTION
+       OWNERSHIP
        ============================================ -->
+  <section class="m-section" id="ownership">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Ownership</div>
+        <h2 class="section-title">You own it.<br>Your team <span class="accent">runs it</span>.</h2>
+        <p class="m-lede">The system is yours, and so is the ability to operate it.</p>
+      </div>
+
+      <div class="m-own reveal reveal-delay-1">
+        <div class="m-own-item">
+          <span class="n">OWN</span>
+          <h4>The system is yours</h4>
+          <p>The workflows, the evaluation frameworks, and the documentation. Built inside your stack, on your accounts.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">LEARN</span>
+          <h4>Trained while it is built</h4>
+          <p>Your people learn the system by building it with us, so nobody is handed a finished thing they have never seen.</p>
+        </div>
+        <div class="m-own-item">
+          <span class="n">ADOPT</span>
+          <h4>Used in the normal week</h4>
+          <p>It runs inside the tools your team already opens every day, so there is nothing new to log into and no rollout to survive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+
+
+  <!-- ============================================
+       TWO WAYS TO RUN IT
+       ============================================ -->
+  <section class="m-section" id="engage">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <div class="section-label">// Engagement</div>
+        <h2 class="section-title">Two ways to <span class="accent">run it</span>.</h2>
+        <p class="m-lede">Same architecture, same evaluation layer, same ownership terms. Two sizes.</p>
+      </div>
+
+      <div class="m-tiers reveal reveal-delay-1">
+        <div class="m-tier">
+          <h3>Maestro Workflows</h3>
+          <div class="m-tier-sub">// build &amp; transfer</div>
+          <ul>
+            <li>Start with the workflows carrying the most manual load</li>
+            <li>Evaluation frameworks on every one</li>
+            <li>Capability transfer to a named owner</li>
+            <li>Your team operates it afterward</li>
+          </ul>
+          <div class="m-tier-shape">Half at the start, half when the outcome lands.</div>
+        </div>
+
+        <div class="m-tier">
+          <h3>Maestro System</h3>
+          <div class="m-tier-sub">// install &amp; operate</div>
+          <ul>
+            <li>The full architecture installed across your stack</li>
+            <li>Signal, intelligence, and execution connected end to end</li>
+            <li>Governance reporting and an accountability cadence</li>
+            <li>Operated by Magnetiz, with your systems where they are</li>
+          </ul>
+          <div class="m-tier-shape">Install fee, then monthly operations.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+
+
   <section class="newsletter" id="newsletter">
     <div class="container">
       <div class="newsletter-inner reveal">
@@ -2563,13 +855,13 @@ img { max-width: 100%; display: block; }
   <div class="glow-line container"></div>
 
   <!-- ============================================
-       CTA SECTION
+       CTA
        ============================================ -->
   <section class="cta-section" id="cta">
     <div class="cta-inner">
       <div class="reveal">
-        <div class="section-label">// Deploy</div>
-        <h2 class="section-title" style="margin-bottom:32px">Ready to Build?</h2>
+        <div class="section-label">// Get Started</div>
+        <h2 class="section-title" style="margin-bottom:16px">See if Maestro fits</h2>
       </div>
 
       <div class="cta-terminal reveal reveal-delay-1">
@@ -2585,41 +877,38 @@ img { max-width: 100%; display: block; }
           <div class="cta-prompt">
             <span class="path">magnetiz.ai</span>
             <span class="dollar">&nbsp;$&nbsp;</span>
-            <span id="cta-typed"></span>
+            <span id="cta-typed" data-cmd="start --conversation"></span>
           </div>
           <div class="terminal-status">
             <div class="status-group">
               <span>STATUS: <span class="status-ready">READY</span></span>
-              <span>BRANCH: <span style="color:var(--accent-blue)">main</span></span>
+              <span>MODE: <span style="color:var(--accent-blue)">maestro</span></span>
             </div>
             <span>awaiting input...</span>
           </div>
         </div>
       </div>
 
-      <p class="cta-text reveal reveal-delay-2">
-        Our Outcome Pricing&trade; model means you pay for results, not hours worked.<br>
-        Schedule a call to see where evaluation-first AI fits your business.
-      </p>
+      <div class="cta-text reveal reveal-delay-2">
+        <p>Thirty minutes. You tell us where the time goes, we tell you if we can help.</p>
+      </div>
 
-      <div class="reveal reveal-delay-3">
-        <a href="#" class="btn-primary" style="font-size:16px; padding:16px 36px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div class="hero-ctas reveal reveal-delay-3" style="justify-content:center">
+        <a href="#cta" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           Schedule Call
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       VIDEO MODAL
-       ============================================ -->
+  <!-- Video Modal -->
   <div class="video-modal" id="video-modal">
     <div class="video-modal-backdrop" id="video-modal-backdrop"></div>
     <div class="video-modal-content">
       <button class="video-modal-close" id="video-modal-close" aria-label="Close video">&times;</button>
       <video id="video-player" controls playsinline preload="none">
-        <source src="assets/videos/magnetiz_hero.mp4" type="video/mp4">
+        <source src="assets/videos/maestro-demo.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -2638,7 +927,7 @@ img { max-width: 100%; display: block; }
         <div>
           <h4>Maestro</h4>
           <ul class="footer-links">
-            <li><a href="maestro.html">Maestro AI Revenue System</a></li>
+            <li><a href="index.html">Maestro AI Revenue System</a></li>
             <li><a href="maestro-marketing.html">Maestro for Marketing</a></li>
             <li><a href="maestro-sales.html">Maestro for Sales</a></li>
             <li><a href="maestro-operations.html">Maestro for Operations</a></li>
@@ -2651,7 +940,6 @@ img { max-width: 100%; display: block; }
             <li><a href="content.html">Content Hub</a></li>
             <li><a href="our-ai-agents.html">Our AI Agents</a></li>
             <li><a href="assessment.html">AI Readiness Assessment</a></li>
-            <li><a href="ai-audit.html">AI Audit</a></li>
           </ul>
         </div>
 
@@ -2677,28 +965,9 @@ img { max-width: 100%; display: block; }
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/animations.js" defer></script>
-  <script src="js/main.js" defer></script>
-
-  <!-- Video modal handler -->
-  <script>
-    (function() {
-      var btn = document.getElementById('video-cta');
-      var modal = document.getElementById('video-modal');
-      var video = document.getElementById('video-player');
-      var backdrop = document.getElementById('video-modal-backdrop');
-      var close = document.getElementById('video-modal-close');
-      if (!btn || !modal) return;
-      function openModal() { modal.classList.add('open'); document.body.style.overflow = 'hidden'; video.play(); }
-      function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; video.pause(); video.currentTime = 0; }
-      btn.addEventListener('click', openModal);
-      backdrop.addEventListener('click', closeModal);
-      close.addEventListener('click', closeModal);
-      document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
-    })();
-  </script>
-
+  <script src="js/animations.js?v=20260813"></script>
+  <script src="js/main.js"></script>
+  <script src="js/maestro.js"></script>
   <!-- Homepage newsletter subscribe handler -->
   <script>
     (function() {
@@ -2741,7 +1010,6 @@ img { max-width: 100%; display: block; }
     })();
   </script>
 
-  <!-- Calendly popup -->
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     document.addEventListener('click', function(e) {
