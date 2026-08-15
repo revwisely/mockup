@@ -827,22 +827,29 @@
     </div>
   </section>
 
-  <!-- ============================================
-       WHO THIS IS FOR
-       ============================================ -->
-  <section class="m-section" id="who">
+  <section class="newsletter" id="newsletter">
     <div class="container">
-      <div class="reveal" style="text-align:center">
-        <div class="section-label">// Fit</div>
-        <h2 class="section-title">You made AI a priority.<br>It still has no <span class="accent">path to production</span>.</h2>
+      <div class="newsletter-inner reveal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <span class="terminal-title">subscribe &mdash; magnetiz</span>
+          </div>
+          <div class="newsletter-body">
+            <h3 class="newsletter-title">AI Evaluation Insights.</h3>
+            <p class="newsletter-desc">Weekly insights on building production-ready AI agents.</p>
+            <form class="newsletter-form" id="homepage-newsletter-form">
+              <input type="email" placeholder="Email Address" class="newsletter-input" id="homepage-newsletter-email" required>
+              <button type="submit" class="btn-primary" id="homepage-newsletter-btn">Subscribe</button>
+            </form>
+            <div id="homepage-newsletter-status" style="margin-top:12px;"></div>
+          </div>
+        </div>
       </div>
-
-      <ul class="m-who reveal reveal-delay-1">
-        <li>Pilots have been running for months and nothing has shipped</li>
-        <li>Someone owns a number and can name the manual work sitting behind it</li>
-        <li>Your stack is worth keeping, so anything new has to run inside it</li>
-        <li>You can put a name on who owns the work</li>
-      </ul>
     </div>
   </section>
 
@@ -962,6 +969,48 @@
   <script src="js/animations.js?v=20260813"></script>
   <script src="js/main.js"></script>
   <script src="js/maestro.js"></script>
+  <!-- Homepage newsletter subscribe handler -->
+  <script>
+    (function() {
+      var form = document.getElementById('homepage-newsletter-form');
+      if (!form) return;
+      var input = document.getElementById('homepage-newsletter-email');
+      var btn = document.getElementById('homepage-newsletter-btn');
+      var status = document.getElementById('homepage-newsletter-status');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = input.value.trim();
+        if (!email) return;
+
+        btn.disabled = true;
+        btn.textContent = 'Subscribing...';
+        status.innerHTML = '';
+
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        })
+        .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
+        .then(function(result) {
+          if (result.ok) {
+            form.innerHTML = '<p class="newsletter-success"><span class="newsletter-success-icon">&#10003;</span> You\'re in. Look for the newsletter every Thursday.</p>';
+          } else {
+            status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">' + (result.data.error || 'Something went wrong.') + '</p>';
+            btn.disabled = false;
+            btn.textContent = 'Subscribe';
+          }
+        })
+        .catch(function() {
+          status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">Connection error. Please try again.</p>';
+          btn.disabled = false;
+          btn.textContent = 'Subscribe';
+        });
+      });
+    })();
+  </script>
+
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     document.addEventListener('click', function(e) {
