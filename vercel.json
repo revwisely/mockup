@@ -3,6 +3,9 @@
     { "source": "/a/:page(.+\\.html)", "destination": "/:page", "permanent": false }
   ],
   "rewrites": [
+    { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },
+    { "source": "/case-study/content-system", "destination": "/case-study-content-system.html" },
+    { "source": "/case-study/operational-visibility", "destination": "/case-study-operational-visibility.html" },
     { "source": "/blog/:slug", "destination": "/api/og?slug=:slug" },
     { "source": "/a/css/:path*", "destination": "/css/:path*" },
     { "source": "/a/js/:path*", "destination": "/js/:path*" },

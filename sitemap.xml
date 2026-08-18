@@ -29,12 +29,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.magnetiz.ai/case-study/content-system</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/case-study/operational-visibility</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/case-study/signal-detection</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.magnetiz.ai/content.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.magnetiz.ai/</loc>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/maestro-marketing.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/maestro-operations.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/maestro-sales.html</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.magnetiz.ai/newsletter.html</loc>
@@ -45,7 +69,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.magnetiz.ai/outcome-pricing.html</loc>
+    <loc>https://www.magnetiz.ai/a/outcome</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -63,6 +87,16 @@
   <url>
     <loc>https://www.magnetiz.ai/video-direction.html</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/crm-data-quality-ai-agents</loc>
+    <lastmod>2026-08-13</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/ai-brand-video-direction</loc>
+    <lastmod>2026-08-06</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.magnetiz.ai/blog/human-in-the-loop-ai-workflow</loc>

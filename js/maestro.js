@@ -97,3 +97,44 @@
     init();
   }
 })();
+
+/* ============================================
+   Ambient loop videos (.m-video video)
+   Play while in view, pause off screen.
+   Chrome defers offscreen muted autoplay and
+   does not always resume it, so ownership of
+   play/pause lives here.
+   ============================================ */
+(function () {
+  'use strict';
+
+  function init() {
+    var vids = Array.prototype.slice.call(document.querySelectorAll('.m-video video'));
+    if (!vids.length) return;
+    var inView = new WeakSet();
+    function sync(v) {
+      if (inView.has(v) && !document.hidden) { v.play().catch(function () {}); } else { v.pause(); }
+    }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { inView.add(e.target); } else { inView.delete(e.target); }
+          sync(e.target);
+        });
+      }, { threshold: 0.3 });
+      vids.forEach(function (v) { io.observe(v); });
+    } else {
+      vids.forEach(function (v) { inView.add(v); sync(v); });
+    }
+    // Chrome pauses muted video in hidden documents; resume on return.
+    document.addEventListener('visibilitychange', function () {
+      vids.forEach(sync);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

@@ -16,10 +16,16 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 - [ai solutions](https://www.magnetiz.ai/ai-solutions.html)
 - [assessment quiz](https://www.magnetiz.ai/assessment-quiz.html)
 - [assessment](https://www.magnetiz.ai/assessment.html)
+- [case study content system](https://www.magnetiz.ai/case-study/content-system)
+- [case study operational visibility](https://www.magnetiz.ai/case-study/operational-visibility)
+- [case study signal detection](https://www.magnetiz.ai/case-study/signal-detection)
 - [content](https://www.magnetiz.ai/content.html)
+- [maestro marketing](https://www.magnetiz.ai/maestro-marketing.html)
+- [maestro operations](https://www.magnetiz.ai/maestro-operations.html)
+- [maestro sales](https://www.magnetiz.ai/maestro-sales.html)
 - [newsletter](https://www.magnetiz.ai/newsletter.html)
 - [our ai agents](https://www.magnetiz.ai/our-ai-agents.html)
-- [outcome pricing](https://www.magnetiz.ai/outcome-pricing.html)
+- [outcome pricing](https://www.magnetiz.ai/a/outcome)
 - [privacy policy](https://www.magnetiz.ai/privacy-policy.html)
 - [talent apply](https://www.magnetiz.ai/talent-apply.html)
 - [talent](https://www.magnetiz.ai/talent.html)
@@ -27,8 +33,10 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 
 ## Writing
 
-145 articles. Most recent first.
+147 articles. Most recent first.
 
+- [What Is Your AI Agent Reading Before It Acts?](https://www.magnetiz.ai/blog/crm-data-quality-ai-agents) (2026-08-13): Agent evaluation grades the output. The record the agent read before it acted gets graded by nobody. Here is where the trust gap actually sits, and the two numbers that measure it.
+- [Why Does Every AI Made Video Look the Same?](https://www.magnetiz.ai/blog/ai-brand-video-direction) (2026-08-06): AI made video cheap enough to ship weekly. It did not make it yours. The generic look is a briefing failure, and here is the direction layer that fixes it, given away free.
 - [Where Does a Human Belong in an AI Workflow That Runs Itself?](https://www.magnetiz.ai/blog/human-in-the-loop-ai-workflow) (2026-07-30): Autonomous AI agents drift into trouble when nobody governs what they may do alone. Here is where the human belongs, and the tier boundary that keeps a self-running workflow safe.
 - [What Gartner's $234 Billion Warning Means for Your GTM Stack](https://www.magnetiz.ai/blog/what-gartners-234-billion-warning-means-for-your-gtm-stack) (2026-07-22): Agentic arbitrage, the Saaspocalypse, and a live case study in where the money goes.
 - [When the Meeting Becomes the Workflow](https://www.magnetiz.ai/blog/when-the-meeting-becomes-the-workflow) (2026-07-15): How Maestro PM turns a conversation into executed work, and what stays with people.

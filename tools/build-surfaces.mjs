@@ -38,8 +38,24 @@ const PRIORITY = {
   'content.html': '0.8',
 };
 
+// Pages served at a clean URL via a vercel.json rewrite must be advertised at
+// that URL, or the sitemap contradicts the page's own canonical tag. Derived
+// from vercel.json so the mapping cannot drift from what actually serves.
+const CLEAN_URLS = (() => {
+  const map = {};
+  const { rewrites = [] } = JSON.parse(readFileSync(join(ROOT, 'vercel.json'), 'utf8'));
+  for (const r of rewrites) {
+    if (!r.source.includes(':') && r.destination.endsWith('.html')) {
+      map[r.destination.replace(/^\//, '')] = r.source;
+    }
+  }
+  return map;
+})();
+
 function pageUrl(file) {
-  return file === 'index.html' ? `${ORIGIN}/` : `${ORIGIN}/${file}`;
+  if (file === 'index.html') return `${ORIGIN}/`;
+  if (CLEAN_URLS[file]) return `${ORIGIN}${CLEAN_URLS[file]}`;
+  return `${ORIGIN}/${file}`;
 }
 
 function collectPages() {
