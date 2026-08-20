@@ -1,5 +1,15 @@
 [
   {
+    "slug": "has-your-ai-agent-earned-autonomy",
+    "title": "Has Your AI Agent Earned Autonomy?",
+    "date": "2026-08-20",
+    "author": "Magnetiz.ai",
+    "excerpt": "Most agents get promoted to autonomous informally. The last ten outputs looked clean, someone flipped the setting. Here is the mechanical gate that replaces the vibe, in three parts.",
+    "image": "assets/images/posts/has-your-ai-agent-earned-autonomy-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "crm-data-quality-ai-agents",
     "title": "What Is Your AI Agent Reading Before It Acts?",
     "date": "2026-08-13",
