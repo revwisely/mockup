@@ -89,6 +89,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.magnetiz.ai/blog/one-system-four-different-jobs</loc>
+    <lastmod>2026-08-27</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/has-your-ai-agent-earned-autonomy</loc>
+    <lastmod>2026-08-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.magnetiz.ai/blog/crm-data-quality-ai-agents</loc>
     <lastmod>2026-08-13</lastmod>
     <priority>0.6</priority>

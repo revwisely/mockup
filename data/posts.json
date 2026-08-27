@@ -1,5 +1,15 @@
 [
   {
+    "slug": "one-system-four-different-jobs",
+    "title": "One System, Four Different Jobs",
+    "date": "2026-08-27",
+    "author": "Magnetiz.ai",
+    "excerpt": "A ten-person deep-tech company and a thousand-person operation can evaluate the same AI revenue system in the same week. They are not buying the same thing. Here is the map, four stages, and the first move that fits each one.",
+    "image": "assets/images/posts/one-system-four-different-jobs-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "has-your-ai-agent-earned-autonomy",
     "title": "Has Your AI Agent Earned Autonomy?",
     "date": "2026-08-20",
