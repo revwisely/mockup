@@ -1,6 +1,7 @@
 {
   "redirects": [
-    { "source": "/a/:page(.+\\.html)", "destination": "/:page", "permanent": false }
+    { "source": "/a/:page(.+\\.html)", "destination": "/:page", "permanent": false },
+    { "source": "/blog/how-to-teach-ai-your-brand-voice", "destination": "/blog/taste-does-not-fit-in-a-document", "permanent": true }
   ],
   "rewrites": [
     { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },

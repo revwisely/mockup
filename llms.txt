@@ -9,7 +9,7 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 
 ## Services
 
-- [Taste Does Not Fit in a Document](https://www.magnetiz.ai/blog/how-to-teach-ai-your-brand-voice) (2026-09-03): You wrote the messaging guideline, shared it with every agency, and loaded it into AI. The drafts still come back needing you. Here is what a context layer holds that a guideline cannot, and the rules that keep it honest once it exists.
+- [Taste Does Not Fit in a Document](https://www.magnetiz.ai/blog/taste-does-not-fit-in-a-document) (2026-09-03): You wrote the messaging guideline, shared it with every agency, and loaded it into AI. The drafts still come back needing you. Here is what a context layer holds that a guideline cannot, and the rules that keep it honest once it exists.
 - [ai agents](https://www.magnetiz.ai/ai-agents.html)
 - [ai audit](https://www.magnetiz.ai/ai-audit.html)
 - [ai code of conduct](https://www.magnetiz.ai/ai-code-of-conduct.html)
