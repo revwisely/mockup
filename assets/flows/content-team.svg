@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 376" width="1010" height="376" role="img" aria-label="content team flow">
+<defs>
+<marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0.5 0.8 L7 4 L0.5 7.2" fill="none" stroke="#484F58" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="r" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0.5 0.8 L7 4 L0.5 7.2" fill="none" stroke="#4A9ECE" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/></marker>
+<style>
+.nd{fill:#161B22;stroke:#30363D;stroke-width:1.5}
+.gh{fill:#0D1117;stroke:#30363D;stroke-width:1.5;stroke-dasharray:4 4}
+.gt{fill:#161B22;stroke:#4A9ECE;stroke-width:1.5}
+.bg{fill:rgba(74,158,206,.16)}
+.nm{font:600 12.5px Inter,-apple-system,"Segoe UI",sans-serif;fill:#E6EDF3;letter-spacing:-.1px}
+.mt{font:600 12.5px Inter,-apple-system,"Segoe UI",sans-serif;fill:#8B949E;letter-spacing:-.1px}
+.no{font:700 11px Inter,-apple-system,"Segoe UI",sans-serif;fill:#4A9ECE}
+.ln{stroke:#30363D;stroke-width:1.5;fill:none}
+.rt{stroke:#4A9ECE;stroke-width:1.5;fill:none;opacity:.5;stroke-dasharray:5 5}
+</style>
+</defs>
+<path class="ln" d="M215 71 H245"/>
+<path class="ln" d="M215 129 H245"/>
+<path class="ln" d="M215 187 H245"/>
+<path class="ln" d="M245 71 V187"/>
+<path class="ln" d="M245 129 H267" marker-end="url(#a)"/>
+<path class="ln" d="M475 129 H505"/>
+<path class="ln" d="M505 42 V216"/>
+<path class="ln" d="M505 42 H527" marker-end="url(#a)"/>
+<path class="ln" d="M505 100 H527" marker-end="url(#a)"/>
+<path class="ln" d="M505 158 H527" marker-end="url(#a)"/>
+<path class="ln" d="M505 216 H527" marker-end="url(#a)"/>
+<path class="ln" d="M735 42 H765"/>
+<path class="ln" d="M735 100 H765"/>
+<path class="ln" d="M735 158 H765"/>
+<path class="ln" d="M735 216 H765"/>
+<path class="ln" d="M765 42 V216"/>
+<path class="ln" d="M765 100 H787" marker-end="url(#a)"/>
+<path class="ln" d="M765 158 H787" marker-end="url(#a)"/>
+<path class="rt" d="M895 237 V332 H813"/>
+<path class="rt" d="M805 332 H605"/>
+<path class="rt" d="M605 332 H413" marker-end="url(#r)"/>
+<path class="rt" d="M205 332 H115 V245" marker-end="url(#r)"/>
+<g><rect class="nd" x="205" y="311" width="200" height="42" rx="9"/><rect class="bg" x="218" y="320" width="24" height="24" rx="6.5"/><text class="no" x="230" y="336" text-anchor="middle">19</text><text class="nm" x="252" y="336">Content Refresh</text></g>
+<g><rect class="nd" x="605" y="311" width="200" height="42" rx="9"/><rect class="bg" x="618" y="320" width="24" height="24" rx="6.5"/><text class="no" x="630" y="336" text-anchor="middle">17</text><text class="nm" x="652" y="336">Inbound Attribution</text></g>
+<g><rect class="nd" x="15" y="50" width="200" height="42" rx="9"/><rect class="bg" x="28" y="59" width="24" height="24" rx="6.5"/><text class="no" x="40" y="75" text-anchor="middle">08</text><text class="nm" x="62" y="76">SEO Content</text></g>
+<g><rect class="nd" x="15" y="108" width="200" height="42" rx="9"/><rect class="bg" x="28" y="117" width="24" height="24" rx="6.5"/><text class="no" x="40" y="133" text-anchor="middle">09</text><text class="nm" x="62" y="134">Email Sequences</text></g>
+<g><rect class="nd" x="15" y="166" width="200" height="42" rx="9"/><rect class="bg" x="28" y="175" width="24" height="24" rx="6.5"/><text class="no" x="40" y="191" text-anchor="middle">10</text><text class="nm" x="62" y="192">Newsletter</text></g>
+<g><rect class="nd" x="275" y="108" width="200" height="42" rx="9"/><rect class="bg" x="288" y="117" width="24" height="24" rx="6.5"/><text class="no" x="300" y="133" text-anchor="middle">11</text><text class="nm" x="322" y="134">Content Atomizer</text></g>
+<g><rect class="nd" x="535" y="21" width="200" height="42" rx="9"/><rect class="bg" x="548" y="30" width="24" height="24" rx="6.5"/><text class="no" x="560" y="46" text-anchor="middle">12</text><text class="nm" x="582" y="46">Technical SEO</text></g>
+<g><rect class="nd" x="535" y="79" width="200" height="42" rx="9"/><rect class="bg" x="548" y="88" width="24" height="24" rx="6.5"/><text class="no" x="560" y="104" text-anchor="middle">14</text><text class="nm" x="582" y="104">AEO Agent</text></g>
+<g><rect class="nd" x="535" y="137" width="200" height="42" rx="9"/><rect class="bg" x="548" y="146" width="24" height="24" rx="6.5"/><text class="no" x="560" y="162" text-anchor="middle">15</text><text class="nm" x="582" y="162">Landing Page Builder</text></g>
+<g><rect class="nd" x="535" y="195" width="200" height="42" rx="9"/><rect class="bg" x="548" y="204" width="24" height="24" rx="6.5"/><text class="no" x="560" y="220" text-anchor="middle">16</text><text class="nm" x="582" y="220">Comparison Page</text></g>
+<g><rect class="nd" x="795" y="79" width="200" height="42" rx="9"/><rect class="bg" x="808" y="88" width="24" height="24" rx="6.5"/><text class="no" x="820" y="104" text-anchor="middle">13</text><text class="nm" x="842" y="104">Blog Publishing</text></g>
+<g><rect class="nd" x="795" y="137" width="200" height="42" rx="9"/><rect class="bg" x="808" y="146" width="24" height="24" rx="6.5"/><text class="no" x="820" y="162" text-anchor="middle">18</text><text class="nm" x="842" y="162">Social Scheduling</text></g>
+</svg>
