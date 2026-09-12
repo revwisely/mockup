@@ -236,6 +236,7 @@
         .then(function(result) {
           if (result.ok) {
             form.innerHTML = '<p class="newsletter-success"><span class="newsletter-success-icon">&#10003;</span> You\'re in. Look for the newsletter every Thursday.</p>';
+            if (window.lintrk) window.lintrk('track', { conversion_id: 28668116 });
           } else {
             status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">' + (result.data.error || 'Something went wrong. Please try again.') + '</p>';
             btn.disabled = false;

@@ -2,12 +2,12 @@
    Loaded async on every page: builds website retargeting audiences (#142)
    and member demographics in Campaign Manager.
 
-   BOOKING CONVERSION: create the event-specific conversion in Campaign
-   Manager (Measure > Conversion tracking > Create > Insight Tag >
-   event-specific), then set its numeric id below. Until then the listener
-   is inert. */
+   BOOKING CONVERSION: id 28668108 ("Call booked (Calendly)"), created via
+   the Advertising API 2026-09-11 and associated with the active campaign.
+   Newsletter signup conversion (28668116) fires from newsletter.html's
+   form success handler. */
 
-var LINKEDIN_BOOKING_CONVERSION_ID = null;
+var LINKEDIN_BOOKING_CONVERSION_ID = 28668108;
 
 _linkedin_partner_id = "7176748";
 window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
