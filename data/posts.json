@@ -1,5 +1,15 @@
 [
   {
+    "slug": "the-check-that-never-ran",
+    "title": "Did Your Agent's Checks Actually Run?",
+    "date": "2026-09-10",
+    "author": "Magnetiz.ai",
+    "excerpt": "A video pipeline released finished assets straight to a live production site. That pipeline carries several required checks, two of which name a person as the input. None of them ran, and nothing reported that none of them ran.",
+    "image": "assets/images/posts/the-check-that-never-ran-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "taste-does-not-fit-in-a-document",
     "title": "Taste Does Not Fit in a Document",
     "date": "2026-09-03",
