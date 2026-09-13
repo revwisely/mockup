@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook: Turn Recorded Calls Into CRM Updates and Deal Awareness — Magnetiz.ai</title>
+  <meta name="description" content="A complete playbook for turning recorded sales and client calls into structured CRM updates, owner-tagged follow-ups, and a channel brief, with every item traced to the words that created it and a human gate on anything customer-facing.">
+  <meta property="og:title" content="Playbook: Turn Recorded Calls Into CRM Updates and Deal Awareness — Magnetiz.ai">
+  <meta property="og:description" content="A complete playbook for turning recorded calls into structured CRM updates and deal awareness, with every item traced to its source quote.">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://www.magnetiz.ai/playbook/meeting-intelligence">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/tailwind-shim.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="/css/terminal.css">
+  <link rel="stylesheet" href="/css/blog-post.css?v=20260913">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+
+  <style>
+    .kit-box { border: 1px solid var(--border, #2a2a2a); border-radius: 8px; padding: 28px; margin: 40px 0; background: rgba(255,255,255,0.02); }
+    .kit-box h3 { margin-top: 0; }
+    .kit-form { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; max-width: 480px; }
+    .kit-form input, .kit-form select { padding: 12px 14px; border: 1px solid var(--border, #2a2a2a); border-radius: 6px; background: rgba(0,0,0,0.25); color: inherit; font-family: inherit; font-size: 15px; }
+    .kit-consent { font-size: 13px; opacity: 0.7; margin-top: 8px; }
+    .pb-sample { overflow-x: auto; }
+  </style>
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- Editor Gutter -->
+  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a class="nav-dropdown-trigger" role="button" aria-haspopup="true" tabindex="0">
+            Maestro <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="/maestro-marketing.html">Maestro for Marketing</a>
+            <a href="/maestro-sales.html">Maestro for Sales</a>
+            <a href="/maestro-operations.html">Maestro for Operations</a>
+          </div>
+        </li>
+        <li><a href="/playbooks.html">Playbooks</a></li>
+        <li><a href="/content.html">Content</a></li>
+      </ul>
+
+      <a href="/index.html#cta" class="nav-cta">Schedule Call</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <span class="mobile-heading">Maestro</span>
+    <a href="/maestro-marketing.html" class="mobile-sub">Maestro for Marketing</a>
+    <a href="/maestro-sales.html" class="mobile-sub">Maestro for Sales</a>
+    <a href="/maestro-operations.html" class="mobile-sub">Maestro for Operations</a>
+    <a href="/playbooks.html">Playbooks</a>
+    <a href="/content.html">Content</a>
+    <a href="/index.html#cta">Schedule Call</a>
+  </div>
+
+  <!-- ============================================
+       PLAYBOOK ARTICLE
+       ============================================ -->
+  <article class="blog-article">
+    <div class="blog-article-inner">
+      <div class="post-header">
+        <a href="/playbooks.html" class="post-back">Playbooks</a>
+        <div class="post-tags"><span class="post-tag">Playbook</span></div>
+        <h1 class="post-title">Turn Recorded Calls Into CRM Updates and Deal Awareness</h1>
+        <div class="post-meta">
+          <span class="post-meta-author">Magnetiz.ai</span>
+          <span class="post-meta-separator">&bull;</span>
+          <span class="post-meta-date">September 2026</span>
+        </div>
+      </div>
+
+      <div class="post-body">
+        <p><strong>One recorded call becomes structured record updates, owner-tagged follow-ups, and a one-minute channel brief. Every item traces to the words that created it. A person approves anything a customer could ever see.</strong></p>
+
+        <p>The full method is below. The implementation kit at the end packages the prompts, rubrics, and worksheets so your team can run it.</p>
+
+        <h2>Who Is This Playbook For?</h2>
+        <p><strong>You already record the calls. The recordings answer to nobody.</strong></p>
+        <p>A buyer said it to us unprompted, and it is the cleanest statement of the gap we know.</p>
+        <blockquote>
+          <p>We record a lot of our meetings and we want to interrogate them and get situational awareness on the deals and the accounts.</p>
+        </blockquote>
+        <p>The baseline cost is familiar too. Updating records after each conversation takes a rep about thirty minutes per client. So the records go stale, and deal awareness lives in whoever happened to be in the room.</p>
+        <p>This playbook closes that gap with your existing stack. A recorder, a language model, the system of record you already run, and the channel your team already reads.</p>
+
+        <h2>What Does the Workflow Produce?</h2>
+        <p><strong>A call becomes a structured record, and the record carries receipts.</strong></p>
+        <p>Each processed call produces six things, filed where your team already works.</p>
+        <ul>
+          <li>Record updates for the account or deal, drafted for review</li>
+          <li>Work items with an owner and a size</li>
+          <li>Decisions, with who committed to them</li>
+          <li>Blockers, with who must resolve them</li>
+          <li>A parking lot of ideas raised without commitment</li>
+          <li>A channel brief a teammate reads in a minute</li>
+        </ul>
+        <p>Here is the shape of one extracted item.</p>
+        <pre class="pb-sample"><code>{
+  "title": "Send pricing summary to their CFO",
+  "owner": "us",
+  "type": "follow-up",
+  "estimate": "S",
+  "confidence": "high",
+  "route": "committed",
+  "tier": "review",
+  "source_quote": "Can you get the pricing summary
+    over to our CFO by Friday?"
+}</code></pre>
+
+        <h2>How Does Extraction Stay Honest?</h2>
+        <p><strong>No quote, no item.</strong></p>
+        <p>The workflow extracts what was said. It never invents. Every item carries the verbatim words that created it, so anyone can audit any entry back to the source in one click.</p>
+        <p>Two rules protect that standard. When the input is a notetaker summary instead of a raw transcript, confidence drops one level, because secondhand notes are already an interpretation. And talk the meeting explicitly deferred becomes a follow-up, never a task.</p>
+        <p><em>Watch for the item you cannot quote. Cut it. A phantom commitment costs more than a missed one.</em></p>
+
+        <h2>How Do You Route What People Said?</h2>
+        <p><strong>The tell is an owner and a yes. Enthusiasm alone routes down.</strong></p>
+        <p>Meetings wander. People riff on things they want someday. The workflow routes that talk instead of promoting it, using the language rather than the topic.</p>
+        <ul>
+          <li><strong>Committed.</strong> Decision language with an owner. Becomes a work item this cycle.</li>
+          <li><strong>New ask.</strong> A real request outside agreed scope. Logged and sized, presented as a proposal.</li>
+          <li><strong>Exploration.</strong> Musing with no owner and no date. Goes to the parking lot.</li>
+          <li><strong>Resurrected non-goal.</strong> Something already scoped out. Flagged so a person re-decides.</li>
+        </ul>
+        <p>When a route is unclear, route down and let a person promote it. The parking lot is expansion signal, and raising it back to the client ("you mentioned this twice, want us to scope it?") is where future work comes from.</p>
+
+        <h2>What Runs Unattended and What Waits for a Person?</h2>
+        <p><strong>Rules decide the tier. The stricter rule always wins.</strong></p>
+        <p>Every item gets an execution tier. Reversible, scoped, testable work runs unattended. Everything else waits for review.</p>
+        <p>Deterministic overrides sit above the model's proposal, so a misclassification can never grant itself more autonomy. Large items wait. Low-confidence items wait. Items owned by the other side are tracked and never executed.</p>
+        <p>And anything a customer or prospect will see waits for a person. Always, regardless of size.</p>
+        <p><em>Watch for the tier assigned by vibes. If you cannot name the rule that decided it, the rule layer is missing.</em></p>
+
+        <h2>How Does the System Earn Autonomy?</h2>
+        <p><strong>Supervised first. Graduation is measured, never assumed.</strong></p>
+        <p>At the start, a person reviews every extraction before anything writes to a live system. Score each pass on four failure modes. Invented items, missed asks, wrong owners, wrong tiers.</p>
+        <p>The workflow graduates to writing on its own only after consecutive clean passes, and only for the tiers the rules already allow. Trust in this design is a property you measure, with a date attached.</p>
+
+        <h2>What Do You Need to Run It?</h2>
+        <p><strong>Your existing stack is enough.</strong></p>
+        <ul>
+          <li>A meeting recorder that produces transcripts, such as Gemini, Zoom, or Fireflies</li>
+          <li>A language model with an API key</li>
+          <li>The CRM or task system you already run</li>
+          <li>The channel your team already reads</li>
+        </ul>
+        <p>The front end is a door, and you should name your own. Slack teams get a Slack brief, Microsoft teams get Teams. Processing a call costs cents in model usage, and spend only happens on calls a person chose to process.</p>
+
+        <!-- ============================================
+             IMPLEMENTATION KIT (email gate)
+             ============================================ -->
+        <div class="kit-box" id="kit">
+          <h3>Get the Implementation Kit</h3>
+          <p>The kit packages this playbook into files your team can run.</p>
+          <ul>
+            <li>The extraction prompt, with the output schema</li>
+            <li>The routing rubric, with the linguistic tells</li>
+            <li>The tier rules, with the deterministic overrides</li>
+            <li>A CRM field-mapping worksheet</li>
+            <li>A sample transcript with its expected output</li>
+          </ul>
+          <!-- TODO(beehiiv): replace action with beehiiv automation endpoint + custom fields
+               (playbook=meeting-intelligence, source=<select value>) once verified in dashboard -->
+          <form class="kit-form" method="POST" action="#" data-playbook="meeting-intelligence">
+            <input type="email" name="email" placeholder="Work email" required>
+            <select name="source" required>
+              <option value="" disabled selected>Where did you hear about this?</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="newsletter">The newsletter</option>
+              <option value="search">Search</option>
+              <option value="ai-assistant">An AI assistant</option>
+              <option value="colleague">A colleague</option>
+              <option value="other">Somewhere else</option>
+            </select>
+            <button type="submit" class="btn-primary">Send Me the Kit</button>
+            <p class="kit-consent">Requesting the kit subscribes you to our weekly release email. Unsubscribe anytime.</p>
+          </form>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>What meeting recorder does this playbook require?</h3>
+        <p>Any recorder that produces a transcript works, including Gemini meeting notes, Zoom transcripts, and Fireflies. Raw speaker-labeled transcripts produce the best extractions. Notetaker summaries still work, and the workflow lowers its confidence scores to match the secondhand source.</p>
+
+        <h3>Does the workflow write to the CRM automatically?</h3>
+        <p>At the start, nothing writes without review. Record updates are drafted, a person approves them, and the approval takes seconds. After consecutive clean review passes, the tiers the rules allow can graduate to writing unattended. Customer-facing content keeps its human gate permanently.</p>
+
+        <h3>How is this different from an AI notetaker summary?</h3>
+        <p>A summary describes the meeting. This workflow files it. Items land in your CRM and task system with an owner, a size, a route, and the verbatim quote that created them, and a person gates anything consequential.</p>
+
+        <h3>What happens to ideas discussed but not committed?</h3>
+        <p>They route to a parking lot instead of the task queue. Each entry keeps who raised it and how seriously it was discussed. Reviewed monthly, the parking lot becomes expansion conversations, because a topic a client raised twice is a topic worth scoping.</p>
+
+        <h3>How long does setup take?</h3>
+        <p>The kit's extraction prompt and routing rubric run on day one against your first transcript. The supervised review period typically runs a few weeks, and its length is decided by your own clean-pass count rather than a calendar. Graduation is earned on evidence.</p>
+
+        <h3>Can the extraction be trusted on messy, wandering calls?</h3>
+        <p>Wandering calls are the design case. The routing layer exists because meetings drift, and the quote requirement means drift never silently becomes commitments. Ambiguous language routes down for a person to promote, so the failure mode is a question rather than a phantom task.</p>
+
+        <h2>The Bottom Line</h2>
+        <p>Situational awareness was in the room. This playbook is how it survives the meeting.</p>
+
+        <h2>Want This Running in Your Stack?</h2>
+        <p>Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff.</p>
+      </div>
+
+      <div style="margin-top:32px">
+        <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
+      </div>
+
+      <div class="post-footer">
+        <a href="/playbooks.html" class="post-footer-back">Back to Playbooks</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>AI workflows built into production, with the evaluation frameworks that keep them correct.</p>
+        </div>
+
+        <div>
+          <h4>Maestro</h4>
+          <ul class="footer-links">
+            <li><a href="/index.html">Maestro AI Revenue System</a></li>
+            <li><a href="/maestro-marketing.html">Maestro for Marketing</a></li>
+            <li><a href="/maestro-sales.html">Maestro for Sales</a></li>
+            <li><a href="/maestro-operations.html">Maestro for Operations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="/playbooks.html">Playbooks</a></li>
+            <li><a href="/content.html">Content Hub</a></li>
+            <li><a href="/our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="/assessment.html">AI Readiness Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="/talent.html">Talent</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC). All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/animations.js"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- Calendly popup -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && (/Schedule\s*Call|^Contact$/i.test(link.textContent.trim()) || link.classList.contains('schedule-cta'))) {
+        e.preventDefault();
+        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+      }
+    });
+  </script>
+  <script src="/js/linkedin-insight.js" async></script>
+  <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
+</body>
+</html>
