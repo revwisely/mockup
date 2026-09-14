@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook: CRM Enrichment With Change Review — Magnetiz.ai</title>
+  <meta name="description" content="A complete playbook for enriching CRM records with a research agent that cites every claim, proposes changes side by side instead of overwriting, and puts a person on the approve step, evaluated against golden records.">
+  <meta property="og:title" content="Playbook: CRM Enrichment With Change Review — Magnetiz.ai">
+  <meta property="og:description" content="An incomplete record becomes a preview of proposed updates, with sources, a person on the approve step, and an undo.">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://www.magnetiz.ai/playbook/crm-enrichment-review">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/tailwind-shim.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="/css/terminal.css">
+  <link rel="stylesheet" href="/css/blog-post.css?v=20260913">
+  <link rel="stylesheet" href="/css/playbooks.css?v=20260914">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a class="nav-dropdown-trigger" role="button" aria-haspopup="true" tabindex="0">
+            Maestro <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="/maestro-marketing.html">Maestro for Marketing</a>
+            <a href="/maestro-sales.html">Maestro for Sales</a>
+            <a href="/maestro-operations.html">Maestro for Operations</a>
+          </div>
+        </li>
+        <li><a href="/playbooks.html">Playbooks</a></li>
+        <li><a href="/content.html">Content</a></li>
+      </ul>
+
+      <a href="/index.html#cta" class="nav-cta">Schedule Call</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <span class="mobile-heading">Maestro</span>
+    <a href="/maestro-marketing.html" class="mobile-sub">Maestro for Marketing</a>
+    <a href="/maestro-sales.html" class="mobile-sub">Maestro for Sales</a>
+    <a href="/maestro-operations.html" class="mobile-sub">Maestro for Operations</a>
+    <a href="/playbooks.html">Playbooks</a>
+    <a href="/content.html">Content</a>
+    <a href="/index.html#cta">Schedule Call</a>
+  </div>
+
+  <!-- Mobile diagram hero -->
+  <div class="pb-diagram-mobile" aria-hidden="true">
+    <img src="/assets/diagrams/crm-enrichment-review.svg" alt="" loading="eager">
+  </div>
+
+  <!-- ============================================
+       PLAYBOOK — SPLIT LAYOUT
+       ============================================ -->
+  <div class="pb-split">
+
+    <!-- ================= LEFT ================= -->
+    <main class="pb-left">
+      <a href="/playbooks.html" class="pb-back">&#8592; Playbooks</a>
+
+      <h1 class="pb-title">CRM Enrichment With Change Review</h1>
+
+      <div class="pb-meta-row">
+        <span class="pb-chip pb-chip--coral">Data</span>
+        <span class="pb-date">Playbook 06 &middot; September 2026</span>
+      </div>
+
+      <p class="pb-eyebrow">Works with</p>
+      <div class="pb-tools">
+        <span class="pb-chip">Claude</span>
+        <span class="pb-chip">Clay</span>
+        <span class="pb-chip">HubSpot</span>
+        <span class="pb-chip">Salesforce</span>
+        <span class="pb-chip">Public web</span>
+      </div>
+
+      <!-- kit gate -->
+      <div class="pb-kit" id="kit">
+        <p class="pb-eyebrow">Implementation kit</p>
+        <ul class="pb-kit-list">
+          <li>The spend gates, with the caps worksheet</li>
+          <li>The research prompt, citations required</li>
+          <li>The overwrite rules, freshness and survivorship</li>
+          <li>The change-review checklist</li>
+          <li>The golden-records eval guide</li>
+        </ul>
+        <form method="POST" action="/api/kit-request" id="kit-form" data-playbook="crm-enrichment-review">
+          <div class="pb-kit-row">
+            <input type="email" name="email" placeholder="Work email" required aria-label="Work email">
+            <button type="submit">Send Me the Kit</button>
+          </div>
+          <select name="source" required aria-label="Where did you hear about this?">
+            <option value="" disabled selected>Where did you hear about this?</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="newsletter">The newsletter</option>
+            <option value="search">Search</option>
+            <option value="ai-assistant">An AI assistant</option>
+            <option value="colleague">A colleague</option>
+            <option value="other">Somewhere else</option>
+          </select>
+          <p class="pb-kit-consent">Requesting the kit subscribes you to our weekly release email. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <p class="pb-lede"><strong>An incomplete record becomes a preview of proposed updates, every claim carrying its source, with a person on the approve step and an undo behind every change.</strong></p>
+      <p class="pb-lede-sub">The full method is below. The pattern behind it turned an estimated twelve to twenty hours of account research into a thirty-minute review in our own client work.</p>
+
+      <blockquote class="pb-quote">
+        <p>An estimated twelve to twenty hours of account research became a thirty-minute review of finished research.</p>
+        <cite>From our signal-detection case study</cite>
+      </blockquote>
+
+      <p class="pb-eyebrow" id="how-it-works">How it works</p>
+      <div class="pb-steps">
+
+        <details class="pb-step" open>
+          <summary><span class="pb-step-num">01</span>Gate the spend</summary>
+          <div class="pb-step-body">
+            <p>Enrich only records something downstream will use, capped per day. An enrichment nobody reads is a bill with no customer.</p>
+            <p>Records that miss the gate queue rather than burn. The queue drains on schedule, inside the cap.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">02</span>Research with citations</summary>
+          <div class="pb-step-body">
+            <p>The agent works public sources and every claim carries where it came from. Unknown stays unknown, never guessed.</p>
+            <p>A cited claim can be audited in one click. An uncited claim is a rumor in a database.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">03</span>Date every fact</summary>
+          <div class="pb-step-body">
+            <p>A title verified last week beats one scraped last year. Every fact carries its date, and stale evidence decays out instead of masquerading as current.</p>
+            <p><em>Watch for the field that is confidently wrong. Undated data does not age, it lies.</em></p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">04</span>Propose, never overwrite</summary>
+          <div class="pb-step-body">
+            <p><strong>Silent overwrites are how trust dies.</strong> The agent produces proposed changes. Old value, new value, source, side by side. The record itself has not moved yet.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">05</span>Review the changes</summary>
+          <div class="pb-step-body">
+            <p>A person approves before the record changes. The approval takes seconds, because the preview did the work. Low-risk fields can graduate to auto-apply later, on clean passes, and consequential fields never do.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">06</span>Keep it reversible</summary>
+          <div class="pb-step-body">
+            <p>Every applied change is logged with its prior state. One click restores it. An enrichment pipeline you cannot undo is a pipeline you will eventually fear.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">07</span>Evaluate on golden records</summary>
+          <div class="pb-step-body">
+            <p>Pick five accounts you know cold and write down the truth about them. Run the agent against those golden records and score it before trusting it, then re-score whenever the prompt, the model, or the sources change.</p>
+            <p><strong>The eval is the difference between an agent you tested once and an agent you can keep trusting.</strong></p>
+          </div>
+        </details>
+
+      </div>
+
+      <p class="pb-lede">An enrichment is a claim. The record should hold evidence.</p>
+      <p class="pb-lede-sub">The implementation kit above packages the gates, the prompt, the rules, and the golden-records eval.</p>
+    </main>
+
+    <!-- ================= RIGHT: the diagram ================= -->
+    <aside class="pb-right" aria-label="Workflow diagram">
+      <div class="pb-right-sticky">
+        <img src="/assets/diagrams/crm-enrichment-review.svg" alt="CRM Enrichment With Change Review workflow diagram" style="max-height:100%; max-width:100%;">
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============================================
+       RELATED PLAYBOOKS
+       ============================================ -->
+  <section class="pb-related">
+    <div class="pb-related-head">
+      <p class="pb-eyebrow">More from the library</p>
+      <h2>Related Playbooks</h2>
+    </div>
+    <div class="pb-grid">
+      <a class="pb-card" href="/playbook-ai-ready-data.html">
+        <div class="pb-card-viz">
+          <img src="/assets/diagrams/ai-ready-data.svg" alt="The AI-Ready Data Playbook workflow diagram" loading="lazy">
+        </div>
+        <div class="pb-card-body">
+          <h3>The AI-Ready Data Playbook</h3>
+          <p>Cleaning the records AI will read, because AI on a mess makes the mess worse.</p>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--coral">Data</span>
+            <span class="pb-date">03</span>
+          </div>
+        </div>
+      </a>
+      <a class="pb-card" href="/playbook-inbound-signup-routing.html">
+        <div class="pb-card-viz">
+          <img src="/assets/diagrams/inbound-signup-routing.svg" alt="Inbound Sign-Up Qualification and Routing workflow diagram" loading="lazy">
+        </div>
+        <div class="pb-card-body">
+          <h3>Inbound Sign-Up Qualification and Routing</h3>
+          <p>A form submission becomes an account brief, a qualification decision, and an assigned next step.</p>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--green">Sales</span>
+            <span class="pb-date">04</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="pb-related-more">
+      <a href="/playbooks.html" class="pb-back">View all playbooks &#8594;</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BOTTOM CTA
+       ============================================ -->
+  <section class="pb-cta">
+    <p class="pb-eyebrow">Maestro</p>
+    <h2>Want This Running in Your Stack?</h2>
+    <p>Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+    <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>AI workflows built into production, with the evaluation frameworks that keep them correct.</p>
+        </div>
+
+        <div>
+          <h4>Maestro</h4>
+          <ul class="footer-links">
+            <li><a href="/index.html">Maestro AI Revenue System</a></li>
+            <li><a href="/maestro-marketing.html">Maestro for Marketing</a></li>
+            <li><a href="/maestro-sales.html">Maestro for Sales</a></li>
+            <li><a href="/maestro-operations.html">Maestro for Operations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="/playbooks.html">Playbooks</a></li>
+            <li><a href="/content.html">Content Hub</a></li>
+            <li><a href="/our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="/assessment.html">AI Readiness Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="/talent.html">Talent</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC). All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/animations.js"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- Calendly popup -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && (/Schedule\s*Call|^Contact$/i.test(link.textContent.trim()) || link.classList.contains('schedule-cta'))) {
+        e.preventDefault();
+        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+      }
+    });
+  </script>
+  <script src="/js/linkedin-insight.js" async></script>
+  <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
+
+  <!-- Kit request -->
+  <script>
+    (function () {
+      var form = document.getElementById('kit-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var email = form.querySelector('input[name="email"]').value;
+        var source = form.querySelector('select[name="source"]').value;
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        fetch('/api/kit-request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, source: source, playbook: form.dataset.playbook })
+        }).then(function (r) {
+          if (!r.ok) throw new Error('failed');
+          form.innerHTML = '<p class="pb-lede"><strong>Check your inbox.</strong></p><p class="pb-kit-consent">The kit is on its way. If it has not arrived in a few minutes, check spam, then reply to any Magnetiz email and a person will sort it out.</p>';
+          if (typeof gtag === 'function') gtag('event', 'kit_request', { playbook: form.dataset.playbook, source: source });
+        }).catch(function () {
+          btn.disabled = false;
+          btn.textContent = 'Send Me the Kit';
+          var err = form.querySelector('.kit-error');
+          if (!err) {
+            err = document.createElement('p');
+            err.className = 'pb-kit-consent kit-error';
+            form.appendChild(err);
+          }
+          err.textContent = 'That did not go through. Try again, or email us and we will send it by hand.';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

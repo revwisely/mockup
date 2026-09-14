@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="Inbound sign-up qualification and routing: capture the claim, enrich with evidence, write the account brief, score fit and intent apart, route by band, drop uncertainty to a person, assign the next step.">
+  <defs>
+    <marker id="s-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="s-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="s-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="s-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#s-dots)"/>
+
+  <g stroke="#30363d" stroke-width="1.5" fill="none">
+    <path d="M372,98 V124" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+    <path d="M372,192 V218" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+    <!-- brief -> fit/intent split -->
+    <path d="M372,286 V308" stroke="#4A9ECE"/>
+    <path d="M222,308 H522"/>
+    <path d="M222,308 V330" marker-end="url(#s-arrdim)"/>
+    <path d="M522,308 V330" marker-end="url(#s-arrdim)"/>
+    <!-- fit/intent -> route bus -->
+    <path d="M222,398 V420"/>
+    <path d="M522,398 V420"/>
+    <path d="M139,420 H605"/>
+    <path d="M139,420 V444" marker-end="url(#s-arrdim)" stroke="#98C379"/>
+    <path d="M372,420 V444" marker-end="url(#s-arrdim)" stroke="#E5C07B"/>
+    <path d="M605,420 V444" marker-end="url(#s-arrdim)" stroke="#E06C75"/>
+    <!-- uncertainty drops to review -->
+    <path d="M139,512 V536 H352" stroke="#484F58" stroke-dasharray="4 4"/>
+    <path d="M372,512 V556" stroke="#484F58" stroke-dasharray="4 4" marker-end="url(#s-arrdim)"/>
+    <path d="M605,512 V536 H392" stroke="#484F58" stroke-dasharray="4 4"/>
+    <!-- qualified straight down + review -> next step -->
+    <path d="M139,512 V690 H222" stroke="#98C379"/>
+    <path d="M372,630 V666" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+  </g>
+
+  <circle r="3.2" fill="#4A9ECE" filter="url(#s-glow)">
+    <animateMotion dur="7s" repeatCount="indefinite" path="M372,50 V218 V308 M372,308 H222 V420 H139 V444 M139,444 V512 V690 H240"/>
+  </circle>
+
+  <!-- 1 form submit -->
+  <g>
+    <rect x="242" y="34" width="260" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="372" y="60" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">FORM SUBMIT</text>
+    <text x="372" y="78" text-anchor="middle" fill="#8B949E" font-size="10">an email and a claim of interest</text>
+  </g>
+
+  <!-- 2 enrich -->
+  <g>
+    <rect x="232" y="124" width="280" height="68" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="372" y="150" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">ENRICH WITH EVIDENCE</text>
+    <text x="372" y="168" text-anchor="middle" fill="#8B949E" font-size="10">public sources &#183; every claim cited</text>
+    <text x="372" y="182" text-anchor="middle" fill="#8B949E" font-size="10">unknown stays unknown, never guessed</text>
+  </g>
+
+  <!-- 3 account brief -->
+  <g>
+    <rect x="222" y="218" width="300" height="68" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text x="372" y="244" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">ACCOUNT BRIEF</text>
+    <text x="372" y="262" text-anchor="middle" fill="#8B949E" font-size="10">what we verified, what we could not,</text>
+    <text x="372" y="276" text-anchor="middle" fill="#8B949E" font-size="10">on one screen with sources</text>
+  </g>
+
+  <!-- 4 fit / intent -->
+  <g>
+    <rect x="117" y="330" width="210" height="68" rx="9" fill="#1c2333" stroke="#56B6C2"/>
+    <text x="222" y="356" text-anchor="middle" fill="#56B6C2" font-size="13" font-weight="700">FIT &#183; WHO THEY ARE</text>
+    <text x="222" y="374" text-anchor="middle" fill="#8B949E" font-size="9.5">role, company, shape &#183; 0-50</text>
+    <text x="222" y="388" text-anchor="middle" fill="#8B949E" font-size="9.5">fit gates the door</text>
+  </g>
+  <g>
+    <rect x="417" y="330" width="210" height="68" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text x="522" y="356" text-anchor="middle" fill="#C678DD" font-size="13" font-weight="700">INTENT &#183; WHAT THEY DID</text>
+    <text x="522" y="374" text-anchor="middle" fill="#8B949E" font-size="9.5">visits, returns, requests &#183; 0-50</text>
+    <text x="522" y="388" text-anchor="middle" fill="#8B949E" font-size="9.5">intent times the play</text>
+  </g>
+  <text x="372" y="414" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">SCORED APART &#183; ENTHUSIASM CANNOT FAKE FIT</text>
+
+  <!-- 5 routes -->
+  <g>
+    <rect x="34" y="444" width="210" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text x="139" y="470" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">QUALIFIED</text>
+    <text x="139" y="488" text-anchor="middle" fill="#8B949E" font-size="9.5">fit and intent both clear</text>
+    <text x="139" y="502" text-anchor="middle" fill="#8B949E" font-size="9.5">the bands you set</text>
+  </g>
+  <g>
+    <rect x="267" y="444" width="210" height="68" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text x="372" y="470" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">NURTURE</text>
+    <text x="372" y="488" text-anchor="middle" fill="#8B949E" font-size="9.5">right fit, not ready &#183;</text>
+    <text x="372" y="502" text-anchor="middle" fill="#8B949E" font-size="9.5">a download is not intent</text>
+  </g>
+  <g>
+    <rect x="500" y="444" width="210" height="68" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="605" y="470" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NO FIT</text>
+    <text x="605" y="488" text-anchor="middle" fill="#8B949E" font-size="9.5">students, recruiters, bots &#183;</text>
+    <text x="605" y="502" text-anchor="middle" fill="#8B949E" font-size="9.5">served politely, never sold to</text>
+  </g>
+
+  <!-- 6 human review -->
+  <g filter="url(#s-glow)">
+    <rect x="222" y="556" width="300" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  </g>
+  <text x="372" y="586" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN REVIEW &#9608;&#9608;</text>
+  <text x="372" y="606" text-anchor="middle" fill="#8B949E" font-size="10">conflicting evidence, duplicates, and</text>
+  <text x="372" y="620" text-anchor="middle" fill="#8B949E" font-size="10">borderline bands drop here, with reasons</text>
+
+  <!-- 7 next step -->
+  <g>
+    <rect x="222" y="666" width="300" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text x="372" y="692" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">ASSIGNED NEXT STEP</text>
+    <text x="372" y="710" text-anchor="middle" fill="#8B949E" font-size="10">a named owner and a dated action,</text>
+    <text x="372" y="724" text-anchor="middle" fill="#8B949E" font-size="10">with the brief attached</text>
+  </g>
+
+  <text x="372" y="790" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"A download alone is not buying intent."</text>
+  <text x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 04 &#183; INBOUND SIGN-UP ROUTING</text>
+</svg>

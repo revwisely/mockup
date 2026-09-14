@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="Outbound reply triage: capture every reply verbatim, clean the text, classify by taxonomy, honor exits instantly, re-enroll out-of-office, a person answers anything that matters.">
+  <defs>
+    <marker id="r-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="r-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="r-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="r-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#r-dots)"/>
+
+  <g stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- sources -> capture -->
+    <path d="M222,92 V114"/>
+    <path d="M522,92 V114"/>
+    <path d="M222,114 H522"/>
+    <path d="M372,114 V138" marker-end="url(#r-arr)" stroke="#4A9ECE"/>
+    <path d="M372,206 V230" marker-end="url(#r-arr)" stroke="#4A9ECE"/>
+    <path d="M372,294 V318" stroke="#4A9ECE"/>
+    <!-- classify bus -->
+    <path d="M104,318 H616"/>
+    <path d="M104,318 V342" marker-end="url(#r-arrdim)"/>
+    <path d="M274,318 V342" marker-end="url(#r-arrdim)"/>
+    <path d="M446,318 V342" marker-end="url(#r-arrdim)"/>
+    <path d="M616,318 V342" marker-end="url(#r-arrdim)"/>
+    <!-- interested + question -> human gate -->
+    <path d="M104,410 V434" stroke="#98C379"/>
+    <path d="M274,410 V434" stroke="#E5C07B"/>
+    <path d="M104,434 H274"/>
+    <path d="M189,434 V458" marker-end="url(#r-arr)" stroke="#4A9ECE"/>
+    <!-- not interested -> dnc, ooo -> re-enroll -->
+    <path d="M446,410 V458" marker-end="url(#r-arrdim)" stroke="#E06C75" stroke-dasharray="4 4"/>
+    <path d="M616,410 V458" marker-end="url(#r-arrdim)" stroke="#C678DD" stroke-dasharray="4 4"/>
+    <!-- gate -> outputs -->
+    <path d="M189,532 V620" stroke="#4A9ECE"/>
+    <path d="M139,620 H605"/>
+    <path d="M139,620 V644" marker-end="url(#r-arrdim)"/>
+    <path d="M372,620 V644" marker-end="url(#r-arrdim)"/>
+    <path d="M605,620 V644" marker-end="url(#r-arrdim)"/>
+    <!-- low confidence loop -->
+    <path d="M700,376 V500 H340" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#r-arrdim)"/>
+  </g>
+
+  <circle r="3.2" fill="#4A9ECE" filter="url(#r-glow)">
+    <animateMotion dur="7s" repeatCount="indefinite" path="M372,60 V138 V230 V318 M372,318 H104 V434 H189 V458 M189,458 V620 H150"/>
+  </circle>
+
+  <!-- sources -->
+  <g>
+    <rect x="117" y="34" width="210" height="58" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="222" y="58" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">EMAIL REPLIES</text>
+    <text x="222" y="76" text-anchor="middle" fill="#8B949E" font-size="9.5">every sending tool, one stream</text>
+  </g>
+  <g>
+    <rect x="417" y="34" width="210" height="58" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="522" y="58" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">LINKEDIN REPLIES</text>
+    <text x="522" y="76" text-anchor="middle" fill="#8B949E" font-size="9.5">connects and messages</text>
+  </g>
+
+  <!-- capture -->
+  <g>
+    <rect x="222" y="138" width="300" height="68" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text x="372" y="164" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">CAPTURE EVERY REPLY</text>
+    <text x="372" y="182" text-anchor="middle" fill="#4A9ECE" font-size="10.5">verbatim &#183; the words are the product</text>
+    <text x="372" y="196" text-anchor="middle" fill="#8B949E" font-size="10">one queue, nothing sits in a tool inbox</text>
+  </g>
+
+  <!-- clean -->
+  <g>
+    <rect x="232" y="230" width="280" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="372" y="256" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">CLEAN THE TEXT</text>
+    <text x="372" y="274" text-anchor="middle" fill="#8B949E" font-size="10">strip signatures, footers, quoted history</text>
+  </g>
+
+  <!-- classify row -->
+  <text x="372" y="312" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">CLASSIFIED BY TAXONOMY, WITH CONFIDENCE</text>
+  <g>
+    <rect x="34" y="342" width="140" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text x="104" y="368" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">INTERESTED</text>
+    <text x="104" y="386" text-anchor="middle" fill="#8B949E" font-size="9.5">a live thread</text>
+  </g>
+  <g>
+    <rect x="204" y="342" width="140" height="68" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text x="274" y="362" text-anchor="middle" fill="#E5C07B" font-size="11" font-weight="700">QUESTION /</text>
+    <text x="274" y="376" text-anchor="middle" fill="#E5C07B" font-size="11" font-weight="700">OBJECTION</text>
+    <text x="274" y="394" text-anchor="middle" fill="#8B949E" font-size="9.5">a thread to answer</text>
+  </g>
+  <g>
+    <rect x="376" y="342" width="140" height="68" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="446" y="366" text-anchor="middle" fill="#E06C75" font-size="11" font-weight="700">NOT INTERESTED</text>
+    <text x="446" y="384" text-anchor="middle" fill="#8B949E" font-size="9.5">an answer, honored</text>
+  </g>
+  <g>
+    <rect x="546" y="342" width="140" height="68" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text x="616" y="366" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">OUT OF OFFICE</text>
+    <text x="616" y="384" text-anchor="middle" fill="#8B949E" font-size="9.5">timing, not rejection</text>
+  </g>
+
+  <!-- exits -->
+  <g>
+    <rect x="376" y="458" width="140" height="64" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="446" y="480" text-anchor="middle" fill="#E06C75" font-size="10.5" font-weight="700">DO-NOT-CONTACT</text>
+    <text x="446" y="496" text-anchor="middle" fill="#8B949E" font-size="9">sequence stops the moment</text>
+    <text x="446" y="509" text-anchor="middle" fill="#8B949E" font-size="9">words arrive &#183; honored forever</text>
+  </g>
+  <g>
+    <rect x="546" y="458" width="140" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="616" y="480" text-anchor="middle" fill="#C678DD" font-size="10.5" font-weight="700">RE-ENROLL LATER</text>
+    <text x="616" y="496" text-anchor="middle" fill="#8B949E" font-size="9">paused until the return</text>
+    <text x="616" y="509" text-anchor="middle" fill="#8B949E" font-size="9">date, then resumes</text>
+  </g>
+
+  <!-- human gate -->
+  <g filter="url(#r-glow)">
+    <rect x="59" y="458" width="260" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  </g>
+  <text x="189" y="488" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+  <text x="189" y="508" text-anchor="middle" fill="#8B949E" font-size="10">a person answers anything that matters,</text>
+  <text x="189" y="522" text-anchor="middle" fill="#8B949E" font-size="10">with the verbatim thread in hand</text>
+
+  <text x="712" y="438" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 712 438)">LOW CONFIDENCE &#183; A PERSON DECIDES THE CLASS</text>
+
+  <!-- outputs -->
+  <text x="372" y="614" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">FILED WHERE THE TEAM ALREADY WORKS</text>
+  <g>
+    <rect x="49" y="644" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="139" y="669" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">TEAM ALERTED</text>
+    <text x="139" y="687" text-anchor="middle" fill="#8B949E" font-size="9.5">in the channel, thread attached</text>
+  </g>
+  <g>
+    <rect x="282" y="644" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="372" y="669" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">CRM UPDATED</text>
+    <text x="372" y="687" text-anchor="middle" fill="#8B949E" font-size="9.5">class, words, and verdict logged</text>
+  </g>
+  <g>
+    <rect x="515" y="644" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="605" y="669" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">SEQUENCE STOPPED</text>
+    <text x="605" y="687" text-anchor="middle" fill="#8B949E" font-size="9.5">never a send past a reply</text>
+  </g>
+
+  <text x="372" y="780" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"A reply is a person. The queue treats it that way."</text>
+  <text x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 05 &#183; OUTBOUND REPLY TRIAGE</text>
+</svg>
