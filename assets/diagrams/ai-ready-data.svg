@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="AI-ready data workflow: scope what AI reads, measure the mess, dedupe, prune, fix at the source, guard the writes, re-measure before AI reads anything.">
+  <defs>
+    <marker id="d-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="d-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="d-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="d-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#d-dots)"/>
+
+  <g stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- mess row -> bus -> scope -->
+    <path d="M139,100 V126"/>
+    <path d="M373,100 V126"/>
+    <path d="M607,100 V126"/>
+    <path d="M139,126 H607"/>
+    <path d="M373,126 V152" marker-end="url(#d-arr)" stroke="#4A9ECE"/>
+    <path d="M373,224 V250" marker-end="url(#d-arr)" stroke="#4A9ECE"/>
+    <!-- measure -> three fixes -->
+    <path d="M373,322 V348" stroke="#4A9ECE"/>
+    <path d="M139,348 H607"/>
+    <path d="M139,348 V374" marker-end="url(#d-arrdim)"/>
+    <path d="M373,348 V374" marker-end="url(#d-arrdim)"/>
+    <path d="M607,348 V374" marker-end="url(#d-arrdim)"/>
+    <!-- fixes -> guards -->
+    <path d="M139,446 V472"/>
+    <path d="M373,446 V472"/>
+    <path d="M607,446 V472"/>
+    <path d="M139,472 H607"/>
+    <path d="M373,472 V498" marker-end="url(#d-arr)" stroke="#4A9ECE"/>
+    <!-- guards -> gate -> clean -->
+    <path d="M373,572 V598" marker-end="url(#d-arr)" stroke="#4A9ECE"/>
+    <path d="M373,672 V698" marker-end="url(#d-arr)" stroke="#4A9ECE"/>
+    <!-- re-measure fail loop back to fixes -->
+    <path d="M523,635 H700 V410 H648" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#d-arrdim)"/>
+  </g>
+
+  <circle r="3.2" fill="#4A9ECE" filter="url(#d-glow)">
+    <animateMotion dur="7s" repeatCount="indefinite" path="M373,70 V152 V250 V348 V472 V598 V698 V720"/>
+  </circle>
+
+  <!-- mess row -->
+  <g>
+    <rect x="34" y="34" width="210" height="66" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="139" y="60" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">DUPLICATES</text>
+    <text x="139" y="78" text-anchor="middle" fill="#8B949E" font-size="9.5">one company, four records</text>
+  </g>
+  <g>
+    <rect x="268" y="34" width="210" height="66" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="373" y="60" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">STALE + EMPTY</text>
+    <text x="373" y="78" text-anchor="middle" fill="#8B949E" font-size="9.5">fields nobody filled or trusts</text>
+  </g>
+  <g>
+    <rect x="502" y="34" width="210" height="66" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="607" y="60" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">CONFLICTING SOURCES</text>
+    <text x="607" y="78" text-anchor="middle" fill="#8B949E" font-size="9.5">CRM vs spreadsheet vs memory</text>
+  </g>
+
+  <!-- scope -->
+  <g>
+    <rect x="223" y="152" width="300" height="72" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text x="373" y="180" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">SCOPE WHAT AI READS</text>
+    <text x="373" y="198" text-anchor="middle" fill="#4A9ECE" font-size="10.5">the fields the workflow touches first</text>
+    <text x="373" y="214" text-anchor="middle" fill="#8B949E" font-size="10">never boil the whole database</text>
+  </g>
+
+  <!-- measure -->
+  <g>
+    <rect x="223" y="250" width="300" height="72" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="373" y="278" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">MEASURE THE MESS</text>
+    <text x="373" y="296" text-anchor="middle" fill="#8B949E" font-size="10">count the dupes, the empties, the conflicts</text>
+    <text x="373" y="312" text-anchor="middle" fill="#8B949E" font-size="10">the before-number makes progress provable</text>
+  </g>
+
+  <!-- three fixes -->
+  <g>
+    <rect x="34" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text x="139" y="400" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">DEDUPE BY RULE</text>
+    <text x="139" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">merge rules, survivorship,</text>
+    <text x="139" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">never by hand twice</text>
+  </g>
+  <g>
+    <rect x="268" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text x="373" y="400" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">PRUNE DEAD FIELDS</text>
+    <text x="373" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">field census &#183; unused,</text>
+    <text x="373" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">duplicated, meaningless</text>
+  </g>
+  <g>
+    <rect x="502" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text x="607" y="400" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">FIX AT THE SOURCE</text>
+    <text x="607" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">validation at entry, so the</text>
+    <text x="607" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">mess stops refilling</text>
+  </g>
+
+  <!-- write guards -->
+  <g>
+    <rect x="213" y="498" width="320" height="74" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text x="373" y="524" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">GUARD THE WRITES</text>
+    <text x="373" y="542" text-anchor="middle" fill="#8B949E" font-size="10">fail loud, never plausible &#183; loop protection</text>
+    <text x="373" y="558" text-anchor="middle" fill="#8B949E" font-size="10">a do-not-touch list the tools must honor</text>
+  </g>
+
+  <!-- re-measure gate -->
+  <g filter="url(#d-glow)">
+    <rect x="223" y="598" width="300" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  </g>
+  <text x="373" y="628" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; RE-MEASURE GATE &#9608;&#9608;</text>
+  <text x="373" y="648" text-anchor="middle" fill="#8B949E" font-size="10">the before-number must move</text>
+  <text x="373" y="662" text-anchor="middle" fill="#8B949E" font-size="10">before any AI reads a record</text>
+  <text x="700" y="522" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 700 522)">NUMBER DIDN'T MOVE &#183; BACK TO THE FIXES</text>
+
+  <!-- clean -->
+  <g>
+    <rect x="223" y="698" width="300" height="64" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text x="373" y="724" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">AI ON CLEAN DATA</text>
+    <text x="373" y="744" text-anchor="middle" fill="#8B949E" font-size="10">scores, drafts, and reports you can trust</text>
+  </g>
+
+  <text x="373" y="800" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"AI on a mess makes the mess worse."</text>
+  <text x="360" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 03 &#183; AI-READY DATA</text>
+</svg>

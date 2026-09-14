@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="Stalled build handoff workflow: audit what exists, name the owner, define runnable, pick the doorbell, wrap the build, transfer ownership, prove it unassisted.">
+  <defs>
+    <marker id="h-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="h-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="h-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="h-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#h-dots)"/>
+
+  <g stroke="#30363d" stroke-width="1.5" fill="none">
+    <path d="M330,98 V124" marker-end="url(#h-arr)" stroke="#4A9ECE"/>
+    <path d="M330,190 V216" marker-end="url(#h-arr)" stroke="#4A9ECE"/>
+    <path d="M470,246 H540" marker-end="url(#h-arrdim)" stroke="#E06C75" stroke-dasharray="4 4"/>
+    <path d="M330,288 V314" marker-end="url(#h-arr)" stroke="#4A9ECE"/>
+    <path d="M330,382 V408" marker-end="url(#h-arr)" stroke="#4A9ECE"/>
+    <path d="M330,476 V502" marker-end="url(#h-arr)" stroke="#4A9ECE"/>
+    <path d="M330,570 V596" marker-end="url(#h-arr)" stroke="#4A9ECE"/>
+    <path d="M330,664 V690" marker-end="url(#h-arr)" stroke="#4A9ECE"/>
+    <path d="M330,760 V786" marker-end="url(#h-arrdim)"/>
+    <!-- comment-to-teach loop -->
+    <path d="M470,630 H688 V440 H478" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#h-arrdim)"/>
+  </g>
+
+  <circle r="3.2" fill="#4A9ECE" filter="url(#h-glow)">
+    <animateMotion dur="7s" repeatCount="indefinite" path="M330,50 V216 V314 V408 V502 V596 V690 V760"/>
+  </circle>
+
+  <!-- 1 stalled build -->
+  <g>
+    <rect x="200" y="34" width="260" height="64" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="330" y="60" text-anchor="middle" fill="#E06C75" font-size="14" font-weight="700">THE STALLED BUILD</text>
+    <text x="330" y="78" text-anchor="middle" fill="#8B949E" font-size="10">built, worked once, sitting there</text>
+  </g>
+
+  <!-- 2 audit -->
+  <g>
+    <rect x="190" y="124" width="280" height="66" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="330" y="150" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">AUDIT WHAT EXISTS</text>
+    <text x="330" y="168" text-anchor="middle" fill="#8B949E" font-size="10">runs &#183; manual &#183; broken, listed honestly</text>
+  </g>
+
+  <!-- 3 name the owner (gate) -->
+  <g filter="url(#h-glow)">
+    <rect x="190" y="216" width="280" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  </g>
+  <text x="330" y="246" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; NAME THE OWNER &#9608;&#9608;</text>
+  <text x="330" y="266" text-anchor="middle" fill="#8B949E" font-size="10">one person, with capacity, on the record</text>
+  <g>
+    <rect x="540" y="222" width="150" height="58" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="615" y="246" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NO OWNER</text>
+    <text x="615" y="264" text-anchor="middle" fill="#8B949E" font-size="8.5">the strongest kill signal</text>
+  </g>
+
+  <!-- 4 define runnable -->
+  <g>
+    <rect x="190" y="314" width="280" height="68" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="330" y="340" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">DEFINE RUNNABLE</text>
+    <text x="330" y="358" text-anchor="middle" fill="#8B949E" font-size="10">they launch it unassisted &#183; baselines captured</text>
+  </g>
+
+  <!-- 5 doorbell -->
+  <g>
+    <rect x="190" y="408" width="280" height="68" rx="9" fill="#1c2333" stroke="#56B6C2"/>
+    <text x="330" y="434" text-anchor="middle" fill="#56B6C2" font-size="14" font-weight="700">PICK THE DOORBELL</text>
+    <text x="330" y="452" text-anchor="middle" fill="#8B949E" font-size="10">slack &#183; teams &#183; the door they already open</text>
+  </g>
+
+  <!-- 6 wrap -->
+  <g>
+    <rect x="190" y="502" width="280" height="68" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="330" y="528" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">WRAP, DON'T REBUILD</text>
+    <text x="330" y="546" text-anchor="middle" fill="#8B949E" font-size="10">a thin runnable layer over what exists</text>
+  </g>
+
+  <!-- 7 transfer -->
+  <g>
+    <rect x="190" y="596" width="280" height="68" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text x="330" y="622" text-anchor="middle" fill="#C678DD" font-size="14" font-weight="700">TRANSFER OWNERSHIP</text>
+    <text x="330" y="640" text-anchor="middle" fill="#8B949E" font-size="10">runbook &#183; training where the work happens</text>
+  </g>
+  <text x="700" y="535" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 700 535)">COMMENT TO TEACH &#183; NOTES BECOME LESSONS</text>
+
+  <!-- 8 prove it -->
+  <g filter="url(#h-glow)">
+    <rect x="180" y="690" width="300" height="70" rx="9" fill="#0d1117" stroke="#98C379" stroke-width="1.6"/>
+  </g>
+  <text x="330" y="718" text-anchor="middle" fill="#98C379" font-size="14" font-weight="800">PROVE IT</text>
+  <text x="330" y="738" text-anchor="middle" fill="#8B949E" font-size="10">the owner runs it end to end, unassisted, dated</text>
+
+  <!-- 9 revived -->
+  <g>
+    <rect x="180" y="786" width="300" height="52" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="330" y="808" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="600">THE BUILD, REVIVED</text>
+    <text x="330" y="826" text-anchor="middle" fill="#8B949E" font-size="9.5">owned by your team, running without us</text>
+  </g>
+
+  <text x="360" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 02 &#183; THE STALLED-BUILD HANDOFF</text>
+</svg>

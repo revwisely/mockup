@@ -6,7 +6,11 @@
   "rewrites": [
     { "source": "/playbooks", "destination": "/playbooks.html" },
     { "source": "/playbook/meeting-intelligence", "destination": "/playbook-meeting-intelligence.html" },
+    { "source": "/playbook/stalled-build-handoff", "destination": "/playbook-stalled-build-handoff.html" },
+    { "source": "/playbook/ai-ready-data", "destination": "/playbook-ai-ready-data.html" },
     { "source": "/k/meeting-intelligence", "destination": "/assets/kits/meeting-intelligence-kit.zip" },
+    { "source": "/k/stalled-build-handoff", "destination": "/assets/kits/stalled-build-handoff-kit.zip" },
+    { "source": "/k/ai-ready-data", "destination": "/assets/kits/ai-ready-data-kit.zip" },
     { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },
     { "source": "/case-study/content-system", "destination": "/case-study-content-system.html" },
     { "source": "/case-study/operational-visibility", "destination": "/case-study-operational-visibility.html" },
