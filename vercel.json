@@ -4,6 +4,9 @@
     { "source": "/blog/how-to-teach-ai-your-brand-voice", "destination": "/blog/taste-does-not-fit-in-a-document", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/playbooks", "destination": "/playbooks.html" },
+    { "source": "/playbook/meeting-intelligence", "destination": "/playbook-meeting-intelligence.html" },
+    { "source": "/k/meeting-intelligence", "destination": "/assets/kits/meeting-intelligence-kit.zip" },
     { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },
     { "source": "/case-study/content-system", "destination": "/case-study-content-system.html" },
     { "source": "/case-study/operational-visibility", "destination": "/case-study-operational-visibility.html" },
