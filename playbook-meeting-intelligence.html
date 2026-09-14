@@ -253,36 +253,8 @@
 
       </div>
 
-      <div class="post-body">
-        <h2>Frequently Asked Questions</h2>
-
-        <h3>What does the workflow cost to run?</h3>
-        <p>Processing a call costs cents in model usage, and spend only happens on calls a person chose to process. The stack is what you already run. A recorder, a language model with an API key, your CRM or task system, and the channel your team reads.</p>
-
-        <h3>Does the workflow write to the CRM automatically?</h3>
-        <p>At the start, nothing writes without review. Record updates are drafted, a person approves them, and the approval takes seconds. After consecutive clean review passes, the tiers the rules allow can graduate to writing unattended. Customer-facing content keeps its human gate permanently.</p>
-
-        <h3>How is this different from an AI notetaker summary?</h3>
-        <p>A summary describes the meeting. This workflow files it. Items land in your CRM and task system with an owner, a size, a route, and the verbatim quote that created them, and a person gates anything consequential.</p>
-
-        <h3>What happens to ideas discussed but not committed?</h3>
-        <p>They route to a parking lot instead of the task queue. Each entry keeps who raised it and how seriously it was discussed. Reviewed monthly, the parking lot becomes expansion conversations, because a topic a client raised twice is a topic worth scoping.</p>
-
-        <h3>How long does setup take?</h3>
-        <p>The kit's extraction prompt and routing rubric run on day one against your first transcript. The supervised review period typically runs a few weeks, and its length is decided by your own clean-pass count rather than a calendar. Graduation is earned on evidence.</p>
-
-        <h3>Can the extraction be trusted on messy, wandering calls?</h3>
-        <p>Wandering calls are the design case. The routing layer exists because meetings drift, and the quote requirement means drift never silently becomes commitments. Ambiguous language routes down for a person to promote, so the failure mode is a question rather than a phantom task.</p>
-
-        <h2>The Bottom Line</h2>
-        <p>Situational awareness was in the room. This playbook is how it survives the meeting.</p>
-
-        <h2>Want This Running in Your Stack?</h2>
-        <p>Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff.</p>
-        <div style="margin-top:24px">
-          <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
-        </div>
-      </div>
+      <p class="pb-lede">Situational awareness was in the room. This playbook is how it survives the meeting.</p>
+      <p class="pb-lede-sub">The implementation kit above packages every rubric on this page. Processing a call costs cents in model usage, and spend only happens on calls a person chose to process.</p>
     </main>
 
     <!-- ================= RIGHT: the diagram ================= -->
@@ -329,7 +301,7 @@
 
           <circle r="3.2" fill="#4A9ECE" filter="url(#glow)">
             <animateMotion dur="7s" repeatCount="indefinite"
-              path="M360,60 V210 V286 L360,312 M360,312 L190,312 V446 V546 L250,546 V700 V730"/>
+              path="M360,55 V312 H190 V516 H250 V700 H360 V730"/>
           </circle>
 
           <g>
@@ -420,6 +392,53 @@
       </div>
     </aside>
   </div>
+
+  <!-- ============================================
+       RELATED PLAYBOOKS
+       ============================================ -->
+  <section class="pb-related">
+    <div class="pb-related-head">
+      <p class="pb-eyebrow">More from the library</p>
+      <h2>Related Playbooks</h2>
+    </div>
+    <div class="pb-grid">
+      <div class="pb-card pb-card--soon">
+        <div class="pb-card-viz">SHIPPING NEXT</div>
+        <div class="pb-card-body">
+          <h3>The Handoff That Revives a Stalled AI Build</h3>
+          <p>Getting an automation to the bar where anyone on your team can run it, without watering down what it does.</p>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--purple">Delivery</span>
+            <span class="pb-date">02</span>
+          </div>
+        </div>
+      </div>
+      <div class="pb-card pb-card--soon">
+        <div class="pb-card-viz">IN PROGRESS</div>
+        <div class="pb-card-body">
+          <h3>The Human Approval Gate</h3>
+          <p>Letting AI draft real work while a person approves anything that leaves the building.</p>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--coral">Governance</span>
+            <span class="pb-date">03</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pb-related-more">
+      <a href="/playbooks.html" class="pb-back">View all playbooks &#8594;</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BOTTOM CTA
+       ============================================ -->
+  <section class="pb-cta">
+    <p class="pb-eyebrow">Maestro</p>
+    <h2>Want This Running in Your Stack?</h2>
+    <p>Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+    <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
+  </section>
 
   <!-- ============================================
        FOOTER

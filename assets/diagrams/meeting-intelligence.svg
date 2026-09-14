@@ -54,7 +54,7 @@
   <!-- packet animation along the spine -->
   <circle r="3.2" fill="#4A9ECE" filter="url(#glow)">
     <animateMotion dur="7s" repeatCount="indefinite"
-      path="M360,60 V210 V286 L360,312 M360,312 L190,312 V446 V546 L250,546 V700 V730"/>
+      path="M360,55 V312 H190 V516 H250 V700 H360 V730"/>
   </circle>
 
   <!-- ===================== nodes ===================== -->

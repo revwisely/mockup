@@ -293,3 +293,42 @@ a.pb-card:hover {
   .pb-card, .pb-card:hover { transition: none; transform: none; }
   .pb-right-sticky svg animateMotion { display: none; }
 }
+
+/* ---------- related playbooks + bottom CTA band ---------- */
+.pb-related {
+  border-top: 1px solid var(--border-default);
+  padding: 70px 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.pb-related-head { text-align: center; margin-bottom: 34px; }
+.pb-related-head h2 { font-size: clamp(26px, 3vw, 36px); color: var(--text-primary); margin: 0; letter-spacing: -0.4px; }
+.pb-related .pb-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 380px)); justify-content: center; }
+.pb-related-more { text-align: center; margin-top: 36px; }
+
+.pb-cta {
+  border-top: 1px solid var(--border-default);
+  background:
+    radial-gradient(ellipse 70% 90% at 50% 110%, rgba(74, 158, 206, 0.14) 0%, transparent 70%),
+    var(--bg-deep);
+  text-align: center;
+  padding: 100px 24px 110px;
+}
+.pb-cta h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin: 0 0 14px;
+}
+.pb-cta p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 560px;
+  margin: 0 auto 30px;
+}
+.pb-cta .btn-primary {
+  font-size: 16px;
+  padding: 15px 34px;
+  box-shadow: var(--glow-md);
+}
