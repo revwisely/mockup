@@ -28,6 +28,7 @@
   <!-- Custom Terminal CSS -->
   <link rel="stylesheet" href="/css/terminal.css">
   <link rel="stylesheet" href="/css/blog-post.css?v=20260913">
+  <link rel="stylesheet" href="/css/playbooks.css?v=20260913">
 
   <!-- Calendly -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -51,23 +52,11 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "rfeny36y07");
   </script>
-
-  <style>
-    .kit-box { border: 1px solid var(--border, #2a2a2a); border-radius: 8px; padding: 28px; margin: 40px 0; background: rgba(255,255,255,0.02); }
-    .kit-box h3 { margin-top: 0; }
-    .kit-form { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; max-width: 480px; }
-    .kit-form input, .kit-form select { padding: 12px 14px; border: 1px solid var(--border, #2a2a2a); border-radius: 6px; background: rgba(0,0,0,0.25); color: inherit; font-family: inherit; font-size: 15px; }
-    .kit-consent { font-size: 13px; opacity: 0.7; margin-top: 8px; }
-    .pb-sample { overflow-x: auto; }
-  </style>
 </head>
 <body>
 
   <!-- Grid Background -->
   <div class="grid-bg" aria-hidden="true"></div>
-
-  <!-- Editor Gutter -->
-  <div class="editor-gutter" id="editor-gutter" aria-hidden="true"></div>
 
   <!-- ============================================
        NAVIGATION
@@ -110,134 +99,165 @@
     <a href="/index.html#cta">Schedule Call</a>
   </div>
 
+  <!-- Mobile diagram hero -->
+  <div class="pb-diagram-mobile" aria-hidden="true">
+    <img src="/assets/diagrams/meeting-intelligence.svg" alt="" loading="eager">
+  </div>
+
   <!-- ============================================
-       PLAYBOOK ARTICLE
+       PLAYBOOK — SPLIT LAYOUT
        ============================================ -->
-  <article class="blog-article">
-    <div class="blog-article-inner">
-      <div class="post-header">
-        <a href="/playbooks.html" class="post-back">Playbooks</a>
-        <div class="post-tags"><span class="post-tag">Playbook</span></div>
-        <h1 class="post-title">Turn Recorded Calls Into CRM Updates and Deal Awareness</h1>
-        <div class="post-meta">
-          <span class="post-meta-author">Magnetiz.ai</span>
-          <span class="post-meta-separator">&bull;</span>
-          <span class="post-meta-date">September 2026</span>
-        </div>
+  <div class="pb-split">
+
+    <!-- ================= LEFT ================= -->
+    <main class="pb-left">
+      <a href="/playbooks.html" class="pb-back">&#8592; Playbooks</a>
+
+      <h1 class="pb-title">Turn Recorded Calls Into CRM Updates and Deal Awareness</h1>
+
+      <div class="pb-meta-row">
+        <span class="pb-chip pb-chip--green">Sales</span>
+        <span class="pb-chip pb-chip--amber">RevOps</span>
+        <span class="pb-date">Playbook 01 &middot; September 2026</span>
+      </div>
+
+      <p class="pb-eyebrow">Works with</p>
+      <div class="pb-tools">
+        <span class="pb-chip">Gemini</span>
+        <span class="pb-chip">Zoom</span>
+        <span class="pb-chip">Fireflies</span>
+        <span class="pb-chip">Claude</span>
+        <span class="pb-chip">HubSpot</span>
+        <span class="pb-chip">Salesforce</span>
+        <span class="pb-chip">Slack</span>
+        <span class="pb-chip">Teams</span>
+      </div>
+
+      <!-- kit gate -->
+      <div class="pb-kit" id="kit">
+        <p class="pb-eyebrow">Implementation kit</p>
+        <ul class="pb-kit-list">
+          <li>The extraction prompt, with the output schema</li>
+          <li>The routing rubric and the tier rules</li>
+          <li>A CRM field-mapping worksheet</li>
+          <li>A sample transcript with its expected output</li>
+        </ul>
+        <!-- TODO(beehiiv): replace action with beehiiv automation endpoint + custom fields
+             (playbook=meeting-intelligence, source=<select value>) once verified in dashboard -->
+        <form method="POST" action="#" data-playbook="meeting-intelligence">
+          <div class="pb-kit-row">
+            <input type="email" name="email" placeholder="Work email" required aria-label="Work email">
+            <button type="submit">Send Me the Kit</button>
+          </div>
+          <select name="source" required aria-label="Where did you hear about this?">
+            <option value="" disabled selected>Where did you hear about this?</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="newsletter">The newsletter</option>
+            <option value="search">Search</option>
+            <option value="ai-assistant">An AI assistant</option>
+            <option value="colleague">A colleague</option>
+            <option value="other">Somewhere else</option>
+          </select>
+          <p class="pb-kit-consent">Requesting the kit subscribes you to our weekly release email. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <p class="pb-lede"><strong>One recorded call becomes structured record updates, owner-tagged follow-ups, and a one-minute channel brief. Every item traces to the words that created it. A person approves anything a customer could ever see.</strong></p>
+      <p class="pb-lede-sub">The full method is below. You already record the calls. The recordings answer to nobody, and a buyer said it best.</p>
+
+      <blockquote class="pb-quote">
+        <p>We record a lot of our meetings and we want to interrogate them and get situational awareness on the deals and the accounts.</p>
+        <cite>Said to us unprompted, on a discovery call</cite>
+      </blockquote>
+
+      <p class="pb-eyebrow" id="how-it-works">How it works</p>
+      <div class="pb-steps">
+
+        <details class="pb-step" open>
+          <summary><span class="pb-step-num">01</span>Capture the call</summary>
+          <div class="pb-step-body">
+            <p>Any recorder that produces a transcript works. Gemini meeting notes, Zoom transcripts, Fireflies.</p>
+            <p>Raw speaker-labeled transcripts produce the best extractions. Notetaker summaries still work, and the workflow lowers its confidence scores to match, because secondhand notes are already an interpretation.</p>
+            <p>The baseline this replaces is familiar. Updating records after each conversation takes a rep about thirty minutes per client, so the records go stale and deal awareness lives in whoever happened to be in the room.</p>
+          </div>
+        </details>
+
+        <details class="pb-step">
+          <summary><span class="pb-step-num">02</span>Extract with receipts</summary>
+          <div class="pb-step-body">
+            <p><strong>No quote, no item.</strong> The workflow extracts what was said. It never invents. Every item carries the verbatim words that created it, so anyone can audit any entry back to the source in one click.</p>
+            <p>Talk the meeting explicitly deferred becomes a follow-up, never a task. Here is the shape of one extracted item.</p>
+            <pre><code>{
+  "title": "Send pricing summary to their CFO",
+  "owner": "us",
+  "estimate": "S",
+  "route": "committed",
+  "tier": "review",
+  "source_quote": "Can you get the pricing
+    summary over to our CFO by Friday?"
+}</code></pre>
+            <p><em>Watch for the item you cannot quote. Cut it. A phantom commitment costs more than a missed one.</em></p>
+          </div>
+        </details>
+
+        <details class="pb-step">
+          <summary><span class="pb-step-num">03</span>Route what was said</summary>
+          <div class="pb-step-body">
+            <p>Meetings wander. People riff on things they want someday. The workflow routes that talk instead of promoting it, using the language rather than the topic.</p>
+            <ul>
+              <li><strong>Committed.</strong> Decision language with an owner. Becomes a work item this cycle.</li>
+              <li><strong>New ask.</strong> A real request outside agreed scope. Logged and sized, presented as a proposal.</li>
+              <li><strong>Exploration.</strong> Musing with no owner and no date. Goes to the parking lot.</li>
+              <li><strong>Resurrected non-goal.</strong> Something already scoped out. Flagged so a person re-decides.</li>
+            </ul>
+            <p><strong>The tell is an owner and a yes. Enthusiasm alone routes down.</strong> When a route is unclear, route down and let a person promote it.</p>
+            <p>The parking lot is expansion signal. Raising it back later ("you mentioned this twice, want us to scope it?") is where future work comes from.</p>
+          </div>
+        </details>
+
+        <details class="pb-step">
+          <summary><span class="pb-step-num">04</span>Fork by owner</summary>
+          <div class="pb-step-body">
+            <p>Owner is the first fork. Items owned by your side are candidates for execution. Items owned by the other side are tracked as waiting-on entries and never executed.</p>
+            <p>That single rule keeps the workflow from quietly doing work that belongs on someone else's plate, and it lets tomorrow's brief say "waiting on Dana since the 14th."</p>
+          </div>
+        </details>
+
+        <details class="pb-step">
+          <summary><span class="pb-step-num">05</span>Apply the tier rules</summary>
+          <div class="pb-step-body">
+            <p><strong>Rules decide the tier. The stricter rule always wins.</strong> Reversible, scoped, testable work is eligible to run unattended. Everything else waits for review.</p>
+            <p>Deterministic overrides sit above the model's proposal, so a misclassification can never grant itself more autonomy. Large items wait. Low-confidence items wait.</p>
+            <p>And anything a customer or prospect will see waits for a person. Always, regardless of size.</p>
+            <p><em>Watch for the tier assigned by vibes. If you cannot name the rule that decided it, the rule layer is missing.</em></p>
+          </div>
+        </details>
+
+        <details class="pb-step">
+          <summary><span class="pb-step-num">06</span>File and brief</summary>
+          <div class="pb-step-body">
+            <p>Approved output lands where your team already works. Record updates drafted into the CRM. Tasks with an owner, a size, and the source quote. A channel brief a teammate reads in a minute.</p>
+            <p>When the meeting updates prior work, the workflow matches the existing record instead of creating a duplicate.</p>
+            <p>The front end is a door, and you should name your own. Slack teams get a Slack brief, Microsoft teams get Teams.</p>
+          </div>
+        </details>
+
+        <details class="pb-step">
+          <summary><span class="pb-step-num">07</span>Graduate autonomy</summary>
+          <div class="pb-step-body">
+            <p><strong>Supervised first. Graduation is measured, never assumed.</strong> At the start, a person reviews every extraction before anything writes to a live system.</p>
+            <p>Score each pass on four failure modes. Invented items, missed asks, wrong owners, wrong tiers. The workflow graduates to writing on its own only after consecutive clean passes, and only for the tiers the rules already allow.</p>
+            <p>Trust in this design is a property you measure, with a date attached.</p>
+          </div>
+        </details>
+
       </div>
 
       <div class="post-body">
-        <p><strong>One recorded call becomes structured record updates, owner-tagged follow-ups, and a one-minute channel brief. Every item traces to the words that created it. A person approves anything a customer could ever see.</strong></p>
-
-        <p>The full method is below. The implementation kit at the end packages the prompts, rubrics, and worksheets so your team can run it.</p>
-
-        <h2>Who Is This Playbook For?</h2>
-        <p><strong>You already record the calls. The recordings answer to nobody.</strong></p>
-        <p>A buyer said it to us unprompted, and it is the cleanest statement of the gap we know.</p>
-        <blockquote>
-          <p>We record a lot of our meetings and we want to interrogate them and get situational awareness on the deals and the accounts.</p>
-        </blockquote>
-        <p>The baseline cost is familiar too. Updating records after each conversation takes a rep about thirty minutes per client. So the records go stale, and deal awareness lives in whoever happened to be in the room.</p>
-        <p>This playbook closes that gap with your existing stack. A recorder, a language model, the system of record you already run, and the channel your team already reads.</p>
-
-        <h2>What Does the Workflow Produce?</h2>
-        <p><strong>A call becomes a structured record, and the record carries receipts.</strong></p>
-        <p>Each processed call produces six things, filed where your team already works.</p>
-        <ul>
-          <li>Record updates for the account or deal, drafted for review</li>
-          <li>Work items with an owner and a size</li>
-          <li>Decisions, with who committed to them</li>
-          <li>Blockers, with who must resolve them</li>
-          <li>A parking lot of ideas raised without commitment</li>
-          <li>A channel brief a teammate reads in a minute</li>
-        </ul>
-        <p>Here is the shape of one extracted item.</p>
-        <pre class="pb-sample"><code>{
-  "title": "Send pricing summary to their CFO",
-  "owner": "us",
-  "type": "follow-up",
-  "estimate": "S",
-  "confidence": "high",
-  "route": "committed",
-  "tier": "review",
-  "source_quote": "Can you get the pricing summary
-    over to our CFO by Friday?"
-}</code></pre>
-
-        <h2>How Does Extraction Stay Honest?</h2>
-        <p><strong>No quote, no item.</strong></p>
-        <p>The workflow extracts what was said. It never invents. Every item carries the verbatim words that created it, so anyone can audit any entry back to the source in one click.</p>
-        <p>Two rules protect that standard. When the input is a notetaker summary instead of a raw transcript, confidence drops one level, because secondhand notes are already an interpretation. And talk the meeting explicitly deferred becomes a follow-up, never a task.</p>
-        <p><em>Watch for the item you cannot quote. Cut it. A phantom commitment costs more than a missed one.</em></p>
-
-        <h2>How Do You Route What People Said?</h2>
-        <p><strong>The tell is an owner and a yes. Enthusiasm alone routes down.</strong></p>
-        <p>Meetings wander. People riff on things they want someday. The workflow routes that talk instead of promoting it, using the language rather than the topic.</p>
-        <ul>
-          <li><strong>Committed.</strong> Decision language with an owner. Becomes a work item this cycle.</li>
-          <li><strong>New ask.</strong> A real request outside agreed scope. Logged and sized, presented as a proposal.</li>
-          <li><strong>Exploration.</strong> Musing with no owner and no date. Goes to the parking lot.</li>
-          <li><strong>Resurrected non-goal.</strong> Something already scoped out. Flagged so a person re-decides.</li>
-        </ul>
-        <p>When a route is unclear, route down and let a person promote it. The parking lot is expansion signal, and raising it back to the client ("you mentioned this twice, want us to scope it?") is where future work comes from.</p>
-
-        <h2>What Runs Unattended and What Waits for a Person?</h2>
-        <p><strong>Rules decide the tier. The stricter rule always wins.</strong></p>
-        <p>Every item gets an execution tier. Reversible, scoped, testable work runs unattended. Everything else waits for review.</p>
-        <p>Deterministic overrides sit above the model's proposal, so a misclassification can never grant itself more autonomy. Large items wait. Low-confidence items wait. Items owned by the other side are tracked and never executed.</p>
-        <p>And anything a customer or prospect will see waits for a person. Always, regardless of size.</p>
-        <p><em>Watch for the tier assigned by vibes. If you cannot name the rule that decided it, the rule layer is missing.</em></p>
-
-        <h2>How Does the System Earn Autonomy?</h2>
-        <p><strong>Supervised first. Graduation is measured, never assumed.</strong></p>
-        <p>At the start, a person reviews every extraction before anything writes to a live system. Score each pass on four failure modes. Invented items, missed asks, wrong owners, wrong tiers.</p>
-        <p>The workflow graduates to writing on its own only after consecutive clean passes, and only for the tiers the rules already allow. Trust in this design is a property you measure, with a date attached.</p>
-
-        <h2>What Do You Need to Run It?</h2>
-        <p><strong>Your existing stack is enough.</strong></p>
-        <ul>
-          <li>A meeting recorder that produces transcripts, such as Gemini, Zoom, or Fireflies</li>
-          <li>A language model with an API key</li>
-          <li>The CRM or task system you already run</li>
-          <li>The channel your team already reads</li>
-        </ul>
-        <p>The front end is a door, and you should name your own. Slack teams get a Slack brief, Microsoft teams get Teams. Processing a call costs cents in model usage, and spend only happens on calls a person chose to process.</p>
-
-        <!-- ============================================
-             IMPLEMENTATION KIT (email gate)
-             ============================================ -->
-        <div class="kit-box" id="kit">
-          <h3>Get the Implementation Kit</h3>
-          <p>The kit packages this playbook into files your team can run.</p>
-          <ul>
-            <li>The extraction prompt, with the output schema</li>
-            <li>The routing rubric, with the linguistic tells</li>
-            <li>The tier rules, with the deterministic overrides</li>
-            <li>A CRM field-mapping worksheet</li>
-            <li>A sample transcript with its expected output</li>
-          </ul>
-          <!-- TODO(beehiiv): replace action with beehiiv automation endpoint + custom fields
-               (playbook=meeting-intelligence, source=<select value>) once verified in dashboard -->
-          <form class="kit-form" method="POST" action="#" data-playbook="meeting-intelligence">
-            <input type="email" name="email" placeholder="Work email" required>
-            <select name="source" required>
-              <option value="" disabled selected>Where did you hear about this?</option>
-              <option value="linkedin">LinkedIn</option>
-              <option value="newsletter">The newsletter</option>
-              <option value="search">Search</option>
-              <option value="ai-assistant">An AI assistant</option>
-              <option value="colleague">A colleague</option>
-              <option value="other">Somewhere else</option>
-            </select>
-            <button type="submit" class="btn-primary">Send Me the Kit</button>
-            <p class="kit-consent">Requesting the kit subscribes you to our weekly release email. Unsubscribe anytime.</p>
-          </form>
-        </div>
-
         <h2>Frequently Asked Questions</h2>
 
-        <h3>What meeting recorder does this playbook require?</h3>
-        <p>Any recorder that produces a transcript works, including Gemini meeting notes, Zoom transcripts, and Fireflies. Raw speaker-labeled transcripts produce the best extractions. Notetaker summaries still work, and the workflow lowers its confidence scores to match the secondhand source.</p>
+        <h3>What does the workflow cost to run?</h3>
+        <p>Processing a call costs cents in model usage, and spend only happens on calls a person chose to process. The stack is what you already run. A recorder, a language model with an API key, your CRM or task system, and the channel your team reads.</p>
 
         <h3>Does the workflow write to the CRM automatically?</h3>
         <p>At the start, nothing writes without review. Record updates are drafted, a person approves them, and the approval takes seconds. After consecutive clean review passes, the tiers the rules allow can graduate to writing unattended. Customer-facing content keeps its human gate permanently.</p>
@@ -259,17 +279,147 @@
 
         <h2>Want This Running in Your Stack?</h2>
         <p>Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff.</p>
+        <div style="margin-top:24px">
+          <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
+        </div>
       </div>
+    </main>
 
-      <div style="margin-top:32px">
-        <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
-      </div>
+    <!-- ================= RIGHT: the diagram ================= -->
+    <aside class="pb-right" aria-label="Workflow diagram">
+      <div class="pb-right-sticky">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace" role="img" aria-label="Meeting intelligence workflow diagram">
+          <defs>
+            <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+            </marker>
+            <marker id="arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+            </marker>
+            <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="6" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
 
-      <div class="post-footer">
-        <a href="/playbooks.html" class="post-footer-back">Back to Playbooks</a>
+          <g stroke="#30363d" stroke-width="1.5" fill="none">
+            <path d="M360,86 V116" marker-end="url(#arr)" stroke="#4A9ECE"/>
+            <path d="M360,178 V208" marker-end="url(#arr)" stroke="#4A9ECE"/>
+            <path d="M360,286 V312" stroke="#4A9ECE"/>
+            <path d="M104,312 H616"/>
+            <path d="M104,312 V336" marker-end="url(#arrdim)"/>
+            <path d="M274,312 V336" marker-end="url(#arrdim)"/>
+            <path d="M446,312 V336" marker-end="url(#arrdim)"/>
+            <path d="M616,312 V336" marker-end="url(#arrdim)"/>
+            <path d="M104,398 V424" stroke="#98C379"/>
+            <path d="M274,398 V424" stroke="#E5C07B"/>
+            <path d="M104,424 H274"/>
+            <path d="M190,424 V446" marker-end="url(#arr)" stroke="#4A9ECE"/>
+            <path d="M446,398 V446" marker-end="url(#arrdim)" stroke="#C678DD" stroke-dasharray="4 4"/>
+            <path d="M616,398 V446" marker-end="url(#arrdim)" stroke="#E06C75" stroke-dasharray="4 4"/>
+            <path d="M130,516 V760" stroke="#98C379"/>
+            <path d="M250,516 V546" marker-end="url(#arr)" stroke="#4A9ECE"/>
+            <path d="M250,614 V700" stroke="#4A9ECE"/>
+            <path d="M130,700 H580"/>
+            <path d="M140,700 V724" marker-end="url(#arrdim)"/>
+            <path d="M360,700 V724" marker-end="url(#arrdim)"/>
+            <path d="M580,700 V724" marker-end="url(#arrdim)"/>
+            <path d="M330,580 H700 V476 H310" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#arrdim)"/>
+          </g>
+
+          <circle r="3.2" fill="#4A9ECE" filter="url(#glow)">
+            <animateMotion dur="7s" repeatCount="indefinite"
+              path="M360,60 V210 V286 L360,312 M360,312 L190,312 V446 V546 L250,546 V700 V730"/>
+          </circle>
+
+          <g>
+            <rect x="240" y="34" width="240" height="52" rx="9" fill="#1c2333" stroke="#30363d"/>
+            <text x="360" y="56" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">RECORDED CALL</text>
+            <text x="360" y="74" text-anchor="middle" fill="#8B949E" font-size="10">gemini &#183; zoom &#183; fireflies</text>
+          </g>
+          <g>
+            <rect x="230" y="116" width="260" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+            <text x="360" y="140" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">TRANSCRIPT OR NOTES</text>
+            <text x="360" y="158" text-anchor="middle" fill="#8B949E" font-size="10">notes are secondhand &#8594; confidence drops</text>
+          </g>
+          <g>
+            <rect x="220" y="208" width="280" height="78" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+            <text x="360" y="234" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">EXTRACTION</text>
+            <text x="360" y="254" text-anchor="middle" fill="#4A9ECE" font-size="11">no quote, no item</text>
+            <text x="360" y="271" text-anchor="middle" fill="#8B949E" font-size="10">extract, never invent</text>
+          </g>
+
+          <text x="360" y="305" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">ROUTED BY LANGUAGE, NEVER TOPIC</text>
+          <g>
+            <rect x="34" y="336" width="140" height="62" rx="9" fill="#1c2333" stroke="#98C379"/>
+            <text x="104" y="361" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">COMMITTED</text>
+            <text x="104" y="379" text-anchor="middle" fill="#8B949E" font-size="9.5">an owner and a yes</text>
+          </g>
+          <g>
+            <rect x="204" y="336" width="140" height="62" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+            <text x="274" y="361" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">NEW ASK</text>
+            <text x="274" y="379" text-anchor="middle" fill="#8B949E" font-size="9.5">outside scope, sized</text>
+          </g>
+          <g>
+            <rect x="376" y="336" width="140" height="62" rx="9" fill="#1c2333" stroke="#C678DD"/>
+            <text x="446" y="361" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">EXPLORATION</text>
+            <text x="446" y="379" text-anchor="middle" fill="#8B949E" font-size="9.5">no owner, no date</text>
+          </g>
+          <g>
+            <rect x="546" y="336" width="140" height="62" rx="9" fill="#1c2333" stroke="#E06C75"/>
+            <text x="616" y="361" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NON-GOAL</text>
+            <text x="616" y="379" text-anchor="middle" fill="#8B949E" font-size="9.5">scoped out before</text>
+          </g>
+
+          <g>
+            <rect x="70" y="446" width="240" height="70" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+            <text x="190" y="470" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">TIER RULES</text>
+            <text x="190" y="488" text-anchor="middle" fill="#8B949E" font-size="10">auto | review &#183; stricter wins</text>
+            <text x="190" y="504" text-anchor="middle" fill="#8B949E" font-size="10">their items &#8594; waiting-on, never run</text>
+          </g>
+          <g>
+            <rect x="376" y="446" width="140" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
+            <text x="446" y="468" text-anchor="middle" fill="#C678DD" font-size="11" font-weight="700">PARKING LOT</text>
+            <text x="446" y="486" text-anchor="middle" fill="#8B949E" font-size="9.5">expansion signal</text>
+          </g>
+          <g>
+            <rect x="546" y="446" width="140" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
+            <text x="616" y="468" text-anchor="middle" fill="#E06C75" font-size="11" font-weight="700">RE-DECIDE</text>
+            <text x="616" y="486" text-anchor="middle" fill="#8B949E" font-size="9.5">a person re-opens it</text>
+          </g>
+
+          <text x="118" y="640" text-anchor="middle" fill="#98C379" font-size="10" transform="rotate(-90 118 640)">AUTO &#183; after graduation</text>
+
+          <g filter="url(#glow)">
+            <rect x="120" y="546" width="260" height="68" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+          </g>
+          <text x="250" y="574" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+          <text x="250" y="594" text-anchor="middle" fill="#8B949E" font-size="10">customer-facing waits here, always</text>
+
+          <text x="712" y="530" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 712 530)">EVAL GATE &#183; clean passes graduate</text>
+
+          <text x="360" y="694" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">FILED WHERE THE TEAM ALREADY WORKS</text>
+          <g>
+            <rect x="50" y="724" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+            <text x="140" y="749" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">CRM UPDATE</text>
+            <text x="140" y="767" text-anchor="middle" fill="#8B949E" font-size="9.5">drafted, with receipts</text>
+          </g>
+          <g>
+            <rect x="270" y="724" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+            <text x="360" y="749" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">TASK + QUOTE</text>
+            <text x="360" y="767" text-anchor="middle" fill="#8B949E" font-size="9.5">owner, size, source</text>
+          </g>
+          <g>
+            <rect x="490" y="724" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+            <text x="580" y="749" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">SLACK BRIEF</text>
+            <text x="580" y="767" text-anchor="middle" fill="#8B949E" font-size="9.5">read in a minute</text>
+          </g>
+
+          <text x="360" y="836" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 01 &#183; MEETING INTELLIGENCE</text>
+        </svg>
       </div>
-    </div>
-  </article>
+    </aside>
+  </div>
 
   <!-- ============================================
        FOOTER

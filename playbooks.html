@@ -27,7 +27,7 @@
 
   <!-- Custom Terminal CSS -->
   <link rel="stylesheet" href="/css/terminal.css">
-  <link rel="stylesheet" href="/css/blog-post.css?v=20260913">
+  <link rel="stylesheet" href="/css/playbooks.css?v=20260913">
 
   <!-- Calendly -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -51,15 +51,6 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "rfeny36y07");
   </script>
-
-  <style>
-    .pb-card { display: block; border: 1px solid var(--border, #2a2a2a); border-radius: 8px; padding: 26px; margin: 18px 0; background: rgba(255,255,255,0.02); text-decoration: none; color: inherit; transition: border-color .15s ease; }
-    a.pb-card:hover { border-color: var(--accent, #7ee787); }
-    .pb-card h3 { margin: 0 0 8px; }
-    .pb-card p { margin: 0 0 10px; opacity: 0.85; }
-    .pb-card .pb-meta { font-family: 'JetBrains Mono', monospace; font-size: 12px; opacity: 0.6; }
-    .pb-card.pb-soon { opacity: 0.55; }
-  </style>
 </head>
 <body>
 
@@ -113,41 +104,67 @@
   <!-- ============================================
        PLAYBOOKS INDEX
        ============================================ -->
-  <article class="blog-article">
-    <div class="blog-article-inner">
-      <div class="post-header">
-        <div class="post-tags"><span class="post-tag">Library</span></div>
-        <h1 class="post-title">GTM Playbooks</h1>
-      </div>
+  <main class="pb-index">
+    <div class="pb-index-head">
+      <p class="pb-eyebrow">The library</p>
+      <h1 class="pb-index-title">GTM Playbooks</h1>
+      <p class="pb-index-sub">Complete, runnable playbooks from systems Magnetiz operates in production. The full method is public on every page. The implementation kit arrives by email. One new playbook ships each week.</p>
+    </div>
 
-      <div class="post-body">
-        <p><strong>Complete, runnable playbooks from systems Magnetiz operates in production.</strong></p>
-        <p>Every playbook publishes its full method on the page. The implementation kit packages the prompts, rubrics, and worksheets, delivered by email. One new playbook ships each week.</p>
+    <div class="pb-cats" aria-label="Categories">
+      <span class="pb-chip pb-chip--green">Sales</span>
+      <span class="pb-chip pb-chip--amber">RevOps</span>
+      <span class="pb-chip pb-chip--purple">Delivery</span>
+      <span class="pb-chip pb-chip--coral">Governance</span>
+    </div>
 
-        <a class="pb-card" href="/playbook-meeting-intelligence.html">
+    <div class="pb-grid">
+
+      <a class="pb-card" href="/playbook-meeting-intelligence.html">
+        <div class="pb-card-viz">
+          <img src="/assets/diagrams/meeting-intelligence.svg" alt="Meeting intelligence workflow diagram" loading="lazy">
+        </div>
+        <div class="pb-card-body">
           <h3>Turn Recorded Calls Into CRM Updates and Deal Awareness</h3>
           <p>One recorded call becomes structured record updates, owner-tagged follow-ups, and a one-minute channel brief. Every item traces to the words that created it.</p>
-          <span class="pb-meta">playbook 01 &middot; meeting intelligence</span>
-        </a>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--green">Sales</span>
+            <span class="pb-chip pb-chip--amber">RevOps</span>
+            <span class="pb-date">01 &middot; Sep 2026</span>
+          </div>
+        </div>
+      </a>
 
-        <div class="pb-card pb-soon">
+      <div class="pb-card pb-card--soon">
+        <div class="pb-card-viz">SHIPPING NEXT</div>
+        <div class="pb-card-body">
           <h3>The Handoff That Revives a Stalled AI Build</h3>
           <p>Getting an automation to the bar where anyone on your team can run it, without watering down what it does.</p>
-          <span class="pb-meta">playbook 02 &middot; shipping next</span>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--purple">Delivery</span>
+            <span class="pb-date">02</span>
+          </div>
         </div>
+      </div>
 
-        <div class="pb-card pb-soon">
+      <div class="pb-card pb-card--soon">
+        <div class="pb-card-viz">IN PROGRESS</div>
+        <div class="pb-card-body">
           <h3>The Human Approval Gate</h3>
           <p>Letting AI draft real work while a person approves anything that leaves the building.</p>
-          <span class="pb-meta">playbook 03 &middot; in progress</span>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--coral">Governance</span>
+            <span class="pb-date">03</span>
+          </div>
         </div>
       </div>
 
-      <div style="margin-top:32px">
-        <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
-      </div>
     </div>
-  </article>
+
+    <div style="margin-top:48px">
+      <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
+    </div>
+  </main>
 
   <!-- ============================================
        FOOTER
