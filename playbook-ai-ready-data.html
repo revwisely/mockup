@@ -133,9 +133,10 @@
       <div class="pb-kit" id="kit">
         <p class="pb-eyebrow">Implementation kit</p>
         <ul class="pb-kit-list">
-          <li>The data-readiness audit worksheet</li>
+          <li>The data-readiness audit, with the ownership block</li>
           <li>Dedupe and merge rules, with survivorship</li>
           <li>The field census rubric</li>
+          <li>Source validation, so the mess stops refilling</li>
           <li>Write-guard patterns for AI tools</li>
           <li>The readiness scorecard</li>
         </ul>
@@ -172,7 +173,7 @@
           <summary><span class="pb-step-num">01</span>Scope what AI reads</summary>
           <div class="pb-step-body">
             <p>Never boil the whole database. Name the workflow you want to run, then list only the fields and records it will actually read. That list is the cleanup's entire scope.</p>
-            <p>A whole-CRM cleanup is the project that already failed once. A twenty-field cleanup ships this month.</p>
+            <p>A whole-CRM cleanup is the project that already failed once. A twenty-field cleanup ships this month. Stale records exit here too, because archiving the dead beats scrubbing them. And every recurring obligation in this kit gets a name in the audit, because unowned cadences quietly stop.</p>
             <p><em>Watch for scope written as table names instead of field names. AI reads fields.</em></p>
           </div>
         </details>
@@ -204,7 +205,7 @@
         <details class="pb-step">
           <summary><span class="pb-step-num">05</span>Fix at the source</summary>
           <div class="pb-step-body">
-            <p>Cleanup without entry validation refills the mess on a schedule. Add validation where records are born. Required fields only where they earn it, picklists over free text where a picklist is honest.</p>
+            <p>Cleanup without entry validation refills the mess on a schedule, which is why this step ships its own worksheet. Entry points, field-by-field treatments, and picklist conversions, each with an owner. Required fields only where they earn it, picklists over free text where a picklist is honest.</p>
             <p>The test for any new rule is that it makes tomorrow's records cheaper to trust, without making them slower to create.</p>
           </div>
         </details>
@@ -213,14 +214,14 @@
           <summary><span class="pb-step-num">06</span>Guard the writes</summary>
           <div class="pb-step-body">
             <p><strong>Fail loud, never plausible.</strong> A deterministic check hits a wrong field and throws an error you see. A model hits the same wrong field, adapts, and writes something plausible anyway. Silence is the failure mode.</p>
-            <p>Three guards, before any tool writes. Loop protection, so enrichment cannot re-trigger itself. A do-not-touch list for records that must never be modified. And deterministic validation around every AI write, so a schema surprise stops the write instead of bending it.</p>
+            <p>Three guards, before any tool writes. Loop protection, so enrichment cannot re-trigger itself. A do-not-touch list covering records AND fields, honored at every write path, merges included. And deterministic validation around every AI write, so a schema surprise stops the write instead of bending it.</p>
           </div>
         </details>
 
         <details class="pb-step">
           <summary><span class="pb-step-num">07</span>Re-measure and gate</summary>
           <div class="pb-step-body">
-            <p><strong>The before-number must move.</strong> Re-run the step 02 counts. The gate is simple. Until the numbers move, no workflow reads these records.</p>
+            <p><strong>The before-number must move.</strong> Re-run the step 02 counts, with the conflict sample freshly drawn at random, never the records you fixed. The gate is simple. Until the numbers move, no workflow reads these records.</p>
             <p>A gate that reads a number cannot be argued with, and it is the difference between a cleanup and a cleanup story.</p>
           </div>
         </details>

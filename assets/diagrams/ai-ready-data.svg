@@ -42,7 +42,7 @@
     <path d="M373,572 V598" marker-end="url(#d-arr)" stroke="#4A9ECE"/>
     <path d="M373,672 V698" marker-end="url(#d-arr)" stroke="#4A9ECE"/>
     <!-- re-measure fail loop back to fixes -->
-    <path d="M523,635 H700 V410 H648" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#d-arrdim)"/>
+    <path d="M523,635 H700 V348 H620" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#d-arrdim)"/>
   </g>
 
   <circle r="3.2" fill="#4A9ECE" filter="url(#d-glow)">
@@ -70,8 +70,9 @@
   <g>
     <rect x="223" y="152" width="300" height="72" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
     <text x="373" y="180" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">SCOPE WHAT AI READS</text>
-    <text x="373" y="198" text-anchor="middle" fill="#4A9ECE" font-size="10.5">the fields the workflow touches first</text>
-    <text x="373" y="214" text-anchor="middle" fill="#8B949E" font-size="10">never boil the whole database</text>
+    <text x="373" y="196" text-anchor="middle" fill="#4A9ECE" font-size="10">the fields the workflow touches first</text>
+    <text x="373" y="210" text-anchor="middle" fill="#8B949E" font-size="9.5">never boil the whole database &#183;</text>
+    <text x="373" y="222" text-anchor="middle" fill="#8B949E" font-size="9.5">stale records exit the scope here</text>
   </g>
 
   <!-- measure -->
@@ -86,20 +87,20 @@
   <g>
     <rect x="34" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#98C379"/>
     <text x="139" y="400" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">DEDUPE BY RULE</text>
-    <text x="139" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">merge rules, survivorship,</text>
-    <text x="139" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">never by hand twice</text>
+    <text x="139" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">duplicates + conflicts &#183;</text>
+    <text x="139" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">survivorship, never by hand twice</text>
   </g>
   <g>
     <rect x="268" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#E5C07B"/>
     <text x="373" y="400" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">PRUNE DEAD FIELDS</text>
-    <text x="373" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">field census &#183; unused,</text>
-    <text x="373" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">duplicated, meaningless</text>
+    <text x="373" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">empty + unread fields &#183;</text>
+    <text x="373" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">the census asks before it deletes</text>
   </g>
   <g>
     <rect x="502" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#C678DD"/>
     <text x="607" y="400" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">FIX AT THE SOURCE</text>
-    <text x="607" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">validation at entry, so the</text>
-    <text x="607" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">mess stops refilling</text>
+    <text x="607" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">free-text drift + entry rules &#183;</text>
+    <text x="607" y="432" text-anchor="middle" fill="#8B949E" font-size="9.5">so the mess stops refilling</text>
   </g>
 
   <!-- write guards -->
@@ -117,7 +118,7 @@
   <text x="373" y="628" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; RE-MEASURE GATE &#9608;&#9608;</text>
   <text x="373" y="648" text-anchor="middle" fill="#8B949E" font-size="10">the before-number must move</text>
   <text x="373" y="662" text-anchor="middle" fill="#8B949E" font-size="10">before any AI reads a record</text>
-  <text x="700" y="522" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 700 522)">NUMBER DIDN'T MOVE &#183; BACK TO THE FIXES</text>
+  <text x="700" y="522" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 700 522)">NUMBER DIDN'T MOVE &#183; BACK TO WHICHEVER FIX IT NAMES</text>
 
   <!-- clean -->
   <g>
