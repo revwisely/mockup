@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="Brand voice context layer: exemplars, hard rules, a judge rubric and a calibration set feed a pipeline where a deterministic linter runs first, a blind judge runs three times for a majority, a person approves, and what ships refines the exemplars.">
+  <defs>
+    <marker id="v-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="v-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="v-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="v-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#v-dots)"/>
+
+  <g stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- the failing loop at the top -->
+    <path d="M372,92 V116" marker-end="url(#v-arr)" stroke="#E06C75"/>
+    <!-- context layer feeds the pipeline -->
+    <path d="M372,296 V326" marker-end="url(#v-arr)" stroke="#4A9ECE"/>
+    <path d="M372,392 V422" marker-end="url(#v-arr)" stroke="#4A9ECE"/>
+    <path d="M372,496 V526" marker-end="url(#v-arr)" stroke="#4A9ECE"/>
+    <path d="M372,600 V630" marker-end="url(#v-arr)" stroke="#4A9ECE"/>
+    <!-- lint fail returns -->
+    <path d="M512,359 H600 V300 H512" stroke="#E06C75" stroke-dasharray="4 4" marker-end="url(#v-arrdim)"/>
+    <!-- judge split returns -->
+    <path d="M512,459 H646 V300 H512" stroke="#E5C07B" stroke-dasharray="4 4" marker-end="url(#v-arrdim)"/>
+    <!-- published -> lessons -> exemplars -->
+    <path d="M372,698 V726" marker-end="url(#v-arrdim)"/>
+    <path d="M232,752 H120 V214 H186" stroke="#98C379" stroke-dasharray="5 5" marker-end="url(#v-arrdim)"/>
+  </g>
+
+  <circle r="3.2" fill="#4A9ECE" filter="url(#v-glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M372,116 V296 V326 V422 V526 V630 V726"/>
+  </circle>
+
+  <!-- the pain -->
+  <g>
+    <rect x="182" y="34" width="380" height="58" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="372" y="58" text-anchor="middle" fill="#E06C75" font-size="13" font-weight="700">THE DRAFT THAT CAME BACK NEEDING YOU</text>
+    <text x="372" y="76" text-anchor="middle" fill="#8B949E" font-size="9.5">the guideline was written, shared, and loaded in anyway</text>
+  </g>
+
+  <!-- THE CONTEXT LAYER container -->
+  <rect x="150" y="116" width="444" height="180" rx="11" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.45"/>
+  <text x="372" y="140" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">THE CONTEXT LAYER</text>
+  <text x="372" y="156" text-anchor="middle" fill="#4A9ECE" font-size="10">what a document cannot hold, versioned in one place</text>
+  <g>
+    <rect x="170" y="172" width="196" height="48" rx="8" fill="#1c2333" stroke="#98C379"/>
+    <text x="268" y="192" text-anchor="middle" fill="#98C379" font-size="11" font-weight="700">EXEMPLARS</text>
+    <text x="268" y="208" text-anchor="middle" fill="#8B949E" font-size="9">what worked, and what didn't</text>
+  </g>
+  <g>
+    <rect x="378" y="172" width="196" height="48" rx="8" fill="#1c2333" stroke="#56B6C2"/>
+    <text x="476" y="192" text-anchor="middle" fill="#56B6C2" font-size="11" font-weight="700">HARD RULES</text>
+    <text x="476" y="208" text-anchor="middle" fill="#8B949E" font-size="9">the mechanical half, checkable</text>
+  </g>
+  <g>
+    <rect x="170" y="230" width="196" height="48" rx="8" fill="#1c2333" stroke="#E5C07B"/>
+    <text x="268" y="250" text-anchor="middle" fill="#E5C07B" font-size="11" font-weight="700">JUDGE RUBRIC</text>
+    <text x="268" y="266" text-anchor="middle" fill="#8B949E" font-size="9">the half rules cannot hold</text>
+  </g>
+  <g>
+    <rect x="378" y="230" width="196" height="48" rx="8" fill="#1c2333" stroke="#C678DD"/>
+    <text x="476" y="250" text-anchor="middle" fill="#C678DD" font-size="11" font-weight="700">CALIBRATION SET</text>
+    <text x="476" y="266" text-anchor="middle" fill="#8B949E" font-size="9">known good, known bad</text>
+  </g>
+
+  <!-- draft -->
+  <g>
+    <rect x="232" y="326" width="280" height="66" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text x="372" y="352" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">THE DRAFT</text>
+    <text x="372" y="370" text-anchor="middle" fill="#8B949E" font-size="10">written by a person, an agency, or an agent</text>
+    <text x="372" y="384" text-anchor="middle" fill="#8B949E" font-size="10">against the same layer</text>
+  </g>
+
+  <!-- lint gate -->
+  <g>
+    <rect x="232" y="422" width="280" height="74" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="372" y="448" text-anchor="middle" fill="#E06C75" font-size="14" font-weight="700">LINT GATE &#183; DETERMINISTIC</text>
+    <text x="372" y="466" text-anchor="middle" fill="#8B949E" font-size="10">the mechanical tells, every time, in milliseconds</text>
+    <text x="372" y="482" text-anchor="middle" fill="#8B949E" font-size="10">fails loud, before a person reads a word</text>
+  </g>
+  <text x="608" y="330" text-anchor="middle" fill="#484F58" font-size="9">rule broken &#183; back to the draft</text>
+
+  <!-- judge -->
+  <g>
+    <rect x="232" y="526" width="280" height="74" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text x="372" y="552" text-anchor="middle" fill="#E5C07B" font-size="14" font-weight="700">BLIND JUDGE &#183; RUN 3&#215;</text>
+    <text x="372" y="570" text-anchor="middle" fill="#8B949E" font-size="10">the same draft can score clean and slop</text>
+    <text x="372" y="586" text-anchor="middle" fill="#8B949E" font-size="10">in consecutive runs &#183; take the majority</text>
+  </g>
+  <text x="646" y="492" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 646 492)">MAJORITY SAYS REWRITE</text>
+
+  <!-- human gate -->
+  <g filter="url(#v-glow)">
+    <rect x="222" y="630" width="300" height="68" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  </g>
+  <text x="372" y="658" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+  <text x="372" y="678" text-anchor="middle" fill="#8B949E" font-size="10">nothing publishes on a judge's say-so</text>
+
+  <!-- published -->
+  <g>
+    <rect x="232" y="726" width="280" height="62" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text x="372" y="751" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">PUBLISHED</text>
+    <text x="372" y="769" text-anchor="middle" fill="#8B949E" font-size="10">and what it earned goes back in</text>
+  </g>
+  <text x="110" y="470" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(-90 110 470)">WHAT SHIPPED REFINES THE EXEMPLARS</text>
+
+  <text x="372" y="830" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"It doesn't really capture taste."</text>
+  <text x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 07 &#183; THE BRAND VOICE CONTEXT LAYER</text>
+</svg>

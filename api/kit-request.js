@@ -4,7 +4,7 @@
 // the GTM engine for lead + content_interaction recording.
 // Delivery email comes from the beehiiv automation, so no welcome email here.
 
-const KNOWN_PLAYBOOKS = new Set(['meeting-intelligence', 'stalled-build-handoff', 'ai-ready-data', 'inbound-signup-routing', 'reply-triage', 'crm-enrichment-review']);
+const KNOWN_PLAYBOOKS = new Set(['meeting-intelligence', 'stalled-build-handoff', 'ai-ready-data', 'inbound-signup-routing', 'reply-triage', 'crm-enrichment-review', 'brand-voice-context-layer']);
 const KNOWN_SOURCES = new Set(['linkedin', 'newsletter', 'search', 'ai-assistant', 'colleague', 'other']);
 
 export default async function handler(req, res) {

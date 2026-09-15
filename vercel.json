@@ -17,6 +17,8 @@
     { "source": "/k/inbound-signup-routing", "destination": "/assets/kits/inbound-signup-routing-kit.zip" },
     { "source": "/k/reply-triage", "destination": "/assets/kits/reply-triage-kit.zip" },
     { "source": "/k/crm-enrichment-review", "destination": "/assets/kits/crm-enrichment-review-kit.zip" },
+    { "source": "/playbook/brand-voice-context-layer", "destination": "/playbook-brand-voice-context-layer.html" },
+    { "source": "/k/brand-voice-context-layer", "destination": "/assets/kits/brand-voice-context-layer-kit.zip" },
     { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },
     { "source": "/case-study/content-system", "destination": "/case-study-content-system.html" },
     { "source": "/case-study/operational-visibility", "destination": "/case-study-operational-visibility.html" },

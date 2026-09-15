@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook: Teach AI Your Brand Voice — Magnetiz.ai</title>
+  <meta name="description" content="A complete playbook for building the context layer a brand guideline cannot hold: exemplars, a deterministic linter for the mechanical rules, a blind judge run three times for the rest, calibrated against known-good and known-bad work.">
+  <meta property="og:title" content="Playbook: Teach AI Your Brand Voice — Magnetiz.ai">
+  <meta property="og:description" content="The guideline was written, shared, and loaded into AI. The drafts still come back needing you. Here is the layer that fixes it, and how to prove it works.">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://www.magnetiz.ai/playbook/brand-voice-context-layer">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/tailwind-shim.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="/css/terminal.css">
+  <link rel="stylesheet" href="/css/blog-post.css?v=20260913">
+  <link rel="stylesheet" href="/css/playbooks.css?v=20260914">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a class="nav-dropdown-trigger" role="button" aria-haspopup="true" tabindex="0">
+            Maestro <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="/maestro-marketing.html">Maestro for Marketing</a>
+            <a href="/maestro-sales.html">Maestro for Sales</a>
+            <a href="/maestro-operations.html">Maestro for Operations</a>
+          </div>
+        </li>
+        <li><a href="/playbooks.html">Playbooks</a></li>
+        <li><a href="/content.html">Content</a></li>
+      </ul>
+
+      <a href="/index.html#cta" class="nav-cta">Schedule Call</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <span class="mobile-heading">Maestro</span>
+    <a href="/maestro-marketing.html" class="mobile-sub">Maestro for Marketing</a>
+    <a href="/maestro-sales.html" class="mobile-sub">Maestro for Sales</a>
+    <a href="/maestro-operations.html" class="mobile-sub">Maestro for Operations</a>
+    <a href="/playbooks.html">Playbooks</a>
+    <a href="/content.html">Content</a>
+    <a href="/index.html#cta">Schedule Call</a>
+  </div>
+
+  <!-- Mobile diagram hero -->
+  <div class="pb-diagram-mobile" aria-hidden="true">
+    <img src="/assets/diagrams/brand-voice-context-layer.svg" alt="" loading="eager">
+  </div>
+
+  <!-- ============================================
+       PLAYBOOK — SPLIT LAYOUT
+       ============================================ -->
+  <div class="pb-split">
+
+    <!-- ================= LEFT ================= -->
+    <main class="pb-left">
+      <a href="/playbooks.html" class="pb-back">&#8592; Playbooks</a>
+
+      <h1 class="pb-title">Teach AI Your Brand Voice</h1>
+
+      <div class="pb-meta-row">
+        <span class="pb-chip pb-chip--amber">Marketing</span>
+        <span class="pb-date">Playbook 07 &middot; September 2026</span>
+      </div>
+
+      <p class="pb-eyebrow">Works with</p>
+      <div class="pb-tools">
+        <span class="pb-chip">Claude</span>
+        <span class="pb-chip">ChatGPT</span>
+        <span class="pb-chip">Notion</span>
+        <span class="pb-chip">Google Docs</span>
+        <span class="pb-chip">Your agency</span>
+      </div>
+
+      <!-- kit gate -->
+      <div class="pb-kit" id="kit">
+        <p class="pb-eyebrow">Implementation kit</p>
+        <ul class="pb-kit-list">
+          <li>The harvest inventory, artifacts over adjectives</li>
+          <li>The mechanical and judgment split worksheet</li>
+          <li>A linter spec with a starting rule set</li>
+          <li>The judge rubric, with the three-run rule</li>
+          <li>The calibration set and its pass bars</li>
+          <li>Distribution and versioning, agencies included</li>
+        </ul>
+        <form method="POST" action="/api/kit-request" id="kit-form" data-playbook="brand-voice-context-layer">
+          <div class="pb-kit-row">
+            <input type="email" name="email" placeholder="Work email" required aria-label="Work email">
+            <button type="submit">Send Me the Kit</button>
+          </div>
+          <select name="source" required aria-label="Where did you hear about this?">
+            <option value="" disabled selected>Where did you hear about this?</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="newsletter">The newsletter</option>
+            <option value="search">Search</option>
+            <option value="ai-assistant">An AI assistant</option>
+            <option value="colleague">A colleague</option>
+            <option value="other">Somewhere else</option>
+          </select>
+          <p class="pb-kit-consent">Requesting the kit subscribes you to our weekly release email. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <p class="pb-lede"><strong>You wrote the messaging guideline, shared it with every agency, and loaded it into AI. The drafts still come back needing you. This playbook builds the layer a document cannot hold, and the two gates that prove it works.</strong></p>
+      <p class="pb-lede-sub">The full method is below. It is the system we run our own content through, and one finding inside it is the reason most voice scoring quietly fails.</p>
+
+      <blockquote class="pb-quote">
+        <p>It can tell AI what words to use or avoid, but it is not followed 100% and it does not really capture taste.</p>
+        <cite>A head of marketing, on the document that was supposed to solve this</cite>
+      </blockquote>
+
+      <p class="pb-eyebrow" id="how-it-works">How it works</p>
+      <div class="pb-steps">
+
+        <details class="pb-step" open>
+          <summary><span class="pb-step-num">01</span>Harvest artifacts, not adjectives</summary>
+          <div class="pb-step-body">
+            <p>A guideline says confident but approachable. An exemplar set shows it. Collect the pieces that worked and the pieces that missed, each with one line on why, plus the lines customers quoted back to you.</p>
+            <p>The rejected drafts matter as much as the published ones. A layer built only from winners teaches what to imitate; the losers teach where the line is.</p>
+            <p><em>Watch for the harvest that skips call recordings. Your customers' own words about their problem are the best voice material you own, and they are already recorded.</em></p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">02</span>Split mechanical from judgment</summary>
+          <div class="pb-step-body">
+            <p><strong>Could a person with no taste check this rule correctly, every time, with no argument?</strong> Yes means mechanical and it belongs in a linter. No means judgment and it belongs in the rubric and the exemplars.</p>
+            <p>Most voice documents fail because they mix the two and enforce neither. Be authentic as a checkbox does nothing, and a human catching punctuation by eye is spending judgment on something a script does perfectly, forever, for free.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">03</span>Build the linter</summary>
+          <div class="pb-step-body">
+            <p>The mechanical half becomes a check that runs before a person reads a word. Banned phrases spelled out, punctuation tells, casing, forbidden constructions, length budgets.</p>
+            <p>It reports the exact line and the exact rule, it exits non-zero on error, and it runs on agency drafts the moment they arrive, so that feedback is mechanical and immediate instead of a thread three days later.</p>
+            <p><em>Watch for the linter getting credit for quality. A clean lint means the tells are gone, nothing more, and a linter that starts being treated as a quality bar is a linter about to be ignored.</em></p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">04</span>Write the judge rubric, and run it three times</summary>
+          <div class="pb-step-body">
+            <p>The judge scores what a linter cannot hold. Predictability, whether the claim is earned, register, voice match against the exemplars, and what the reader can do afterward. Blind, because a judge told the founder wrote it scores the founder.</p>
+            <p><strong>Run it three times and take the majority.</strong> We measured this in our own system. The same draft, the same rubric, the same model, scored clean and slop in consecutive runs, four of nine clean on an unchanged piece.</p>
+            <p>A single run is a coin weighted by nothing you control.</p>
+            <p>Trust a reproduced finding over the verdict label. Two runs flagging the same sentence for different reasons means that sentence is the problem, whatever the headline said.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">05</span>Calibrate against known-good and known-bad</summary>
+          <div class="pb-step-body">
+            <p>Score five pieces you know are good, five you know are bad, and two your team argued about, with the answers kept out of the judge's reach and the pass bars written down first.</p>
+            <p><strong>If the judge cannot separate your known-good from your known-bad, the rubric is wrong, not the drafts.</strong> A judge that passes a known-bad is missing an axis. A judge that fails a known-good is enforcing something your voice does not believe, and left alone it will slowly flatten the writing.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">06</span>Distribute one version</summary>
+          <div class="pb-step-body">
+            <p>A layer that lives in one person's cloud and gets downloaded, edited, and re-uploaded has as many versions as it has readers.</p>
+            <p>One source, one named owner, dated versions with a one-line reason, and retirements recorded loudly, so a replaced rule cannot keep being enforced from a stale copy.</p>
+            <p>Agencies are the test case. If handing a new agency your voice takes a meeting and a follow-up thread, the layer is described rather than distributed. The brief should be a link.</p>
+          </div>
+        </details>
+        <details class="pb-step">
+          <summary><span class="pb-step-num">07</span>Close the loop</summary>
+          <div class="pb-step-body">
+            <p>What ships goes back in. A piece that landed becomes an exemplar, a piece that missed becomes a known-bad, and a correction you have now made three times becomes a rule, mechanical if it can be one.</p>
+            <p><strong>A context layer that never grows is a document again</strong>, and documents are what sent the drafts back needing you.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <p class="pb-lede">Taste does not fit in a document. It fits in a layer a person, an agency, and a model can all read.</p>
+      <p class="pb-lede-sub">The implementation kit above packages the harvest, the split, the linter spec, the rubric, and the calibration set.</p>
+    </main>
+
+    <!-- ================= RIGHT: the diagram ================= -->
+    <aside class="pb-right" aria-label="Workflow diagram">
+      <div class="pb-right-sticky">
+        <img src="/assets/diagrams/brand-voice-context-layer.svg" alt="Brand voice context layer workflow diagram" style="max-height:100%; max-width:100%;">
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============================================
+       RELATED PLAYBOOKS
+       ============================================ -->
+  <section class="pb-related">
+    <div class="pb-related-head">
+      <p class="pb-eyebrow">More from the library</p>
+      <h2>Related Playbooks</h2>
+    </div>
+    <div class="pb-grid">
+      <a class="pb-card" href="/playbook-meeting-intelligence.html">
+        <div class="pb-card-viz">
+          <img src="/assets/diagrams/meeting-intelligence.svg" alt="Turn Recorded Calls Into CRM Updates and Deal Awareness workflow diagram" loading="lazy">
+        </div>
+        <div class="pb-card-body">
+          <h3>Turn Recorded Calls Into CRM Updates and Deal Awareness</h3>
+          <p>The call recordings you already have are the best voice material you own. This is how they become structured work.</p>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--green">Sales</span>
+            <span class="pb-date">01</span>
+          </div>
+        </div>
+      </a>
+      <a class="pb-card" href="/playbook-ai-ready-data.html">
+        <div class="pb-card-viz">
+          <img src="/assets/diagrams/ai-ready-data.svg" alt="The AI-Ready Data Playbook workflow diagram" loading="lazy">
+        </div>
+        <div class="pb-card-body">
+          <h3>The AI-Ready Data Playbook</h3>
+          <p>The same principle one layer down. Prepare what AI reads before you point it at anything.</p>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--purple">Operations</span>
+            <span class="pb-date">03</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="pb-related-more">
+      <a href="/playbooks.html" class="pb-back">View all playbooks &#8594;</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BOTTOM CTA
+       ============================================ -->
+  <section class="pb-cta">
+    <p class="pb-eyebrow">Maestro for Operations</p>
+    <h2>Want This Running in Your Stack?</h2>
+    <p>Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+    <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>AI workflows built into production, with the evaluation frameworks that keep them correct.</p>
+        </div>
+
+        <div>
+          <h4>Maestro</h4>
+          <ul class="footer-links">
+            <li><a href="/index.html">Maestro AI Revenue System</a></li>
+            <li><a href="/maestro-marketing.html">Maestro for Marketing</a></li>
+            <li><a href="/maestro-sales.html">Maestro for Sales</a></li>
+            <li><a href="/maestro-operations.html">Maestro for Operations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="/playbooks.html">Playbooks</a></li>
+            <li><a href="/content.html">Content Hub</a></li>
+            <li><a href="/our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="/assessment.html">AI Readiness Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="/talent.html">Talent</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC). All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/animations.js"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- Calendly popup -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && (/Schedule\s*Call|^Contact$/i.test(link.textContent.trim()) || link.classList.contains('schedule-cta'))) {
+        e.preventDefault();
+        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+      }
+    });
+  </script>
+  <script src="/js/linkedin-insight.js" async></script>
+  <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
+
+  <!-- Kit request -->
+  <script>
+    (function () {
+      var form = document.getElementById('kit-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var email = form.querySelector('input[name="email"]').value;
+        var source = form.querySelector('select[name="source"]').value;
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        fetch('/api/kit-request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, source: source, playbook: form.dataset.playbook })
+        }).then(function (r) {
+          if (!r.ok) throw new Error('failed');
+          form.innerHTML = '<p class="pb-lede"><strong>Check your inbox.</strong></p><p class="pb-kit-consent">The kit is on its way. If it has not arrived in a few minutes, check spam, then reply to any Magnetiz email and a person will sort it out.</p>';
+          if (typeof gtag === 'function') gtag('event', 'kit_request', { playbook: form.dataset.playbook, source: source });
+        }).catch(function () {
+          btn.disabled = false;
+          btn.textContent = 'Send Me the Kit';
+          var err = form.querySelector('.kit-error');
+          if (!err) {
+            err = document.createElement('p');
+            err.className = 'pb-kit-consent kit-error';
+            form.appendChild(err);
+          }
+          err.textContent = 'That did not go through. Try again, or email us and we will send it by hand.';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
