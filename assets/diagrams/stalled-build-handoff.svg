@@ -55,7 +55,7 @@
     <rect x="190" y="216" width="280" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
   </g>
   <text x="330" y="246" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; NAME THE OWNER &#9608;&#9608;</text>
-  <text x="330" y="266" text-anchor="middle" fill="#8B949E" font-size="10">one person, with capacity, on the record</text>
+  <text x="330" y="266" text-anchor="middle" fill="#8B949E" font-size="10">one person &#183; hours in numbers, on the record</text>
   <g>
     <rect x="540" y="222" width="150" height="58" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="615" y="246" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NO OWNER</text>
