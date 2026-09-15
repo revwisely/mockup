@@ -27,9 +27,9 @@
     <path d="M372,496 V526" marker-end="url(#v-arr)" stroke="#4A9ECE"/>
     <path d="M372,600 V630" marker-end="url(#v-arr)" stroke="#4A9ECE"/>
     <!-- lint fail returns -->
-    <path d="M512,359 H600 V300 H512" stroke="#E06C75" stroke-dasharray="4 4" marker-end="url(#v-arrdim)"/>
+    <path d="M532,459 H600 V359 H536" stroke="#E06C75" stroke-dasharray="4 4" marker-end="url(#v-arrdim)"/>
     <!-- judge split returns -->
-    <path d="M512,459 H646 V300 H512" stroke="#E5C07B" stroke-dasharray="4 4" marker-end="url(#v-arrdim)"/>
+    <path d="M532,563 H652 V359 H536" stroke="#E5C07B" stroke-dasharray="4 4" marker-end="url(#v-arrdim)"/>
     <!-- published -> lessons -> exemplars -->
     <path d="M372,698 V726" marker-end="url(#v-arrdim)"/>
     <path d="M232,752 H120 V214 H186" stroke="#98C379" stroke-dasharray="5 5" marker-end="url(#v-arrdim)"/>
@@ -73,29 +73,29 @@
 
   <!-- draft -->
   <g>
-    <rect x="232" y="326" width="280" height="66" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <rect x="212" y="326" width="320" height="66" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="372" y="352" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">THE DRAFT</text>
-    <text x="372" y="370" text-anchor="middle" fill="#8B949E" font-size="10">written by a person, an agency, or an agent</text>
-    <text x="372" y="384" text-anchor="middle" fill="#8B949E" font-size="10">against the same layer</text>
+    <text x="372" y="370" text-anchor="middle" fill="#8B949E" font-size="9.5">by a person, an agency, or an agent</text>
+    <text x="372" y="384" text-anchor="middle" fill="#8B949E" font-size="9.5">all against the same layer</text>
   </g>
 
   <!-- lint gate -->
   <g>
-    <rect x="232" y="422" width="280" height="74" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <rect x="212" y="422" width="320" height="74" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="372" y="448" text-anchor="middle" fill="#E06C75" font-size="14" font-weight="700">LINT GATE &#183; DETERMINISTIC</text>
-    <text x="372" y="466" text-anchor="middle" fill="#8B949E" font-size="10">the mechanical tells, every time, in milliseconds</text>
-    <text x="372" y="482" text-anchor="middle" fill="#8B949E" font-size="10">fails loud, before a person reads a word</text>
+    <text x="372" y="466" text-anchor="middle" fill="#8B949E" font-size="9.5">the mechanical tells, every time</text>
+    <text x="372" y="482" text-anchor="middle" fill="#8B949E" font-size="9.5">fails loud, before a person reads a word</text>
   </g>
-  <text x="608" y="330" text-anchor="middle" fill="#484F58" font-size="9">rule broken &#183; back to the draft</text>
+  <text x="608" y="412" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 608 412)">RULE BROKEN</text>
 
   <!-- judge -->
   <g>
-    <rect x="232" y="526" width="280" height="74" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <rect x="212" y="526" width="320" height="74" rx="9" fill="#1c2333" stroke="#E5C07B"/>
     <text x="372" y="552" text-anchor="middle" fill="#E5C07B" font-size="14" font-weight="700">BLIND JUDGE &#183; RUN 3&#215;</text>
-    <text x="372" y="570" text-anchor="middle" fill="#8B949E" font-size="10">the same draft can score clean and slop</text>
-    <text x="372" y="586" text-anchor="middle" fill="#8B949E" font-size="10">in consecutive runs &#183; take the majority</text>
+    <text x="372" y="570" text-anchor="middle" fill="#8B949E" font-size="9.5">the same draft can score clean and slop</text>
+    <text x="372" y="586" text-anchor="middle" fill="#8B949E" font-size="9.5">in consecutive runs &#183; take the majority</text>
   </g>
-  <text x="646" y="492" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 646 492)">MAJORITY SAYS REWRITE</text>
+  <text x="660" y="462" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 660 462)">MAJORITY SAYS REWRITE</text>
 
   <!-- human gate -->
   <g filter="url(#v-glow)">

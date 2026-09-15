@@ -111,7 +111,7 @@
 
   <!-- 6 human review, checked first -->
   <g filter="url(#s-glow)">
-    <rect x="222" y="556" width="300" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    <rect x="202" y="556" width="340" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
   </g>
   <text x="372" y="582" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN REVIEW &#9608;&#9608;</text>
   <text x="372" y="602" text-anchor="middle" fill="#8B949E" font-size="9.5">checked FIRST, before any band. Fit nulls, conflicts,</text>

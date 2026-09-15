@@ -104,7 +104,7 @@
   </g>
   <text x="372" y="582" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; CHANGE REVIEW &#9608;&#9608;</text>
   <text x="372" y="602" text-anchor="middle" fill="#8B949E" font-size="10">a person approves before the record moves &#183;</text>
-  <text x="372" y="616" text-anchor="middle" fill="#8B949E" font-size="10">seconds per change, because the preview did the work</text>
+  <text x="372" y="616" text-anchor="middle" fill="#8B949E" font-size="9.5">seconds per change, the preview did the work</text>
 
   <text x="712" y="420" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 712 420)">GOLDEN RECORDS &#183; RE-SCORED WHEN ANYTHING CHANGES</text>
 
