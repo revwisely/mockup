@@ -133,11 +133,11 @@
       <div class="pb-kit" id="kit">
         <p class="pb-eyebrow">Implementation kit</p>
         <ul class="pb-kit-list">
-          <li>The reply taxonomy, with the tells per class</li>
+          <li>The six-class taxonomy, with the tells</li>
           <li>The triage prompt, with the output schema</li>
-          <li>The guardrails file, exits and re-enrollment</li>
-          <li>The routing and alert formats</li>
-          <li>Sample replies with the answer key</li>
+          <li>The guardrails, with the send-paths table</li>
+          <li>The routing and alert formats, anger included</li>
+          <li>Eight sample replies with the answer key</li>
         </ul>
         <form method="POST" action="/api/kit-request" id="kit-form" data-playbook="reply-triage">
           <div class="pb-kit-row">
@@ -185,34 +185,34 @@
         <details class="pb-step">
           <summary><span class="pb-step-num">03</span>Classify with a taxonomy, not a vibe</summary>
           <div class="pb-step-body">
-            <p>Four classes, each with linguistic tells and a confidence score. Interested. A question or objection. Not interested. Out of office.</p>
-            <p><em>Watch for low confidence. An ambiguous reply routes to a person for the class decision, and the human verdict becomes training data.</em></p>
+            <p>Six classes, each with linguistic tells and a numeric confidence. Interested. A question or objection. Not interested. Out of office. Routed away, because people leave companies and treating that as rejection burns a live account. And unclassified, because one letter is not evidence, and the schema can say so.</p>
+            <p><em>Watch for low confidence. Below the threshold, a person decides the class, and the human verdict with its reason becomes the calibration data.</em></p>
           </div>
         </details>
         <details class="pb-step">
           <summary><span class="pb-step-num">04</span>Honor the exits instantly</summary>
           <div class="pb-step-body">
-            <p><strong>The sequence stops the moment words arrive.</strong> Any reply pauses the sends. A not-interested lands on the do-not-contact list, honored at every send path, forever.</p>
+            <p><strong>The sequence stops the moment words arrive.</strong> Any reply pauses the sends, deterministically, before classification even runs. The do-not-contact list splits by how the no arrived. Explicit unsubscribe language lands instantly with no model in the path, and an inferred no waits for the human verdict, because the irreversible action never rests on an inference. One list, honored at every send path you named in the guardrails table.</p>
             <p><em>Watch for the tool that keeps sending while a reply sits unread. Nothing burns a domain and a reputation faster.</em></p>
           </div>
         </details>
         <details class="pb-step">
           <summary><span class="pb-step-num">05</span>Re-enroll the out-of-office</summary>
           <div class="pb-step-body">
-            <p>An out-of-office is timing, not rejection. The contact pauses until the return date the auto-reply named, then resumes where the sequence left off.</p>
+            <p>An out-of-office is timing, not rejection. The contact pauses until the stated return date plus a bracketed buffer, with dates resolved against the day the reply arrived, then resumes where the sequence left off. Unresolvable dates fall to the default pause.</p>
           </div>
         </details>
         <details class="pb-step">
           <summary><span class="pb-step-num">06</span>A person answers anything that matters</summary>
           <div class="pb-step-body">
-            <p>Interested replies and real questions alert the channel with the verbatim thread attached and the lead's context alongside. A person writes the answer.</p>
+            <p>Interested replies and real questions alert the channel with the verbatim thread and the lead's context, each with a bracketed answer-by time. Anger gets its own alert, read by a person the same day, never answered with a template. A person writes every answer.</p>
             <p><em>Watch for automation drafting replies to objections. An objection answered by a machine reads as exactly that.</em></p>
           </div>
         </details>
         <details class="pb-step">
           <summary><span class="pb-step-num">07</span>Log the words, learn the classes</summary>
           <div class="pb-step-body">
-            <p>Every reply gets recorded with its class, its confidence, and the human verdict when one was needed. Low-confidence classes get reviewed on a cadence.</p>
+            <p>Every reply gets recorded with its class, its numeric confidence, the human verdict when one was needed, and the verdict's reason in one line, because the reasons are the calibration data. Three same-shaped disagreements are a taxonomy revision waiting to be written.</p>
             <p><strong>Supervised first.</strong> The taxonomy earns trust pass by pass, and the objection language you collect becomes next month's better messaging.</p>
           </div>
         </details>

@@ -47,11 +47,11 @@
     <path d="M372,620 V644" marker-end="url(#r-arrdim)"/>
     <path d="M605,620 V644" marker-end="url(#r-arrdim)"/>
     <!-- low confidence loop -->
-    <path d="M700,376 V500 H340" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#r-arrdim)"/>
+    <path d="M700,376 V528 H323" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#r-arrdim)"/>
   </g>
 
   <circle r="3.2" fill="#4A9ECE" filter="url(#r-glow)">
-    <animateMotion dur="7s" repeatCount="indefinite" path="M372,60 V138 V230 V318 M372,318 H104 V434 H189 V458 M189,458 V620 H150"/>
+    <animateMotion dur="7s" repeatCount="indefinite" path="M372,112 V138 V230 V318 M372,318 H104 V434 H189 V458 M189,458 V620 H150"/>
   </circle>
 
   <!-- sources -->
@@ -82,7 +82,7 @@
   </g>
 
   <!-- classify row -->
-  <text x="372" y="312" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">CLASSIFIED BY TAXONOMY, WITH CONFIDENCE</text>
+  <text x="372" y="312" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">SIX CLASSES, WITH NUMERIC CONFIDENCE</text>
   <g>
     <rect x="34" y="342" width="140" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
     <text x="104" y="368" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">INTERESTED</text>
@@ -109,8 +109,8 @@
   <g>
     <rect x="376" y="458" width="140" height="64" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="446" y="480" text-anchor="middle" fill="#E06C75" font-size="10.5" font-weight="700">DO-NOT-CONTACT</text>
-    <text x="446" y="496" text-anchor="middle" fill="#8B949E" font-size="9">sequence stops the moment</text>
-    <text x="446" y="509" text-anchor="middle" fill="#8B949E" font-size="9">words arrive &#183; honored forever</text>
+    <text x="446" y="496" text-anchor="middle" fill="#8B949E" font-size="8.5">explicit words land instantly &#183;</text>
+    <text x="446" y="509" text-anchor="middle" fill="#8B949E" font-size="8.5">inferred waits for a person</text>
   </g>
   <g>
     <rect x="546" y="458" width="140" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
@@ -127,7 +127,7 @@
   <text x="189" y="508" text-anchor="middle" fill="#8B949E" font-size="10">a person answers anything that matters,</text>
   <text x="189" y="522" text-anchor="middle" fill="#8B949E" font-size="10">with the verbatim thread in hand</text>
 
-  <text x="712" y="438" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 712 438)">LOW CONFIDENCE &#183; A PERSON DECIDES THE CLASS</text>
+  <text x="712" y="438" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(90 712 438)">UNCLASSIFIED &#183; ROUTED AWAY &#183; BELOW 0.8 &#183; A PERSON DECIDES</text>
 
   <!-- outputs -->
   <text x="372" y="614" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">FILED WHERE THE TEAM ALREADY WORKS</text>
