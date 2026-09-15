@@ -172,7 +172,7 @@
           <summary><span class="pb-step-num">01</span>Gate the spend</summary>
           <div class="pb-step-body">
             <p>Enrich only records something downstream will use, capped per day. An enrichment nobody reads is a bill with no customer.</p>
-            <p>Records that miss the gate queue rather than burn. The queue drains on schedule, inside the cap.</p>
+            <p>Records that miss the gate queue rather than burn. The queue drains inside the cap, and queued records expire and re-qualify, because the reason a record qualified goes stale too.</p>
           </div>
         </details>
         <details class="pb-step">
@@ -185,32 +185,32 @@
         <details class="pb-step">
           <summary><span class="pb-step-num">03</span>Date every fact</summary>
           <div class="pb-step-body">
-            <p>A title verified last week beats one scraped last year. Every fact carries its date, and stale evidence decays out instead of masquerading as current.</p>
+            <p>A title verified last week beats one scraped last year. Every fact carries its date, stale evidence gets suppressed visibly instead of masquerading as current, and a pre-existing value with no date is treated as challengeable, because undated data lies.</p>
             <p><em>Watch for the field that is confidently wrong. Undated data does not age, it lies.</em></p>
           </div>
         </details>
         <details class="pb-step">
           <summary><span class="pb-step-num">04</span>Propose, never overwrite</summary>
           <div class="pb-step-body">
-            <p><strong>Silent overwrites are how trust dies.</strong> The agent produces proposed changes. Old value, new value, source, side by side. The record itself has not moved yet.</p>
+            <p><strong>Silent overwrites are how trust dies.</strong> The agent produces proposed changes. Old value, new value, source, side by side, with conflicts and unknowns rendered on the same screen and suppressed proposals shown collapsed, because a rule that says never silently resolved needs a place on the screen. The record itself has not moved yet.</p>
           </div>
         </details>
         <details class="pb-step">
           <summary><span class="pb-step-num">05</span>Review the changes</summary>
           <div class="pb-step-body">
-            <p>A person approves before the record changes. The approval takes seconds, because the preview did the work. Low-risk fields can graduate to auto-apply later, on clean passes, and consequential fields never do.</p>
+            <p>A named person drains the review on a cadence, and approval takes seconds because the preview did the work. Approve-all covers high confidence only. A field class graduates to auto-apply only when the approval streak AND a passing golden-records score both hold, and consequential fields never do.</p>
           </div>
         </details>
         <details class="pb-step">
           <summary><span class="pb-step-num">06</span>Keep it reversible</summary>
           <div class="pb-step-body">
-            <p>Every applied change is logged with its prior state. One click restores it. An enrichment pipeline you cannot undo is a pipeline you will eventually fear.</p>
+            <p>Every applied change is logged with its prior state. Undo restores only when the current value still equals what the change wrote; a later human edit turns the undo into a conflict for a person, never a clobber. An enrichment pipeline you cannot undo is a pipeline you will eventually fear.</p>
           </div>
         </details>
         <details class="pb-step">
           <summary><span class="pb-step-num">07</span>Evaluate on golden records</summary>
           <div class="pb-step-body">
-            <p>Pick five accounts you know cold and write down the truth about them. Run the agent against those golden records and score it before trusting it, then re-score whenever the prompt, the model, or the sources change.</p>
+            <p>Pick five accounts you know cold and write down the truth about them. Score the agent with the 5x arithmetic (correct minus five times wrong minus five times hallucinated, over findable fields) against a pass bar you wrote down first, re-score whenever the prompt, model, or sources change, and grow the set from your rejections, because failures point at the fixtures you need.</p>
             <p><strong>The eval is the difference between an agent you tested once and an agent you can keep trusting.</strong></p>
           </div>
         </details>

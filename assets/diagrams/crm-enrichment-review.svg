@@ -22,7 +22,8 @@
     <path d="M372,98 V122" marker-end="url(#e-arr)" stroke="#4A9ECE"/>
     <path d="M372,188 V212" marker-end="url(#e-arr)" stroke="#4A9ECE"/>
     <!-- spend gate skip branch -->
-    <path d="M512,155 H582" marker-end="url(#e-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <path d="M512,148 H582" marker-end="url(#e-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <path d="M582,168 H516" marker-end="url(#e-arrdim)" stroke="#484F58" stroke-dasharray="4 4"/>
     <path d="M372,288 V312" stroke="#4A9ECE"/>
     <!-- evidence split -->
     <path d="M222,312 H522"/>
@@ -63,8 +64,9 @@
   </g>
   <g>
     <rect x="582" y="128" width="130" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
-    <text x="647" y="150" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="700">NOT YET</text>
-    <text x="647" y="166" text-anchor="middle" fill="#8B949E" font-size="9">queued, not billed</text>
+    <text x="647" y="148" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="700">NOT YET</text>
+    <text x="647" y="162" text-anchor="middle" fill="#8B949E" font-size="8.5">queued &#183; drains in the cap,</text>
+    <text x="647" y="174" text-anchor="middle" fill="#8B949E" font-size="8.5">expires and re-qualifies</text>
   </g>
 
   <!-- 3 research -->
@@ -84,8 +86,8 @@
   <g>
     <rect x="417" y="336" width="210" height="68" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="522" y="358" text-anchor="middle" fill="#E06C75" font-size="11.5" font-weight="700">STALE OR CONFLICTING</text>
-    <text x="522" y="376" text-anchor="middle" fill="#8B949E" font-size="9.5">decays out &#183; never</text>
-    <text x="522" y="390" text-anchor="middle" fill="#8B949E" font-size="9.5">overwrites silently</text>
+    <text x="522" y="376" text-anchor="middle" fill="#8B949E" font-size="9.5">surfaced as conflicts and</text>
+    <text x="522" y="390" text-anchor="middle" fill="#8B949E" font-size="9.5">suppressions &#183; never silent</text>
   </g>
 
   <!-- 5 proposed changes -->
