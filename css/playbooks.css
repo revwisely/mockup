@@ -332,3 +332,11 @@ a.pb-card:hover {
   padding: 15px 34px;
   box-shadow: var(--glow-md);
 }
+
+/* ---------- service filter (index) ---------- */
+button.pb-filter { cursor: pointer; background: var(--bg-card); }
+button.pb-filter:hover { border-color: var(--border-accent); color: var(--text-primary); }
+button.pb-filter.is-active { color: var(--accent-blue); border-color: var(--accent-blue); }
+button.pb-filter:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
+.pb-hidden { display: none; }
+.pb-empty { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-muted); padding: 40px 0; text-align: center; }

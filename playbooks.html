@@ -111,15 +111,16 @@
       <p class="pb-index-sub">Complete, runnable playbooks from systems Magnetiz operates in production. The full method is public on every page. The implementation kit arrives by email. One new playbook ships each week.</p>
     </div>
 
-    <div class="pb-cats" aria-label="Maestro services">
-      <a class="pb-chip" href="/maestro-sales.html" style="text-decoration:none">Maestro for Sales</a>
-      <a class="pb-chip" href="/maestro-marketing.html" style="text-decoration:none">Maestro for Marketing</a>
-      <a class="pb-chip" href="/maestro-operations.html" style="text-decoration:none">Maestro for Operations</a>
+    <div class="pb-cats" role="group" aria-label="Filter playbooks by service">
+      <button class="pb-chip pb-filter is-active" data-filter="all" type="button">All</button>
+      <button class="pb-chip pb-filter" data-filter="sales" type="button">Sales</button>
+      <button class="pb-chip pb-filter" data-filter="marketing" type="button">Marketing</button>
+      <button class="pb-chip pb-filter" data-filter="operations" type="button">Operations</button>
     </div>
 
     <div class="pb-grid">
 
-      <a class="pb-card" href="/playbook-meeting-intelligence.html">
+      <a class="pb-card" data-cat="sales" href="/playbook-meeting-intelligence.html">
         <div class="pb-card-viz">
           <img src="/assets/diagrams/meeting-intelligence.svg" alt="Meeting intelligence workflow diagram" loading="lazy">
         </div>
@@ -127,15 +128,13 @@
           <h3>Turn Recorded Calls Into CRM Updates and Deal Awareness</h3>
           <p>One recorded call becomes structured record updates, owner-tagged follow-ups, and a one-minute channel brief. Every item traces to the words that created it.</p>
           <div class="pb-card-meta">
-            <span class="pb-chip">Maestro &#183; Sales</span>
             <span class="pb-chip pb-chip--green">Sales</span>
-            <span class="pb-chip pb-chip--amber">RevOps</span>
             <span class="pb-date">01 &middot; Sep 2026</span>
           </div>
         </div>
       </a>
 
-      <a class="pb-card" href="/playbook-stalled-build-handoff.html">
+      <a class="pb-card" data-cat="operations" href="/playbook-stalled-build-handoff.html">
         <div class="pb-card-viz">
           <img src="/assets/diagrams/stalled-build-handoff.svg" alt="Stalled build handoff workflow diagram" loading="lazy">
         </div>
@@ -143,14 +142,13 @@
           <h3>The Handoff That Revives a Stalled AI Build</h3>
           <p>The automation worked, then its builder moved on. Taking what exists to the bar where one named person on your team runs it, without watering down what it does.</p>
           <div class="pb-card-meta">
-            <span class="pb-chip">Maestro &#183; Operations</span>
-            <span class="pb-chip pb-chip--purple">Delivery</span>
+            <span class="pb-chip pb-chip--purple">Operations</span>
             <span class="pb-date">02 &middot; Sep 2026</span>
           </div>
         </div>
       </a>
 
-      <a class="pb-card" href="/playbook-ai-ready-data.html">
+      <a class="pb-card" data-cat="operations" href="/playbook-ai-ready-data.html">
         <div class="pb-card-viz">
           <img src="/assets/diagrams/ai-ready-data.svg" alt="AI-ready data workflow diagram" loading="lazy">
         </div>
@@ -158,14 +156,13 @@
           <h3>The AI-Ready Data Playbook</h3>
           <p>AI on a mess makes the mess worse. Scope what AI reads, clean it by rule, guard the writes, and prove the cleanup with a number.</p>
           <div class="pb-card-meta">
-            <span class="pb-chip">Maestro &#183; Operations</span>
-            <span class="pb-chip pb-chip--coral">Data</span>
+            <span class="pb-chip pb-chip--purple">Operations</span>
             <span class="pb-date">03 &middot; Sep 2026</span>
           </div>
         </div>
       </a>
 
-      <a class="pb-card" href="/playbook-inbound-signup-routing.html">
+      <a class="pb-card" data-cat="sales" href="/playbook-inbound-signup-routing.html">
         <div class="pb-card-viz">
           <img src="/assets/diagrams/inbound-signup-routing.svg" alt="Inbound Sign-Up Qualification and Routing workflow diagram" loading="lazy">
         </div>
@@ -173,14 +170,13 @@
           <h3>Inbound Sign-Up Qualification and Routing</h3>
           <p>A form submission becomes an account brief, a qualification decision, and an assigned next step, with fit and intent scored apart.</p>
           <div class="pb-card-meta">
-            <span class="pb-chip">Maestro &#183; Sales</span>
             <span class="pb-chip pb-chip--green">Sales</span>
             <span class="pb-date">04 &middot; Sep 2026</span>
           </div>
         </div>
       </a>
 
-      <a class="pb-card" href="/playbook-reply-triage.html">
+      <a class="pb-card" data-cat="sales" href="/playbook-reply-triage.html">
         <div class="pb-card-viz">
           <img src="/assets/diagrams/reply-triage.svg" alt="The Outbound Reply Triage Playbook workflow diagram" loading="lazy">
         </div>
@@ -188,14 +184,13 @@
           <h3>The Outbound Reply Triage Playbook</h3>
           <p>Every reply captured verbatim, classified honestly, sequences stopped the moment words arrive, with a person on anything that matters.</p>
           <div class="pb-card-meta">
-            <span class="pb-chip">Maestro &#183; Sales</span>
-            <span class="pb-chip pb-chip--amber">RevOps</span>
+            <span class="pb-chip pb-chip--green">Sales</span>
             <span class="pb-date">05 &middot; Sep 2026</span>
           </div>
         </div>
       </a>
 
-      <a class="pb-card" href="/playbook-crm-enrichment-review.html">
+      <a class="pb-card" data-cat="operations" href="/playbook-crm-enrichment-review.html">
         <div class="pb-card-viz">
           <img src="/assets/diagrams/crm-enrichment-review.svg" alt="CRM Enrichment With Change Review workflow diagram" loading="lazy">
         </div>
@@ -203,14 +198,15 @@
           <h3>CRM Enrichment With Change Review</h3>
           <p>An incomplete record becomes a preview of proposed updates, with sources, an approve step, and an undo.</p>
           <div class="pb-card-meta">
-            <span class="pb-chip">Maestro &#183; Operations</span>
-            <span class="pb-chip pb-chip--coral">Data</span>
+            <span class="pb-chip pb-chip--purple">Operations</span>
             <span class="pb-date">06 &middot; Sep 2026</span>
           </div>
         </div>
       </a>
 
     </div>
+
+    <p class="pb-empty" id="pb-empty" hidden>Marketing playbooks ship next. The library adds one each week.</p>
 
   </main>
 
@@ -293,6 +289,29 @@
     });
   </script>
   <script src="/js/linkedin-insight.js" async></script>
+
+  <!-- Playbook filter -->
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.pb-filter');
+      var cards = document.querySelectorAll('.pb-card[data-cat]');
+      var empty = document.getElementById('pb-empty');
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          buttons.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var f = btn.dataset.filter;
+          var visible = 0;
+          cards.forEach(function (c) {
+            var show = (f === 'all' || c.dataset.cat === f);
+            c.classList.toggle('pb-hidden', !show);
+            if (show) visible++;
+          });
+          if (empty) empty.hidden = visible !== 0;
+        });
+      });
+    })();
+  </script>
   <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
 </body>
 </html>
