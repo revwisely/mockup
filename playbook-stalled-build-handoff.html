@@ -134,10 +134,11 @@
         <p class="pb-eyebrow">Implementation kit</p>
         <ul class="pb-kit-list">
           <li>The stalled-build audit worksheet</li>
-          <li>The runnable-definition template</li>
+          <li>The runnable-definition template, with baselines</li>
           <li>The doorbell decision guide</li>
           <li>A handoff runbook template</li>
-          <li>The owner checklist</li>
+          <li>The owner checklist, with the six-check proving run</li>
+          <li>The corrections-to-lessons spec</li>
         </ul>
         <form method="POST" action="/api/kit-request" id="kit-form" data-playbook="stalled-build-handoff">
           <div class="pb-kit-row">
@@ -181,15 +182,16 @@
           <summary><span class="pb-step-num">02</span>Name the owner</summary>
           <div class="pb-step-body">
             <p><strong>One person, with capacity, on the record.</strong> A system producing results is not the same as a system adopted. The handoff fails where ownership was never transferred, and that failure looks exactly like a capability problem until you check.</p>
-            <p>No named owner means stop. It is the strongest kill signal there is, and naming one is a management decision no workflow can make for you.</p>
+            <p><strong>One person, with hours in numbers.</strong> How many per week, and what moves off their plate to make room. A manager who cannot name what moves has not actually decided.</p>
+            <p>No named owner means the revival does not start. The audit asks the question in its first row for exactly that reason, and it is the strongest kill signal there is.</p>
           </div>
         </details>
 
         <details class="pb-step">
           <summary><span class="pb-step-num">03</span>Define runnable</summary>
           <div class="pb-step-body">
-            <p>Write the acceptance bar before touching anything. The owner launches the workflow unassisted, from the tool they already use, and knows what good output looks like.</p>
-            <p>Capture baselines now. Reply rate, time in stage, hours spent. The revival gets proven against these numbers, and unproven revivals stall again.</p>
+            <p>Write the acceptance bar before touching anything. The owner launches the workflow unassisted, from the tool they already use, knows what good output looks like, and finds out from the system when it goes quiet.</p>
+            <p>Capture baselines now. Reply rate, time in stage, hours spent, and when the work had stopped entirely, the cost of not doing it. The after columns get filled 30 days post-handoff, on the calendar.</p>
           </div>
         </details>
 
@@ -212,7 +214,7 @@
         <details class="pb-step">
           <summary><span class="pb-step-num">06</span>Transfer ownership</summary>
           <div class="pb-step-body">
-            <p>The runbook lives where the work happens, and the training does too. The owner comments on output in plain language, and the system files those notes as lessons. No prompt engineering is asked of anyone.</p>
+            <p>The runbook lives where the work happens, and the training does too. The owner comments on output in plain language, the system files the note as a lesson and confirms it back in the thread, and a wrong lesson rolls back in one step. The kit ships the full mechanism, and no prompt engineering is asked of anyone.</p>
             <p>Docs that live outside the flow of work rot. The comment thread on real output is the durable classroom.</p>
           </div>
         </details>
@@ -220,8 +222,8 @@
         <details class="pb-step">
           <summary><span class="pb-step-num">07</span>Prove it</summary>
           <div class="pb-step-body">
-            <p><strong>The owner runs it end to end, unassisted, and the run gets a date.</strong> Against the step 03 baselines, the revival is now a measured fact rather than a feeling.</p>
-            <p>Trust in this design is a property you measure. A dated, unassisted run is what "handed off" means.</p>
+            <p><strong>Six checks, each with a date.</strong> The owner runs it end to end, unassisted. The output passes and the owner says why. A failure gets recovered with the runbook alone. Silence gets simulated, and the system reports it. The backup runs it end to end. A correction gets filed and confirmed as a lesson.</p>
+            <p>Then it re-proves quarterly, or on any owner change, because a handoff is a state, never a ceremony. Trust in this design is a property you measure, on a calendar.</p>
           </div>
         </details>
 

@@ -29,7 +29,7 @@
     <path d="M330,664 V690" marker-end="url(#h-arr)" stroke="#4A9ECE"/>
     <path d="M330,760 V786" marker-end="url(#h-arrdim)"/>
     <!-- comment-to-teach loop -->
-    <path d="M470,630 H688 V440 H478" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#h-arrdim)"/>
+    <path d="M480,812 H688 V630 H478" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#h-arrdim)"/>
   </g>
 
   <circle r="3.2" fill="#4A9ECE" filter="url(#h-glow)">
@@ -59,7 +59,7 @@
   <g>
     <rect x="540" y="222" width="150" height="58" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="615" y="246" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NO OWNER</text>
-    <text x="615" y="264" text-anchor="middle" fill="#8B949E" font-size="8.5">the strongest kill signal</text>
+    <text x="615" y="264" text-anchor="middle" fill="#8B949E" font-size="8.5">stop here &#183; the revival does not start</text>
   </g>
 
   <!-- 4 define runnable -->
@@ -89,7 +89,7 @@
     <text x="330" y="622" text-anchor="middle" fill="#C678DD" font-size="14" font-weight="700">TRANSFER OWNERSHIP</text>
     <text x="330" y="640" text-anchor="middle" fill="#8B949E" font-size="10">runbook &#183; training where the work happens</text>
   </g>
-  <text x="700" y="535" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 700 535)">COMMENT TO TEACH &#183; NOTES BECOME LESSONS</text>
+  <text x="700" y="720" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 700 720)">IN OPERATION &#183; COMMENTS BECOME LESSONS</text>
 
   <!-- 8 prove it -->
   <g filter="url(#h-glow)">
