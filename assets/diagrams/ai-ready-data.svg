@@ -18,7 +18,7 @@
   <rect width="745" height="880" fill="#0d1117"/>
   <rect width="745" height="880" fill="url(#d-dots)"/>
 
-  <g stroke="#30363d" stroke-width="1.5" fill="none">
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
     <!-- mess row -> bus -> scope -->
     <path d="M139,100 V126"/>
     <path d="M373,100 V126"/>
@@ -45,29 +45,29 @@
     <path d="M523,635 H700 V348 H620" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#d-arrdim)"/>
   </g>
 
-  <circle r="3.2" fill="#4A9ECE" filter="url(#d-glow)">
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#d-glow)">
     <animateMotion dur="7s" repeatCount="indefinite" path="M373,70 V152 V250 V348 V472 V598 V698 V720"/>
   </circle>
 
   <!-- mess row -->
-  <g>
+  <g id="n-dupes" class="dx">
     <rect x="34" y="34" width="210" height="66" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="139" y="60" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">DUPLICATES</text>
     <text x="139" y="78" text-anchor="middle" fill="#8B949E" font-size="9.5">one company, four records</text>
   </g>
-  <g>
+  <g id="n-stale" class="dx">
     <rect x="268" y="34" width="210" height="66" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="373" y="60" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">STALE + EMPTY</text>
     <text x="373" y="78" text-anchor="middle" fill="#8B949E" font-size="9.5">fields nobody filled or trusts</text>
   </g>
-  <g>
+  <g id="n-conflict" class="dx">
     <rect x="502" y="34" width="210" height="66" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="607" y="60" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">CONFLICTING SOURCES</text>
     <text x="607" y="78" text-anchor="middle" fill="#8B949E" font-size="9.5">CRM vs spreadsheet vs memory</text>
   </g>
 
   <!-- scope -->
-  <g>
+  <g id="n-scope" class="dx">
     <rect x="223" y="152" width="300" height="72" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
     <text x="373" y="180" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">SCOPE WHAT AI READS</text>
     <text x="373" y="196" text-anchor="middle" fill="#4A9ECE" font-size="10">the fields the workflow touches first</text>
@@ -76,7 +76,7 @@
   </g>
 
   <!-- measure -->
-  <g>
+  <g id="n-measure" class="dx">
     <rect x="223" y="250" width="300" height="72" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="373" y="278" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">MEASURE THE MESS</text>
     <text x="373" y="296" text-anchor="middle" fill="#8B949E" font-size="10">count the dupes, the empties, the conflicts</text>
@@ -84,19 +84,19 @@
   </g>
 
   <!-- three fixes -->
-  <g>
+  <g id="n-dedupe" class="dx">
     <rect x="34" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#98C379"/>
     <text x="139" y="400" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">DEDUPE BY RULE</text>
     <text x="139" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">duplicates + conflicts &#183;</text>
     <text x="139" y="432" text-anchor="middle" fill="#8B949E" font-size="9">survivorship, never by hand twice</text>
   </g>
-  <g>
+  <g id="n-prune" class="dx">
     <rect x="268" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#E5C07B"/>
     <text x="373" y="400" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">PRUNE DEAD FIELDS</text>
     <text x="373" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">empty + unread fields &#183;</text>
     <text x="373" y="432" text-anchor="middle" fill="#8B949E" font-size="9">the census asks before it deletes</text>
   </g>
-  <g>
+  <g id="n-source" class="dx">
     <rect x="502" y="374" width="210" height="72" rx="9" fill="#1c2333" stroke="#C678DD"/>
     <text x="607" y="400" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">FIX AT THE SOURCE</text>
     <text x="607" y="418" text-anchor="middle" fill="#8B949E" font-size="9.5">free-text drift + entry rules &#183;</text>
@@ -104,7 +104,7 @@
   </g>
 
   <!-- write guards -->
-  <g>
+  <g id="n-guards" class="dx">
     <rect x="213" y="498" width="320" height="74" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
     <text x="373" y="524" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">GUARD THE WRITES</text>
     <text x="373" y="542" text-anchor="middle" fill="#8B949E" font-size="10">fail loud, never plausible &#183; loop protection</text>
@@ -112,21 +112,23 @@
   </g>
 
   <!-- re-measure gate -->
-  <g filter="url(#d-glow)">
-    <rect x="223" y="598" width="300" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  <g id="n-gate" class="dx">
+    <g filter="url(#d-glow)">
+      <rect x="223" y="598" width="300" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text x="373" y="628" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; RE-MEASURE GATE &#9608;&#9608;</text>
+    <text x="373" y="648" text-anchor="middle" fill="#8B949E" font-size="10">the before-number must move</text>
+    <text x="373" y="662" text-anchor="middle" fill="#8B949E" font-size="10">before any AI reads a record</text>
   </g>
-  <text x="373" y="628" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; RE-MEASURE GATE &#9608;&#9608;</text>
-  <text x="373" y="648" text-anchor="middle" fill="#8B949E" font-size="10">the before-number must move</text>
-  <text x="373" y="662" text-anchor="middle" fill="#8B949E" font-size="10">before any AI reads a record</text>
-  <text x="722" y="522" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(90 722 522)">NUMBER DIDN'T MOVE &#183; BACK TO WHICHEVER FIX IT NAMES</text>
+  <text id="n-loop" class="dx" x="722" y="522" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(90 722 522)">NUMBER DIDN'T MOVE &#183; BACK TO WHICHEVER FIX IT NAMES</text>
 
   <!-- clean -->
-  <g>
+  <g id="n-clean" class="dx">
     <rect x="223" y="698" width="300" height="64" rx="9" fill="#1c2333" stroke="#98C379"/>
     <text x="373" y="724" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">AI ON CLEAN DATA</text>
     <text x="373" y="744" text-anchor="middle" fill="#8B949E" font-size="10">scores, drafts, and reports you can trust</text>
   </g>
 
-  <text x="373" y="800" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"AI on a mess makes the mess worse."</text>
-  <text x="360" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 03 &#183; AI-READY DATA</text>
+  <text class="dx" x="373" y="800" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"AI on a mess makes the mess worse."</text>
+  <text class="dx" x="360" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 03 &#183; AI-READY DATA</text>
 </svg>

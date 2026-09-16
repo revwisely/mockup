@@ -99,7 +99,7 @@
 
   <!-- Mobile diagram hero -->
   <div class="pb-diagram-mobile" aria-hidden="true">
-    <img src="/assets/diagrams/reply-triage.svg?v=20260915" alt="" loading="eager">
+    <img src="/assets/diagrams/reply-triage.svg?v=20260916" alt="" loading="eager">
   </div>
 
   <!-- ============================================
@@ -166,48 +166,48 @@
       <p class="pb-eyebrow" id="how-it-works">How it works</p>
       <div class="pb-steps">
 
-        <details class="pb-step" open>
+        <details class="pb-step" open data-highlight="n-email n-linkedin n-capture">
           <summary><span class="pb-step-num">01</span>Capture every reply in one queue</summary>
           <div class="pb-step-body">
             <p>Replies scatter across sending tools and sit in inboxes nobody owns. Capture every one into a single queue, verbatim.</p>
             <p><strong>The words are the product.</strong> A paraphrased reply has already lost the thing the whole system exists to collect.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-clean">
           <summary><span class="pb-step-num">02</span>Clean the text</summary>
           <div class="pb-step-body">
             <p>Strip signatures, footers, legal disclaimers, and quoted history, so classification reads the human's words and nothing else.</p>
             <p>Most misclassifications are the footer's fault. Clean first, classify second.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-interested n-question n-notinterested n-ooo">
           <summary><span class="pb-step-num">03</span>Classify with a taxonomy, not a vibe</summary>
           <div class="pb-step-body">
             <p>Six classes, each with linguistic tells and a numeric confidence. Interested. A question or objection. Not interested. Out of office. Routed away, because people leave companies and treating that as rejection burns a live account. And unclassified, because one letter is not evidence, and the schema can say so.</p>
             <p><em>Watch for low confidence. Below the threshold, a person decides the class, and the human verdict with its reason becomes the calibration data.</em></p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-notinterested n-dnc n-stopped">
           <summary><span class="pb-step-num">04</span>Honor the exits instantly</summary>
           <div class="pb-step-body">
             <p><strong>The sequence stops the moment words arrive.</strong> Any reply pauses the sends, deterministically, before classification even runs. The do-not-contact list splits by how the no arrived. Explicit unsubscribe language lands instantly with no model in the path, and an inferred no waits for the human verdict, because the irreversible action never rests on an inference. One list, honored at every send path you named in the guardrails table.</p>
             <p><em>Watch for the tool that keeps sending while a reply sits unread. Nothing burns a domain and a reputation faster.</em></p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-ooo n-reenroll">
           <summary><span class="pb-step-num">05</span>Re-enroll the out-of-office</summary>
           <div class="pb-step-body">
             <p>An out-of-office is timing, not rejection. The contact pauses until the stated return date plus a bracketed buffer, with dates resolved against the day the reply arrived, then resumes where the sequence left off. Unresolvable dates fall to the default pause.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-gate n-uncertain n-alerted">
           <summary><span class="pb-step-num">06</span>A person answers anything that matters</summary>
           <div class="pb-step-body">
             <p>Interested replies and real questions alert the channel with the verbatim thread and the lead's context, each with a bracketed answer-by time. Anger gets its own alert, read by a person the same day, never answered with a template. A person writes every answer.</p>
             <p><em>Watch for automation drafting replies to objections. An objection answered by a machine reads as exactly that.</em></p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-crm">
           <summary><span class="pb-step-num">07</span>Log the words, learn the classes</summary>
           <div class="pb-step-body">
             <p>Every reply gets recorded with its class, its numeric confidence, the human verdict when one was needed, and the verdict's reason in one line, because the reasons are the calibration data. Three same-shaped disagreements are a taxonomy revision waiting to be written.</p>
@@ -223,8 +223,8 @@
 
     <!-- ================= RIGHT: the diagram ================= -->
     <aside class="pb-right" aria-label="Workflow diagram">
-      <div class="pb-right-sticky">
-        <img src="/assets/diagrams/reply-triage.svg?v=20260915" alt="The Outbound Reply Triage Playbook workflow diagram" style="max-height:100%; max-width:100%;">
+      <div class="pb-right-sticky" id="pb-diagram" data-diagram="/assets/diagrams/reply-triage.svg?v=20260916">
+        <img src="/assets/diagrams/reply-triage.svg?v=20260916" alt="The Outbound Reply Triage Playbook workflow diagram" style="max-height:100%; max-width:100%;">
       </div>
     </aside>
   </div>
@@ -240,7 +240,7 @@
     <div class="pb-grid">
       <a class="pb-card" href="/playbook-inbound-signup-routing.html">
         <div class="pb-card-viz">
-          <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260915" alt="Inbound Sign-Up Qualification and Routing workflow diagram" loading="lazy">
+          <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260916" alt="Inbound Sign-Up Qualification and Routing workflow diagram" loading="lazy">
         </div>
         <div class="pb-card-body">
           <h3>Inbound Sign-Up Qualification and Routing</h3>
@@ -253,7 +253,7 @@
       </a>
       <a class="pb-card" href="/playbook-crm-enrichment-review.html">
         <div class="pb-card-viz">
-          <img src="/assets/diagrams/crm-enrichment-review.svg?v=20260915" alt="CRM Enrichment With Change Review workflow diagram" loading="lazy">
+          <img src="/assets/diagrams/crm-enrichment-review.svg?v=20260916" alt="CRM Enrichment With Change Review workflow diagram" loading="lazy">
         </div>
         <div class="pb-card-body">
           <h3>CRM Enrichment With Change Review</h3>
@@ -383,6 +383,55 @@
           err.textContent = 'That did not go through. Try again, or email us and we will send it by hand.';
         });
       });
+    })();
+  </script>
+
+  <!-- Diagram focus: opening a step illuminates the part of the system it describes.
+       The SVG is fetched from the same file the <img> uses, so there is still one
+       source on disk; injecting it only makes the nodes addressable. -->
+  <script>
+    (function () {
+      var host = document.getElementById('pb-diagram');
+      if (!host || !host.dataset.diagram) return;
+      var DESKTOP = window.matchMedia('(min-width: 981px)');
+      var svg = null, stack = [];
+
+      function paint() {
+        if (!svg) return;
+        var current = stack[stack.length - 1];
+        svg.querySelectorAll('.dx.is-on').forEach(function (n) { n.classList.remove('is-on'); });
+        if (!current || !DESKTOP.matches) { svg.classList.remove('is-focused'); return; }
+        var found = 0;
+        current.dataset.highlight.split(/\s+/).forEach(function (id) {
+          var node = svg.getElementById(id);
+          if (node) { node.classList.add('is-on'); found++; }
+        });
+        svg.classList.toggle('is-focused', found > 0);
+      }
+
+      fetch(host.dataset.diagram)
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(function (markup) {
+          host.innerHTML = markup;
+          svg = host.querySelector('svg');
+          if (!svg) return;
+          svg.setAttribute('aria-hidden', 'true');
+          // Step 01 ships open so the column is not a wall of closed bars, but that
+          // is the page's choice, not the reader's. Seeding the stack from it would
+          // dim the diagram before anyone touched anything, and the first look at a
+          // workflow should be the whole workflow. Focus starts on the first toggle.
+          document.querySelectorAll('.pb-step[data-highlight]').forEach(function (step) {
+            step.addEventListener('toggle', function () {
+              stack = stack.filter(function (s) { return s !== step; });
+              if (step.open) stack.push(step);
+              paint();
+            });
+          });
+          paint();
+        })
+        .catch(function () { /* the <img> fallback is already on screen */ });
+
+      DESKTOP.addEventListener('change', paint);
     })();
   </script>
 </body>

@@ -99,7 +99,7 @@
 
   <!-- Mobile diagram hero -->
   <div class="pb-diagram-mobile" aria-hidden="true">
-    <img src="/assets/diagrams/stalled-build-handoff.svg?v=20260915" alt="" loading="eager">
+    <img src="/assets/diagrams/stalled-build-handoff.svg?v=20260916" alt="" loading="eager">
   </div>
 
   <!-- ============================================
@@ -167,7 +167,7 @@
       <p class="pb-eyebrow" id="how-it-works">How it works</p>
       <div class="pb-steps">
 
-        <details class="pb-step" open>
+        <details class="pb-step" open data-highlight="n-stalled n-audit">
           <summary><span class="pb-step-num">01</span>Audit what exists</summary>
           <div class="pb-step-body">
             <p>List the stalled build honestly, in three columns. What still runs. What runs with a human hand on it. What broke and when.</p>
@@ -176,7 +176,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-owner n-noowner">
           <summary><span class="pb-step-num">02</span>Name the owner</summary>
           <div class="pb-step-body">
             <p><strong>A system producing results is not the same as a system adopted.</strong> The handoff fails where ownership was never transferred, and that failure looks exactly like a capability problem until you check.</p>
@@ -185,7 +185,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-runnable">
           <summary><span class="pb-step-num">03</span>Define runnable</summary>
           <div class="pb-step-body">
             <p>Write the acceptance bar before touching anything. The owner launches the workflow unassisted, from the tool they already use, knows what good output looks like, and finds out from the system when it goes quiet.</p>
@@ -193,7 +193,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-doorbell">
           <summary><span class="pb-step-num">04</span>Pick the doorbell</summary>
           <div class="pb-step-body">
             <p><strong>The front end is a door, never the house.</strong> Slack teams get a Slack front end. Microsoft teams get Teams. The requirement is that anyone can run it, without watering down the power of what it is doing.</p>
@@ -201,7 +201,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-wrap">
           <summary><span class="pb-step-num">05</span>Wrap, don't rebuild</summary>
           <div class="pb-step-body">
             <p>Put a thin, runnable layer over what exists. The smallest reliable slice ships first, gets used, and earns the next slice.</p>
@@ -209,7 +209,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-transfer n-loop">
           <summary><span class="pb-step-num">06</span>Transfer ownership</summary>
           <div class="pb-step-body">
             <p>The runbook lives where the work happens, and the training does too. The owner comments on output in plain language, the system files the note as a lesson and confirms it back in the thread, and a wrong lesson rolls back in one step. The kit ships the full mechanism, and no prompt engineering is asked of anyone.</p>
@@ -217,7 +217,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-prove n-revived">
           <summary><span class="pb-step-num">07</span>Prove it</summary>
           <div class="pb-step-body">
             <p><strong>Six checks, each with a date.</strong> The owner runs it end to end, unassisted. The output passes and the owner says why. A failure gets recovered with the runbook alone. Silence gets simulated, and the system reports it. The backup runs it end to end. A correction gets filed and confirmed as a lesson.</p>
@@ -233,8 +233,8 @@
 
     <!-- ================= RIGHT: the diagram ================= -->
     <aside class="pb-right" aria-label="Workflow diagram">
-      <div class="pb-right-sticky">
-        <img src="/assets/diagrams/stalled-build-handoff.svg?v=20260915" alt="Stalled build handoff workflow diagram" style="max-height:100%; max-width:100%;">
+      <div class="pb-right-sticky" id="pb-diagram" data-diagram="/assets/diagrams/stalled-build-handoff.svg?v=20260916">
+        <img src="/assets/diagrams/stalled-build-handoff.svg?v=20260916" alt="Stalled build handoff workflow diagram" style="max-height:100%; max-width:100%;">
       </div>
     </aside>
   </div>
@@ -250,7 +250,7 @@
     <div class="pb-grid">
       <a class="pb-card" href="/playbook-meeting-intelligence.html">
         <div class="pb-card-viz">
-          <img src="/assets/diagrams/meeting-intelligence.svg?v=20260915" alt="Meeting intelligence workflow diagram" loading="lazy">
+          <img src="/assets/diagrams/meeting-intelligence.svg?v=20260916" alt="Meeting intelligence workflow diagram" loading="lazy">
         </div>
         <div class="pb-card-body">
           <h3>Turn Recorded Calls Into CRM Updates and Deal Awareness</h3>
@@ -263,7 +263,7 @@
       </a>
       <a class="pb-card" href="/playbook-ai-ready-data.html">
         <div class="pb-card-viz">
-          <img src="/assets/diagrams/ai-ready-data.svg?v=20260915" alt="AI-ready data workflow diagram" loading="lazy">
+          <img src="/assets/diagrams/ai-ready-data.svg?v=20260916" alt="AI-ready data workflow diagram" loading="lazy">
         </div>
         <div class="pb-card-body">
           <h3>The AI-Ready Data Playbook</h3>
@@ -393,6 +393,55 @@
           err.textContent = 'That did not go through. Try again, or email us and we will send it by hand.';
         });
       });
+    })();
+  </script>
+
+  <!-- Diagram focus: opening a step illuminates the part of the system it describes.
+       The SVG is fetched from the same file the <img> uses, so there is still one
+       source on disk; injecting it only makes the nodes addressable. -->
+  <script>
+    (function () {
+      var host = document.getElementById('pb-diagram');
+      if (!host || !host.dataset.diagram) return;
+      var DESKTOP = window.matchMedia('(min-width: 981px)');
+      var svg = null, stack = [];
+
+      function paint() {
+        if (!svg) return;
+        var current = stack[stack.length - 1];
+        svg.querySelectorAll('.dx.is-on').forEach(function (n) { n.classList.remove('is-on'); });
+        if (!current || !DESKTOP.matches) { svg.classList.remove('is-focused'); return; }
+        var found = 0;
+        current.dataset.highlight.split(/\s+/).forEach(function (id) {
+          var node = svg.getElementById(id);
+          if (node) { node.classList.add('is-on'); found++; }
+        });
+        svg.classList.toggle('is-focused', found > 0);
+      }
+
+      fetch(host.dataset.diagram)
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(function (markup) {
+          host.innerHTML = markup;
+          svg = host.querySelector('svg');
+          if (!svg) return;
+          svg.setAttribute('aria-hidden', 'true');
+          // Step 01 ships open so the column is not a wall of closed bars, but that
+          // is the page's choice, not the reader's. Seeding the stack from it would
+          // dim the diagram before anyone touched anything, and the first look at a
+          // workflow should be the whole workflow. Focus starts on the first toggle.
+          document.querySelectorAll('.pb-step[data-highlight]').forEach(function (step) {
+            step.addEventListener('toggle', function () {
+              stack = stack.filter(function (s) { return s !== step; });
+              if (step.open) stack.push(step);
+              paint();
+            });
+          });
+          paint();
+        })
+        .catch(function () { /* the <img> fallback is already on screen */ });
+
+      DESKTOP.addEventListener('change', paint);
     })();
   </script>
 </body>

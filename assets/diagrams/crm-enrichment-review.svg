@@ -18,7 +18,7 @@
   <rect width="745" height="880" fill="#0d1117"/>
   <rect width="745" height="880" fill="url(#e-dots)"/>
 
-  <g stroke="#30363d" stroke-width="1.5" fill="none">
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
     <path d="M372,98 V122" marker-end="url(#e-arr)" stroke="#4A9ECE"/>
     <path d="M372,188 V212" marker-end="url(#e-arr)" stroke="#4A9ECE"/>
     <!-- spend gate skip branch -->
@@ -44,89 +44,91 @@
     <path d="M512,730 V750" marker-end="url(#e-arrdim)"/>
   </g>
 
-  <circle r="3.2" fill="#4A9ECE" filter="url(#e-glow)">
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#e-glow)">
     <animateMotion dur="7s" repeatCount="indefinite" path="M372,55 V122 V212 V312 M372,312 H222 V428 H372 V452 M372,452 V552 V650 V730 H250"/>
   </circle>
 
   <!-- 1 incomplete record -->
-  <g>
+  <g id="n-incomplete" class="dx">
     <rect x="242" y="34" width="260" height="64" rx="9" fill="#1c2333" stroke="#E06C75"/>
-    <text x="372" y="60" text-anchor="middle" fill="#E06C75" font-size="14" font-weight="700">INCOMPLETE RECORD</text>
-    <text x="372" y="78" text-anchor="middle" fill="#8B949E" font-size="10">gaps, stale fields, unknowns</text>
+    <text class="dx" x="372" y="60" text-anchor="middle" fill="#E06C75" font-size="14" font-weight="700">INCOMPLETE RECORD</text>
+    <text class="dx" x="372" y="78" text-anchor="middle" fill="#8B949E" font-size="10">gaps, stale fields, unknowns</text>
   </g>
 
   <!-- 2 spend gate -->
-  <g>
+  <g id="n-spend" class="dx">
     <rect x="232" y="122" width="280" height="66" rx="9" fill="#1c2333" stroke="#E5C07B"/>
-    <text x="372" y="148" text-anchor="middle" fill="#E5C07B" font-size="14" font-weight="700">SPEND GATE</text>
-    <text x="372" y="166" text-anchor="middle" fill="#8B949E" font-size="10">enrich only what something will use,</text>
-    <text x="372" y="180" text-anchor="middle" fill="#8B949E" font-size="10">capped per day</text>
+    <text class="dx" x="372" y="148" text-anchor="middle" fill="#E5C07B" font-size="14" font-weight="700">SPEND GATE</text>
+    <text class="dx" x="372" y="166" text-anchor="middle" fill="#8B949E" font-size="10">enrich only what something will use,</text>
+    <text class="dx" x="372" y="180" text-anchor="middle" fill="#8B949E" font-size="10">capped per day</text>
   </g>
-  <g>
+  <g id="n-notyet" class="dx">
     <rect x="582" y="128" width="130" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
-    <text x="647" y="148" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="700">NOT YET</text>
-    <text x="647" y="162" text-anchor="middle" fill="#8B949E" font-size="8.5">queued, not billed</text>
-    <text x="647" y="174" text-anchor="middle" fill="#8B949E" font-size="8.5">expires, re-qualifies</text>
+    <text class="dx" x="647" y="148" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="700">NOT YET</text>
+    <text class="dx" x="647" y="162" text-anchor="middle" fill="#8B949E" font-size="8.5">queued, not billed</text>
+    <text class="dx" x="647" y="174" text-anchor="middle" fill="#8B949E" font-size="8.5">expires, re-qualifies</text>
   </g>
 
   <!-- 3 research -->
-  <g>
+  <g id="n-research" class="dx">
     <rect x="222" y="212" width="300" height="76" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
-    <text x="372" y="238" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">RESEARCH AGENT</text>
-    <text x="372" y="256" text-anchor="middle" fill="#4A9ECE" font-size="10.5">public sources &#183; every claim cited</text>
-    <text x="372" y="272" text-anchor="middle" fill="#8B949E" font-size="10">unknown stays unknown, never guessed</text>
+    <text class="dx" x="372" y="238" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">RESEARCH AGENT</text>
+    <text class="dx" x="372" y="256" text-anchor="middle" fill="#4A9ECE" font-size="10.5">public sources &#183; every claim cited</text>
+    <text class="dx" x="372" y="272" text-anchor="middle" fill="#8B949E" font-size="10">unknown stays unknown, never guessed</text>
   </g>
 
   <!-- 4 evidence split -->
-  <g>
+  <g id="n-fresh" class="dx">
     <rect x="117" y="336" width="210" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
-    <text x="222" y="362" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">FRESH EVIDENCE</text>
-    <text x="222" y="380" text-anchor="middle" fill="#8B949E" font-size="9.5">dated, sourced, usable</text>
+    <text class="dx" x="222" y="362" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">FRESH EVIDENCE</text>
+    <text class="dx" x="222" y="380" text-anchor="middle" fill="#8B949E" font-size="9.5">dated, sourced, usable</text>
   </g>
-  <g>
+  <g id="n-stale" class="dx">
     <rect x="417" y="336" width="210" height="68" rx="9" fill="#1c2333" stroke="#E06C75"/>
-    <text x="522" y="358" text-anchor="middle" fill="#E06C75" font-size="11.5" font-weight="700">STALE OR CONFLICTING</text>
-    <text x="522" y="376" text-anchor="middle" fill="#8B949E" font-size="9.5">surfaced as conflicts and</text>
-    <text x="522" y="390" text-anchor="middle" fill="#8B949E" font-size="9.5">suppressions &#183; never silent</text>
+    <text class="dx" x="522" y="358" text-anchor="middle" fill="#E06C75" font-size="11.5" font-weight="700">STALE OR CONFLICTING</text>
+    <text class="dx" x="522" y="376" text-anchor="middle" fill="#8B949E" font-size="9.5">surfaced as conflicts and</text>
+    <text class="dx" x="522" y="390" text-anchor="middle" fill="#8B949E" font-size="9.5">suppressions &#183; never silent</text>
   </g>
 
   <!-- 5 proposed changes -->
-  <g>
+  <g id="n-proposed" class="dx">
     <rect x="222" y="452" width="300" height="76" rx="9" fill="#1c2333" stroke="#30363d"/>
-    <text x="372" y="478" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">PROPOSED CHANGES</text>
-    <text x="372" y="496" text-anchor="middle" fill="#8B949E" font-size="10">old value &#8594; new value, source attached,</text>
-    <text x="372" y="512" text-anchor="middle" fill="#8B949E" font-size="10">side by side, reversible</text>
+    <text class="dx" x="372" y="478" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">PROPOSED CHANGES</text>
+    <text class="dx" x="372" y="496" text-anchor="middle" fill="#8B949E" font-size="10">old value &#8594; new value, source attached,</text>
+    <text class="dx" x="372" y="512" text-anchor="middle" fill="#8B949E" font-size="10">side by side, reversible</text>
   </g>
 
   <!-- 6 change review gate -->
-  <g filter="url(#e-glow)">
-    <rect x="222" y="552" width="300" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
-  </g>
-  <text x="372" y="582" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; CHANGE REVIEW &#9608;&#9608;</text>
-  <text x="372" y="602" text-anchor="middle" fill="#8B949E" font-size="10">a person approves before the record moves &#183;</text>
-  <text x="372" y="616" text-anchor="middle" fill="#8B949E" font-size="9.5">seconds per change, the preview did the work</text>
+  <g id="n-review" class="dx">
+    <g filter="url(#e-glow)">
+      <rect x="222" y="552" width="300" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="582" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; CHANGE REVIEW &#9608;&#9608;</text>
+    <text class="dx" x="372" y="602" text-anchor="middle" fill="#8B949E" font-size="10">a person approves before the record moves &#183;</text>
+    <text class="dx" x="372" y="616" text-anchor="middle" fill="#8B949E" font-size="9.5">seconds per change, the preview did the work</text>
 
-  <text x="712" y="420" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 712 420)">GOLDEN RECORDS &#183; RE-SCORED WHEN ANYTHING CHANGES</text>
+    <text id="n-golden" class="dx" x="712" y="420" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 712 420)">GOLDEN RECORDS &#183; RE-SCORED WHEN ANYTHING CHANGES</text>
+  </g>
 
   <!-- 7 record updated -->
-  <g>
+  <g id="n-updated" class="dx">
     <rect x="232" y="650" width="280" height="64" rx="9" fill="#1c2333" stroke="#98C379"/>
-    <text x="372" y="676" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">RECORD UPDATED</text>
-    <text x="372" y="694" text-anchor="middle" fill="#8B949E" font-size="10">with provenance on every field</text>
+    <text class="dx" x="372" y="676" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">RECORD UPDATED</text>
+    <text class="dx" x="372" y="694" text-anchor="middle" fill="#8B949E" font-size="10">with provenance on every field</text>
   </g>
 
   <!-- outputs -->
-  <g>
+  <g id="n-audit" class="dx">
     <rect x="142" y="750" width="180" height="58" rx="9" fill="#1c2333" stroke="#30363d"/>
-    <text x="232" y="774" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">AUDIT TRAIL</text>
-    <text x="232" y="792" text-anchor="middle" fill="#8B949E" font-size="9.5">every change explainable</text>
+    <text class="dx" x="232" y="774" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">AUDIT TRAIL</text>
+    <text class="dx" x="232" y="792" text-anchor="middle" fill="#8B949E" font-size="9.5">every change explainable</text>
   </g>
-  <g>
+  <g id="n-prior" class="dx">
     <rect x="422" y="750" width="180" height="58" rx="9" fill="#1c2333" stroke="#30363d"/>
-    <text x="512" y="774" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">PRIOR STATE KEPT</text>
-    <text x="512" y="792" text-anchor="middle" fill="#8B949E" font-size="9.5">one click to undo</text>
+    <text class="dx" x="512" y="774" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">PRIOR STATE KEPT</text>
+    <text class="dx" x="512" y="792" text-anchor="middle" fill="#8B949E" font-size="9.5">one click to undo</text>
   </g>
 
-  <text x="372" y="844" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"An enrichment is a claim. The record holds evidence."</text>
-  <text x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 06 &#183; CRM ENRICHMENT WITH CHANGE REVIEW</text>
+  <text class="dx" x="372" y="844" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"An enrichment is a claim. The record holds evidence."</text>
+  <text class="dx" x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 06 &#183; CRM ENRICHMENT WITH CHANGE REVIEW</text>
 </svg>

@@ -18,7 +18,7 @@
   <rect width="745" height="880" fill="#0d1117"/>
   <rect width="745" height="880" fill="url(#s-dots)"/>
 
-  <g stroke="#30363d" stroke-width="1.5" fill="none">
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
     <path d="M372,98 V124" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
     <path d="M372,192 V218" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
     <!-- brief -> fit/intent split -->
@@ -41,90 +41,92 @@
     <path d="M372,630 V660" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
   </g>
 
-  <circle r="3.2" fill="#4A9ECE" filter="url(#s-glow)">
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#s-glow)">
     <animateMotion dur="7s" repeatCount="indefinite" path="M372,50 V218 V308 M372,308 H222 V420 H104 V512 V690 H216"/>
   </circle>
 
   <!-- 1 form submit -->
-  <g>
+  <g id="n-form" class="dx">
     <rect x="242" y="34" width="260" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
-    <text x="372" y="60" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">FORM SUBMIT</text>
-    <text x="372" y="78" text-anchor="middle" fill="#8B949E" font-size="10">an email and a claim of interest</text>
+    <text class="dx" x="372" y="60" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">FORM SUBMIT</text>
+    <text class="dx" x="372" y="78" text-anchor="middle" fill="#8B949E" font-size="10">an email and a claim of interest</text>
   </g>
 
   <!-- 2 enrich -->
-  <g>
+  <g id="n-enrich" class="dx">
     <rect x="232" y="124" width="280" height="68" rx="9" fill="#1c2333" stroke="#30363d"/>
-    <text x="372" y="150" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">ENRICH WITH EVIDENCE</text>
-    <text x="372" y="168" text-anchor="middle" fill="#8B949E" font-size="10">public sources &#183; every claim cited</text>
-    <text x="372" y="182" text-anchor="middle" fill="#8B949E" font-size="10">unknown stays unknown, never guessed</text>
+    <text class="dx" x="372" y="150" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">ENRICH WITH EVIDENCE</text>
+    <text class="dx" x="372" y="168" text-anchor="middle" fill="#8B949E" font-size="10">public sources &#183; every claim cited</text>
+    <text class="dx" x="372" y="182" text-anchor="middle" fill="#8B949E" font-size="10">unknown stays unknown, never guessed</text>
   </g>
 
   <!-- 3 account brief -->
-  <g>
+  <g id="n-brief" class="dx">
     <rect x="222" y="218" width="300" height="68" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
-    <text x="372" y="244" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">ACCOUNT BRIEF</text>
-    <text x="372" y="262" text-anchor="middle" fill="#8B949E" font-size="10">what we verified, what we could not,</text>
-    <text x="372" y="276" text-anchor="middle" fill="#8B949E" font-size="10">on one screen with sources</text>
+    <text class="dx" x="372" y="244" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">ACCOUNT BRIEF</text>
+    <text class="dx" x="372" y="262" text-anchor="middle" fill="#8B949E" font-size="10">what we verified, what we could not,</text>
+    <text class="dx" x="372" y="276" text-anchor="middle" fill="#8B949E" font-size="10">on one screen with sources</text>
   </g>
 
   <!-- 4 fit / intent -->
-  <g>
+  <g id="n-fit" class="dx">
     <rect x="117" y="330" width="210" height="68" rx="9" fill="#1c2333" stroke="#56B6C2"/>
-    <text x="222" y="356" text-anchor="middle" fill="#56B6C2" font-size="13" font-weight="700">FIT &#183; WHO THEY ARE</text>
-    <text x="222" y="374" text-anchor="middle" fill="#8B949E" font-size="9.5">role, company, shape &#183; 0-50</text>
-    <text x="222" y="388" text-anchor="middle" fill="#8B949E" font-size="8.5">unverified scores null, never zero</text>
+    <text class="dx" x="222" y="356" text-anchor="middle" fill="#56B6C2" font-size="13" font-weight="700">FIT &#183; WHO THEY ARE</text>
+    <text class="dx" x="222" y="374" text-anchor="middle" fill="#8B949E" font-size="9.5">role, company, shape &#183; 0-50</text>
+    <text class="dx" x="222" y="388" text-anchor="middle" fill="#8B949E" font-size="8.5">unverified scores null, never zero</text>
   </g>
-  <g>
+  <g id="n-intent" class="dx">
     <rect x="417" y="330" width="210" height="68" rx="9" fill="#1c2333" stroke="#C678DD"/>
-    <text x="522" y="356" text-anchor="middle" fill="#C678DD" font-size="13" font-weight="700">INTENT &#183; WHAT THEY DID</text>
-    <text x="522" y="374" text-anchor="middle" fill="#8B949E" font-size="9.5">visits, returns, requests &#183; 0-50</text>
-    <text x="522" y="388" text-anchor="middle" fill="#8B949E" font-size="9.5">old signals decay out</text>
+    <text class="dx" x="522" y="356" text-anchor="middle" fill="#C678DD" font-size="13" font-weight="700">INTENT &#183; WHAT THEY DID</text>
+    <text class="dx" x="522" y="374" text-anchor="middle" fill="#8B949E" font-size="9.5">visits, returns, requests &#183; 0-50</text>
+    <text class="dx" x="522" y="388" text-anchor="middle" fill="#8B949E" font-size="9.5">old signals decay out</text>
   </g>
-  <text x="372" y="414" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">SCORED APART &#183; ENTHUSIASM CANNOT FAKE FIT</text>
+  <text id="n-apart" class="dx" x="372" y="414" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">SCORED APART &#183; ENTHUSIASM CANNOT FAKE FIT</text>
 
   <!-- 5 routes, four lanes -->
-  <g>
+  <g id="n-qualified" class="dx">
     <rect x="34" y="444" width="140" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
-    <text x="104" y="470" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">QUALIFIED</text>
-    <text x="104" y="488" text-anchor="middle" fill="#8B949E" font-size="9">fit and intent</text>
-    <text x="104" y="501" text-anchor="middle" fill="#8B949E" font-size="9">both clear the bands</text>
+    <text class="dx" x="104" y="470" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">QUALIFIED</text>
+    <text class="dx" x="104" y="488" text-anchor="middle" fill="#8B949E" font-size="9">fit and intent</text>
+    <text class="dx" x="104" y="501" text-anchor="middle" fill="#8B949E" font-size="9">both clear the bands</text>
   </g>
-  <g>
+  <g id="n-nurture" class="dx">
     <rect x="204" y="444" width="140" height="68" rx="9" fill="#1c2333" stroke="#E5C07B"/>
-    <text x="274" y="470" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">NURTURE</text>
-    <text x="274" y="488" text-anchor="middle" fill="#8B949E" font-size="9">right fit, not ready &#183;</text>
-    <text x="274" y="501" text-anchor="middle" fill="#8B949E" font-size="8.5">a download is not intent</text>
+    <text class="dx" x="274" y="470" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">NURTURE</text>
+    <text class="dx" x="274" y="488" text-anchor="middle" fill="#8B949E" font-size="9">right fit, not ready &#183;</text>
+    <text class="dx" x="274" y="501" text-anchor="middle" fill="#8B949E" font-size="8.5">a download is not intent</text>
   </g>
-  <g>
+  <g id="n-monitor" class="dx">
     <rect x="376" y="444" width="140" height="68" rx="9" fill="#1c2333" stroke="#56B6C2"/>
-    <text x="446" y="470" text-anchor="middle" fill="#56B6C2" font-size="12" font-weight="700">MONITOR</text>
-    <text x="446" y="488" text-anchor="middle" fill="#8B949E" font-size="8">intent high, fit known-low</text>
-    <text x="446" y="501" text-anchor="middle" fill="#8B949E" font-size="9">watch, never sell</text>
+    <text class="dx" x="446" y="470" text-anchor="middle" fill="#56B6C2" font-size="12" font-weight="700">MONITOR</text>
+    <text class="dx" x="446" y="488" text-anchor="middle" fill="#8B949E" font-size="8">intent high, fit known-low</text>
+    <text class="dx" x="446" y="501" text-anchor="middle" fill="#8B949E" font-size="9">watch, never sell</text>
   </g>
-  <g>
+  <g id="n-nofit" class="dx">
     <rect x="546" y="444" width="140" height="68" rx="9" fill="#1c2333" stroke="#E06C75"/>
-    <text x="616" y="470" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NO FIT</text>
-    <text x="616" y="488" text-anchor="middle" fill="#8B949E" font-size="8">students, recruiters, bots</text>
-    <text x="616" y="501" text-anchor="middle" fill="#8B949E" font-size="8.5">served, never sold to</text>
+    <text class="dx" x="616" y="470" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NO FIT</text>
+    <text class="dx" x="616" y="488" text-anchor="middle" fill="#8B949E" font-size="8">students, recruiters, bots</text>
+    <text class="dx" x="616" y="501" text-anchor="middle" fill="#8B949E" font-size="8.5">served, never sold to</text>
   </g>
 
   <!-- 6 human review, checked first -->
-  <g filter="url(#s-glow)">
-    <rect x="202" y="556" width="340" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  <g id="n-review" class="dx">
+    <g filter="url(#s-glow)">
+      <rect x="202" y="556" width="340" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="582" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN REVIEW &#9608;&#9608;</text>
+    <text class="dx" x="372" y="602" text-anchor="middle" fill="#8B949E" font-size="9.5">checked FIRST, before any band</text>
+    <text class="dx" x="372" y="616" text-anchor="middle" fill="#8B949E" font-size="9.5">nulls, conflicts, duplicates, borderline</text>
   </g>
-  <text x="372" y="582" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN REVIEW &#9608;&#9608;</text>
-  <text x="372" y="602" text-anchor="middle" fill="#8B949E" font-size="9.5">checked FIRST, before any band</text>
-  <text x="372" y="616" text-anchor="middle" fill="#8B949E" font-size="9.5">nulls, conflicts, duplicates, borderline</text>
 
   <!-- 7 next step -->
-  <g>
+  <g id="n-assigned" class="dx">
     <rect x="222" y="660" width="300" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
-    <text x="372" y="686" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">ASSIGNED NEXT STEP</text>
-    <text x="372" y="704" text-anchor="middle" fill="#8B949E" font-size="10">a named owner and a dated action,</text>
-    <text x="372" y="718" text-anchor="middle" fill="#8B949E" font-size="10">with the brief attached</text>
+    <text class="dx" x="372" y="686" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">ASSIGNED NEXT STEP</text>
+    <text class="dx" x="372" y="704" text-anchor="middle" fill="#8B949E" font-size="10">a named owner and a dated action,</text>
+    <text class="dx" x="372" y="718" text-anchor="middle" fill="#8B949E" font-size="10">with the brief attached</text>
   </g>
 
-  <text x="372" y="790" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"A download alone is not buying intent."</text>
-  <text x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 04 &#183; INBOUND SIGN-UP ROUTING</text>
+  <text class="dx" x="372" y="790" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"A download alone is not buying intent."</text>
+  <text class="dx" x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 04 &#183; INBOUND SIGN-UP ROUTING</text>
 </svg>

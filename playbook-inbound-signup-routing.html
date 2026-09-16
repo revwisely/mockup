@@ -99,7 +99,7 @@
 
   <!-- Mobile diagram hero -->
   <div class="pb-diagram-mobile" aria-hidden="true">
-    <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260915" alt="" loading="eager">
+    <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260916" alt="" loading="eager">
   </div>
 
   <!-- ============================================
@@ -167,27 +167,27 @@
       <p class="pb-eyebrow" id="how-it-works">How it works</p>
       <div class="pb-steps">
 
-        <details class="pb-step" open>
+        <details class="pb-step" open data-highlight="n-form">
           <summary><span class="pb-step-num">01</span>Capture the claim</summary>
           <div class="pb-step-body">
             <p>A form submission is an email and a claim of interest. Store both verbatim, with where the person arrived from.</p>
             <p>Treat the claim as a claim. A download alone is not buying intent, and a router that assumes otherwise sells to students and spams recruiters.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-enrich">
           <summary><span class="pb-step-num">02</span>Enrich with evidence</summary>
           <div class="pb-step-body">
             <p>Company, size, role, from public sources, with every claim carrying where it came from. Unknown stays unknown, never guessed.</p>
             <p>Spend follows use. Enrichment runs on sign-ups something downstream will actually read, capped per day.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-brief">
           <summary><span class="pb-step-num">03</span>Write the account brief</summary>
           <div class="pb-step-body">
             <p>One screen. What we verified, what we could not, with sources. The brief serves the router and the human reviewer the same, so a person can audit any decision in a minute.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-apart n-fit n-intent">
           <summary><span class="pb-step-num">04</span>Score fit and intent apart</summary>
           <div class="pb-step-body">
             <p><strong>Enthusiasm cannot fake fit.</strong> Fit scores who they are. Intent scores what they did. Kept separate, a crawler visiting twenty-five times is intent without fit, and a perfect-fit visitor on day one is fit without intent. Different numbers, different plays.</p>
@@ -195,21 +195,21 @@
             <p><em>Watch for the single combined score. It routes the enthusiastic wrong-fit visitor above the quiet right one.</em></p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-qualified n-nurture n-monitor n-nofit">
           <summary><span class="pb-step-num">05</span>Route by band</summary>
           <div class="pb-step-body">
             <p>Five lanes, checked in a stated order so two implementers get the same route from the same rules. Review first, then qualified, nurture, monitor, no fit.</p>
             <p>Qualified gets a named owner with a dated next step. Right fit without readiness nurtures. High intent with KNOWN-low fit monitors, because the crawler is watched and never sold to. Known no-fits get a polite, useful response and nothing more. Students, recruiters, and bots deserve the resource they asked for, never a sequence.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-review">
           <summary><span class="pb-step-num">06</span>Drop uncertainty to a person</summary>
           <div class="pb-step-body">
             <p>Review is checked before any band. Fit nulls, conflicting evidence, borderline scores, and ambiguous duplicates drop to a person with the reasons attached. High intent with UNKNOWN fit lands here, and that keeps review and monitor honestly apart. Duplicates get matched against existing accounts before anything new is created.</p>
             <p><em>Watch for the router that never asks for help. A queue that is always empty means the rules are guessing.</em></p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-assigned">
           <summary><span class="pb-step-num">07</span>Evaluate on the sample sign-ups</summary>
           <div class="pb-step-body">
             <p>The kit ships four sample sign-ups. A potential customer, a recruiter, a student, and someone whose intent is unknown. Run them before any real submission and compare against the answer key.</p>
@@ -225,8 +225,8 @@
 
     <!-- ================= RIGHT: the diagram ================= -->
     <aside class="pb-right" aria-label="Workflow diagram">
-      <div class="pb-right-sticky">
-        <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260915" alt="Inbound Sign-Up Qualification and Routing workflow diagram" style="max-height:100%; max-width:100%;">
+      <div class="pb-right-sticky" id="pb-diagram" data-diagram="/assets/diagrams/inbound-signup-routing.svg?v=20260916">
+        <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260916" alt="Inbound Sign-Up Qualification and Routing workflow diagram" style="max-height:100%; max-width:100%;">
       </div>
     </aside>
   </div>
@@ -242,7 +242,7 @@
     <div class="pb-grid">
       <a class="pb-card" href="/playbook-meeting-intelligence.html">
         <div class="pb-card-viz">
-          <img src="/assets/diagrams/meeting-intelligence.svg?v=20260915" alt="Turn Recorded Calls Into CRM Updates and Deal Awareness workflow diagram" loading="lazy">
+          <img src="/assets/diagrams/meeting-intelligence.svg?v=20260916" alt="Turn Recorded Calls Into CRM Updates and Deal Awareness workflow diagram" loading="lazy">
         </div>
         <div class="pb-card-body">
           <h3>Turn Recorded Calls Into CRM Updates and Deal Awareness</h3>
@@ -255,7 +255,7 @@
       </a>
       <a class="pb-card" href="/playbook-reply-triage.html">
         <div class="pb-card-viz">
-          <img src="/assets/diagrams/reply-triage.svg?v=20260915" alt="The Outbound Reply Triage Playbook workflow diagram" loading="lazy">
+          <img src="/assets/diagrams/reply-triage.svg?v=20260916" alt="The Outbound Reply Triage Playbook workflow diagram" loading="lazy">
         </div>
         <div class="pb-card-body">
           <h3>The Outbound Reply Triage Playbook</h3>
@@ -385,6 +385,55 @@
           err.textContent = 'That did not go through. Try again, or email us and we will send it by hand.';
         });
       });
+    })();
+  </script>
+
+  <!-- Diagram focus: opening a step illuminates the part of the system it describes.
+       The SVG is fetched from the same file the <img> uses, so there is still one
+       source on disk; injecting it only makes the nodes addressable. -->
+  <script>
+    (function () {
+      var host = document.getElementById('pb-diagram');
+      if (!host || !host.dataset.diagram) return;
+      var DESKTOP = window.matchMedia('(min-width: 981px)');
+      var svg = null, stack = [];
+
+      function paint() {
+        if (!svg) return;
+        var current = stack[stack.length - 1];
+        svg.querySelectorAll('.dx.is-on').forEach(function (n) { n.classList.remove('is-on'); });
+        if (!current || !DESKTOP.matches) { svg.classList.remove('is-focused'); return; }
+        var found = 0;
+        current.dataset.highlight.split(/\s+/).forEach(function (id) {
+          var node = svg.getElementById(id);
+          if (node) { node.classList.add('is-on'); found++; }
+        });
+        svg.classList.toggle('is-focused', found > 0);
+      }
+
+      fetch(host.dataset.diagram)
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(function (markup) {
+          host.innerHTML = markup;
+          svg = host.querySelector('svg');
+          if (!svg) return;
+          svg.setAttribute('aria-hidden', 'true');
+          // Step 01 ships open so the column is not a wall of closed bars, but that
+          // is the page's choice, not the reader's. Seeding the stack from it would
+          // dim the diagram before anyone touched anything, and the first look at a
+          // workflow should be the whole workflow. Focus starts on the first toggle.
+          document.querySelectorAll('.pb-step[data-highlight]').forEach(function (step) {
+            step.addEventListener('toggle', function () {
+              stack = stack.filter(function (s) { return s !== step; });
+              if (step.open) stack.push(step);
+              paint();
+            });
+          });
+          paint();
+        })
+        .catch(function () { /* the <img> fallback is already on screen */ });
+
+      DESKTOP.addEventListener('change', paint);
     })();
   </script>
 </body>

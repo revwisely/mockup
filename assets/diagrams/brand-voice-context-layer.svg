@@ -18,7 +18,7 @@
   <rect width="745" height="880" fill="#0d1117"/>
   <rect width="745" height="880" fill="url(#v-dots)"/>
 
-  <g stroke="#30363d" stroke-width="1.5" fill="none">
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
     <!-- the failing loop at the top -->
     <path d="M372,92 V116" marker-end="url(#v-arr)" stroke="#E06C75"/>
     <!-- context layer feeds the pipeline -->
@@ -35,83 +35,87 @@
     <path d="M232,752 H120 V214 H186" stroke="#98C379" stroke-dasharray="5 5" marker-end="url(#v-arrdim)"/>
   </g>
 
-  <circle r="3.2" fill="#4A9ECE" filter="url(#v-glow)">
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#v-glow)">
     <animateMotion dur="8s" repeatCount="indefinite" path="M372,116 V296 V326 V422 V526 V630 V726"/>
   </circle>
 
   <!-- the pain -->
-  <g>
+  <g id="n-draftback" class="dx">
     <rect x="182" y="34" width="380" height="58" rx="9" fill="#1c2333" stroke="#E06C75"/>
-    <text x="372" y="58" text-anchor="middle" fill="#E06C75" font-size="13" font-weight="700">THE DRAFT THAT CAME BACK NEEDING YOU</text>
-    <text x="372" y="76" text-anchor="middle" fill="#8B949E" font-size="9.5">the guideline was written, shared, and loaded in anyway</text>
+    <text class="dx" x="372" y="58" text-anchor="middle" fill="#E06C75" font-size="13" font-weight="700">THE DRAFT THAT CAME BACK NEEDING YOU</text>
+    <text class="dx" x="372" y="76" text-anchor="middle" fill="#8B949E" font-size="9.5">the guideline was written, shared, and loaded in anyway</text>
   </g>
 
   <!-- THE CONTEXT LAYER container -->
-  <rect x="150" y="116" width="444" height="180" rx="11" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.45"/>
-  <text x="372" y="140" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">THE CONTEXT LAYER</text>
-  <text x="372" y="156" text-anchor="middle" fill="#4A9ECE" font-size="10">what a document cannot hold, versioned in one place</text>
-  <g>
+  <g id="n-layer" class="dx">
+    <rect x="150" y="116" width="444" height="180" rx="11" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.45"/>
+    <text class="dx" x="372" y="140" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">THE CONTEXT LAYER</text>
+    <text class="dx" x="372" y="156" text-anchor="middle" fill="#4A9ECE" font-size="10">what a document cannot hold, versioned in one place</text>
+  </g>
+  <g id="n-exemplars" class="dx">
     <rect x="170" y="172" width="196" height="48" rx="8" fill="#1c2333" stroke="#98C379"/>
-    <text x="268" y="192" text-anchor="middle" fill="#98C379" font-size="11" font-weight="700">EXEMPLARS</text>
-    <text x="268" y="208" text-anchor="middle" fill="#8B949E" font-size="9">what worked, and what didn't</text>
+    <text class="dx" x="268" y="192" text-anchor="middle" fill="#98C379" font-size="11" font-weight="700">EXEMPLARS</text>
+    <text class="dx" x="268" y="208" text-anchor="middle" fill="#8B949E" font-size="9">what worked, and what didn't</text>
   </g>
-  <g>
+  <g id="n-rules" class="dx">
     <rect x="378" y="172" width="196" height="48" rx="8" fill="#1c2333" stroke="#56B6C2"/>
-    <text x="476" y="192" text-anchor="middle" fill="#56B6C2" font-size="11" font-weight="700">HARD RULES</text>
-    <text x="476" y="208" text-anchor="middle" fill="#8B949E" font-size="9">the mechanical half, checkable</text>
+    <text class="dx" x="476" y="192" text-anchor="middle" fill="#56B6C2" font-size="11" font-weight="700">HARD RULES</text>
+    <text class="dx" x="476" y="208" text-anchor="middle" fill="#8B949E" font-size="9">the mechanical half, checkable</text>
   </g>
-  <g>
+  <g id="n-rubric" class="dx">
     <rect x="170" y="230" width="196" height="48" rx="8" fill="#1c2333" stroke="#E5C07B"/>
-    <text x="268" y="250" text-anchor="middle" fill="#E5C07B" font-size="11" font-weight="700">JUDGE RUBRIC</text>
-    <text x="268" y="266" text-anchor="middle" fill="#8B949E" font-size="9">the half rules cannot hold</text>
+    <text class="dx" x="268" y="250" text-anchor="middle" fill="#E5C07B" font-size="11" font-weight="700">JUDGE RUBRIC</text>
+    <text class="dx" x="268" y="266" text-anchor="middle" fill="#8B949E" font-size="9">the half rules cannot hold</text>
   </g>
-  <g>
+  <g id="n-calibration" class="dx">
     <rect x="378" y="230" width="196" height="48" rx="8" fill="#1c2333" stroke="#C678DD"/>
-    <text x="476" y="250" text-anchor="middle" fill="#C678DD" font-size="11" font-weight="700">CALIBRATION SET</text>
-    <text x="476" y="266" text-anchor="middle" fill="#8B949E" font-size="9">known good, known bad</text>
+    <text class="dx" x="476" y="250" text-anchor="middle" fill="#C678DD" font-size="11" font-weight="700">CALIBRATION SET</text>
+    <text class="dx" x="476" y="266" text-anchor="middle" fill="#8B949E" font-size="9">known good, known bad</text>
   </g>
 
   <!-- draft -->
-  <g>
+  <g id="n-draft" class="dx">
     <rect x="212" y="326" width="320" height="66" rx="9" fill="#1c2333" stroke="#30363d"/>
-    <text x="372" y="352" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">THE DRAFT</text>
-    <text x="372" y="370" text-anchor="middle" fill="#8B949E" font-size="9.5">by a person, an agency, or an agent</text>
-    <text x="372" y="384" text-anchor="middle" fill="#8B949E" font-size="9.5">all against the same layer</text>
+    <text class="dx" x="372" y="352" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">THE DRAFT</text>
+    <text class="dx" x="372" y="370" text-anchor="middle" fill="#8B949E" font-size="9.5">by a person, an agency, or an agent</text>
+    <text class="dx" x="372" y="384" text-anchor="middle" fill="#8B949E" font-size="9.5">all against the same layer</text>
   </g>
 
   <!-- lint gate -->
-  <g>
+  <g id="n-lint" class="dx">
     <rect x="212" y="422" width="320" height="74" rx="9" fill="#1c2333" stroke="#E06C75"/>
-    <text x="372" y="448" text-anchor="middle" fill="#E06C75" font-size="14" font-weight="700">LINT GATE &#183; DETERMINISTIC</text>
-    <text x="372" y="466" text-anchor="middle" fill="#8B949E" font-size="9.5">the mechanical tells, every time</text>
-    <text x="372" y="482" text-anchor="middle" fill="#8B949E" font-size="9.5">fails loud, before a person reads a word</text>
+    <text class="dx" x="372" y="448" text-anchor="middle" fill="#E06C75" font-size="14" font-weight="700">LINT GATE &#183; DETERMINISTIC</text>
+    <text class="dx" x="372" y="466" text-anchor="middle" fill="#8B949E" font-size="9.5">the mechanical tells, every time</text>
+    <text class="dx" x="372" y="482" text-anchor="middle" fill="#8B949E" font-size="9.5">fails loud, before a person reads a word</text>
   </g>
-  <text x="616" y="412" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 616 412)">RULE BROKEN</text>
+  <text id="n-rulebroken" class="dx" x="616" y="412" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 616 412)">RULE BROKEN</text>
 
   <!-- judge -->
-  <g>
+  <g id="n-judge" class="dx">
     <rect x="212" y="526" width="320" height="74" rx="9" fill="#1c2333" stroke="#E5C07B"/>
-    <text x="372" y="552" text-anchor="middle" fill="#E5C07B" font-size="14" font-weight="700">BLIND JUDGE &#183; RUN 3&#215;</text>
-    <text x="372" y="570" text-anchor="middle" fill="#8B949E" font-size="9.5">the same draft can score clean and slop</text>
-    <text x="372" y="586" text-anchor="middle" fill="#8B949E" font-size="9.5">in consecutive runs &#183; take the majority</text>
+    <text class="dx" x="372" y="552" text-anchor="middle" fill="#E5C07B" font-size="14" font-weight="700">BLIND JUDGE &#183; RUN 3&#215;</text>
+    <text class="dx" x="372" y="570" text-anchor="middle" fill="#8B949E" font-size="9.5">the same draft can score clean and slop</text>
+    <text class="dx" x="372" y="586" text-anchor="middle" fill="#8B949E" font-size="9.5">in consecutive runs &#183; take the majority</text>
   </g>
-  <text x="668" y="462" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 668 462)">MAJORITY SAYS REWRITE</text>
+  <text id="n-majority" class="dx" x="668" y="462" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 668 462)">MAJORITY SAYS REWRITE</text>
 
   <!-- human gate -->
-  <g filter="url(#v-glow)">
-    <rect x="222" y="630" width="300" height="68" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  <g id="n-gate" class="dx">
+    <g filter="url(#v-glow)">
+      <rect x="222" y="630" width="300" height="68" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="658" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+    <text class="dx" x="372" y="678" text-anchor="middle" fill="#8B949E" font-size="10">nothing publishes on a judge's say-so</text>
   </g>
-  <text x="372" y="658" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
-  <text x="372" y="678" text-anchor="middle" fill="#8B949E" font-size="10">nothing publishes on a judge's say-so</text>
 
   <!-- published -->
-  <g>
+  <g id="n-published" class="dx">
     <rect x="232" y="726" width="280" height="62" rx="9" fill="#1c2333" stroke="#98C379"/>
-    <text x="372" y="751" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">PUBLISHED</text>
-    <text x="372" y="769" text-anchor="middle" fill="#8B949E" font-size="10">and what it earned goes back in</text>
+    <text class="dx" x="372" y="751" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">PUBLISHED</text>
+    <text class="dx" x="372" y="769" text-anchor="middle" fill="#8B949E" font-size="10">and what it earned goes back in</text>
   </g>
-  <text x="104" y="470" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(-90 104 470)">WHAT SHIPPED REFINES THE EXEMPLARS</text>
+  <text id="n-refines" class="dx" x="104" y="470" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(-90 104 470)">WHAT SHIPPED REFINES THE EXEMPLARS</text>
 
-  <text x="372" y="830" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"It doesn't really capture taste."</text>
-  <text x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 07 &#183; THE BRAND VOICE CONTEXT LAYER</text>
+  <text class="dx" x="372" y="830" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"It doesn't really capture taste."</text>
+  <text class="dx" x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 07 &#183; THE BRAND VOICE CONTEXT LAYER</text>
 </svg>

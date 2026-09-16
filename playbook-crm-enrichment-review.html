@@ -99,7 +99,7 @@
 
   <!-- Mobile diagram hero -->
   <div class="pb-diagram-mobile" aria-hidden="true">
-    <img src="/assets/diagrams/crm-enrichment-review.svg?v=20260915" alt="" loading="eager">
+    <img src="/assets/diagrams/crm-enrichment-review.svg?v=20260916" alt="" loading="eager">
   </div>
 
   <!-- ============================================
@@ -166,46 +166,46 @@
       <p class="pb-eyebrow" id="how-it-works">How it works</p>
       <div class="pb-steps">
 
-        <details class="pb-step" open>
+        <details class="pb-step" open data-highlight="n-incomplete n-spend n-notyet">
           <summary><span class="pb-step-num">01</span>Gate the spend</summary>
           <div class="pb-step-body">
             <p>Enrich only records something downstream will use, capped per day. An enrichment nobody reads is a bill with no customer.</p>
             <p>Records that miss the gate queue rather than burn. The queue drains inside the cap, and queued records expire and re-qualify, because the reason a record qualified goes stale too.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-research">
           <summary><span class="pb-step-num">02</span>Research with citations</summary>
           <div class="pb-step-body">
             <p>The agent works public sources and every claim carries where it came from. Unknown stays unknown, never guessed.</p>
             <p>A cited claim can be audited in one click. An uncited claim is a rumor in a database.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-fresh n-stale">
           <summary><span class="pb-step-num">03</span>Date every fact</summary>
           <div class="pb-step-body">
             <p>A title verified last week beats one scraped last year. Every fact carries its date, stale evidence gets suppressed visibly instead of masquerading as current, and a pre-existing value with no date is treated as challengeable, because undated data lies.</p>
             <p><em>Watch for the field that is confidently wrong. Undated data does not age, it lies.</em></p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-proposed">
           <summary><span class="pb-step-num">04</span>Propose, never overwrite</summary>
           <div class="pb-step-body">
             <p><strong>Silent overwrites are how trust dies.</strong> The agent produces proposed changes. Old value, new value, source, side by side, with conflicts and unknowns rendered on the same screen and suppressed proposals shown collapsed, because a rule that says never silently resolved needs a place on the screen. The record itself has not moved yet.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-review n-updated">
           <summary><span class="pb-step-num">05</span>Review the changes</summary>
           <div class="pb-step-body">
             <p>A named person drains the review on a cadence, and approval takes seconds because the preview did the work. Approve-all covers high confidence only. A field class graduates to auto-apply only when the approval streak AND a passing golden-records score both hold, and consequential fields never do.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-audit n-prior">
           <summary><span class="pb-step-num">06</span>Keep it reversible</summary>
           <div class="pb-step-body">
             <p>Every applied change is logged with its prior state. Undo restores only when the current value still equals what the change wrote; a later human edit turns the undo into a conflict for a person, never a clobber. An enrichment pipeline you cannot undo is a pipeline you will eventually fear.</p>
           </div>
         </details>
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-golden">
           <summary><span class="pb-step-num">07</span>Evaluate on golden records</summary>
           <div class="pb-step-body">
             <p>Pick five accounts you know cold and write down the truth about them. Score the agent with the 5x arithmetic (correct minus five times wrong minus five times hallucinated, over findable fields) against a pass bar you wrote down first, re-score whenever the prompt, model, or sources change, and grow the set from your rejections, because failures point at the fixtures you need.</p>
@@ -221,8 +221,8 @@
 
     <!-- ================= RIGHT: the diagram ================= -->
     <aside class="pb-right" aria-label="Workflow diagram">
-      <div class="pb-right-sticky">
-        <img src="/assets/diagrams/crm-enrichment-review.svg?v=20260915" alt="CRM Enrichment With Change Review workflow diagram" style="max-height:100%; max-width:100%;">
+      <div class="pb-right-sticky" id="pb-diagram" data-diagram="/assets/diagrams/crm-enrichment-review.svg?v=20260916">
+        <img src="/assets/diagrams/crm-enrichment-review.svg?v=20260916" alt="CRM Enrichment With Change Review workflow diagram" style="max-height:100%; max-width:100%;">
       </div>
     </aside>
   </div>
@@ -238,7 +238,7 @@
     <div class="pb-grid">
       <a class="pb-card" href="/playbook-ai-ready-data.html">
         <div class="pb-card-viz">
-          <img src="/assets/diagrams/ai-ready-data.svg?v=20260915" alt="The AI-Ready Data Playbook workflow diagram" loading="lazy">
+          <img src="/assets/diagrams/ai-ready-data.svg?v=20260916" alt="The AI-Ready Data Playbook workflow diagram" loading="lazy">
         </div>
         <div class="pb-card-body">
           <h3>The AI-Ready Data Playbook</h3>
@@ -251,7 +251,7 @@
       </a>
       <a class="pb-card" href="/playbook-inbound-signup-routing.html">
         <div class="pb-card-viz">
-          <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260915" alt="Inbound Sign-Up Qualification and Routing workflow diagram" loading="lazy">
+          <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260916" alt="Inbound Sign-Up Qualification and Routing workflow diagram" loading="lazy">
         </div>
         <div class="pb-card-body">
           <h3>Inbound Sign-Up Qualification and Routing</h3>
@@ -381,6 +381,55 @@
           err.textContent = 'That did not go through. Try again, or email us and we will send it by hand.';
         });
       });
+    })();
+  </script>
+
+  <!-- Diagram focus: opening a step illuminates the part of the system it describes.
+       The SVG is fetched from the same file the <img> uses, so there is still one
+       source on disk; injecting it only makes the nodes addressable. -->
+  <script>
+    (function () {
+      var host = document.getElementById('pb-diagram');
+      if (!host || !host.dataset.diagram) return;
+      var DESKTOP = window.matchMedia('(min-width: 981px)');
+      var svg = null, stack = [];
+
+      function paint() {
+        if (!svg) return;
+        var current = stack[stack.length - 1];
+        svg.querySelectorAll('.dx.is-on').forEach(function (n) { n.classList.remove('is-on'); });
+        if (!current || !DESKTOP.matches) { svg.classList.remove('is-focused'); return; }
+        var found = 0;
+        current.dataset.highlight.split(/\s+/).forEach(function (id) {
+          var node = svg.getElementById(id);
+          if (node) { node.classList.add('is-on'); found++; }
+        });
+        svg.classList.toggle('is-focused', found > 0);
+      }
+
+      fetch(host.dataset.diagram)
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(function (markup) {
+          host.innerHTML = markup;
+          svg = host.querySelector('svg');
+          if (!svg) return;
+          svg.setAttribute('aria-hidden', 'true');
+          // Step 01 ships open so the column is not a wall of closed bars, but that
+          // is the page's choice, not the reader's. Seeding the stack from it would
+          // dim the diagram before anyone touched anything, and the first look at a
+          // workflow should be the whole workflow. Focus starts on the first toggle.
+          document.querySelectorAll('.pb-step[data-highlight]').forEach(function (step) {
+            step.addEventListener('toggle', function () {
+              stack = stack.filter(function (s) { return s !== step; });
+              if (step.open) stack.push(step);
+              paint();
+            });
+          });
+          paint();
+        })
+        .catch(function () { /* the <img> fallback is already on screen */ });
+
+      DESKTOP.addEventListener('change', paint);
     })();
   </script>
 </body>
