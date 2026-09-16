@@ -77,6 +77,14 @@ async function verifyTurnstile(token, ip) {
   // Fail open ONLY when the key was never configured, so shipping the guard
   // cannot take the live form down before the key is set in Vercel. An
   // invalid or missing token with a key present is always rejected.
+  //
+  // TURNSTILE_SECRET_KEY is stored as a Vercel Sensitive variable, so
+  // `vercel env pull` writes it as an EMPTY STRING while the beehiiv values
+  // come back intact. That is by design and is not a misconfiguration. Do not
+  // re-diagnose it from a pulled .env; verified 2026-09-16 against production,
+  // where a tokenless request returned 403 rather than the 200 an empty
+  // secret would have produced here, a fake token returned 403 (so siteverify
+  // really ran), and a real browser token returned 200.
   if (!secret) {
     console.warn('[guard] TURNSTILE_SECRET_KEY unset, challenge gate skipped');
     return { ok: true, skipped: true };
