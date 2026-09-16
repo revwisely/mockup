@@ -45,6 +45,14 @@
     }
     state.widgetId = global.turnstile.render(state.mount, {
       sitekey: SITE_KEY,
+      // Hidden for every visitor Cloudflare can clear silently, and shown as
+      // a checkbox only for the minority who need to interact. Invisible mode
+      // has no interactive path at all, so a flagged but genuine visitor was
+      // simply unable to subscribe. This keeps the clean card without that
+      // dead end. Theme and size below only matter on the occasions it shows.
+      appearance: 'interaction-only',
+      theme: 'dark',
+      size: 'flexible',
       callback: function (token) { state.token = token; },
       // Tokens expire. Invisible mode gives the visitor no widget to notice
       // that in, so request a fresh challenge immediately rather than letting
@@ -82,16 +90,13 @@
     if (configured()) {
       // Mounted after the form rather than inside it. .newsletter-form is a
       // flex row capped at 440px, so a child here became a third flex item
-      // that overflowed the card. The widget is configured Invisible in
-      // Cloudflare, so nothing renders and the container takes no layout
-      // space, but Turnstile still needs a real element to render into.
-      // Switching back to a visible mode means giving this a width and a top
-      // margin again. Turnstile's own hidden input lands outside the form
-      // with this arrangement, which is fine: the token comes from the
-      // render callback, not from a form field.
+      // that overflowed the card. Sized rather than collapsed, because with
+      // interaction-only the widget can appear: it is empty and zero-height
+      // for almost everyone, and right-aligned under the form when shown.
       var rail = document.createElement('div');
-      rail.style.cssText = 'height:0;overflow:hidden;';
+      rail.style.cssText = 'max-width:440px;margin:12px auto 0;display:flex;justify-content:flex-end;';
       var mount = document.createElement('div');
+      mount.style.cssText = 'width:100%;max-width:300px;';
       rail.appendChild(mount);
       form.parentNode.insertBefore(rail, form.nextSibling);
       state.mount = mount;

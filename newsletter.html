@@ -211,7 +211,7 @@
   <script src="js/main.js"></script>
 
   <!-- Newsletter subscribe handler -->
-  <script src="js/form-guard.js?v=20260916e"></script>
+  <script src="js/form-guard.js?v=20260916f"></script>
   <script>
     (function() {
       var form = document.getElementById('newsletter-form');
@@ -234,7 +234,7 @@
         if (!email) return;
 
         if (MagnetizFormGuard.awaitingChallenge(guard)) {
-          fail('Still verifying. Give it a second and try again.');
+          fail('Verifying you are human. One moment, then press Subscribe again.');
           return;
         }
 
