@@ -340,3 +340,12 @@ button.pb-filter.is-active { color: var(--accent-blue); border-color: var(--acce
 button.pb-filter:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
 .pb-hidden { display: none; }
 .pb-empty { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-muted); padding: 40px 0; text-align: center; }
+
+/* ---------- diagram focus (opening a step illuminates its part) ---------- */
+.pb-right-sticky svg .dx { transition: opacity .18s ease; }
+.pb-right-sticky svg.is-focused .dx { opacity: .28; }
+.pb-right-sticky svg.is-focused .dx.is-on { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pb-right-sticky svg .dx { transition: none; }
+}

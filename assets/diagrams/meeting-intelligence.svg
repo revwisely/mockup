@@ -19,7 +19,7 @@
   <rect width="745" height="880" fill="url(#dots)"/>
 
   <!-- ===================== wires ===================== -->
-  <g stroke="#30363d" stroke-width="1.5" fill="none">
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
     <!-- call -> transcript -> extraction -->
     <path d="M360,86 V116" marker-end="url(#arr)" stroke="#4A9ECE" class="mi-main"/>
     <path d="M360,178 V208" marker-end="url(#arr)" stroke="#4A9ECE" class="mi-main"/>
@@ -39,7 +39,7 @@
     <path d="M446,398 V446" marker-end="url(#arrdim)" stroke="#C678DD" stroke-dasharray="4 4"/>
     <path d="M616,398 V446" marker-end="url(#arrdim)" stroke="#E06C75" stroke-dasharray="4 4"/>
     <!-- tier rules -> auto / review -->
-    <path d="M130,516 V760 " stroke="#98C379"/>
+    <path d="M98,516 V760" stroke="#98C379"/>
     <path d="M250,516 V546" marker-end="url(#arr)" stroke="#4A9ECE" class="mi-main"/>
     <!-- human gate -> outputs bus -->
     <path d="M250,614 V700" stroke="#4A9ECE" class="mi-main"/>
@@ -52,28 +52,28 @@
   </g>
 
   <!-- packet animation along the spine -->
-  <circle r="3.2" fill="#4A9ECE" filter="url(#glow)">
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#glow)">
     <animateMotion dur="7s" repeatCount="indefinite"
-      path="M360,55 V312 H190 V516 H250 V700 H360 V730"/>
+      path="M360,55 V312 H104 V424 H190 V516 H250 V700 H360 V730"/>
   </circle>
 
   <!-- ===================== nodes ===================== -->
   <!-- 1. recorded call -->
-  <g>
+  <g id="n-call" class="dx">
     <rect x="240" y="34" width="240" height="52" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="360" y="56" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">RECORDED CALL</text>
     <text x="360" y="74" text-anchor="middle" fill="#8B949E" font-size="10">gemini &#183; zoom &#183; fireflies</text>
   </g>
 
   <!-- 2. transcript -->
-  <g>
+  <g id="n-transcript" class="dx">
     <rect x="220" y="116" width="280" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="360" y="140" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">TRANSCRIPT OR NOTES</text>
     <text x="360" y="158" text-anchor="middle" fill="#8B949E" font-size="10">notes are secondhand &#8594; confidence drops</text>
   </g>
 
   <!-- 3. extraction -->
-  <g>
+  <g id="n-extraction" class="dx">
     <rect x="220" y="208" width="280" height="78" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
     <text x="360" y="234" text-anchor="middle" fill="#E6EDF3" font-size="15" font-weight="700">EXTRACTION</text>
     <text x="360" y="254" text-anchor="middle" fill="#4A9ECE" font-size="11">no quote, no item</text>
@@ -81,77 +81,79 @@
   </g>
 
   <!-- 4. routes -->
-  <text x="360" y="305" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">ROUTED BY LANGUAGE, NEVER TOPIC</text>
-  <g>
+  <text id="n-routelabel" class="dx" x="360" y="305" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">ROUTED BY LANGUAGE, NEVER TOPIC</text>
+  <g id="n-committed" class="dx">
     <rect x="34" y="336" width="140" height="62" rx="9" fill="#1c2333" stroke="#98C379"/>
     <text x="104" y="361" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">COMMITTED</text>
     <text x="104" y="379" text-anchor="middle" fill="#8B949E" font-size="9.5">an owner and a yes</text>
   </g>
-  <g>
+  <g id="n-scoped" class="dx">
     <rect x="204" y="336" width="140" height="62" rx="9" fill="#1c2333" stroke="#E5C07B"/>
     <text x="274" y="358" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">SCOPED ASK</text>
     <text x="274" y="374" text-anchor="middle" fill="#8B949E" font-size="8.5">agreed, out of scope</text>
     <text x="274" y="387" text-anchor="middle" fill="#8B949E" font-size="8.5">proceeds with a note</text>
   </g>
-  <g>
+  <g id="n-exploration" class="dx">
     <rect x="376" y="336" width="140" height="62" rx="9" fill="#1c2333" stroke="#C678DD"/>
     <text x="446" y="361" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">EXPLORATION</text>
     <text x="446" y="379" text-anchor="middle" fill="#8B949E" font-size="9.5">no owner, no date</text>
   </g>
-  <g>
+  <g id="n-nongoal" class="dx">
     <rect x="546" y="336" width="140" height="62" rx="9" fill="#1c2333" stroke="#E06C75"/>
     <text x="616" y="361" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NON-GOAL</text>
     <text x="616" y="379" text-anchor="middle" fill="#8B949E" font-size="9.5">scoped out before</text>
   </g>
 
   <!-- 5. tier rules / parking / re-decide -->
-  <g>
+  <g id="n-tier" class="dx">
     <rect x="70" y="446" width="240" height="70" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
     <text x="190" y="470" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">TIER RULES</text>
     <text x="190" y="488" text-anchor="middle" fill="#8B949E" font-size="10">auto | review &#183; stricter wins</text>
     <text x="190" y="504" text-anchor="middle" fill="#8B949E" font-size="10">their items &#8594; waiting-on, never run</text>
   </g>
-  <g>
+  <g id="n-parking" class="dx">
     <rect x="376" y="446" width="140" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="446" y="468" text-anchor="middle" fill="#C678DD" font-size="11" font-weight="700">PARKING LOT</text>
     <text x="446" y="486" text-anchor="middle" fill="#8B949E" font-size="9.5">expansion signal</text>
   </g>
-  <g>
+  <g id="n-redecide" class="dx">
     <rect x="546" y="446" width="140" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="616" y="468" text-anchor="middle" fill="#E06C75" font-size="11" font-weight="700">RE-DECIDE</text>
     <text x="616" y="486" text-anchor="middle" fill="#8B949E" font-size="9.5">a person re-opens it</text>
   </g>
 
   <!-- auto path label -->
-  <text x="118" y="640" text-anchor="middle" fill="#98C379" font-size="10" transform="rotate(-90 118 640)">AUTO &#183; after graduation</text>
+  <text id="n-auto" class="dx" x="84" y="640" text-anchor="middle" fill="#98C379" font-size="10" transform="rotate(-90 84 640)">AUTO &#183; after graduation</text>
 
   <!-- 6. human gate -->
-  <g filter="url(#glow)">
-    <rect x="120" y="546" width="260" height="68" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+  <g id="n-gate" class="dx">
+    <g filter="url(#glow)">
+      <rect x="120" y="546" width="260" height="68" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text x="250" y="574" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+    <text x="250" y="594" text-anchor="middle" fill="#8B949E" font-size="10">customer-facing waits here, always</text>
   </g>
-  <text x="250" y="574" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
-  <text x="250" y="594" text-anchor="middle" fill="#8B949E" font-size="10">customer-facing waits here, always</text>
 
   <!-- eval loop label -->
-  <text x="462" y="540" text-anchor="start" fill="#484F58" font-size="9">promotion is a human act</text>
+  <text id="n-evalnote" class="dx" x="462" y="540" text-anchor="start" fill="#484F58" font-size="9">promotion is a human act</text>
 
   <!-- 7. outputs -->
-  <text x="360" y="694" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">FILED WHERE THE TEAM ALREADY WORKS</text>
-  <g>
+  <text id="n-outputslabel" class="dx" x="360" y="694" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">FILED WHERE THE TEAM ALREADY WORKS</text>
+  <g id="n-crm" class="dx">
     <rect x="50" y="724" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="140" y="749" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">CRM UPDATE</text>
     <text x="140" y="767" text-anchor="middle" fill="#8B949E" font-size="9.5">drafted, with receipts</text>
   </g>
-  <g>
+  <g id="n-task" class="dx">
     <rect x="270" y="724" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="360" y="749" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">TASK + QUOTE</text>
     <text x="360" y="767" text-anchor="middle" fill="#8B949E" font-size="9.5">owner, size, source</text>
   </g>
-  <g>
+  <g id="n-slack" class="dx">
     <rect x="490" y="724" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="580" y="749" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">SLACK BRIEF</text>
     <text x="580" y="767" text-anchor="middle" fill="#8B949E" font-size="9.5">read in a minute</text>
   </g>
 
-  <text x="360" y="836" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 01 &#183; MEETING INTELLIGENCE</text>
+  <text class="dx" x="360" y="836" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 01 &#183; MEETING INTELLIGENCE</text>
 </svg>

@@ -28,7 +28,7 @@
   <!-- Custom Terminal CSS -->
   <link rel="stylesheet" href="/css/terminal.css">
   <link rel="stylesheet" href="/css/blog-post.css?v=20260913">
-  <link rel="stylesheet" href="/css/playbooks.css?v=20260913">
+  <link rel="stylesheet" href="/css/playbooks.css?v=20260916">
 
   <!-- Calendly -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -168,7 +168,7 @@
       <p class="pb-eyebrow" id="how-it-works">How it works</p>
       <div class="pb-steps">
 
-        <details class="pb-step" open>
+        <details class="pb-step" open data-highlight="n-call n-transcript">
           <summary><span class="pb-step-num">01</span>Capture the call</summary>
           <div class="pb-step-body">
             <p>Any recorder that produces a transcript works. Gemini meeting notes, Zoom transcripts, Fireflies.</p>
@@ -177,7 +177,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-extraction">
           <summary><span class="pb-step-num">02</span>Extract with receipts</summary>
           <div class="pb-step-body">
             <p><strong>No quote, no item.</strong> The workflow extracts what was said. It never invents. Every item carries the verbatim words that created it, so anyone can audit any entry back to the source in one click.</p>
@@ -196,7 +196,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-routelabel n-committed n-scoped n-exploration n-nongoal n-parking n-redecide">
           <summary><span class="pb-step-num">03</span>Route what was said</summary>
           <div class="pb-step-body">
             <p>Meetings wander. The workflow judges two things separately for every item, because they are different facts. Was it agreed, and is it inside the agreed scope. The route follows from the pair.</p>
@@ -211,7 +211,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-committed n-scoped n-tier">
           <summary><span class="pb-step-num">04</span>Fork by owner</summary>
           <div class="pb-step-body">
             <p>Owner is the first fork. Items owned by your side are candidates for execution. Items owned by the other side are tracked as waiting-on entries and never executed.</p>
@@ -219,7 +219,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-tier">
           <summary><span class="pb-step-num">05</span>Apply the tier rules</summary>
           <div class="pb-step-body">
             <p><strong>Rules decide the tier. The stricter rule always wins.</strong> Reversible, scoped, testable work is eligible to run unattended. Everything else waits for review.</p>
@@ -229,7 +229,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-outputslabel n-crm n-task n-slack">
           <summary><span class="pb-step-num">06</span>File and brief</summary>
           <div class="pb-step-body">
             <p>Approved output lands where your team already works. Record updates drafted into the CRM. Tasks with an owner, a size, and the source quote. A channel brief a teammate reads in a minute.</p>
@@ -238,7 +238,7 @@
           </div>
         </details>
 
-        <details class="pb-step">
+        <details class="pb-step" data-highlight="n-gate n-auto n-evalnote">
           <summary><span class="pb-step-num">07</span>Graduate autonomy</summary>
           <div class="pb-step-body">
             <p><strong>Supervised first. Graduation is measured, never assumed.</strong> At the start, a person reviews every extraction before anything writes to a live system.</p>
@@ -255,8 +255,8 @@
 
     <!-- ================= RIGHT: the diagram ================= -->
     <aside class="pb-right" aria-label="Workflow diagram">
-      <div class="pb-right-sticky">
-        <img src="/assets/diagrams/meeting-intelligence.svg?v=20260915" alt="Meeting intelligence workflow diagram" style="max-height:100%; max-width:100%;">
+      <div class="pb-right-sticky" id="pb-diagram" data-diagram="/assets/diagrams/meeting-intelligence.svg?v=20260916">
+        <img src="/assets/diagrams/meeting-intelligence.svg?v=20260916" alt="Meeting intelligence workflow diagram" style="max-height:100%; max-width:100%;">
       </div>
     </aside>
   </div>
@@ -383,6 +383,52 @@
   <script src="/js/linkedin-insight.js" async></script>
   <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
 
+
+  <!-- Diagram focus: opening a step illuminates the part of the system it describes.
+       The SVG is fetched from the same file the <img> uses, so there is still one
+       source on disk; injecting it only makes the nodes addressable. -->
+  <script>
+    (function () {
+      var host = document.getElementById('pb-diagram');
+      if (!host || !host.dataset.diagram) return;
+      var DESKTOP = window.matchMedia('(min-width: 981px)');
+      var svg = null, stack = [];
+
+      function paint() {
+        if (!svg) return;
+        var current = stack[stack.length - 1];
+        svg.querySelectorAll('.dx.is-on').forEach(function (n) { n.classList.remove('is-on'); });
+        if (!current || !DESKTOP.matches) { svg.classList.remove('is-focused'); return; }
+        var found = 0;
+        current.dataset.highlight.split(/\s+/).forEach(function (id) {
+          var node = svg.getElementById(id);
+          if (node) { node.classList.add('is-on'); found++; }
+        });
+        svg.classList.toggle('is-focused', found > 0);
+      }
+
+      fetch(host.dataset.diagram)
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(function (markup) {
+          host.innerHTML = markup;
+          svg = host.querySelector('svg');
+          if (!svg) return;
+          svg.setAttribute('aria-hidden', 'true');
+          document.querySelectorAll('.pb-step[data-highlight]').forEach(function (step) {
+            if (step.open) stack.push(step);
+            step.addEventListener('toggle', function () {
+              stack = stack.filter(function (s) { return s !== step; });
+              if (step.open) stack.push(step);
+              paint();
+            });
+          });
+          paint();
+        })
+        .catch(function () { /* the <img> fallback is already on screen */ });
+
+      DESKTOP.addEventListener('change', paint);
+    })();
+  </script>
   <!-- Kit request -->
   <script>
     (function () {
