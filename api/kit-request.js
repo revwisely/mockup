@@ -14,6 +14,24 @@ import { guardSubmission } from './_lib/guard.js';
 const KNOWN_PLAYBOOKS = new Set(['meeting-intelligence', 'stalled-build-handoff', 'ai-ready-data', 'inbound-signup-routing', 'reply-triage', 'crm-enrichment-review', 'brand-voice-context-layer']);
 const KNOWN_SOURCES = new Set(['linkedin', 'newsletter', 'search', 'ai-assistant', 'colleague', 'other']);
 
+// beehiiv's "Added by API" trigger does NOT mean "a subscriber was created
+// through the subscriptions API". It means this automation was named in a call
+// to its own journeys endpoint. Subscribing alone enrolls nobody, so the kit
+// email only sends because of the second call below.
+//
+// BEEHIIV_KIT_AUTOMATIONS maps each playbook slug to its automation id:
+//   {"meeting-intelligence":"aut_...","reply-triage":"aut_...", ...}
+// The ids only exist once the automations are built in beehiiv, so this is an
+// env var rather than a constant.
+const KIT_AUTOMATIONS = (() => {
+  try {
+    return JSON.parse(process.env.BEEHIIV_KIT_AUTOMATIONS || '{}');
+  } catch {
+    console.error('[kit-request] BEEHIIV_KIT_AUTOMATIONS is not valid JSON');
+    return {};
+  }
+})();
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -41,6 +59,16 @@ export default async function handler(req, res) {
   const API_KEY = process.env.BEEHIIV_API_KEY;
   const PUB_ID = process.env.BEEHIIV_PUB_ID;
   if (!API_KEY || !PUB_ID) {
+    return res.status(500).json({ error: 'Server configuration error' });
+  }
+
+  // Checked BEFORE subscribing, on purpose. Without an automation id there is
+  // no kit, and a subscriber created here would be someone we took an address
+  // from and sent nothing to. Failing loudly also means a missing id shows up
+  // as a broken form the day it ships rather than as silence nobody notices.
+  const automationId = KIT_AUTOMATIONS[playbook];
+  if (!automationId) {
+    console.error(`[kit-request] no automation id configured for ${playbook}`);
     return res.status(500).json({ error: 'Server configuration error' });
   }
 
@@ -72,6 +100,39 @@ export default async function handler(req, res) {
       const err = await response.json().catch(() => ({}));
       return res.status(response.status).json({
         error: err.message || 'Kit request failed'
+      });
+    }
+
+    // Enrol into this playbook's automation, which is what actually sends the
+    // kit. Awaited rather than fire-and-forget, because the form promises an
+    // inbox and this call is the promise.
+    const created = await response.json().catch(() => ({}));
+    const enrolment = await fetch(
+      `https://api.beehiiv.com/v2/publications/${PUB_ID}/automations/${automationId}/journeys`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${API_KEY}`
+        },
+        // Both `subscription_id` and `email` are accepted. The id is exact and
+        // avoids a second lookup, so prefer it and fall back to the address.
+        body: JSON.stringify(
+          created?.data?.id ? { subscription_id: created.data.id } : { email }
+        )
+      }
+    );
+
+    if (!enrolment.ok) {
+      // They are subscribed but nothing will arrive, so saying "check your
+      // inbox" here would be a lie. The body goes to the log because the
+      // address and the playbook are what let someone send the kit by hand.
+      const detail = await enrolment.text().catch(() => '');
+      console.error(
+        `[kit-request] enrolment failed ${enrolment.status} for ${playbook} / ${email}: ${detail.slice(0, 200)}`
+      );
+      return res.status(502).json({
+        error: 'We could not start your kit delivery. Try again, or email us and we will send it by hand.'
       });
     }
 
