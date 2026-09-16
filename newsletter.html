@@ -211,17 +211,32 @@
   <script src="js/main.js"></script>
 
   <!-- Newsletter subscribe handler -->
+  <script src="js/form-guard.js"></script>
   <script>
     (function() {
       var form = document.getElementById('newsletter-form');
+      if (!form) return;
       var input = document.getElementById('newsletter-email');
       var btn = document.getElementById('newsletter-btn');
       var status = document.getElementById('newsletter-status');
+      var guard = MagnetizFormGuard.arm(form);
+
+      function fail(message) {
+        status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">' + message + '</p>';
+        btn.disabled = false;
+        btn.textContent = 'Subscribe';
+        MagnetizFormGuard.reset(guard);
+      }
 
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         var email = input.value.trim();
         if (!email) return;
+
+        if (MagnetizFormGuard.awaitingChallenge(guard)) {
+          fail('Still verifying. Give it a second and try again.');
+          return;
+        }
 
         btn.disabled = true;
         btn.textContent = 'Subscribing...';
@@ -230,23 +245,19 @@
         fetch('/api/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email })
+          body: JSON.stringify(MagnetizFormGuard.payload(guard, { email: email }))
         })
         .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
         .then(function(result) {
           if (result.ok) {
-            form.innerHTML = '<p class="newsletter-success"><span class="newsletter-success-icon">&#10003;</span> You\'re in. Look for the newsletter every Thursday.</p>';
+            form.innerHTML = '<p class="newsletter-success"><span class="newsletter-success-icon">&#10003;</span> Almost there. Check your inbox and confirm to finish subscribing.</p>';
             if (window.lintrk) window.lintrk('track', { conversion_id: 28668116 });
           } else {
-            status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">' + (result.data.error || 'Something went wrong. Please try again.') + '</p>';
-            btn.disabled = false;
-            btn.textContent = 'Subscribe';
+            fail(result.data.error || 'Something went wrong. Please try again.');
           }
         })
         .catch(function() {
-          status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">Connection error. Please try again.</p>';
-          btn.disabled = false;
-          btn.textContent = 'Subscribe';
+          fail('Connection error. Please try again.');
         });
       });
     })();
