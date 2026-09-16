@@ -34,23 +34,22 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           email: gate.email,
           // A returning subscriber who had unsubscribed must be able to come
-          // back. Setting this false broke exactly that: beehiiv refuses the
-          // reactivation, no pending confirmation is created, and the link in
-          // the email lands them on a generic subscribe page having already
-          // signed up. Safe to allow, because double opt-in below means a
-          // reactivation still has to be confirmed from the real inbox, so a
-          // bot replaying an unsubscribed address can reach pending and no
-          // further.
+          // back. Setting this false blocked exactly that: beehiiv refuses the
+          // reactivation, so the confirmation link had nothing to complete and
+          // dropped them on a generic subscribe page. Note that reactivation
+          // is immediate and does NOT require confirmation, verified by
+          // reproduction, so the gates in _lib/guard.js are the only thing
+          // standing between a replayed address and an active subscriber.
           reactivate_existing: true,
           // No welcome email is configured on this publication, so this flag
-          // was always inert. Left off rather than implying one exists. The
-          // double opt-in confirmation below is what a new subscriber gets.
+          // was always inert. Left off rather than implying one exists.
           send_welcome_email: false,
-          // Forces double opt-in at the API level, so an address that never
-          // confirms never becomes an active subscriber and never receives
-          // mail from our sending domain. Set here rather than relying only
-          // on the publication toggle so the protection travels with the code.
-          double_opt_override: 'on',
+          // No double_opt_override here on purpose. It was set while the form
+          // had no challenge, and it cost more than it bought: beehiiv's
+          // post-confirmation redirect is only configurable in their new
+          // website builder, which this publication has not migrated to, so
+          // every confirming subscriber landed on a page asking them to sign
+          // up a second time. Turnstile now does that job at the door.
           utm_source: 'magnetiz_website',
           utm_medium: 'newsletter_page'
         })

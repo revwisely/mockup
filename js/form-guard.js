@@ -12,7 +12,7 @@
 
   // Cloudflare dashboard -> Turnstile -> your widget -> Site Key.
   // The secret key is its pair and belongs in Vercel as TURNSTILE_SECRET_KEY.
-  var SITE_KEY = 'REPLACE_WITH_TURNSTILE_SITE_KEY';
+  var SITE_KEY = '0x4AAAAAAE5HlM92NNh_w577';
 
   var HONEYPOT_FIELD = 'company_website';
   var TURNSTILE_SRC = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=__magnetizTurnstileReady';
