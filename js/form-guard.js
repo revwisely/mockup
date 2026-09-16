@@ -45,14 +45,16 @@
     }
     state.widgetId = global.turnstile.render(state.mount, {
       sitekey: SITE_KEY,
-      // The site is dark; 'auto' would follow the visitor's OS and render a
-      // white box on a dark card. 'flexible' fills the mount width so the
-      // widget lines up with the form above it instead of sitting at whatever
-      // fixed width Cloudflare defaults to.
-      theme: 'dark',
-      size: 'flexible',
       callback: function (token) { state.token = token; },
-      'expired-callback': function () { state.token = ''; },
+      // Tokens expire. Invisible mode gives the visitor no widget to notice
+      // that in, so request a fresh challenge immediately rather than letting
+      // someone who read the page for a while get rejected on submit.
+      'expired-callback': function () {
+        state.token = '';
+        if (global.turnstile && state.widgetId !== null) {
+          try { global.turnstile.reset(state.widgetId); } catch (e) {}
+        }
+      },
       'error-callback': function () { state.token = ''; }
     });
   }
@@ -78,19 +80,18 @@
     state.trap = trap;
 
     if (configured()) {
-      // Mounted AFTER the form, not inside it. .newsletter-form is a flex row
-      // with a 440px cap, so appending the widget made it a third flex item
-      // that overflowed the card and squeezed the input. Turnstile's own
-      // hidden input would land outside the form this way, which does not
-      // matter because the token is read from the render callback below.
-      // A 440px rail matching the form, with the widget pushed to its right
-      // edge and capped at 300px. Flexible sizing then fills that cap, so the
-      // widget is small and right-aligned on desktop but still shrinks with
-      // the card on a phone instead of overflowing a fixed 300px.
+      // Mounted after the form rather than inside it. .newsletter-form is a
+      // flex row capped at 440px, so a child here became a third flex item
+      // that overflowed the card. The widget is configured Invisible in
+      // Cloudflare, so nothing renders and the container takes no layout
+      // space, but Turnstile still needs a real element to render into.
+      // Switching back to a visible mode means giving this a width and a top
+      // margin again. Turnstile's own hidden input lands outside the form
+      // with this arrangement, which is fine: the token comes from the
+      // render callback, not from a form field.
       var rail = document.createElement('div');
-      rail.style.cssText = 'max-width:440px;margin:12px auto 0;display:flex;justify-content:flex-end;';
+      rail.style.cssText = 'height:0;overflow:hidden;';
       var mount = document.createElement('div');
-      mount.style.cssText = 'width:100%;max-width:300px;';
       rail.appendChild(mount);
       form.parentNode.insertBefore(rail, form.nextSibling);
       state.mount = mount;
