@@ -909,6 +909,7 @@
   <script src="js/main.js"></script>
   <script src="js/maestro.js"></script>
   <!-- Homepage newsletter subscribe handler -->
+  <script src="js/form-guard.js?v=20260916f"></script>
   <script>
     (function() {
       var form = document.getElementById('homepage-newsletter-form');
@@ -916,11 +917,24 @@
       var input = document.getElementById('homepage-newsletter-email');
       var btn = document.getElementById('homepage-newsletter-btn');
       var status = document.getElementById('homepage-newsletter-status');
+      var guard = MagnetizFormGuard.arm(form);
+
+      function fail(message) {
+        status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">' + message + '</p>';
+        btn.disabled = false;
+        btn.textContent = 'Subscribe';
+        MagnetizFormGuard.reset(guard);
+      }
 
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         var email = input.value.trim();
         if (!email) return;
+
+        if (MagnetizFormGuard.awaitingChallenge(guard)) {
+          fail('Verifying you are human. One moment, then press Subscribe again.');
+          return;
+        }
 
         btn.disabled = true;
         btn.textContent = 'Subscribing...';
@@ -929,22 +943,19 @@
         fetch('/api/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email })
+          body: JSON.stringify(MagnetizFormGuard.payload(guard, { email: email }))
         })
         .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
         .then(function(result) {
           if (result.ok) {
             form.innerHTML = '<p class="newsletter-success"><span class="newsletter-success-icon">&#10003;</span> You\'re in. Look for the newsletter every Thursday.</p>';
+            MagnetizFormGuard.teardown(guard);
           } else {
-            status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">' + (result.data.error || 'Something went wrong.') + '</p>';
-            btn.disabled = false;
-            btn.textContent = 'Subscribe';
+            fail(result.data.error || 'Something went wrong.');
           }
         })
         .catch(function() {
-          status.innerHTML = '<p style="color:var(--accent-coral);font-size:13px;">Connection error. Please try again.</p>';
-          btn.disabled = false;
-          btn.textContent = 'Subscribe';
+          fail('Connection error. Please try again.');
         });
       });
     })();
