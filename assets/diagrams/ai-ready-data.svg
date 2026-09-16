@@ -118,7 +118,7 @@
   <text x="373" y="628" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; RE-MEASURE GATE &#9608;&#9608;</text>
   <text x="373" y="648" text-anchor="middle" fill="#8B949E" font-size="10">the before-number must move</text>
   <text x="373" y="662" text-anchor="middle" fill="#8B949E" font-size="10">before any AI reads a record</text>
-  <text x="700" y="522" text-anchor="middle" fill="#484F58" font-size="10" transform="rotate(90 700 522)">NUMBER DIDN'T MOVE &#183; BACK TO WHICHEVER FIX IT NAMES</text>
+  <text x="722" y="522" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(90 722 522)">NUMBER DIDN'T MOVE &#183; BACK TO WHICHEVER FIX IT NAMES</text>
 
   <!-- clean -->
   <g>

@@ -86,7 +86,7 @@
     <text x="372" y="466" text-anchor="middle" fill="#8B949E" font-size="9.5">the mechanical tells, every time</text>
     <text x="372" y="482" text-anchor="middle" fill="#8B949E" font-size="9.5">fails loud, before a person reads a word</text>
   </g>
-  <text x="608" y="412" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 608 412)">RULE BROKEN</text>
+  <text x="616" y="412" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 616 412)">RULE BROKEN</text>
 
   <!-- judge -->
   <g>
@@ -95,7 +95,7 @@
     <text x="372" y="570" text-anchor="middle" fill="#8B949E" font-size="9.5">the same draft can score clean and slop</text>
     <text x="372" y="586" text-anchor="middle" fill="#8B949E" font-size="9.5">in consecutive runs &#183; take the majority</text>
   </g>
-  <text x="660" y="462" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 660 462)">MAJORITY SAYS REWRITE</text>
+  <text x="668" y="462" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 668 462)">MAJORITY SAYS REWRITE</text>
 
   <!-- human gate -->
   <g filter="url(#v-glow)">
@@ -110,7 +110,7 @@
     <text x="372" y="751" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">PUBLISHED</text>
     <text x="372" y="769" text-anchor="middle" fill="#8B949E" font-size="10">and what it earned goes back in</text>
   </g>
-  <text x="110" y="470" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(-90 110 470)">WHAT SHIPPED REFINES THE EXEMPLARS</text>
+  <text x="104" y="470" text-anchor="middle" fill="#484F58" font-size="9.5" transform="rotate(-90 104 470)">WHAT SHIPPED REFINES THE EXEMPLARS</text>
 
   <text x="372" y="830" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"It doesn't really capture taste."</text>
   <text x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 07 &#183; THE BRAND VOICE CONTEXT LAYER</text>
