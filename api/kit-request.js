@@ -3,6 +3,13 @@
 // automation conditions on `playbook`), and optionally forwards the event to
 // the GTM engine for lead + content_interaction recording.
 // Delivery email comes from the beehiiv automation, so no welcome email here.
+//
+// Same guard as subscribe.js, and for the same reason. This endpoint writes to
+// the same beehiiv publication, so an unprotected form here would refill the
+// list the newsletter guard was written to clean. Seven public forms point at
+// it, which is seven times the surface the bots already found once.
+
+import { guardSubmission } from './_lib/guard.js';
 
 const KNOWN_PLAYBOOKS = new Set(['meeting-intelligence', 'stalled-build-handoff', 'ai-ready-data', 'inbound-signup-routing', 'reply-triage', 'crm-enrichment-review', 'brand-voice-context-layer']);
 const KNOWN_SOURCES = new Set(['linkedin', 'newsletter', 'search', 'ai-assistant', 'colleague', 'other']);
@@ -12,13 +19,23 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, source, playbook } = req.body || {};
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return res.status(400).json({ error: 'Valid email is required' });
-  }
+  const { source, playbook } = req.body || {};
+
+  // Playbook first: an unknown slug is a malformed request, not a bot, and
+  // saying so plainly costs nothing. Everything after this is the shared gate.
   if (!KNOWN_PLAYBOOKS.has(playbook)) {
     return res.status(400).json({ error: 'Unknown playbook' });
   }
+
+  const gate = await guardSubmission(req, { email: req.body?.email });
+  if (!gate.ok) {
+    // Log the specific gate for triage, return only the generic message so a
+    // bot cannot tune against our checks.
+    console.warn(`[kit-request] rejected: ${gate.reason}`);
+    return res.status(gate.status).json({ error: gate.error });
+  }
+
+  const email = gate.email;
   const safeSource = KNOWN_SOURCES.has(source) ? source : 'other';
 
   const API_KEY = process.env.BEEHIIV_API_KEY;
