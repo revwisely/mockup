@@ -4,6 +4,8 @@
 // the GTM engine for lead + content_interaction recording.
 // Delivery email comes from the beehiiv automation, so no welcome email here.
 
+import { guardSubmission } from './_lib/guard.js';
+
 const KNOWN_PLAYBOOKS = new Set(['meeting-intelligence', 'stalled-build-handoff', 'ai-ready-data', 'inbound-signup-routing', 'reply-triage', 'crm-enrichment-review', 'brand-voice-context-layer']);
 const KNOWN_SOURCES = new Set(['linkedin', 'newsletter', 'search', 'ai-assistant', 'colleague', 'other']);
 
@@ -13,12 +15,20 @@ export default async function handler(req, res) {
   }
 
   const { email, source, playbook } = req.body || {};
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return res.status(400).json({ error: 'Valid email is required' });
-  }
+
   if (!KNOWN_PLAYBOOKS.has(playbook)) {
     return res.status(400).json({ error: 'Unknown playbook' });
   }
+
+  // Same five gates as the newsletter form. This endpoint needs them at least
+  // as badly: it writes to the list AND forwards a lead into the GTM engine,
+  // so an unguarded version poisons the CRM, not just the subscriber count.
+  const gate = await guardSubmission(req, { email });
+  if (!gate.ok) {
+    console.warn(`[kit-request] rejected: ${gate.reason}`);
+    return res.status(gate.status).json({ error: gate.error });
+  }
+
   const safeSource = KNOWN_SOURCES.has(source) ? source : 'other';
 
   const API_KEY = process.env.BEEHIIV_API_KEY;
@@ -37,7 +47,7 @@ export default async function handler(req, res) {
           'Authorization': `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
-          email,
+          email: gate.email,
           reactivate_existing: true,
           send_welcome_email: false,
           utm_source: 'magnetiz_website',
@@ -65,7 +75,7 @@ export default async function handler(req, res) {
       fetch(ENGINE_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, playbook, source: safeSource, at: new Date().toISOString() })
+        body: JSON.stringify({ email: gate.email, playbook, source: safeSource, at: new Date().toISOString() })
       }).catch(() => {});
     }
 

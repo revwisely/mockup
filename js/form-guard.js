@@ -88,13 +88,16 @@
     state.trap = trap;
 
     if (configured()) {
-      // Mounted after the form rather than inside it. .newsletter-form is a
-      // flex row capped at 440px, so a child here became a third flex item
-      // that overflowed the card. Sized rather than collapsed, because with
-      // interaction-only the widget can appear: it is empty and zero-height
-      // for almost everyone, and right-aligned under the form when shown.
+      // Mounted after the form rather than inside it, because a form laid out
+      // as a flex row treats an appended child as another column. The rail
+      // matches the width the form actually renders at, so the widget lines
+      // up with it on the newsletter card and on the wider playbook kit form
+      // alike. Empty and zero-height for almost every visitor, since
+      // interaction-only only draws it when someone must act.
       var rail = document.createElement('div');
-      rail.style.cssText = 'max-width:440px;margin:12px auto 0;display:flex;justify-content:flex-end;';
+      var formWidth = form.offsetWidth;
+      rail.style.cssText = 'margin:12px auto 0;display:flex;justify-content:flex-end;'
+        + (formWidth ? 'max-width:' + formWidth + 'px;' : '');
       var mount = document.createElement('div');
       mount.style.cssText = 'width:100%;max-width:300px;';
       rail.appendChild(mount);

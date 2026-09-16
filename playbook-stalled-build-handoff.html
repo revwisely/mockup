@@ -362,10 +362,12 @@
   <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
 
   <!-- Kit request -->
+  <script src="js/form-guard.js?v=20260916f"></script>
   <script>
     (function () {
       var form = document.getElementById('kit-form');
       if (!form) return;
+      var guard = MagnetizFormGuard.arm(form);
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var btn = form.querySelector('button[type="submit"]');
@@ -376,12 +378,14 @@
         fetch('/api/kit-request', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email, source: source, playbook: form.dataset.playbook })
+          body: JSON.stringify(MagnetizFormGuard.payload(guard, { email: email, source: source, playbook: form.dataset.playbook }))
         }).then(function (r) {
           if (!r.ok) throw new Error('failed');
+          MagnetizFormGuard.teardown(guard);
           form.innerHTML = '<p class="pb-lede"><strong>Check your inbox.</strong></p><p class="pb-kit-consent">The kit is on its way. If it has not arrived in a few minutes, check spam, then reply to any Magnetiz email and a person will sort it out.</p>';
           if (typeof gtag === 'function') gtag('event', 'kit_request', { playbook: form.dataset.playbook, source: source });
         }).catch(function () {
+          MagnetizFormGuard.reset(guard);
           btn.disabled = false;
           btn.textContent = 'Send Me the Kit';
           var err = form.querySelector('.kit-error');
