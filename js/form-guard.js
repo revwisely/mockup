@@ -45,6 +45,12 @@
     }
     state.widgetId = global.turnstile.render(state.mount, {
       sitekey: SITE_KEY,
+      // The site is dark; 'auto' would follow the visitor's OS and render a
+      // white box on a dark card. 'flexible' fills the mount width so the
+      // widget lines up with the form above it instead of sitting at whatever
+      // fixed width Cloudflare defaults to.
+      theme: 'dark',
+      size: 'flexible',
       callback: function (token) { state.token = token; },
       'expired-callback': function () { state.token = ''; },
       'error-callback': function () { state.token = ''; }
@@ -72,9 +78,14 @@
     state.trap = trap;
 
     if (configured()) {
+      // Mounted AFTER the form, not inside it. .newsletter-form is a flex row
+      // with a 440px cap, so appending the widget made it a third flex item
+      // that overflowed the card and squeezed the input. Turnstile's own
+      // hidden input would land outside the form this way, which does not
+      // matter because the token is read from the render callback below.
       var mount = document.createElement('div');
-      mount.style.cssText = 'margin-top:12px;';
-      form.appendChild(mount);
+      mount.style.cssText = 'max-width:440px;margin:12px auto 0;';
+      form.parentNode.insertBefore(mount, form.nextSibling);
       state.mount = mount;
       loadTurnstile();
       renderWidget(state);
