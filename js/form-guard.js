@@ -83,10 +83,18 @@
       // that overflowed the card and squeezed the input. Turnstile's own
       // hidden input would land outside the form this way, which does not
       // matter because the token is read from the render callback below.
+      // A 440px rail matching the form, with the widget pushed to its right
+      // edge and capped at 300px. Flexible sizing then fills that cap, so the
+      // widget is small and right-aligned on desktop but still shrinks with
+      // the card on a phone instead of overflowing a fixed 300px.
+      var rail = document.createElement('div');
+      rail.style.cssText = 'max-width:440px;margin:12px auto 0;display:flex;justify-content:flex-end;';
       var mount = document.createElement('div');
-      mount.style.cssText = 'max-width:440px;margin:12px auto 0;';
-      form.parentNode.insertBefore(mount, form.nextSibling);
+      mount.style.cssText = 'width:100%;max-width:300px;';
+      rail.appendChild(mount);
+      form.parentNode.insertBefore(rail, form.nextSibling);
       state.mount = mount;
+      state.rail = rail;
       loadTurnstile();
       renderWidget(state);
     }
@@ -122,10 +130,26 @@
     return configured() && !state.token;
   }
 
+  /**
+   * Remove the challenge once a submission has succeeded. The mount lives
+   * outside the form, so replacing the form's contents with the success
+   * message no longer takes the widget with it.
+   */
+  function teardown(state) {
+    if (state.rail && state.rail.parentNode) {
+      if (global.turnstile && state.widgetId !== null) {
+        try { global.turnstile.remove(state.widgetId); } catch (e) {}
+      }
+      state.rail.parentNode.removeChild(state.rail);
+      state.rail = null;
+    }
+  }
+
   global.MagnetizFormGuard = {
     arm: arm,
     payload: payload,
     reset: reset,
+    teardown: teardown,
     awaitingChallenge: awaitingChallenge
   };
 })(window, document);
