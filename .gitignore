@@ -2,3 +2,10 @@
 node_modules/
 .DS_Store
 **/.DS_Store
+
+# `vercel env pull` writes the production secrets here, and this repo is
+# committed with `git add -A`. Without this line one pull puts the beehiiv
+# key and the Turnstile secret into git history.
+.env
+.env.*
+!.env.example
