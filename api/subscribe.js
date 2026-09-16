@@ -33,10 +33,15 @@ export default async function handler(req, res) {
         },
         body: JSON.stringify({
           email: gate.email,
-          // Was true. beehiiv's own docs say to use it only when the
-          // subscriber is knowingly resubscribing, and a bot submitting a
-          // previously unsubscribed address is not that.
-          reactivate_existing: false,
+          // A returning subscriber who had unsubscribed must be able to come
+          // back. Setting this false broke exactly that: beehiiv refuses the
+          // reactivation, no pending confirmation is created, and the link in
+          // the email lands them on a generic subscribe page having already
+          // signed up. Safe to allow, because double opt-in below means a
+          // reactivation still has to be confirmed from the real inbox, so a
+          // bot replaying an unsubscribed address can reach pending and no
+          // further.
+          reactivate_existing: true,
           // No welcome email is configured on this publication, so this flag
           // was always inert. Left off rather than implying one exists. The
           // double opt-in confirmation below is what a new subscriber gets.
