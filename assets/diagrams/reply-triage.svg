@@ -78,7 +78,7 @@
   <g>
     <rect x="232" y="230" width="280" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="372" y="256" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">CLEAN THE TEXT</text>
-    <text x="372" y="274" text-anchor="middle" fill="#8B949E" font-size="10">strip signatures, footers, quoted history</text>
+    <text x="372" y="274" text-anchor="middle" fill="#8B949E" font-size="9.5">strip signatures, footers, quoted history</text>
   </g>
 
   <!-- classify row -->
@@ -107,21 +107,21 @@
 
   <!-- exits -->
   <g>
-    <rect x="376" y="458" width="140" height="64" rx="9" fill="#1c2333" stroke="#E06C75"/>
-    <text x="446" y="480" text-anchor="middle" fill="#E06C75" font-size="10.5" font-weight="700">DO-NOT-CONTACT</text>
-    <text x="446" y="496" text-anchor="middle" fill="#8B949E" font-size="8.5">explicit words land instantly &#183;</text>
-    <text x="446" y="509" text-anchor="middle" fill="#8B949E" font-size="8.5">inferred waits for a person</text>
+    <rect x="368" y="458" width="160" height="64" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text x="448" y="480" text-anchor="middle" fill="#E06C75" font-size="10.5" font-weight="700">DO-NOT-CONTACT</text>
+    <text x="448" y="496" text-anchor="middle" fill="#8B949E" font-size="8.5">explicit lands instantly</text>
+    <text x="448" y="509" text-anchor="middle" fill="#8B949E" font-size="8.5">inferred waits for a person</text>
   </g>
   <g>
     <rect x="546" y="458" width="140" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="616" y="480" text-anchor="middle" fill="#C678DD" font-size="10.5" font-weight="700">RE-ENROLL LATER</text>
-    <text x="616" y="496" text-anchor="middle" fill="#8B949E" font-size="9">paused until the return</text>
+    <text x="616" y="496" text-anchor="middle" fill="#8B949E" font-size="8.5">paused until the return</text>
     <text x="616" y="509" text-anchor="middle" fill="#8B949E" font-size="9">date, then resumes</text>
   </g>
 
   <!-- human gate -->
   <g filter="url(#r-glow)">
-    <rect x="59" y="458" width="260" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    <rect x="49" y="458" width="280" height="74" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
   </g>
   <text x="189" y="488" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
   <text x="189" y="508" text-anchor="middle" fill="#8B949E" font-size="10">a person answers anything that matters,</text>
@@ -134,12 +134,12 @@
   <g>
     <rect x="49" y="644" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="139" y="669" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">TEAM ALERTED</text>
-    <text x="139" y="687" text-anchor="middle" fill="#8B949E" font-size="9.5">in the channel, thread attached</text>
+    <text x="139" y="687" text-anchor="middle" fill="#8B949E" font-size="9">in the channel, with thread</text>
   </g>
   <g>
     <rect x="282" y="644" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="372" y="669" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">CRM UPDATED</text>
-    <text x="372" y="687" text-anchor="middle" fill="#8B949E" font-size="9.5">class, words, and verdict logged</text>
+    <text x="372" y="687" text-anchor="middle" fill="#8B949E" font-size="9">class, words, verdict logged</text>
   </g>
   <g>
     <rect x="515" y="644" width="180" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>

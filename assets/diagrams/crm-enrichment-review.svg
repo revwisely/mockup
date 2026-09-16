@@ -65,8 +65,8 @@
   <g>
     <rect x="582" y="128" width="130" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
     <text x="647" y="148" text-anchor="middle" fill="#8B949E" font-size="10" font-weight="700">NOT YET</text>
-    <text x="647" y="162" text-anchor="middle" fill="#8B949E" font-size="8.5">queued &#183; drains in the cap,</text>
-    <text x="647" y="174" text-anchor="middle" fill="#8B949E" font-size="8.5">expires and re-qualifies</text>
+    <text x="647" y="162" text-anchor="middle" fill="#8B949E" font-size="8.5">queued, not billed</text>
+    <text x="647" y="174" text-anchor="middle" fill="#8B949E" font-size="8.5">expires, re-qualifies</text>
   </g>
 
   <!-- 3 research -->
