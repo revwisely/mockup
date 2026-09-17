@@ -1,5 +1,15 @@
 [
   {
+    "slug": "the-scorer-that-disagrees-with-itself",
+    "title": "Your AI Scorer Disagrees With Itself",
+    "date": "2026-09-17",
+    "author": "Magnetiz.ai",
+    "excerpt": "We ran one of our own quality judges nine times on the same draft. Four runs said publish. Five said kill. Every AI score in your GTM stack is the same kind of instrument until someone runs it twice. Here is the ten-minute test and the discipline that follows it.",
+    "image": "assets/images/posts/the-scorer-that-disagrees-with-itself-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "the-check-that-never-ran",
     "title": "Did Your Agent's Checks Actually Run?",
     "date": "2026-09-10",

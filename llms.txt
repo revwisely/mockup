@@ -9,7 +9,6 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 
 ## Services
 
-- [Taste Does Not Fit in a Document](https://www.magnetiz.ai/blog/taste-does-not-fit-in-a-document) (2026-09-03): You wrote the messaging guideline, shared it with every agency, and loaded it into AI. The drafts still come back needing you. Here is what a context layer holds that a guideline cannot, and the rules that keep it honest once it exists.
 - [ai agents](https://www.magnetiz.ai/ai-agents.html)
 - [ai audit](https://www.magnetiz.ai/ai-audit.html)
 - [ai code of conduct](https://www.magnetiz.ai/ai-code-of-conduct.html)
@@ -34,8 +33,11 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 
 ## Writing
 
-150 articles. Most recent first.
+152 articles. Most recent first.
 
+- [Your AI Scorer Disagrees With Itself](https://www.magnetiz.ai/blog/the-scorer-that-disagrees-with-itself) (2026-09-17): We ran one of our own quality judges nine times on the same draft. Four runs said publish. Five said kill. Every AI score in your GTM stack is the same kind of instrument until someone runs it twice. Here is the ten-minute test and the discipline that follows it.
+- [Did Your Agent's Checks Actually Run?](https://www.magnetiz.ai/blog/the-check-that-never-ran) (2026-09-10): A video pipeline released finished assets straight to a live production site. That pipeline carries several required checks, two of which name a person as the input. None of them ran, and nothing reported that none of them ran.
+- [Taste Does Not Fit in a Document](https://www.magnetiz.ai/blog/taste-does-not-fit-in-a-document) (2026-09-03): You wrote the messaging guideline, shared it with every agency, and loaded it into AI. The drafts still come back needing you. Here is what a context layer holds that a guideline cannot, and the rules that keep it honest once it exists.
 - [One System, Four Different Jobs](https://www.magnetiz.ai/blog/one-system-four-different-jobs) (2026-08-27): A ten-person deep-tech company and a thousand-person operation can evaluate the same AI revenue system in the same week. They are not buying the same thing. Here is the map, four stages, and the first move that fits each one.
 - [Has Your AI Agent Earned Autonomy?](https://www.magnetiz.ai/blog/has-your-ai-agent-earned-autonomy) (2026-08-20): Most agents get promoted to autonomous informally. The last ten outputs looked clean, someone flipped the setting. Here is the mechanical gate that replaces the vibe, in three parts.
 - [What Is Your AI Agent Reading Before It Acts?](https://www.magnetiz.ai/blog/crm-data-quality-ai-agents) (2026-08-13): Agent evaluation grades the output. The record the agent read before it acted gets graded by nobody. Here is where the trust gap actually sits, and the two numbers that measure it.

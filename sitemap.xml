@@ -89,6 +89,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.magnetiz.ai/blog/the-scorer-that-disagrees-with-itself</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/the-check-that-never-ran</loc>
+    <lastmod>2026-09-10</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.magnetiz.ai/blog/taste-does-not-fit-in-a-document</loc>
     <lastmod>2026-09-03</lastmod>
     <priority>0.6</priority>
