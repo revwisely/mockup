@@ -138,7 +138,7 @@
           <li>The review-queue criteria</li>
           <li>Four sample sign-ups with the answer key</li>
         </ul>
-        <form method="POST" action="/api/kit-request" id="kit-form" data-playbook="inbound-signup-routing">
+        <form method="POST" action="/api/kit-request" id="kit-form" data-playbook="inbound-signup-routing" data-kit-gated>
           <div class="pb-kit-row">
             <input type="email" name="email" placeholder="Work email" required aria-label="Work email">
             <button type="submit">Send Me the Kit</button>
@@ -359,6 +359,15 @@
     (function () {
       var form = document.getElementById('kit-form');
       if (!form) return;
+
+      // No automation for this playbook yet, so there is nothing to deliver.
+      // Say so instead of taking an address and returning a 500. Remove the
+      // data-kit-gated attribute on this page once its automation is built.
+      if (form.hasAttribute('data-kit-gated')) {
+        form.innerHTML = '<p class="pb-kit-consent"><strong>This kit opens with the next release.</strong> The method above is complete and you can run it today. The <a href="/playbook/meeting-intelligence">Meeting Intelligence kit</a> is available now.</p>';
+        return;
+      }
+
       var guard = MagnetizFormGuard.arm(form);
 
       function fail(message) {
