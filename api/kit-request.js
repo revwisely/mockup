@@ -45,7 +45,17 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Unknown playbook' });
   }
 
-  const gate = await guardSubmission(req, { email: req.body?.email });
+  // Reading several playbooks in one sitting and wanting each kit is the
+  // behaviour this library is for, so the newsletter's three-per-ten-minutes
+  // would reject the most engaged visitor on their fourth download. Seven
+  // playbooks exist; 12 leaves room for retries and for the library growing.
+  // The IP ceiling is separate and much higher because one office shares one
+  // address, and a shared limit would block whoever asked fourth.
+  const gate = await guardSubmission(req, {
+    email: req.body?.email,
+    maxPerEmail: 12,
+    maxPerIp: 60
+  });
   if (!gate.ok) {
     // Log the specific gate for triage, return only the generic message so a
     // bot cannot tune against our checks.

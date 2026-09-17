@@ -24,6 +24,10 @@ export const HONEYPOT_FIELD = 'company_website';
 const MIN_FILL_MS = 1500;
 const MAX_FILL_MS = 60 * 60 * 1000;
 
+// Defaults suit a form a person submits once. The newsletter is that form:
+// three tries in ten minutes means something is wrong. A form a person is
+// MEANT to submit repeatedly needs its own numbers, passed per call, because
+// the default punishes the best visitor. See kit-request.js.
 const RATE_LIMIT_MAX = 3;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 
@@ -116,7 +120,10 @@ async function verifyTurnstile(token, ip) {
  * `error` is what the visitor sees. `reason` is for logs only and is never
  * returned to the client, so a bot cannot learn which gate caught it.
  */
-export async function guardSubmission(req, { email, requireChallenge = true } = {}) {
+export async function guardSubmission(
+  req,
+  { email, requireChallenge = true, maxPerEmail = RATE_LIMIT_MAX, maxPerIp = RATE_LIMIT_MAX } = {}
+) {
   const now = Date.now();
 
   // Gate 1: same origin. Kills every plain curl loop on its own.
@@ -155,12 +162,15 @@ export async function guardSubmission(req, { email, requireChallenge = true } = 
     return { ok: false, status: 400, error: 'Please use a permanent email address.', reason: `disposable:${domain}` };
   }
 
-  // Gate 4: rate limit, keyed on both IP and the normalized inbox.
+  // Gate 4: rate limit. The two keys get separate ceilings because they fail
+  // differently. One inbox asking many times is one curious person; one IP
+  // asking many times is an office, where a shared limit would block whoever
+  // happened to be fourth.
   pruneRateLimit(now);
   const ip = clientIp(req);
-  for (const key of [`ip:${ip}`, `email:${normalized}`]) {
+  for (const [key, max] of [[`ip:${ip}`, maxPerIp], [`email:${normalized}`, maxPerEmail]]) {
     const hits = recentSubmissions.get(key) || [];
-    if (hits.length >= RATE_LIMIT_MAX) {
+    if (hits.length >= max) {
       return { ok: false, status: 429, error: 'Too many attempts. Please try again later.', reason: `ratelimit:${key}` };
     }
   }
