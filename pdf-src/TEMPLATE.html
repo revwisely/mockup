@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/pdf-src/playbook.css">
+</head>
+<body>
+
+<!--
+  PLAYBOOK TEMPLATE. Copy to playbook-NN-<kit-slug>.html and fill in.
+  Read README.md in this folder first. Every block below is a real pattern lifted
+  from the seven shipped playbooks. Delete what you do not use.
+
+  Never add a <style> block here. One design system lives in playbook.css, and a
+  local override is how seven playbooks stop looking like one product.
+-->
+
+<!-- ============ 1. COVER ============ -->
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook NN</p>
+    <h1>The Headline In<br>Three Short<br>Lines</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">Two or three sentences naming the situation the reader is in and what the playbook takes it to. Written to the reader's problem, never to the method.</p>
+    <div style="margin-top: 26px;">
+      <!-- function chips, then the month. c-green Sales · c-amber RevOps · c-purple Delivery · c-coral Marketing -->
+      <span class="chip c-green">Sales</span><span class="chip">September 2026</span>
+    </div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>The one sentence this playbook exists to defend.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">What that line is (the failure it fixes, the rule it enforces)</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+
+<!-- ============ 2. THE SYSTEM, END TO END (full-page diagram) ============ -->
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap">
+    <!-- Same SVG the web page uses. Site-absolute path, never file:// -->
+    <img src="/assets/diagrams/KIT-SLUG.svg" alt="Workflow diagram">
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+
+<!-- ============ 3. THE METHOD (steps 01 to 04) ============ -->
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The worksheets for every one of them ship as the markdown files in this kit.</p>
+  <hr class="rule">
+
+  <div class="step">
+    <h3><span class="stepnum">01</span>The step, as an imperative</h3>
+    <p>What the step does and why it is in this position. Lead with the operative sentence in <strong style="color:#E6EDF3">bold</strong> when the step has one.</p>
+    <p class="watch">Watch for the failure mode a reader will actually hit here. One line, and only when there is a real one.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">02</span>A step carrying a table</h3>
+    <p>Set the table up in a sentence, then let it carry the detail.</p>
+    <table>
+      <tr><th>Column</th><th>The tell</th><th>What happens</th></tr>
+      <tr><td><strong style="color:#98C379">Green case</strong></td><td>How you recognise it</td><td>Where it goes</td></tr>
+      <tr><td><strong style="color:#E5C07B">Amber case</strong></td><td>How you recognise it</td><td>Where it goes</td></tr>
+      <tr><td><strong style="color:#E06C75">Red case</strong></td><td>How you recognise it</td><td>A person decides</td></tr>
+    </table>
+  </div>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+
+<!-- ============ 4. THE METHOD (remaining steps) + an exhibit ============ -->
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Later steps continue here</h3>
+    <p>Steps run across as many pages as they need. Keep the running footer number correct.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">An Exhibit With a Name</h2>
+  <!-- A JSON shape, a rendered UI mock, or a fill-in table. One per page, never two. -->
+<pre>{
+  "field": "value",
+  "source_quote": "the words that created this"
+}</pre>
+  <div class="box">
+    <h3>A defined-terms box</h3>
+    <ul>
+      <li><strong>Term.</strong> What it means here, in one line.</li>
+    </ul>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+
+<!-- ============ 5. IN THIS KIT + CTA (always the last page) ============ -->
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Worksheets</h2>
+  <p>Markdown files, ready to fill against your own [thing]. Start in this order.</p>
+
+  <!--
+    EVERY .md file in the kit folder must be named here. A worksheet that ships
+    unlisted is the exact bug that hit playbook 02. Pair two files in one box when
+    they serve the same step, rather than dropping one.
+  -->
+  <div class="box"><h3>1 &nbsp;first-worksheet.md</h3><p>What it is and what filling it gives you.</p></div>
+  <div class="box"><h3>2 &nbsp;second-worksheet.md</h3><p>What it is and what filling it gives you.</p></div>
+
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;·&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">A closing line. The thesis of the playbook, said once, plainly.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK NN</span></div>
+</div>
+
+</body>
+</html>

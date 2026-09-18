@@ -1,29 +1,33 @@
 #!/usr/bin/env bash
 # Render the playbook PDFs from pdf-src/*.html.
 #
+# Read pdf-src/README.md before editing a source or adding a playbook.
+#
 # Pipeline, reproduced and verified 2026-09-17 against the shipped files:
-#   1. Chrome headless --print-to-pdf  (the page CSS carries @page { size: letter })
-#   2. a plain pypdf rewrite, which is what sets Producer to pypdf and drops ~7%
+#   1. serve the repo root over localhost, so /assets/... resolves exactly as it does
+#      in production (brand fonts, diagrams). Never use file:// — the font CSS uses
+#      site-absolute paths and silently falls back to system fonts under file://,
+#      which is how these shipped in Helvetica Neue for two weeks.
+#   2. Chrome headless --print-to-pdf. The page CSS carries @page { size: letter }.
+#   3. a plain pypdf rewrite, which sets Producer to pypdf and drops ~7%.
 #
-# Output lands in assets/kits/pdf/. scripts/build-kits.sh picks it up from there when
-# rebuilding the zips; without it, that script carries the PDF already inside each zip
-# forward untouched.
+# Output lands in assets/kits/pdf/. scripts/build-kits.sh picks it up from there.
 #
-#   ./scripts/build-playbook-pdfs.sh              # all seven
-#   ./scripts/build-playbook-pdfs.sh 01 02        # just these
+#   ./scripts/build-playbook-pdfs.sh              # all of them
+#   ./scripts/build-playbook-pdfs.sh 02 05        # just these
 #
-# Page counts are asserted below. A layout edit that spills onto an extra page fails
-# the build rather than shipping quietly.
+# Page counts are asserted. A layout edit that spills onto an extra page fails the
+# build rather than shipping quietly. To add a playbook, add a row to `names` below.
 #
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SRC="$ROOT/pdf-src"
 OUT="$ROOT/assets/kits/pdf"
 CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 PY="${PLAYBOOK_PDF_PYTHON:-python3}"
+PORT="${PLAYBOOK_PDF_PORT:-8731}"
 
-# slug -> kit name, and the page count this playbook is expected to render to.
+# number : kit slug : expected page count
 names=(
   "01:meeting-intelligence:7"
   "02:stalled-build-handoff:5"
@@ -41,7 +45,20 @@ names=(
 }
 
 mkdir -p "$OUT"
-WORK="$(mktemp -d)"; trap 'rm -rf "$WORK"' EXIT
+WORK="$(mktemp -d)"
+
+cd "$ROOT"
+set +m   # no job-control chatter when the trap kills the server
+"$PY" -m http.server "$PORT" --bind 127.0.0.1 >/dev/null 2>&1 &
+SERVER=$!
+trap 'kill $SERVER 2>/dev/null; wait $SERVER 2>/dev/null; rm -rf "$WORK"' EXIT
+
+for _ in $(seq 1 40); do
+  curl -sf "http://127.0.0.1:$PORT/pdf-src/playbook.css" -o /dev/null && break
+  sleep 0.25
+done
+curl -sf "http://127.0.0.1:$PORT/pdf-src/playbook.css" -o /dev/null || {
+  echo "local server never came up on port $PORT" >&2; exit 1; }
 
 fail=0
 for entry in "${names[@]}"; do
@@ -51,11 +68,11 @@ for entry in "${names[@]}"; do
     case " $* " in *" $num "*) ;; *) continue ;; esac
   fi
 
-  html="$SRC/playbook-$num-$kit.html"
-  [ -f "$html" ] || { echo "MISSING $html" >&2; fail=1; continue; }
+  page="pdf-src/playbook-$num-$kit.html"
+  [ -f "$ROOT/$page" ] || { echo "MISSING $page" >&2; fail=1; continue; }
 
   "$CHROME" --headless --disable-gpu --no-sandbox --no-pdf-header-footer \
-    --print-to-pdf="$WORK/$kit.raw.pdf" "file://$html" >/dev/null 2>&1
+    --print-to-pdf="$WORK/$kit.raw.pdf" "http://127.0.0.1:$PORT/$page" >/dev/null 2>&1
 
   "$PY" - "$WORK/$kit.raw.pdf" "$OUT/$kit-playbook.pdf" <<'PY'
 import sys
@@ -67,12 +84,23 @@ with open(sys.argv[2], "wb") as fh:
     writer.write(fh)
 PY
 
-  got="$("$PY" -c "from pypdf import PdfReader;print(len(PdfReader('$OUT/$kit-playbook.pdf').pages))")"
+  pdf="$OUT/$kit-playbook.pdf"
+  got="$("$PY" -c "from pypdf import PdfReader;print(len(PdfReader('$pdf').pages))")"
+  # The brand faces embed as composite CID fonts, which pypdf's /BaseFont lookup
+  # returns None for. Scan the file bytes instead; subset font names sit there
+  # uncompressed, and "did the brand font embed" is exactly what needs to be true.
+  fonts="$("$PY" -c "
+d = open('$pdf','rb').read()
+print(','.join(n for n in ('DMSans','JetBrainsMono','Menlo') if n.encode() in d))")"
+
   if [ "$got" != "$want" ]; then
     echo "FAIL $kit: rendered $got pages, expected $want. Layout spilled; fix the source or update the expectation." >&2
     fail=1
+  elif ! printf '%s' "$fonts" | grep -q 'DMSans'; then
+    echo "FAIL $kit: DM Sans did not embed (got $fonts). The server or /assets/fonts is not resolving." >&2
+    fail=1
   else
-    echo "$kit-playbook.pdf  $got pages  $(stat -f%z "$OUT/$kit-playbook.pdf") bytes"
+    echo "$kit-playbook.pdf  $got pages  $(stat -f%z "$pdf") bytes  [$fonts]"
   fi
 done
 
