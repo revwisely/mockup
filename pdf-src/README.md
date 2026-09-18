@@ -27,6 +27,44 @@ ask you to `--break-system-packages` your system Python it creates `.venv/` in t
 on first run and reuses it. That directory is gitignored and safe to delete; the next
 run rebuilds it. `PLAYBOOK_PDF_PYTHON` overrides the interpreter if you want your own.
 
+## Shipping a new playbook (the weekly job)
+
+**Start and finish with the preflight.** It names every place a playbook has to be
+wired, all at once, instead of one deploy failure at a time.
+
+```bash
+./scripts/check-playbook.sh <slug>
+```
+
+Nine wiring points, across two repos plus beehiiv:
+
+| # | Thing | Where | If you forget |
+|---|---|---|---|
+| 1 | Worksheets | `~/life_os/magnetiz/playbooks/<slug>-kit/*.md` | the kit ships empty |
+| 2 | PDF source | `pdf-src/playbook-NN-<slug>.html`, from `TEMPLATE.html` | no PDF |
+| 3 | A row in `names=` | `scripts/build-playbook-pdfs.sh` | **the PDF is never rendered, silently** |
+| 4 | Diagram | `assets/diagrams/<slug>.svg` | the page and PDF have a hole |
+| 5 | Web page | `playbook-<slug>.html` | nothing to link to |
+| 6 | Index card | `playbooks.html` | the page exists but nobody reaches it |
+| 7 | `KNOWN_PLAYBOOKS` | `api/kit-request.js` | **every kit request 400s** |
+| 8 | Form slug | `data-playbook="<slug>"` on the page's form | same 400 |
+| 9 | beehiiv automation + its id in `BEEHIIV_KIT_AUTOMATIONS` | beehiiv, then Vercel env | the form succeeds and **no email ever sends** |
+
+Then the three commands, and the preflight once more to confirm.
+
+**What is genuinely hand work**, and there is no shortcut for it:
+
+- **The diagram.** Hand-authored SVG with animated packets and `id="n-*"` nodes that the
+  page's accordion highlights. Copy the closest existing one and rework it. This is the
+  longest part of a new playbook.
+- **The page copy**, which is the actual job.
+- **The beehiiv automation and its two emails.** UI work. `automation-emails.md` in the
+  vault carries the pattern, the copy for all fourteen existing emails, and the three
+  failure modes worth knowing before you start.
+
+**What is not hand work:** the PDF design, the page design (all seven share
+`/css/playbooks.css`, no page has its own CSS), the zip, and the deploy.
+
 ## What the build actually does
 
 1. **Serves the repo root over localhost.** Not `file://`. The brand font CSS uses
