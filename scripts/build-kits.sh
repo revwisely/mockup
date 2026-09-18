@@ -17,12 +17,16 @@ PDFS="$KITS/pdf"
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
 
-for zip in "$KITS"/*-kit.zip; do
-  kit="$(basename "$zip" .zip)"
-  src="$VAULT/$kit"
+# Drive from the vault, never from the existing zips. A new playbook has worksheets
+# and a rendered PDF but no zip yet, so iterating over *-kit.zip would skip it in
+# silence — which is exactly what the weekly build produces.
+shopt -s nullglob
+for src in "$VAULT"/*-kit; do
+  kit="$(basename "$src")"
+  zip="$KITS/$kit.zip"
 
-  if [ ! -d "$src" ]; then
-    echo "SKIP $kit (no source at $src)" >&2
+  if ! compgen -G "$src/*.md" >/dev/null; then
+    echo "SKIP $kit (no worksheets in $src)" >&2
     continue
   fi
 
