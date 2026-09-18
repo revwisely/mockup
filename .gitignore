@@ -12,3 +12,6 @@ node_modules/
 
 # rendered playbook PDFs — build artifacts, sources live in pdf-src/
 assets/kits/pdf/
+
+# build venv for the playbook PDF pipeline (auto-created)
+.venv/

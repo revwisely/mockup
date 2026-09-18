@@ -39,10 +39,20 @@ names=(
 )
 
 [ -x "$CHROME" ] || { echo "Chrome not found at $CHROME" >&2; exit 1; }
-"$PY" -c 'import pypdf' 2>/dev/null || {
-  echo "pypdf missing. pip install pypdf, or set PLAYBOOK_PDF_PYTHON to an interpreter that has it." >&2
-  exit 1
-}
+
+# pypdf, without asking anything of the system Python. Homebrew's is externally
+# managed (PEP 668), so installing into it needs --break-system-packages. Build our
+# own venv instead, once, and reuse it. Override with PLAYBOOK_PDF_PYTHON.
+if ! "$PY" -c 'import pypdf' 2>/dev/null; then
+  VENV="$ROOT/.venv"
+  if [ ! -x "$VENV/bin/python" ]; then
+    echo "setting up $VENV (one time, for pypdf)"
+    "$PY" -m venv "$VENV" >/dev/null
+  fi
+  "$VENV/bin/python" -m pip install --quiet --disable-pip-version-check pypdf || {
+    echo "could not install pypdf into $VENV" >&2; exit 1; }
+  PY="$VENV/bin/python"
+fi
 
 mkdir -p "$OUT"
 WORK="$(mktemp -d)"
@@ -51,7 +61,19 @@ cd "$ROOT"
 set +m   # no job-control chatter when the trap kills the server
 "$PY" -m http.server "$PORT" --bind 127.0.0.1 >/dev/null 2>&1 &
 SERVER=$!
-trap 'kill $SERVER 2>/dev/null; wait $SERVER 2>/dev/null; rm -rf "$WORK"' EXIT
+# Keep the script's own exit status. Without capturing it first, `wait` on the killed
+# server returns 143 and that becomes the script's status, failing every && chain.
+# Every step needs `|| true`: under `set -e` a non-zero `wait` (143, the SIGTERM we
+# just sent) aborts the trap before `exit $status` runs, and 143 leaks out as the
+# script's status.
+cleanup() {
+  status=$?
+  kill $SERVER 2>/dev/null || true
+  wait $SERVER 2>/dev/null || true
+  rm -rf "$WORK" || true
+  exit $status
+}
+trap cleanup EXIT
 
 for _ in $(seq 1 40); do
   curl -sf "http://127.0.0.1:$PORT/pdf-src/playbook.css" -o /dev/null && break

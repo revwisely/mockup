@@ -21,8 +21,11 @@ cd ~/Projects/magnetiz_new
 npx vercel deploy --prod                  # the only deploy command for this repo
 ```
 
-Needs Chrome at `/Applications/Google Chrome.app` and a Python with `pypdf`. Point
-`PLAYBOOK_PDF_PYTHON` at an interpreter that has it if the system one does not.
+Needs Chrome at `/Applications/Google Chrome.app`. Nothing else to install. The build
+needs `pypdf`, and Homebrew's Python is externally managed (PEP 668), so rather than
+ask you to `--break-system-packages` your system Python it creates `.venv/` in the repo
+on first run and reuses it. That directory is gitignored and safe to delete; the next
+run rebuilds it. `PLAYBOOK_PDF_PYTHON` overrides the interpreter if you want your own.
 
 ## What the build actually does
 
