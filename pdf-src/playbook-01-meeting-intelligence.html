@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --card: #1c2333;
+    --blue: #4A9ECE; --green: #98C379; --amber: #E5C07B; --purple: #C678DD; --coral: #E06C75;
+    --t1: #E6EDF3; --t2: #8B949E; --t3: #484F58; --border: #30363d;
+  }
+  body { font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--t1); }
+  .page {
+    width: 8.5in; height: 11in; padding: 0.75in; page-break-after: always;
+    background: var(--bg); position: relative; overflow: hidden;
+    background-image: radial-gradient(circle, rgba(74,158,206,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+  .eyebrow { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 3px; color: var(--t3); text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.5px; }
+  h2 { font-size: 22px; letter-spacing: -0.3px; margin-bottom: 6px; }
+  p { font-size: 12.5px; line-height: 1.65; color: var(--t2); }
+  .lead { font-size: 14px; color: var(--t1); }
+  .footer { position: absolute; bottom: 0.5in; left: 0.75in; right: 0.75in; display: flex; justify-content: space-between; font-family: Menlo, monospace; font-size: 8.5px; color: var(--t3); letter-spacing: 1px; }
+  .logo { font-family: Menlo, monospace; font-weight: 700; font-size: 14px; }
+  .logo .a { color: var(--blue); }
+  .rule { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+  .box { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 16px 18px; margin: 12px 0; }
+  .box h3 { font-size: 13px; margin-bottom: 6px; }
+  .box p, .box li { font-size: 11.5px; line-height: 1.6; color: var(--t2); }
+  ul { padding-left: 16px; }
+  li { font-size: 12px; line-height: 1.7; color: var(--t2); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t3); text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  td { font-size: 11px; line-height: 1.5; color: var(--t2); padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td.fill { min-width: 1.6in; }
+  td strong { color: var(--t1); }
+  .chip { display: inline-block; font-family: Menlo, monospace; font-size: 9px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 99px; color: var(--t2); margin-right: 5px; }
+  .c-green { color: var(--green); border-color: var(--green); }
+  .c-amber { color: var(--amber); border-color: var(--amber); }
+  .c-purple { color: var(--purple); border-color: var(--purple); }
+  .c-coral { color: var(--coral); border-color: var(--coral); }
+  .stepnum { font-family: Menlo, monospace; font-size: 11px; color: var(--blue); margin-right: 8px; }
+  .step { margin: 14px 0; }
+  .step h3 { font-size: 14px; margin-bottom: 4px; }
+  .step p { font-size: 11.5px; }
+  .watch { font-size: 11px; color: var(--t3); font-style: italic; margin-top: 4px; }
+  pre { font-family: Menlo, monospace; font-size: 9.5px; line-height: 1.55; color: var(--t2); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 10px 0; }
+  .diagram-wrap { display: flex; align-items: center; justify-content: center; height: 8.6in; }
+  .diagram-wrap img { max-width: 100%; max-height: 100%; }
+  blockquote { border-left: 3px solid var(--blue); padding: 6px 0 6px 14px; margin: 14px 0; font-style: italic; color: var(--t2); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 01</p>
+    <h1>Turn Recorded Calls Into<br>CRM Updates and<br>Deal Awareness</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">One recorded call becomes structured record updates, owner-tagged follow-ups, and a one-minute channel brief. Every item traces to the words that created it. A person approves anything a customer could ever see.</p>
+    <div style="margin-top: 26px;">
+      <span class="chip c-green">Sales</span><span class="chip c-amber">RevOps</span><span class="chip">September 2026</span>
+    </div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in;">
+    <blockquote>No quote, no item.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The rule the extraction enforces</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+
+<!-- ============ THE SYSTEM (DIAGRAM) ============ -->
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap">
+    <img src="file:///Users/derr/Projects/magnetiz_new/assets/diagrams/meeting-intelligence.svg" alt="Meeting intelligence workflow diagram">
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+
+<!-- ============ THE METHOD 1 ============ -->
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The runnable versions of every rubric here ship as the markdown files in this kit, ready to paste into your model.</p>
+  <hr class="rule">
+  <div class="step">
+    <h3><span class="stepnum">01</span>Capture the call</h3>
+    <p>Any recorder that produces a transcript works. Raw speaker-labeled transcripts produce the best extractions. Notetaker summaries still work, and the workflow lowers its confidence scores to match, because secondhand notes are already an interpretation.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">02</span>Extract with receipts</h3>
+    <p><strong style="color:#E6EDF3">No quote, no item.</strong> The workflow extracts what was said. It never invents. Every item carries the verbatim words that created it, so anyone can audit any entry back to the source. Anything the meeting explicitly deferred becomes a follow-up, never a task.</p>
+    <p class="watch">Watch for the item you cannot quote. Cut it. A phantom commitment costs more than a missed one.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">03</span>Route what was said</h3>
+    <p>Meetings wander. Two facts get judged separately per item. Was it agreed, and is it in scope. The route follows from the pair.</p>
+    <table>
+      <tr><th>Route</th><th>The tell</th><th>What happens</th></tr>
+      <tr><td><strong style="color:#98C379">Committed, in scope</strong></td><td>An owner and a yes. "Yes, ship it."</td><td>Work item this cycle</td></tr>
+      <tr><td><strong style="color:#E5C07B">Committed, out of scope</strong></td><td>Agreed in the room, but scope does not cover it</td><td>Proceeds, always with a scope note</td></tr>
+      <tr><td><strong style="color:#C678DD">Explored</strong></td><td>Musing. No owner, no date</td><td>Parking lot, no task</td></tr>
+      <tr><td><strong style="color:#E06C75">Non-goal reversal</strong></td><td>Already scoped out, came back</td><td>Flagged; a person re-decides</td></tr>
+    </table>
+    <p><strong style="color:#E6EDF3">The tell is an owner and a yes. Enthusiasm alone is explored.</strong> The parking lot is expansion signal, and promotion out of it is a human act, always.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">04</span>Fork by owner</h3>
+    <p>Items owned by your side are candidates for execution. Items owned by the other side become waiting-on entries and are never executed. That single rule lets tomorrow's brief say "waiting on Dana since the 14th."</p>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+
+<!-- ============ THE METHOD 2 ============ -->
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Apply the tier rules</h3>
+    <p><strong style="color:#E6EDF3">Rules decide the tier. The stricter rule always wins.</strong> Reversible, scoped, testable work is eligible to run unattended. Large items wait. Low-confidence items wait. And anything a person outside your team will see, in their words or yours, waits for a person on your side. Always, regardless of size.</p>
+    <p class="watch">Watch for the tier assigned by vibes. If you cannot name the rule that decided it, the rule layer is missing.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">06</span>File and brief</h3>
+    <p>Approved output lands where your team already works. Record updates drafted into the CRM. Tasks with an owner, a size, and the source quote. A channel brief a teammate reads in a minute. The front end is a door, and you should name your own. Slack teams get a Slack brief, Microsoft teams get Teams.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">07</span>Graduate autonomy</h3>
+    <p><strong style="color:#E6EDF3">Supervised first. Graduation is measured, never assumed.</strong> A person reviews every extraction at the start, scoring five failure modes. Invented items, missed asks, wrong owners, wrong routes, unfaithful quotes. The workflow writes on its own only after consecutive clean passes, and only for the tiers the rules allow. Trust is a property you measure, with a date attached.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">The Shape of One Extracted Item</h2>
+  <pre>{
+  "title": "Send pricing summary to their CFO",
+  "owner": "us",
+  "estimate": "S",
+  "commitment": "committed",
+  "scope": "in",
+  "tier_proposed": "review",
+  "source_quote": "Can you get the pricing summary over to our CFO by Friday?"
+}</pre>
+  <div class="box">
+    <h3>The scales, defined</h3>
+    <ul>
+      <li><strong>Estimate.</strong> S = under an hour. M = fits in a day. L = more than a day, or cannot honestly be estimated. Torn between two, pick the larger.</li>
+      <li><strong>Confidence.</strong> high = explicit and unambiguous. medium = clear ask, inferred criteria. low = a reasonable reader would ask "did they actually agree to that?" Notes-sourced input drops one level.</li>
+    </ul>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+
+<!-- ============ WORKSHEET: FIELD MAP ============ -->
+<div class="page">
+  <p class="eyebrow">Worksheet</p>
+  <h2>CRM Field Mapping</h2>
+  <p>Fill this once per team. An unmapped fact goes to the review queue instead of guessing.</p>
+  <table style="margin-top: 14px;">
+    <tr><th>Question</th><th style="width: 2.6in;">Your answer</th></tr>
+    <tr><td>System of record for deals and accounts</td><td class="fill"></td></tr>
+    <tr><td>System of record for tasks</td><td class="fill"></td></tr>
+    <tr><td>Channel for the brief</td><td class="fill"></td></tr>
+    <tr><td>Who reviews the queue, by name</td><td class="fill"></td></tr>
+  </table>
+  <table style="margin-top: 18px;">
+    <tr><th>Fact class</th><th>Example</th><th style="width: 1.8in;">Destination field</th></tr>
+    <tr><td><strong>Budget signal</strong></td><td>"budget constrained through the rest of the year"</td><td class="fill"></td></tr>
+    <tr><td><strong>Timeline signal</strong></td><td>"we want this before Q1"</td><td class="fill"></td></tr>
+    <tr><td><strong>Named stakeholder</strong></td><td>"our CFO needs to see this"</td><td class="fill"></td></tr>
+    <tr><td><strong>Competitor mention</strong></td><td>"we're also talking to X"</td><td class="fill"></td></tr>
+    <tr><td><strong>Current stack</strong></td><td>"we run HubSpot and Slack"</td><td class="fill"></td></tr>
+    <tr><td><strong>Problem confirmed</strong></td><td>"that is exactly our issue"</td><td class="fill"></td></tr>
+    <tr><td><strong>Objection, their words</strong></td><td></td><td class="fill"></td></tr>
+    <tr><td><strong>Next step agreed</strong></td><td>"let's meet Thursday"</td><td class="fill"></td></tr>
+  </table>
+  <div class="box">
+    <h3>Two rules that keep the map honest</h3>
+    <ul>
+      <li>Verbatim beats summary in any field that holds their words.</li>
+      <li>Items owned by the other side map to your tool's waiting-on state, dated, never to your task queue.</li>
+    </ul>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05</span></div>
+</div>
+
+<!-- ============ WORKSHEET: GRADUATION LOG ============ -->
+<div class="page">
+  <p class="eyebrow">Worksheet</p>
+  <h2>The Graduation Log</h2>
+  <p>Score every supervised pass on the five failure modes, unfaithful quotes included, because the receipts are the product. Set your clean-pass bar before you start (five consecutive is a common one). The log with dates is what makes "we trust it" a measured claim.</p>
+  <table style="margin-top: 14px;">
+    <tr><th>Date</th><th>Call</th><th>Invented</th><th>Missed</th><th>Wrong owner</th><th>Wrong route</th><th>Unfaithful quote</th><th>Clean?</th></tr>
+    <tr><td class="fill" style="height: 26px;"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td style="height: 26px;"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td style="height: 26px;"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td style="height: 26px;"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td style="height: 26px;"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="box">
+    <h3>What graduates, what never does</h3>
+    <ul>
+      <li>Graduates after your clean-pass bar: internal record drafts, task creation, the channel brief.</li>
+      <li>Never graduates: anything a customer or prospect will see. The human gate is permanent there.</li>
+    </ul>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>06</span></div>
+</div>
+
+<!-- ============ THE RUNNABLE FILES + CLOSE ============ -->
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Runnable Files</h2>
+  <p>The markdown files in this kit are the working versions. Markdown pastes straight into Claude, ChatGPT, or any capable model and runs. Start in this order.</p>
+  <div class="box">
+    <h3>1 &nbsp;extraction-prompt.md</h3>
+    <p>The full system prompt with the output schema AND the routing tells inlined, so this one file runs standalone. Fill the context block, paste, run.</p>
+  </div>
+  <div class="box">
+    <h3>2 &nbsp;sample-transcript-and-output.md</h3>
+    <p>A synthetic call and its answer key. Run the prompt against the sample and diff your output against the expected one. A clean pass here means your first real call processes with receipts on day one. The answer key states why each item routes the way it does.</p>
+  </div>
+  <div class="box">
+    <h3>3 &nbsp;routing-rubric.md &nbsp;+&nbsp; tier-rules.md</h3>
+    <p>The four routes with their linguistic tells, and the deterministic tier overrides. These are the judgment layer. Adjust the force-review list to your own red lines before the first real call.</p>
+  </div>
+  <div class="box">
+    <h3>4 &nbsp;crm-field-mapping.md</h3>
+    <p>The worksheet from page 5 in editable form. Fill it before anything writes to a live record.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;·&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">Situational awareness was in the room. This playbook is how it survives the meeting.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>07 · MAGNETIZ.AI · PLAYBOOK 01</span></div>
+</div>
+
+</body>
+</html>

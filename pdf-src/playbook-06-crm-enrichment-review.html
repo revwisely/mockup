@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --card: #1c2333;
+    --blue: #4A9ECE; --green: #98C379; --amber: #E5C07B; --purple: #C678DD; --coral: #E06C75;
+    --t1: #E6EDF3; --t2: #8B949E; --t3: #484F58; --border: #30363d;
+  }
+  body { font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--t1); }
+  .page {
+    width: 8.5in; height: 11in; padding: 0.75in; page-break-after: always;
+    background: var(--bg); position: relative; overflow: hidden;
+    background-image: radial-gradient(circle, rgba(74,158,206,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+  .eyebrow { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 3px; color: var(--t3); text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.5px; }
+  h2 { font-size: 22px; letter-spacing: -0.3px; margin-bottom: 6px; }
+  p { font-size: 12.5px; line-height: 1.65; color: var(--t2); }
+  .lead { font-size: 14px; color: var(--t1); }
+  .footer { position: absolute; bottom: 0.5in; left: 0.75in; right: 0.75in; display: flex; justify-content: space-between; font-family: Menlo, monospace; font-size: 8.5px; color: var(--t3); letter-spacing: 1px; }
+  .logo { font-family: Menlo, monospace; font-weight: 700; font-size: 14px; }
+  .logo .a { color: var(--blue); }
+  .rule { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+  .box { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 16px 18px; margin: 12px 0; }
+  .box h3 { font-size: 13px; margin-bottom: 6px; }
+  .box p, .box li { font-size: 11.5px; line-height: 1.6; color: var(--t2); }
+  ul { padding-left: 16px; }
+  li { font-size: 12px; line-height: 1.7; color: var(--t2); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t3); text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  td { font-size: 11px; line-height: 1.5; color: var(--t2); padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td.fill { min-width: 1.6in; }
+  td strong { color: var(--t1); }
+  .chip { display: inline-block; font-family: Menlo, monospace; font-size: 9px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 99px; color: var(--t2); margin-right: 5px; }
+  .c-green { color: var(--green); border-color: var(--green); }
+  .c-amber { color: var(--amber); border-color: var(--amber); }
+  .c-purple { color: var(--purple); border-color: var(--purple); }
+  .c-coral { color: var(--coral); border-color: var(--coral); }
+  .stepnum { font-family: Menlo, monospace; font-size: 11px; color: var(--blue); margin-right: 8px; }
+  .step { margin: 14px 0; }
+  .step h3 { font-size: 14px; margin-bottom: 4px; }
+  .step p { font-size: 11.5px; }
+  .watch { font-size: 11px; color: var(--t3); font-style: italic; margin-top: 4px; }
+  pre { font-family: Menlo, monospace; font-size: 9.5px; line-height: 1.55; color: var(--t2); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 10px 0; }
+  .diagram-wrap { display: flex; align-items: center; justify-content: center; height: 8.6in; }
+  .diagram-wrap img { max-width: 100%; max-height: 100%; }
+  blockquote { border-left: 3px solid var(--blue); padding: 6px 0 6px 14px; margin: 14px 0; font-style: italic; color: var(--t2); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 06</p>
+    <h1>CRM Enrichment<br>With Change<br>Review</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">An incomplete record becomes a preview of proposed updates, every claim carrying its source, with a person on the approve step and an undo behind every change.</p>
+    <div style="margin-top: 26px;"><span class="chip c-coral">Data</span><span class="chip">September 2026</span></div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>An estimated twelve to twenty hours of account research became a thirty-minute review of finished research.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">From our signal-detection case study</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap"><img src="file:///Users/derr/Projects/magnetiz_new/assets/diagrams/crm-enrichment-review.svg" alt="Workflow diagram"></div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The runnable versions ship as the markdown files in this kit.</p>
+  <hr class="rule">
+  <div class="step">
+    <h3><span class="stepnum">01</span>Gate the spend</h3>
+    <p>Enrich only records something downstream will use, capped per day. Records that miss the gate queue rather than burn, the queue drains inside the cap, and queued records expire and re-qualify, because the reason a record qualified goes stale too.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">02</span>Research with citations</h3>
+    <p>Public sources, every claim carrying where it came from. Unknown stays unknown, never guessed. A cited claim audits in one click; an uncited claim is a rumor in a database.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">03</span>Date every fact</h3>
+    <p>Every fact carries its date. A title verified last week beats one scraped last year, stale evidence is suppressed visibly rather than dropped silently, and a pre-existing value with no date is challengeable, because undated data lies.</p><p class="watch">Watch for the field that is confidently wrong. Undated data does not age, it lies.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">04</span>Propose, never overwrite</h3>
+    <p><strong style="color:#E6EDF3">Silent overwrites are how trust dies.</strong> The agent produces proposed changes. Old value, new value, source, side by side, with conflicts and unknowns on the same screen and suppressed proposals collapsed beneath them. A rule that says never silently resolved needs a place on the screen. The record has not moved yet.</p>
+  </div>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Review the changes</h3>
+    <p>A named person drains the queue on a cadence, and approval takes seconds because the preview did the work. Approve-all covers high confidence only. A field class graduates to auto-apply only when an approval streak AND a passing golden-records score both hold, because agreement is not correctness. Owner, stage, amounts, and human prose never graduate.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">06</span>Keep it reversible</h3>
+    <p>Every applied change is logged with its prior state. Undo restores only when the current value still equals what the change wrote; a later human edit turns the undo into a conflict for a person, never a clobber. An enrichment pipeline you cannot undo is a pipeline you will eventually fear.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">07</span>Evaluate on golden records</h3>
+    <p><strong style="color:#E6EDF3">The eval is the difference between an agent you tested once and an agent you can keep trusting.</strong> Five accounts you know cold, scored against a pass bar you wrote down first: correct minus five times wrong minus five times hallucinated, over findable fields. Re-scored when the prompt, model, or sources change, and the set grows from your rejections, because failures point at the fixtures you need.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">The Review, As the Reviewer Sees It</h2>
+  <pre>[Company] · 4 proposed changes · agent run [date]
+──────────────────────────────────────────────
+ employee_count   140  →  210      careers page, Mar 2026    HIGH
+ title (J. Ríos)  Dir → VP Ops     profile, last week        HIGH
+ industry         blank → logistics company site             HIGH
+ title (M. Chen)  blank → Dir Ops  speaker page, undated     LOW ⚠
+──────────────────────────────────────────────
+ CONFLICT  revenue: CRM M · invoices M — a person picks
+ UNKNOWNS  funding stage, region split (searched, not found)
+ SUPPRESSED (2)  older than current — view why
+──────────────────────────────────────────────
+[Approve all HIGH] [Pick individually] [Reject all]
+every source is a link · every change is reversible</pre>
+  <p style="font-size: 11px;">Revenue appears as a conflict, never as a proposal, because survivorship blocks revenue proposals from estimates before review. Conflicts and unknowns always render.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Rules and Worksheets</h2>
+  <p>Markdown files, ready to run against your own records. Start in this order.</p>
+  <div class="box"><h3>1 &nbsp;spend-gates.md</h3><p>When a record earns enrichment, the caps, and the queue.</p></div>
+  <div class="box"><h3>2 &nbsp;research-prompt.md</h3><p>The agent prompt. Citations required, unknowns honest, conflicts surfaced.</p></div>
+  <div class="box"><h3>3 &nbsp;overwrite-rules.md &nbsp;+&nbsp; change-review-checklist.md</h3><p>Freshness, survivorship, the two hard walls, and the reviewer's three questions.</p></div>
+  <div class="box"><h3>4 &nbsp;eval-fixtures.md</h3><p>The golden-records eval with its 5x-weighted score and a pass bar set before the first run. Built in an hour, re-run on every change, grown from your rejections.</p></div>
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;&#183;&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">An enrichment is a claim. The record should hold evidence.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 06</span></div>
+</div>
+</body>
+</html>

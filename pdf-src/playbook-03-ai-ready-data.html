@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --card: #1c2333;
+    --blue: #4A9ECE; --green: #98C379; --amber: #E5C07B; --purple: #C678DD; --coral: #E06C75;
+    --t1: #E6EDF3; --t2: #8B949E; --t3: #484F58; --border: #30363d;
+  }
+  body { font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--t1); }
+  .page {
+    width: 8.5in; height: 11in; padding: 0.75in; page-break-after: always;
+    background: var(--bg); position: relative; overflow: hidden;
+    background-image: radial-gradient(circle, rgba(74,158,206,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+  .eyebrow { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 3px; color: var(--t3); text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.5px; }
+  h2 { font-size: 22px; letter-spacing: -0.3px; margin-bottom: 6px; }
+  p { font-size: 12.5px; line-height: 1.65; color: var(--t2); }
+  .lead { font-size: 14px; color: var(--t1); }
+  .footer { position: absolute; bottom: 0.5in; left: 0.75in; right: 0.75in; display: flex; justify-content: space-between; font-family: Menlo, monospace; font-size: 8.5px; color: var(--t3); letter-spacing: 1px; }
+  .logo { font-family: Menlo, monospace; font-weight: 700; font-size: 14px; }
+  .logo .a { color: var(--blue); }
+  .rule { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+  .box { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 16px 18px; margin: 12px 0; }
+  .box h3 { font-size: 13px; margin-bottom: 6px; }
+  .box p, .box li { font-size: 11.5px; line-height: 1.6; color: var(--t2); }
+  ul { padding-left: 16px; }
+  li { font-size: 12px; line-height: 1.7; color: var(--t2); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t3); text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  td { font-size: 11px; line-height: 1.5; color: var(--t2); padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td.fill { min-width: 1.6in; }
+  td strong { color: var(--t1); }
+  .chip { display: inline-block; font-family: Menlo, monospace; font-size: 9px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 99px; color: var(--t2); margin-right: 5px; }
+  .c-green { color: var(--green); border-color: var(--green); }
+  .c-amber { color: var(--amber); border-color: var(--amber); }
+  .c-purple { color: var(--purple); border-color: var(--purple); }
+  .c-coral { color: var(--coral); border-color: var(--coral); }
+  .stepnum { font-family: Menlo, monospace; font-size: 11px; color: var(--blue); margin-right: 8px; }
+  .step { margin: 14px 0; }
+  .step h3 { font-size: 14px; margin-bottom: 4px; }
+  .step p { font-size: 11.5px; }
+  .watch { font-size: 11px; color: var(--t3); font-style: italic; margin-top: 4px; }
+  pre { font-family: Menlo, monospace; font-size: 9.5px; line-height: 1.55; color: var(--t2); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 10px 0; }
+  .diagram-wrap { display: flex; align-items: center; justify-content: center; height: 8.6in; }
+  .diagram-wrap img { max-width: 100%; max-height: 100%; }
+  blockquote { border-left: 3px solid var(--blue); padding: 6px 0 6px 14px; margin: 14px 0; font-style: italic; color: var(--t2); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 03</p>
+    <h1>The AI-Ready<br>Data Playbook</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">Before any workflow reads your records, the records have to deserve it. This playbook scopes the fields AI will touch, cleans them by rule, guards the writes, and proves the cleanup with a number.</p>
+    <div style="margin-top: 26px;"><span class="chip c-coral">Data</span><span class="chip">September 2026</span></div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>If your data is a mess or hard to make sense of, simply bringing AI to that party makes the mess 4 times, 10 times, 100 times worse.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The principle this playbook enforces</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap">
+    <img src="file:///Users/derr/Projects/magnetiz_new/assets/diagrams/ai-ready-data.svg" alt="Workflow diagram">
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The rules and worksheets for every one of them ship as the markdown files in this kit.</p>
+  <hr class="rule">
+  <div class="step">
+    <h3><span class="stepnum">01</span>Scope what AI reads</h3>
+    <p>Never boil the whole database. Name the workflow you want to run, then list only the fields and records it will actually read. Stale records exit the scope here, because archiving the dead beats scrubbing them. And every recurring obligation gets a name in the audit, because unowned cadences quietly stop.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">02</span>Measure the mess</h3>
+    <p>Count it. Duplicates in scope, empty required fields, fields where two systems disagree, records untouched for a year. <strong style="color:#E6EDF3">The before-number is the whole point.</strong> It makes the cleanup provable, and the re-measure gate reads against it.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">03</span>Dedupe by rule</h3>
+    <p>Write merge rules before merging anything. Which record survives, and for each field, which source wins. Rules mean the dedupe never gets done by hand twice, and next quarter's duplicate meets the same rules instead of a new argument.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">04</span>Prune dead fields</h3>
+    <p>Run the field census. For every custom field in scope, who filled it last, when, and what reads it. Unused and duplicated fields are noise, and AI will faithfully read the noise.</p><p class="watch">Watch for the field someone quietly reports from. The census asks before it deletes.</p>
+  </div>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Fix at the source</h3>
+    <p>Cleanup without entry validation refills the mess on a schedule, which is why this step ships its own worksheet. Entry points, field-by-field treatments, picklist conversions, each with an owner. The test for any rule: it makes tomorrow's records cheaper to trust without making them slower to create.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">06</span>Guard the writes</h3>
+    <p><strong style="color:#E6EDF3">Fail loud, never plausible.</strong> A deterministic check hits a wrong field and throws an error you see. A model hits the same wrong field, adapts, and writes something plausible anyway. Silence is the failure mode. Three guards before any tool writes: loop protection, a do-not-touch list covering records AND fields, honored at every write path with merges included, and deterministic validation around every AI write.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">07</span>Re-measure and gate</h3>
+    <p><strong style="color:#E6EDF3">The before-number must move.</strong> Re-run the step 02 counts, with the conflict sample freshly drawn at random, never the records you fixed. Until the numbers move, no workflow reads these records. A gate that reads a number cannot be argued with.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">The Readiness Gate</h2>
+  <table>
+    <tr><th>Check</th><th>Threshold</th><th style="width:0.8in;">Before</th><th style="width:0.8in;">After</th><th style="width:0.6in;">Pass?</th></tr>
+    <tr><td><strong>Duplicates in scope</strong></td><td>under 2% (starting point)</td><td></td><td></td><td></td></tr>
+    <tr><td><strong>Required fields filled</strong></td><td>over 90% (starting point)</td><td></td><td></td><td></td></tr>
+    <tr><td><strong>Cross-system conflicts</strong></td><td>zero unexplained, in a fresh random sample</td><td></td><td></td><td></td></tr>
+    <tr><td><strong>Stale records in scope</strong></td><td>excluded, or under 10%</td><td></td><td></td><td></td></tr>
+    <tr><td><strong>Entry validation live</strong></td><td>every routed field treated and owned</td><td></td><td></td><td></td></tr>
+    <tr><td><strong>Loop protection</strong></td><td>tested with a deliberate loop</td><td></td><td></td><td></td></tr>
+    <tr><td><strong>Do-not-touch list</strong></td><td>checked at every write path</td><td></td><td></td><td></td></tr>
+    <tr><td><strong>Validation on AI writes</strong></td><td>fails loud on schema surprise</td><td></td><td></td><td></td></tr>
+  </table>
+  <p style="font-size: 11px;">Starting points, not laws. Set yours before the cleanup and write down why; thresholds set after the work always equal whatever the work achieved. Count rows re-run monthly. Guard rows re-test on change, and any new integration reopens the do-not-touch row.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Rules and Worksheets</h2>
+  <p>Markdown files, ready to run against your own records. Start in this order.</p>
+  <div class="box"><h3>1 &nbsp;data-readiness-audit.md</h3><p>Scope the fields AI reads, then count the mess. The before-numbers live here.</p></div>
+  <div class="box"><h3>2 &nbsp;dedupe-merge-rules.md &nbsp;+&nbsp; field-census.md</h3><p>Match rules, survivorship, merges checked against the do-not-touch list, and the census that asks before it deletes.</p></div>
+  <div class="box"><h3>3 &nbsp;source-validation.md</h3><p>The step that stops the refilling. Entry points, field treatments, picklist conversions, each with an owner.</p></div>
+  <div class="box"><h3>4 &nbsp;write-guards.md</h3><p>Loop protection, the do-not-touch list, and deterministic validation around every AI write.</p></div>
+  <div class="box"><h3>5 &nbsp;readiness-scorecard.md</h3><p>The gate. Until the numbers move, no workflow reads these records.</p></div>
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;·&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">Clean data is the first place the judgment shows.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 03</span></div>
+</div>
+</body>
+</html>

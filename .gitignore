@@ -9,3 +9,6 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# rendered playbook PDFs — build artifacts, sources live in pdf-src/
+assets/kits/pdf/

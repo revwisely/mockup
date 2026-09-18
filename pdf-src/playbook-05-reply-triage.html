@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --card: #1c2333;
+    --blue: #4A9ECE; --green: #98C379; --amber: #E5C07B; --purple: #C678DD; --coral: #E06C75;
+    --t1: #E6EDF3; --t2: #8B949E; --t3: #484F58; --border: #30363d;
+  }
+  body { font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--t1); }
+  .page {
+    width: 8.5in; height: 11in; padding: 0.75in; page-break-after: always;
+    background: var(--bg); position: relative; overflow: hidden;
+    background-image: radial-gradient(circle, rgba(74,158,206,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+  .eyebrow { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 3px; color: var(--t3); text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.5px; }
+  h2 { font-size: 22px; letter-spacing: -0.3px; margin-bottom: 6px; }
+  p { font-size: 12.5px; line-height: 1.65; color: var(--t2); }
+  .lead { font-size: 14px; color: var(--t1); }
+  .footer { position: absolute; bottom: 0.5in; left: 0.75in; right: 0.75in; display: flex; justify-content: space-between; font-family: Menlo, monospace; font-size: 8.5px; color: var(--t3); letter-spacing: 1px; }
+  .logo { font-family: Menlo, monospace; font-weight: 700; font-size: 14px; }
+  .logo .a { color: var(--blue); }
+  .rule { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+  .box { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 16px 18px; margin: 12px 0; }
+  .box h3 { font-size: 13px; margin-bottom: 6px; }
+  .box p, .box li { font-size: 11.5px; line-height: 1.6; color: var(--t2); }
+  ul { padding-left: 16px; }
+  li { font-size: 12px; line-height: 1.7; color: var(--t2); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t3); text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  td { font-size: 11px; line-height: 1.5; color: var(--t2); padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td.fill { min-width: 1.6in; }
+  td strong { color: var(--t1); }
+  .chip { display: inline-block; font-family: Menlo, monospace; font-size: 9px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 99px; color: var(--t2); margin-right: 5px; }
+  .c-green { color: var(--green); border-color: var(--green); }
+  .c-amber { color: var(--amber); border-color: var(--amber); }
+  .c-purple { color: var(--purple); border-color: var(--purple); }
+  .c-coral { color: var(--coral); border-color: var(--coral); }
+  .stepnum { font-family: Menlo, monospace; font-size: 11px; color: var(--blue); margin-right: 8px; }
+  .step { margin: 14px 0; }
+  .step h3 { font-size: 14px; margin-bottom: 4px; }
+  .step p { font-size: 11.5px; }
+  .watch { font-size: 11px; color: var(--t3); font-style: italic; margin-top: 4px; }
+  pre { font-family: Menlo, monospace; font-size: 9.5px; line-height: 1.55; color: var(--t2); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 10px 0; }
+  .diagram-wrap { display: flex; align-items: center; justify-content: center; height: 8.6in; }
+  .diagram-wrap img { max-width: 100%; max-height: 100%; }
+  blockquote { border-left: 3px solid var(--blue); padding: 6px 0 6px 14px; margin: 14px 0; font-style: italic; color: var(--t2); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 05</p>
+    <h1>The Outbound<br>Reply Triage<br>Playbook</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">Replies scatter across tools and sit unread. This playbook captures every one verbatim, classifies it honestly, stops the sequence the moment words arrive, and puts a person on anything that matters.</p>
+    <div style="margin-top: 26px;"><span class="chip c-amber">RevOps</span><span class="chip">September 2026</span></div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>A reply is a person. Every guard in this playbook exists because busy queues forget that.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The design principle the whole system enforces</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap"><img src="file:///Users/derr/Projects/magnetiz_new/assets/diagrams/reply-triage.svg" alt="Workflow diagram"></div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The runnable versions ship as the markdown files in this kit.</p>
+  <hr class="rule">
+  <div class="step">
+    <h3><span class="stepnum">01</span>Capture every reply in one queue</h3>
+    <p><strong style="color:#E6EDF3">The words are the product.</strong> Every reply from every sending tool lands in one queue, verbatim. A paraphrased reply has already lost the thing the system exists to collect.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">02</span>Clean the text</h3>
+    <p>Strip signatures, footers, disclaimers, and quoted history, so classification reads the human. Most misclassifications are the footer. Keep the raw original alongside for the record.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">03</span>Classify with a taxonomy, not a vibe</h3>
+    <p>Six classes with linguistic tells and a numeric confidence. Interested. A question or objection. Not interested. Out of office. Routed away, because people leave companies. And unclassified, because one letter is not evidence, and the schema can say so.</p><p class="watch">Watch for low confidence. Below 0.8, a person decides the class, and the verdict with its reason becomes the calibration data.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">04</span>Honor the exits instantly</h3>
+    <p><strong style="color:#E6EDF3">The sequence stops the moment words arrive,</strong> deterministically, before classification runs. Do-not-contact splits by how the no arrived. Explicit unsubscribe language lands instantly, no model in the path. An inferred no waits for the human verdict, because the irreversible action never rests on an inference. One list, honored at every send path in the guardrails table.</p><p class="watch">Watch for the tool that keeps sending while a reply sits unread. Nothing burns a domain faster.</p>
+  </div>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Re-enroll the out-of-office</h3>
+    <p>An out-of-office is timing, not rejection. The contact pauses until the stated return date plus a bracketed buffer, dates resolved against the day the reply arrived, then resumes where it left off. A delegate named in the auto-reply is a fact for the record, never a new target.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">06</span>A person answers anything that matters</h3>
+    <p>Interested replies and real questions alert the channel with the verbatim thread and the lead context alongside. A person writes every answer. Nothing auto-replies, ever.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">07</span>Log the words, learn the classes</h3>
+    <p><strong style="color:#E6EDF3">Supervised first.</strong> Every reply is recorded with its class, numeric confidence, the human verdict, and the verdict's reason in one line. Three same-shaped disagreements are a revision candidate, and the objection language is next month's better messaging.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">The Six Classes</h2>
+  <table>
+    <tr><th>Class</th><th>The tell</th><th>What happens</th></tr>
+    <tr><td><strong style="color:#98C379">Interested</strong></td><td>names a time, asks price, real specifics</td><td>stop &#183; alert &#183; a person replies in the hour</td></tr>
+    <tr><td><strong style="color:#E5C07B">Question / objection</strong></td><td>a real question or pushback with content</td><td>stop &#183; alert &#183; a person answers same day</td></tr>
+    <tr><td><strong style="color:#E06C75">Not interested</strong></td><td>a clear no</td><td>stop &#183; explicit unsubscribe lands DNC instantly, an inferred no waits for a person</td></tr>
+    <tr><td><strong style="color:#C678DD">Out of office</strong></td><td>auto-reply, return date</td><td>pause &#183; re-enroll after the return + buffer</td></tr>
+    <tr><td><strong style="color:#56B6C2">Routed away</strong></td><td>"I left the company," a named successor</td><td>record updated &#183; never DNC &#183; new contact is a person's call</td></tr>
+    <tr><td><strong>Unclassified</strong></td><td>too little signal to read ("k")</td><td>always a person &#183; sequence stays paused</td></tr>
+  </table>
+  <p style="font-size: 11px;">Below 0.8 confidence, whatever the class, a person decides. The honesty about what it cannot classify is what makes the confident calls trustworthy.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Files</h2>
+  <p>Markdown files, ready to run against your own reply stream. Start in this order.</p>
+  <div class="box"><h3>1 &nbsp;reply-taxonomy.md</h3><p>The six classes, the tells, the edge rules, the channel differences, and the confidence threshold.</p></div>
+  <div class="box"><h3>2 &nbsp;triage-prompt.md</h3><p>The cleaning rules and the classification prompt with its output schema.</p></div>
+  <div class="box"><h3>3 &nbsp;sample-replies-and-output.md</h3><p>Eight replies and the answer key, with numeric confidence, including the three that route to a person by design.</p></div>
+  <div class="box"><h3>4 &nbsp;guardrails.md &nbsp;+&nbsp; routing-and-alerts.md</h3><p>The send-paths table, the four guards with their tests, and the alert formats, the anger alert included.</p></div>
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;&#183;&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">The reply was the point of the whole campaign. Treat it like it.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 05</span></div>
+</div>
+</body>
+</html>

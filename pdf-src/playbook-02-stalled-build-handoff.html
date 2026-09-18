@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --card: #1c2333;
+    --blue: #4A9ECE; --green: #98C379; --amber: #E5C07B; --purple: #C678DD; --coral: #E06C75;
+    --t1: #E6EDF3; --t2: #8B949E; --t3: #484F58; --border: #30363d;
+  }
+  body { font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--t1); }
+  .page {
+    width: 8.5in; height: 11in; padding: 0.75in; page-break-after: always;
+    background: var(--bg); position: relative; overflow: hidden;
+    background-image: radial-gradient(circle, rgba(74,158,206,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+  .eyebrow { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 3px; color: var(--t3); text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.5px; }
+  h2 { font-size: 22px; letter-spacing: -0.3px; margin-bottom: 6px; }
+  p { font-size: 12.5px; line-height: 1.65; color: var(--t2); }
+  .lead { font-size: 14px; color: var(--t1); }
+  .footer { position: absolute; bottom: 0.5in; left: 0.75in; right: 0.75in; display: flex; justify-content: space-between; font-family: Menlo, monospace; font-size: 8.5px; color: var(--t3); letter-spacing: 1px; }
+  .logo { font-family: Menlo, monospace; font-weight: 700; font-size: 14px; }
+  .logo .a { color: var(--blue); }
+  .rule { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+  .box { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 16px 18px; margin: 12px 0; }
+  .box h3 { font-size: 13px; margin-bottom: 6px; }
+  .box p, .box li { font-size: 11.5px; line-height: 1.6; color: var(--t2); }
+  ul { padding-left: 16px; }
+  li { font-size: 12px; line-height: 1.7; color: var(--t2); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t3); text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  td { font-size: 11px; line-height: 1.5; color: var(--t2); padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td.fill { min-width: 1.6in; }
+  td strong { color: var(--t1); }
+  .chip { display: inline-block; font-family: Menlo, monospace; font-size: 9px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 99px; color: var(--t2); margin-right: 5px; }
+  .c-green { color: var(--green); border-color: var(--green); }
+  .c-amber { color: var(--amber); border-color: var(--amber); }
+  .c-purple { color: var(--purple); border-color: var(--purple); }
+  .c-coral { color: var(--coral); border-color: var(--coral); }
+  .stepnum { font-family: Menlo, monospace; font-size: 11px; color: var(--blue); margin-right: 8px; }
+  .step { margin: 14px 0; }
+  .step h3 { font-size: 14px; margin-bottom: 4px; }
+  .step p { font-size: 11.5px; }
+  .watch { font-size: 11px; color: var(--t3); font-style: italic; margin-top: 4px; }
+  pre { font-family: Menlo, monospace; font-size: 9.5px; line-height: 1.55; color: var(--t2); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 10px 0; }
+  .diagram-wrap { display: flex; align-items: center; justify-content: center; height: 8.6in; }
+  .diagram-wrap img { max-width: 100%; max-height: 100%; }
+  blockquote { border-left: 3px solid var(--blue); padding: 6px 0 6px 14px; margin: 14px 0; font-style: italic; color: var(--t2); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 02</p>
+    <h1>The Handoff That<br>Revives a Stalled<br>AI Build</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">The automation worked. Then its builder left, or moved on, and it sat. This playbook takes what already exists to the bar where one named person on your team runs it, without watering down what it does.</p>
+    <div style="margin-top: 26px;"><span class="chip c-purple">Delivery</span><span class="chip">September 2026</span></div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>A system producing results is not a system adopted.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The failure this playbook is built to fix</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap">
+    <img src="file:///Users/derr/Projects/magnetiz_new/assets/diagrams/stalled-build-handoff.svg" alt="Workflow diagram">
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The worksheets for every one of them ship as the markdown files in this kit.</p>
+  <hr class="rule">
+  <div class="step">
+    <h3><span class="stepnum">01</span>Audit what exists</h3>
+    <p>List the stalled build honestly, in three columns. What still runs. What runs with a human hand on it. What broke and when. Most stalled builds are closer to alive than anyone remembers.</p><p class="watch">Watch for the audit that turns into a rebuild pitch. Reviving beats rebuilding until proven otherwise.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">02</span>Name the owner</h3>
+    <p><strong style="color:#E6EDF3">One person, with hours in numbers.</strong> How many per week, and what moves off their plate to make room. A manager who cannot name what moves has not decided. No named owner means the revival does not start, and the audit asks the question in its first row.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">03</span>Define runnable</h3>
+    <p>Write the acceptance bar before touching anything. The owner launches unassisted, knows what good output looks like, recovers the likely failures with the runbook alone, and finds out from the system when it goes quiet. Capture baselines now; the after columns fill 30 days post-handoff, on the calendar. When the work had stopped entirely, the baseline is the cost of not doing it.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">04</span>Pick the doorbell</h3>
+    <p><strong style="color:#E6EDF3">The front end is a door, never the house.</strong> Slack teams get a Slack front end. Microsoft teams get Teams. The requirement is that anyone can run it, without watering down the power of what it is doing.</p><p class="watch">Watch for a front end that asks your team to learn a new tool. The door they already open is the door.</p>
+  </div>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Wrap, don't rebuild</h3>
+    <p>Put a thin, runnable layer over what exists. The smallest reliable slice ships first, gets used, and earns the next slice. Every change stays reversible. The stalled build is the asset, and wrapping preserves it while a rebuild would gamble it.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">06</span>Transfer ownership</h3>
+    <p>The runbook lives where the work happens, and the training does too. The owner comments on output in plain language, the system files the note as a lesson and confirms it back in the thread, and a wrong lesson rolls back in one step. The kit ships the mechanism (corrections-to-lessons.md). No prompt engineering is asked of anyone.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">07</span>Prove it</h3>
+    <p><strong style="color:#E6EDF3">Six checks, each with a date, then a cadence.</strong> Owner runs it unassisted. Output passes, in their words. A failure recovered by runbook alone. Silence simulated, reported by the system. The backup runs it end to end. A correction filed and confirmed as a lesson. Then it re-proves quarterly or on owner change, because a handoff is a state, never a ceremony.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">The Proving Run, All Six</h2>
+  <table>
+    <tr><th>Check</th><th style="width:1.2in;">Date</th></tr>
+    <tr><td>Owner ran the workflow end to end, unassisted, from the doorbell</td><td class="fill"></td></tr>
+    <tr><td>Output passed, and the owner said why in their own words</td><td class="fill"></td></tr>
+    <tr><td>One failure simulated; owner recovered it with the runbook alone</td><td class="fill"></td></tr>
+    <tr><td><strong>Silence simulated; the owner found out from the system</strong></td><td class="fill"></td></tr>
+    <tr><td><strong>The backup ran it end to end, unassisted</strong></td><td class="fill"></td></tr>
+    <tr><td>A correction filed as a comment; the lesson confirmed in the thread</td><td class="fill"></td></tr>
+  </table>
+  <p style="font-size: 11px;">Re-prove the first check every quarter, or on any owner or backup change, whichever comes first. The date goes in the runbook history.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Worksheets</h2>
+  <p>Markdown files, ready to fill against your own stalled build. Start in this order.</p>
+  <div class="box"><h3>1 &nbsp;stalled-build-audit.md</h3><p>The three-column inventory. What runs, what needs a hand, what broke and when.</p></div>
+  <div class="box"><h3>2 &nbsp;owner-checklist.md</h3><p>Capacity in hours, the internals question answered honestly, and the six-check proving run with its re-prove cadence.</p></div>
+  <div class="box"><h3>3 &nbsp;runnable-definition.md</h3><p>The acceptance bar and the baseline table that makes the revival provable.</p></div>
+  <div class="box"><h3>4 &nbsp;doorbell-guide.md</h3><p>Pick the door your team already opens, rather than the one that asks them to learn a new tool.</p></div>
+  <div class="box"><h3>5 &nbsp;wrapping-worksheet.md</h3><p>The line between what you wrap and what you leave alone, the slice order that ships smallest first, and an undo for every change.</p></div>
+  <div class="box"><h3>6 &nbsp;handoff-runbook-template.md &nbsp;+&nbsp; corrections-to-lessons.md</h3><p>The runbook that lives where the work happens, and the mechanism that turns a plain-language comment into a confirmed lesson.</p></div>
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz revives and builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;·&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">The build was never dead. It was waiting for an owner and a door.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 02</span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: letter; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --card: #1c2333;
+    --blue: #4A9ECE; --green: #98C379; --amber: #E5C07B; --purple: #C678DD; --coral: #E06C75;
+    --t1: #E6EDF3; --t2: #8B949E; --t3: #484F58; --border: #30363d;
+  }
+  body { font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--t1); }
+  .page {
+    width: 8.5in; height: 11in; padding: 0.75in; page-break-after: always;
+    background: var(--bg); position: relative; overflow: hidden;
+    background-image: radial-gradient(circle, rgba(74,158,206,0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; }
+  .eyebrow { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 3px; color: var(--t3); text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.5px; }
+  h2 { font-size: 22px; letter-spacing: -0.3px; margin-bottom: 6px; }
+  p { font-size: 12.5px; line-height: 1.65; color: var(--t2); }
+  .lead { font-size: 14px; color: var(--t1); }
+  .footer { position: absolute; bottom: 0.5in; left: 0.75in; right: 0.75in; display: flex; justify-content: space-between; font-family: Menlo, monospace; font-size: 8.5px; color: var(--t3); letter-spacing: 1px; }
+  .logo { font-family: Menlo, monospace; font-weight: 700; font-size: 14px; }
+  .logo .a { color: var(--blue); }
+  .rule { border: none; border-top: 1px solid var(--border); margin: 18px 0; }
+  .box { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); padding: 16px 18px; margin: 12px 0; }
+  .box h3 { font-size: 13px; margin-bottom: 6px; }
+  .box p, .box li { font-size: 11.5px; line-height: 1.6; color: var(--t2); }
+  ul { padding-left: 16px; }
+  li { font-size: 12px; line-height: 1.7; color: var(--t2); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { font-family: Menlo, monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t3); text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); }
+  td { font-size: 11px; line-height: 1.5; color: var(--t2); padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td.fill { min-width: 1.6in; }
+  td strong { color: var(--t1); }
+  .chip { display: inline-block; font-family: Menlo, monospace; font-size: 9px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 99px; color: var(--t2); margin-right: 5px; }
+  .c-green { color: var(--green); border-color: var(--green); }
+  .c-amber { color: var(--amber); border-color: var(--amber); }
+  .c-purple { color: var(--purple); border-color: var(--purple); }
+  .c-coral { color: var(--coral); border-color: var(--coral); }
+  .stepnum { font-family: Menlo, monospace; font-size: 11px; color: var(--blue); margin-right: 8px; }
+  .step { margin: 14px 0; }
+  .step h3 { font-size: 14px; margin-bottom: 4px; }
+  .step p { font-size: 11.5px; }
+  .watch { font-size: 11px; color: var(--t3); font-style: italic; margin-top: 4px; }
+  pre { font-family: Menlo, monospace; font-size: 9.5px; line-height: 1.55; color: var(--t2); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin: 10px 0; }
+  .diagram-wrap { display: flex; align-items: center; justify-content: center; height: 8.6in; }
+  .diagram-wrap img { max-width: 100%; max-height: 100%; }
+  blockquote { border-left: 3px solid var(--blue); padding: 6px 0 6px 14px; margin: 14px 0; font-style: italic; color: var(--t2); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 07</p>
+    <h1>Teach AI<br>Your Brand Voice</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">You wrote the messaging guideline, shared it with everyone who writes for you, and loaded it into AI. The drafts still come back needing you. This playbook builds the layer a document cannot hold, and the two gates that prove it works.</p>
+    <div style="margin-top: 26px;"><span class="chip c-amber">Marketing</span><span class="chip">September 2026</span></div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>Taste does not fit in a document.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The Magnetiz position, published September 2026</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap"><img src="file:///Users/derr/Projects/magnetiz_new/assets/diagrams/brand-voice-context-layer.svg" alt="Workflow diagram"></div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The worksheets for every one of them ship as the markdown files in this kit.</p>
+  <hr class="rule">
+  <div class="step">
+    <h3><span class="stepnum">01</span>Harvest artifacts, not adjectives</h3>
+    <p>A guideline says confident but approachable. An exemplar set shows it. Collect what worked and what missed, each with one line on why, plus the lines customers quoted back to you. The rejected drafts matter as much as the published ones; the losers teach where the line is.</p><p class="watch">Watch for the harvest that skips call recordings. Your customers' own words are the best voice material you own, and they are already recorded.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">02</span>Split mechanical from judgment</h3>
+    <p><strong style="color:#E6EDF3">Could a person with no taste check this rule correctly, every time, with no argument?</strong> Yes means mechanical, and it belongs in a linter. No means judgment, and it belongs in the rubric and the exemplars. Most voice documents mix the two and enforce neither.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">03</span>Build the linter</h3>
+    <p>The mechanical half becomes a check that runs before a person reads a word. It reports the exact line and the exact rule, exits non-zero on error, and runs on outside drafts the moment they arrive.</p><p class="watch">Watch for the linter getting credit for quality. A clean lint means the tells are gone, nothing more.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">04</span>Write the rubric, and run it three times</h3>
+    <p>The judge scores what a linter cannot hold. Predictability, earned claim, register, voice match, contribution. Blind, because a judge told the founder wrote it scores the founder.</p><p><strong style="color:#E6EDF3">Run it three times and take the majority.</strong> We measured this in our own system. The same draft, the same rubric, the same model, scored clean and slop in consecutive runs, four of nine clean on an unchanged piece. Trust a reproduced finding over the verdict label.</p>
+  </div>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Calibrate against known-good and known-bad</h3>
+    <p>Five pieces you know are good, five you know are bad, two your team argued about, answers kept out of the judge's reach, pass bars written down first. <strong style="color:#E6EDF3">If the judge cannot separate your known-good from your known-bad, the rubric is wrong, not the drafts.</strong> A judge that fails a known-good is enforcing something your voice does not believe, and left alone it flattens the writing.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">06</span>Distribute one version</h3>
+    <p>A layer that lives in one person's cloud and gets downloaded, edited, and re-uploaded has as many versions as it has readers. One source, one named owner, dated versions, retirements recorded loudly. Anyone outside your core team is the test case, and the brief should be a link.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">07</span>Close the loop</h3>
+    <p>What ships goes back in. A piece that landed becomes an exemplar, a piece that missed becomes a known-bad, and a correction you have made three times becomes a rule. <strong style="color:#E6EDF3">A context layer that never grows is a document again</strong>, and documents are what sent the drafts back needing you.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">The Calibration Gate</h2>
+  <table>
+    <tr><th>Check</th><th>Starting bar</th><th style="width:1in;">Your result</th></tr>
+    <tr><td><strong>Known-good pieces passing</strong></td><td>5 of 5</td><td class="fill"></td></tr>
+    <tr><td><strong>Known-bad pieces failing</strong></td><td>5 of 5</td><td class="fill"></td></tr>
+    <tr><td><strong>Borderline verdicts stable across three runs</strong></td><td>1 of 2</td><td class="fill"></td></tr>
+  </table>
+  <p style="font-size: 11px;">Write your bars down before the first run. A bar set afterward equals whatever the run achieved. A judge that passes a known-bad is missing an axis; name it and add it.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Worksheets</h2>
+  <p>Markdown files, ready to fill against your own voice. Start in this order.</p>
+  <div class="box"><h3>1 &nbsp;harvest-inventory.md</h3><p>What to collect, how many, and the one line of why that turns a sample into a lesson.</p></div>
+  <div class="box"><h3>2 &nbsp;mechanical-vs-judgment.md</h3><p>The sort that decides what a script enforces and what taste decides.</p></div>
+  <div class="box"><h3>3 &nbsp;linter-spec.md &nbsp;+&nbsp; judge-rubric.md</h3><p>The deterministic half with a starting rule set, and the blind rubric with the three-run majority rule.</p></div>
+  <div class="box"><h3>4 &nbsp;calibration-set.md &nbsp;+&nbsp; distribution-and-versioning.md</h3><p>Proving the rubric can tell good from bad, then getting one version into every reader's hands.</p></div>
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;&#183;&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">Taste lives in the examples you kept, the checks that run, and a judge you proved can tell good from bad.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 07</span></div>
+</div>
+</body>
+</html>
