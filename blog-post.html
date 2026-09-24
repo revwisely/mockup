@@ -105,6 +105,20 @@
     <div class="post-loading">// Loading post</div>
   </article>
 
+  <!-- Post CTA. ONE source: js/blog-post.js clones this in the browser and
+       api/og.js lifts it for the server render, so the two never drift. -->
+  <template id="post-cta">
+    <aside class="post-cta">
+      <div class="post-cta-label">// Keep going</div>
+      <h2 class="post-cta-title">Bring the problem behind this to a call.</h2>
+      <p class="post-cta-body">Magnetiz builds the workflow, trains a named person on your team to run it, and hands it over. Twenty-five minutes, no deck.</p>
+      <div class="post-cta-actions">
+        <a href="/index.html#cta" class="btn-primary">Schedule Call</a>
+        <a href="/newsletter.html#newsletter-form" class="post-cta-secondary">Get the Thursday newsletter</a>
+      </div>
+    </aside>
+  </template>
+
   <!-- ============================================
        FOOTER
        ============================================ -->

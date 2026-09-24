@@ -50,7 +50,7 @@ function renderHero(post) {
 // The markup below mirrors renderPost() in js/blog-post.js exactly so the same
 // CSS applies. If one changes, change the other. post.content is already HTML
 // and is inserted verbatim, same as the client does.
-function renderArticle(post) {
+function renderArticle(post, cta = '') {
   const tags = (Array.isArray(post.tags) ? post.tags : [])
     .map(t => `<span class="post-tag">${esc(t)}</span>`).join('');
 
@@ -67,6 +67,7 @@ function renderArticle(post) {
       </div>
       ${renderHero(post)}
       <div class="post-body">${post.content || ''}</div>
+${cta}
       <div class="post-footer">
         <a href="/content.html" class="post-footer-back">Back to Content Hub</a>
       </div>
@@ -167,7 +168,9 @@ export default async function handler(req, res) {
     // string silently mangles the article body. A function replacement is
     // handed the text verbatim.
     const head = `  ${tags}\n  ${canonicalAndSchema(post, pageUrl, image)}\n</head>`;
-    const article = renderArticle(post);
+    // Same CTA the browser clones from <template id="post-cta"> in the shell.
+    const ctaMatch = html.match(/<template id="post-cta">([\s\S]*?)<\/template>/i);
+    const article = renderArticle(post, ctaMatch ? ctaMatch[1] : '');
 
     html = html
       .replace(/<title>[\s\S]*?<\/title>\s*/i, '')

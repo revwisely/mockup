@@ -52,6 +52,13 @@
     return '<img src="' + toAbsolute(post.image) + '" alt="' + post.title + '" class="post-featured-image" loading="lazy">';
   }
 
+  // The CTA lives in <template id="post-cta"> in blog-post.html. api/og.js lifts
+  // the same block for the server render; keep this the only browser copy.
+  function renderCta() {
+    var t = document.getElementById('post-cta');
+    return t ? t.innerHTML : '';
+  }
+
   function renderPost(post) {
     // api/og.js renders the article server-side and marks the container with
     // data-ssr. When that has happened the DOM is already correct, and
@@ -85,6 +92,7 @@
         '</div>' +
         renderHero(post) +
         '<div class="post-body">' + post.content + '</div>' +
+        renderCta() +
         '<div class="post-footer">' +
           '<a href="/content.html" class="post-footer-back">Back to Content Hub</a>' +
         '</div>' +
