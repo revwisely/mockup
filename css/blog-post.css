@@ -378,11 +378,6 @@
   gap: 20px;
 }
 
-.post-cta-secondary {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  color: var(--accent-blue);
-}
 
 /* --- Loading State --- */
 .post-loading {
