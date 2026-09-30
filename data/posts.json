@@ -1,5 +1,15 @@
 [
   {
+    "slug": "new-playbook-target-account-ads",
+    "title": "New Playbook: Target Account Ads",
+    "date": "2026-10-01",
+    "author": "Magnetiz.ai",
+    "excerpt": "Upload a list of target companies to LinkedIn and one row with a parent company's domain can match that parent's entire workforce, while the dashboard looks normal. Playbook 08 is the workflow that catches it, with an AI agent checking the list, the campaign and the weekly numbers before a person spends a dollar.",
+    "image": "assets/images/posts/new-playbook-target-account-ads-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "same-company-four-times",
     "title": "Why Does AI Make Bad Data Worse?",
     "date": "2026-09-24",
