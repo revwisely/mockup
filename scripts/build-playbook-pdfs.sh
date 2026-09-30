@@ -36,6 +36,7 @@ names=(
   "05:reply-triage:5"
   "06:crm-enrichment-review:5"
   "07:brand-voice-context-layer:5"
+  "08:target-account-ads:5"
 )
 
 [ -x "$CHROME" ] || { echo "Chrome not found at $CHROME" >&2; exit 1; }

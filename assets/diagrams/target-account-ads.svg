@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="Target account ads: an agent checks every company against the account rules, a person reviews and uploads, the audience size is checked, an agent checks the campaign settings, ads run before outreach opens, an agent writes the weekly readout, and a person decides.">
+  <defs>
+    <marker id="t-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="t-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="t-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="t-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#t-dots)"/>
+
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- sources -> list check -->
+    <path d="M222,84 V106"/>
+    <path d="M522,84 V106"/>
+    <path d="M222,106 H522"/>
+    <path d="M372,106 V128" marker-end="url(#t-arr)" stroke="#4A9ECE"/>
+    <!-- verdict bus -->
+    <path d="M372,194 V214" stroke="#4A9ECE"/>
+    <path d="M147,214 H597"/>
+    <path d="M147,214 V234" marker-end="url(#t-arrdim)" stroke="#98C379"/>
+    <path d="M372,214 V234" marker-end="url(#t-arrdim)" stroke="#E5C07B"/>
+    <path d="M597,214 V234" marker-end="url(#t-arrdim)" stroke="#E06C75"/>
+    <!-- keep + unsure -> human gate -->
+    <path d="M147,294 V312 H372" stroke="#98C379"/>
+    <path d="M372,294 V330" marker-end="url(#t-arr)" stroke="#4A9ECE"/>
+    <!-- gate -> size -> settings -->
+    <path d="M372,396 V416" marker-end="url(#t-arr)" stroke="#4A9ECE"/>
+    <path d="M522,444 H560" marker-end="url(#t-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <path d="M372,472 V492" marker-end="url(#t-arr)" stroke="#4A9ECE"/>
+    <!-- settings -> ads, ads -> outreach -->
+    <path d="M372,558 V568 H212 V578" marker-end="url(#t-arr)" stroke="#4A9ECE"/>
+    <path d="M327,609 H417" marker-end="url(#t-arr)" stroke="#4A9ECE"/>
+    <!-- ads + outreach -> readout -->
+    <path d="M212,640 V656 H532 V640"/>
+    <path d="M372,656 V676" marker-end="url(#t-arr)" stroke="#4A9ECE"/>
+    <path d="M372,734 V752" marker-end="url(#t-arr)" stroke="#4A9ECE"/>
+    <!-- kill loop: back to the layer the gate names -->
+    <path id="n-killback" d="M572,787 H728 V161 H547" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#t-arrdim)"/>
+  </g>
+
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#t-glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M372,106 V214 H147 V312 H372 V492 V568 H212 V609 H417 M532,640 V656 H372 V752"/>
+  </circle>
+
+  <!-- sources -->
+  <g id="n-list" class="dx">
+    <rect x="117" y="30" width="210" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="222" y="53" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">TARGET ACCOUNT LIST</text>
+    <text class="dx" x="222" y="71" text-anchor="middle" fill="#8B949E" font-size="9.5">companies you intend to contact</text>
+  </g>
+  <g id="n-rules" class="dx">
+    <rect x="417" y="30" width="210" height="54" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="522" y="53" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">ACCOUNT RULES</text>
+    <text class="dx" x="522" y="71" text-anchor="middle" fill="#8B949E" font-size="9.5">the class test, written first</text>
+  </g>
+
+  <!-- agent: list check -->
+  <g id="n-listcheck" class="dx">
+    <rect x="197" y="128" width="350" height="66" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="372" y="153" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">AGENT &#183; CHECK EVERY COMPANY</text>
+    <text class="dx" x="372" y="170" text-anchor="middle" fill="#4A9ECE" font-size="10.5">screen, then web research, one at a time</text>
+    <text class="dx" x="372" y="184" text-anchor="middle" fill="#8B949E" font-size="9.5">a source and a reason on every row</text>
+  </g>
+
+  <!-- verdicts -->
+  <g id="n-keep" class="dx">
+    <rect x="77" y="234" width="140" height="60" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="147" y="259" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">KEEP</text>
+    <text class="dx" x="147" y="277" text-anchor="middle" fill="#8B949E" font-size="9.5">every rule sourced</text>
+  </g>
+  <g id="n-unsure" class="dx">
+    <rect x="302" y="234" width="140" height="60" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="372" y="259" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">UNSURE</text>
+    <text class="dx" x="372" y="277" text-anchor="middle" fill="#8B949E" font-size="9.5">a source is missing</text>
+  </g>
+  <g id="n-cut" class="dx">
+    <rect x="527" y="234" width="140" height="60" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text class="dx" x="597" y="256" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">CUT</text>
+    <text class="dx" x="597" y="272" text-anchor="middle" fill="#8B949E" font-size="9">reason recorded</text>
+    <text class="dx" x="597" y="285" text-anchor="middle" fill="#8B949E" font-size="9">never re-added</text>
+  </g>
+
+  <!-- human gate 1: upload -->
+  <g id="n-upload" class="dx">
+    <g filter="url(#t-glow)">
+      <rect x="172" y="330" width="400" height="66" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="357" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+    <text class="dx" x="372" y="377" text-anchor="middle" fill="#8B949E" font-size="10">reads every cut and unsure, spot-checks keeps,</text>
+    <text class="dx" x="372" y="390" text-anchor="middle" fill="#8B949E" font-size="10">then uploads the company list</text>
+  </g>
+
+  <!-- size check -->
+  <g id="n-size" class="dx">
+    <rect x="222" y="416" width="300" height="56" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="372" y="440" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="600">AUDIENCE SIZE CHECK</text>
+    <text class="dx" x="372" y="458" text-anchor="middle" fill="#8B949E" font-size="9.5">300+ matched members, read ~2 days later</text>
+  </g>
+  <g id="n-below" class="dx">
+    <rect x="560" y="416" width="150" height="56" rx="9" fill="#1c2333" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <text class="dx" x="635" y="438" text-anchor="middle" fill="#E5C07B" font-size="10.5" font-weight="700">BELOW 300</text>
+    <text class="dx" x="635" y="454" text-anchor="middle" fill="#8B949E" font-size="8.5">loosen the job filters,</text>
+    <text class="dx" x="635" y="466" text-anchor="middle" fill="#8B949E" font-size="8.5">never the list</text>
+  </g>
+
+  <!-- agent: settings check -->
+  <g id="n-settings" class="dx">
+    <rect x="197" y="492" width="350" height="66" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="372" y="517" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">AGENT &#183; CHECK THE CAMPAIGN</text>
+    <text class="dx" x="372" y="534" text-anchor="middle" fill="#4A9ECE" font-size="10.5">as configured vs the worksheet</text>
+    <text class="dx" x="372" y="548" text-anchor="middle" fill="#8B949E" font-size="9.5">Audience Network off &#183; expansion off</text>
+  </g>
+
+  <!-- ads, then outreach -->
+  <g id="n-ads" class="dx">
+    <rect x="97" y="578" width="230" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="212" y="603" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">ADS RUN &#183; DAY 0</text>
+    <text class="dx" x="212" y="621" text-anchor="middle" fill="#8B949E" font-size="9.5">the list sees you first</text>
+  </g>
+  <text class="dx" x="372" y="601" text-anchor="middle" fill="#484F58" font-size="9">~1 week</text>
+  <g id="n-outreach" class="dx">
+    <rect x="417" y="578" width="230" height="62" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="532" y="600" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">OUTREACH OPENS</text>
+    <text class="dx" x="532" y="617" text-anchor="middle" fill="#8B949E" font-size="9.5">the first message lands warm</text>
+    <text class="dx" x="532" y="631" text-anchor="middle" fill="#8B949E" font-size="9">a reply takes it out of both</text>
+  </g>
+
+  <!-- agent: readout -->
+  <g id="n-readout" class="dx">
+    <rect x="197" y="676" width="350" height="58" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="372" y="700" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">AGENT &#183; WEEKLY READOUT</text>
+    <text class="dx" x="372" y="718" text-anchor="middle" fill="#4A9ECE" font-size="10.5">each gate read against its number</text>
+  </g>
+
+  <!-- human gate 2: decide -->
+  <g id="n-decide" class="dx">
+    <g filter="url(#t-glow)">
+      <rect x="172" y="752" width="400" height="70" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="780" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+    <text class="dx" x="372" y="800" text-anchor="middle" fill="#8B949E" font-size="10">continue &#183; change &#183; stop</text>
+    <text class="dx" x="372" y="814" text-anchor="middle" fill="#8B949E" font-size="10">with one line of reason</text>
+  </g>
+
+  <text class="dx" x="740" y="474" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(90 740 474)">NUMBER DIDN'T MOVE &#183; BACK TO THE LAYER THE GATE NAMES</text>
+
+  <text class="dx" x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 08 &#183; TARGET ACCOUNT ADS</text>
+</svg>

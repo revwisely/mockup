@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/pdf-src/playbook.css">
+</head>
+<body>
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 08</p>
+    <h1>The Target<br>Account Ads<br>Playbook</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">LinkedIn ads that warm the accounts you are about to contact. An AI agent checks the list, checks the campaign before launch, and writes the weekly readout. A person makes every call that spends money.</p>
+    <div style="margin-top: 26px;"><span class="chip c-amber">Marketing</span><span class="chip">September 2026</span></div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>A wrong audience spends at the normal rate and reports like a normal campaign. The only cheap place to catch it is before the upload.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The design principle the whole system enforces</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap"><img src="/assets/diagrams/target-account-ads.svg" alt="Workflow diagram"></div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The runnable versions ship as the markdown files in this kit.</p>
+  <hr class="rule">
+  <div class="step">
+    <h3><span class="stepnum">01</span>Write the account rules before the list</h3>
+    <p><strong style="color:#E6EDF3">The trigger is a named list of companies you intend to contact.</strong> Before anyone builds it, write the class test a stranger could apply to one company. Country, ownership, headcount band, the automatic exclusions, and the suppression lists. The agent can only be as precise as these rules.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">02</span>An agent checks every company</h3>
+    <p>Two passes. A fast screen cuts the obvious rows from the name and domain. A research pass checks each remaining company on the web and returns KEEP, CUT, or UNSURE, with a source and a reason on every row. A missing source is UNSURE, never KEEP.</p><p class="watch">Watch for the domain trap. LinkedIn matches company lists on the website domain, so a subsidiary listed under its parent's domain pulls in the parent's whole workforce. The matched count looks healthy while the ads reach the wrong people.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">03</span>A person reads the cuts, then uploads</h3>
+    <p>Every CUT reason and every UNSURE row gets a human read, plus a spot-check of a few KEEPs. The upload is a person's decision. If the list comes back small, loosen the campaign's job filters. Never re-add companies the check cut.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">04</span>Check the audience size before you design the campaign</h3>
+    <p>LinkedIn will not serve a matched audience under 300 members. Read the matched count about two days after upload, then build only the layers you can fill today.</p><p class="watch">Watch for the layer that never activates. It sits in the campaign doing nothing, and nobody notices for weeks.</p>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>An agent checks the campaign before launch</h3>
+    <p><strong style="color:#E6EDF3">The builder reads what they meant to set.</strong> The agent gets the settings worksheet and the campaign as configured, from the API, an export, or screenshots, and lists every difference. Anything it cannot see is CANNOT SEE, never an assumed default.</p><p class="watch">Watch for a cost per thousand far below normal in the first days. Cheap impressions usually mean the ads left LinkedIn's feed.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">06</span>Ads first, outreach second</h3>
+    <p>The account enters the audience and the ads run for about a week before the first message goes out. Ads introduce, outreach asks. Suppression runs both ways, so a reply, a meeting, or a new deal takes the account out of both.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">07</span>An agent writes the readout, a person decides</h3>
+    <p>The gates are written before launch, each with the number, the day it is read, and the action under each outcome. Weekly, the agent fills in the readout from the exports. A person decides to continue, change, or stop, and writes one line of reason.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">The Settings That Move Your Spend</h2>
+  <table>
+    <tr><th>Setting</th><th>Set it to</th><th>Why</th></tr>
+    <tr><td><strong style="color:#E5C07B">Objective</strong></td><td>website visits or engagement</td><td>locked once created &#183; awareness buys impressions</td></tr>
+    <tr><td><strong style="color:#E06C75">Audience Network</strong></td><td>off</td><td>on serves ads in other apps and sites</td></tr>
+    <tr><td><strong style="color:#E06C75">Audience expansion</strong></td><td>off</td><td>on adds people outside your list</td></tr>
+    <tr><td><strong style="color:#98C379">Exclusions</strong></td><td>customers, open deals, opt-outs</td><td>prospecting ads never reach a customer</td></tr>
+    <tr><td><strong style="color:#C678DD">Conversions</strong></td><td>named before launch</td><td>otherwise impressions are the only result</td></tr>
+  </table>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Files</h2>
+  <p>Markdown files, ready to run against your own account list. Start in this order.</p>
+  <div class="box"><h3>1 &nbsp;account-rules.md</h3><p>The class test, the automatic exclusions, the domain trap rule, and the suppression lists.</p></div>
+  <div class="box"><h3>2 &nbsp;list-check-prompt.md &nbsp;+&nbsp; sample-list-and-verdicts.md</h3><p>The two-pass agent prompts with the output schema, and ten sample companies with the answer key.</p></div>
+  <div class="box"><h3>3 &nbsp;campaign-settings-check.md</h3><p>The settings worksheet and the pre-launch check prompt.</p></div>
+  <div class="box"><h3>4 &nbsp;launch-sequence.md</h3><p>The audience size check, the order of operations, and two-way suppression.</p></div>
+  <div class="box"><h3>5 &nbsp;weekly-readout.md</h3><p>The gate card, the readout prompt, and the decision line a person signs.</p></div>
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;&#183;&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">Check the list before you pay to show it anything.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 08</span></div>
+</div>
+</body>
+</html>
