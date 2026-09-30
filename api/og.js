@@ -39,6 +39,18 @@ function renderHero(post) {
   return `<img src="${esc(toAbsolute(post.image))}" alt="${esc(post.title)}" class="post-featured-image">`;
 }
 
+// A post may carry its own CTA copy: { "cta": { "title": "...", "body": "..." } }.
+// Only the title and body change; the button is always Schedule Call. Function
+// replacements for the same $-reference reason noted below.
+function personalizeCta(ctaHtml, post) {
+  const c = post && post.cta;
+  if (!c) return ctaHtml;
+  let out = ctaHtml;
+  if (c.title) out = out.replace(/(<h2 class="post-cta-title">)[\s\S]*?(<\/h2>)/, (m, a, b) => a + esc(c.title) + b);
+  if (c.body) out = out.replace(/(<p class="post-cta-body">)[\s\S]*?(<\/p>)/, (m, a, b) => a + esc(c.body) + b);
+  return out;
+}
+
 // Renders the article body into the HTML the server sends.
 //
 // This exists because every post used to arrive at a crawler as the string
@@ -170,7 +182,7 @@ export default async function handler(req, res) {
     const head = `  ${tags}\n  ${canonicalAndSchema(post, pageUrl, image)}\n</head>`;
     // Same CTA the browser clones from <template id="post-cta"> in the shell.
     const ctaMatch = html.match(/<template id="post-cta">([\s\S]*?)<\/template>/i);
-    const article = renderArticle(post, ctaMatch ? ctaMatch[1] : '');
+    const article = renderArticle(post, ctaMatch ? personalizeCta(ctaMatch[1], post) : '');
 
     html = html
       .replace(/<title>[\s\S]*?<\/title>\s*/i, '')

@@ -54,9 +54,17 @@
 
   // The CTA lives in <template id="post-cta"> in blog-post.html. api/og.js lifts
   // the same block for the server render; keep this the only browser copy.
-  function renderCta() {
+  // A post may carry its own CTA copy (post.cta.title / post.cta.body). The button
+  // stays Schedule Call. api/og.js personalizeCta() does the same on the server.
+  function renderCta(post) {
     var t = document.getElementById('post-cta');
-    return t ? t.innerHTML : '';
+    if (!t) return '';
+    var wrap = document.createElement('div');
+    wrap.innerHTML = t.innerHTML;
+    var c = post && post.cta;
+    if (c && c.title) { var h = wrap.querySelector('.post-cta-title'); if (h) h.textContent = c.title; }
+    if (c && c.body) { var b = wrap.querySelector('.post-cta-body'); if (b) b.textContent = c.body; }
+    return wrap.innerHTML;
   }
 
   function renderPost(post) {
@@ -92,7 +100,7 @@
         '</div>' +
         renderHero(post) +
         '<div class="post-body">' + post.content + '</div>' +
-        renderCta() +
+        renderCta(post) +
         '<div class="post-footer">' +
           '<a href="/content.html" class="post-footer-back">Back to Content Hub</a>' +
         '</div>' +
