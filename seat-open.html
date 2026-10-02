@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- /seat-open. Paid destination for LinkedIn ad R1 ("The seat is open."), October 2026 open-seat campaign.
+       Copy source of truth: life_os magnetiz/gtm/2026-10-open-seat/messaging/outreach-message-house-2026-10-01.md (v4).
+       noindex: a campaign page, reached from the ad only. -->
+  <title>The Seat Is Open | Magnetiz.ai</title>
+  <meta name="description" content="Hiring a GTM engineer or RevOps lead? The first system that role was meant to build can be live in about 30 days, and your new hire starts with it running.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+
+  <!-- Site CSS (absolute paths so the /seat-open rewrite resolves them) -->
+  <link rel="stylesheet" href="/css/terminal.css">
+  <link rel="stylesheet" href="/css/maestro.css">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Google tag (gtag.js), same property as index.html -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B, same key as index.html -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity, same project as index.html -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+
+  <style>
+    /* ============================================
+       SEAT-OPEN PAGE (/seat-open)
+       Builds on terminal.css + maestro.css.
+       Only page-specific patterns live here.
+       ============================================ */
+
+    /* Paid-traffic nav: logo and the one CTA, no menu.
+       The CTA stays visible on phones (terminal.css hides it under 768px). */
+    .hb-nav .nav-cta { display: inline-block; }
+    @media (max-width: 768px) {
+      .hb-nav { padding: 12px 0; background: rgba(13, 17, 23, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-default); }
+      .hb-nav .container { padding: 0 16px; }
+      .hb-nav .nav-logo { font-size: 17px; }
+      .hb-nav .nav-cta { display: inline-block; padding: 8px 14px; font-size: 12px; }
+    }
+
+    /* --- Hero --- */
+    .hb-hero {
+      position: relative;
+      z-index: 2;
+      padding: 132px 24px 88px;
+    }
+    .hb-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hb-h1 {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: clamp(33px, 4.1vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+    }
+    .hb-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: clamp(17px, 2.1vw, 26px);
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+      color: var(--accent-blue);
+      margin-top: 18px;
+      max-width: 560px;
+    }
+    .hb-small {
+      font-size: 18px;
+      line-height: 1.45;
+      color: var(--text-secondary);
+      margin-top: 26px;
+    }
+    .hb-small strong { color: var(--text-primary); font-weight: 500; }
+    .hb-cta-row { margin-top: 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+    .hb-micro {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .hb-rail { width: 100%; }
+    .hb-rail svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .hb-rail .sys-glow { filter: drop-shadow(0 0 22px rgba(74, 158, 206, 0.16)); }
+    .hb-rail-mobile { display: none; }
+
+    /* --- Section rhythm --- */
+    .hb-section { position: relative; z-index: 2; padding: 96px 0; }
+    .hb-head { text-align: center; max-width: 760px; margin: 0 auto; }
+    .hb-head .section-title { font-size: clamp(26px, 3.4vw, 40px); }
+
+    /* --- Problem: the search log --- */
+    .hb-log { max-width: 760px; margin: 44px auto 0; }
+    .hb-log-row {
+      display: grid;
+      grid-template-columns: 22px 150px 1fr;
+      gap: 14px;
+      align-items: baseline;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--border-default);
+    }
+    .hb-log-row:last-child { border-bottom: none; }
+    .hb-log-row .ico { color: var(--accent-amber); font-family: 'JetBrains Mono', monospace; }
+    .hb-log-row .stage { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-primary); }
+    .hb-log-row p { color: var(--text-secondary); font-size: 15px; line-height: 1.5; }
+    .hb-log-row p .held { color: var(--accent-amber); font-family: 'JetBrains Mono', monospace; font-size: 13px; white-space: nowrap; }
+    .hb-log-row.is-live .ico, .hb-log-row p .live { color: var(--accent-green); font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+    .hb-log-row.is-live .stage { color: var(--accent-green); }
+
+    /* --- Switcher tweaks: role tabs --- */
+    .hb-switch { max-width: 1000px; margin-left: auto; margin-right: auto; }
+
+    /* --- The 30 days --- */
+    .hb-plan { max-width: 800px; margin: 44px auto 0; }
+
+    /* --- Ownership --- */
+    .hb-ownership {
+      max-width: 1000px;
+      margin: 44px auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .hb-own { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .hb-own .m-own-item { padding: 20px; }
+    .hb-own .m-own-item h3 { color: var(--text-primary); font-size: 1rem; margin: 8px 0 6px; }
+
+    /* --- Proof --- */
+    .hb-proof { max-width: 900px; margin: 44px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .hb-stat {
+      background: var(--bg-card);
+      border: 1px solid var(--border-default);
+      border-left: 2px solid var(--accent-green);
+      border-radius: var(--radius);
+      padding: 26px;
+    }
+    .hb-stat .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-green);
+    }
+    .hb-stat .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: clamp(28px, 3.2vw, 38px);
+      line-height: 1.05;
+      color: var(--text-primary);
+      margin: 14px 0 12px;
+    }
+    .hb-stat .num .from { color: var(--text-secondary); font-weight: 500; }
+    .hb-stat p { color: var(--text-secondary); font-size: 15px; line-height: 1.6; }
+
+    /* --- Questions --- */
+    .hb-qa { max-width: 760px; margin: 40px auto 0; border: 1px solid var(--border-default); border-radius: var(--radius); overflow: hidden; }
+    .hb-qa div { background: var(--bg-card); padding: 22px 24px; border-bottom: 1px solid var(--border-default); }
+    .hb-qa div:last-child { border-bottom: none; }
+    .hb-qa dt { color: var(--text-primary); font-weight: 600; font-size: 1.02rem; margin-bottom: 6px; }
+    .hb-qa dd { color: var(--text-secondary); font-size: 0.97rem; line-height: 1.65; }
+
+    /* --- Fit --- */
+    .hb-fit { max-width: 900px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .hb-fit .m-col h3 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .hb-fit .yes h3 { color: var(--accent-green); }
+    .hb-fit .no h3 { color: var(--text-secondary); }
+    .hb-fit .m-col li { font-size: 0.95rem; line-height: 1.55; padding: 10px 0 10px 24px; position: relative; }
+    .hb-fit .m-col li::before { position: absolute; left: 0; font-family: 'JetBrains Mono', monospace; }
+    .hb-fit .yes li::before { content: '\2713'; color: var(--accent-green); }
+    .hb-fit .no li::before { content: '\2212'; color: var(--text-muted); }
+
+    /* --- CTA --- */
+    .hb-cta .cta-text { margin-bottom: 28px; }
+    .hb-cta .cta-prompt { font-size: 15px; flex-wrap: wrap; }
+
+    .hb-footer { padding: 40px 24px; }
+    .hb-footer .footer-bottom { border-top: none; padding-top: 0; }
+
+    /* --- Responsive --- */
+    @media (max-width: 1024px) {
+      .hb-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 900px) {
+      .hb-ownership, .hb-proof, .hb-fit { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .hb-hero { padding: 82px 16px 56px; }
+      .hb-hero-inner { gap: 0; }
+      .hb-h1 { font-size: 33px; letter-spacing: -0.04em; }
+      .hb-hero .section-label { letter-spacing: 0.5px; font-size: 12px; margin-bottom: 12px; }
+      .hb-sub { font-size: 18px; margin-top: 12px; }
+      .hb-rail-desktop { display: none; }
+      .hb-rail-mobile { display: block; margin-top: 24px; }
+      .hb-small { font-size: 16px; margin-top: 18px; }
+      .hb-cta-row { margin-top: 18px; align-items: stretch; }
+      .hb-cta-row .btn-primary { justify-content: center; }
+      .hb-micro { text-align: center; text-wrap: balance; }
+      .hb-section { padding: 48px 0; }
+      .hb-log, .hb-plan, .hb-ownership, .hb-proof, .hb-qa, .hb-fit, .m-switch { margin-top: 28px; }
+      .hb-own .m-own-item { padding: 14px; }
+      .hb-own .m-own-item h3 { font-size: 0.92rem; margin-top: 0; }
+      .hb-own .m-own-item p { font-size: 0.84rem; }
+      .hb-stat { padding: 20px; }
+      .hb-log-row { grid-template-columns: 18px 1fr; padding: 16px; row-gap: 4px; }
+      .hb-log-row p { grid-column: 2; }
+      .m-switch-panel { padding: 24px 20px; }
+      .m-switch-nav { padding: 12px; }
+      .m-switch-tab { padding: 12px 14px 12px 18px; font-size: 0.95rem; }
+      .m-switch-points li { border-radius: 12px; align-items: flex-start; }
+      .hb-cta .cta-prompt { font-size: 13px; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- NAV: logo + the one CTA. No menu on a cold paid page. -->
+  <nav class="nav hb-nav" id="nav">
+    <div class="nav-inner container">
+      <a href="#hero" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+      <a href="#cta" class="nav-cta">Schedule Call</a>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO. The ad's three lines, verbatim, and its seat rail.
+       ============================================ -->
+  <section class="hb-hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hb-hero-inner">
+      <div>
+        <div class="section-label">// Hiring a GTM engineer or RevOps lead</div>
+        <h1 class="hb-h1">The seat is open.</h1>
+        <p class="hb-sub">The first system it was meant to build doesn&rsquo;t have to wait for the hire.</p>
+
+        <div class="hb-rail hb-rail-mobile" role="img" aria-label="A running system, with a dashed arrow pointing to an empty seat labelled Your new hire, seat open">
+          <svg viewBox="0 0 950 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g class="sys-glow"><rect x="0.5" y="0.5" width="519" height="299" rx="12" fill="#161B22" stroke="rgba(74,158,206,0.32)"/><path d="M12.5,0.5 H507.5 A12,12 0 0 1 519.5,12.5 V46 H0.5 V12.5 A12,12 0 0 1 12.5,0.5 Z" fill="#1C2333"/><line x1="0.5" y1="46" x2="519.5" y2="46" stroke="#30363D"/><circle cx="24" cy="23" r="5.5" fill="#30363D"/><circle cx="44" cy="23" r="5.5" fill="#30363D"/><circle cx="64" cy="23" r="5.5" fill="#30363D"/><circle cx="496" cy="23" r="11" fill="#98C379" fill-opacity="0.18"/><circle cx="496" cy="23" r="6" fill="#98C379"/></g><path d="M135,125 C146,125 146,221 156,221" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><path d="M260,221 C270,221 270,125 281,125" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><path d="M385,125 C390,125 390,221 395,221" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><rect x="31" y="82" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="46" y="118" width="74" height="8" rx="4" fill="#30363D"/><rect x="46" y="139" width="54" height="8" rx="4" fill="#30363D"/><circle cx="121" cy="96" r="4.5" fill="#98C379"/><rect x="156" y="178" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="171" y="214" width="74" height="8" rx="4" fill="#30363D"/><rect x="171" y="235" width="54" height="8" rx="4" fill="#30363D"/><circle cx="246" cy="192" r="4.5" fill="#98C379"/><rect x="281" y="82" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="296" y="118" width="74" height="8" rx="4" fill="#30363D"/><rect x="296" y="139" width="54" height="8" rx="4" fill="#30363D"/><circle cx="371" cy="96" r="4.5" fill="#98C379"/><rect x="395" y="178" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="410" y="214" width="74" height="8" rx="4" fill="#30363D"/><rect x="410" y="235" width="54" height="8" rx="4" fill="#30363D"/><circle cx="485" cy="192" r="4.5" fill="#98C379"/><line x1="540" y1="150" x2="624" y2="150" stroke="#8B949E" stroke-width="3" stroke-dasharray="9 6"/><polygon points="624,140 642,150 624,160" fill="#8B949E"/><rect x="651" y="1" width="298" height="298" rx="12" fill="rgba(22,27,34,0.55)" stroke="rgba(139,148,158,0.75)" stroke-width="2" stroke-dasharray="9 6"/><g transform="translate(750,36)"><circle cx="50" cy="34" r="19" fill="none" stroke="#8B949E" stroke-width="4" stroke-dasharray="7 6"/><path d="M14,92 C14,66 30,58 50,58 C70,58 86,66 86,92" fill="none" stroke="#8B949E" stroke-width="4" stroke-dasharray="7 6"/></g><text x="800" y="186" text-anchor="middle" font-family="DM Sans, sans-serif" font-weight="500" font-size="36" fill="#E6EDF3">Your new hire</text><rect x="709" y="214" width="182" height="46" rx="7" fill="none" stroke="rgba(229,192,123,0.6)" stroke-width="1.5"/><text x="800" y="245" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="27" fill="#E5C07B">seat open</text></svg>
+        </div>
+
+        <p class="hb-small">First system live in about 30 days.<br><strong>Your new hire starts with it running.</strong></p>
+        <div class="hb-cta-row">
+          <a href="#cta" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Schedule Call
+          </a>
+          <span class="hb-micro">25 minutes. See one running, then pick your first system.</span>
+        </div>
+      </div>
+
+      <div class="hb-rail hb-rail-desktop" role="img" aria-label="A running system, with a dashed arrow pointing to an empty seat labelled Your new hire, seat open">
+        <svg viewBox="0 0 950 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g class="sys-glow"><rect x="0.5" y="0.5" width="519" height="299" rx="12" fill="#161B22" stroke="rgba(74,158,206,0.32)"/><path d="M12.5,0.5 H507.5 A12,12 0 0 1 519.5,12.5 V46 H0.5 V12.5 A12,12 0 0 1 12.5,0.5 Z" fill="#1C2333"/><line x1="0.5" y1="46" x2="519.5" y2="46" stroke="#30363D"/><circle cx="24" cy="23" r="5.5" fill="#30363D"/><circle cx="44" cy="23" r="5.5" fill="#30363D"/><circle cx="64" cy="23" r="5.5" fill="#30363D"/><circle cx="496" cy="23" r="11" fill="#98C379" fill-opacity="0.18"/><circle cx="496" cy="23" r="6" fill="#98C379"/></g><path d="M135,125 C146,125 146,221 156,221" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><path d="M260,221 C270,221 270,125 281,125" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><path d="M385,125 C390,125 390,221 395,221" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><rect x="31" y="82" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="46" y="118" width="74" height="8" rx="4" fill="#30363D"/><rect x="46" y="139" width="54" height="8" rx="4" fill="#30363D"/><circle cx="121" cy="96" r="4.5" fill="#98C379"/><rect x="156" y="178" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="171" y="214" width="74" height="8" rx="4" fill="#30363D"/><rect x="171" y="235" width="54" height="8" rx="4" fill="#30363D"/><circle cx="246" cy="192" r="4.5" fill="#98C379"/><rect x="281" y="82" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="296" y="118" width="74" height="8" rx="4" fill="#30363D"/><rect x="296" y="139" width="54" height="8" rx="4" fill="#30363D"/><circle cx="371" cy="96" r="4.5" fill="#98C379"/><rect x="395" y="178" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="410" y="214" width="74" height="8" rx="4" fill="#30363D"/><rect x="410" y="235" width="54" height="8" rx="4" fill="#30363D"/><circle cx="485" cy="192" r="4.5" fill="#98C379"/><line x1="540" y1="150" x2="624" y2="150" stroke="#8B949E" stroke-width="3" stroke-dasharray="9 6"/><polygon points="624,140 642,150 624,160" fill="#8B949E"/><rect x="651" y="1" width="298" height="298" rx="12" fill="rgba(22,27,34,0.55)" stroke="rgba(139,148,158,0.75)" stroke-width="2" stroke-dasharray="9 6"/><g transform="translate(750,36)"><circle cx="50" cy="34" r="19" fill="none" stroke="#8B949E" stroke-width="4" stroke-dasharray="7 6"/><path d="M14,92 C14,66 30,58 50,58 C70,58 86,66 86,92" fill="none" stroke="#8B949E" stroke-width="4" stroke-dasharray="7 6"/></g><text x="800" y="186" text-anchor="middle" font-family="DM Sans, sans-serif" font-weight="500" font-size="36" fill="#E6EDF3">Your new hire</text><rect x="709" y="214" width="182" height="46" rx="7" fill="none" stroke="rgba(229,192,123,0.6)" stroke-width="1.5"/><text x="800" y="245" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="27" fill="#E5C07B">seat open</text></svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line container"></div>
+
+  <!-- ============================================
+       PROBLEM. What the open seat costs, in steps they recognise.
+       ============================================ -->
+  <section class="hb-section" id="wait">
+    <div class="container">
+      <div class="hb-head">
+        <div class="section-label">// search.log</div>
+        <h2 class="section-title">The real wait is longer than the search.</h2>
+        <p class="m-lede">After the offer is signed, the new hire still has to learn your stack and build the system before it produces.</p>
+      </div>
+
+      <div class="terminal hb-log">
+        <div class="terminal-header">
+          <div class="terminal-dots"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span></div>
+          <span class="terminal-title">search.log</span>
+        </div>
+        <div class="hb-log-row"><span class="ico">&#9675;</span><span class="stage">Role posted</span><p>The first system goes on the list for the new hire. <span class="held">on hold</span></p></div>
+        <div class="hb-log-row"><span class="ico">&#9675;</span><span class="stage">Interviewing</span><p>Screens, panels, a take-home. <span class="held">on hold</span></p></div>
+        <div class="hb-log-row"><span class="ico">&#9675;</span><span class="stage">Offer signed</span><p>Notice period at their current job. <span class="held">on hold</span></p></div>
+        <div class="hb-log-row"><span class="ico">&#9675;</span><span class="stage">Day one</span><p>Logins, intros, the first round of meetings. <span class="held">on hold</span></p></div>
+        <div class="hb-log-row"><span class="ico">&#9675;</span><span class="stage">Learning the stack</span><p>Your CRM, your data, and how the team actually sells. <span class="held">on hold</span></p></div>
+        <div class="hb-log-row"><span class="ico">&#9675;</span><span class="stage">Building</span><p>The first system finally gets started. <span class="held">on hold</span></p></div>
+        <div class="hb-log-row is-live"><span class="ico">&#10003;</span><span class="stage">Live</span><p>Only now does it start producing. <span class="live">live</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       WHAT GETS BUILT. Example first systems, by the role being hired.
+       ============================================ -->
+  <section class="hb-section" id="build">
+    <div class="container">
+      <div class="hb-head">
+        <div class="section-label">// What gets built</div>
+        <h2 class="section-title">The first system the role was meant to build</h2>
+        <p class="m-lede">We pick it with you on the call. Most teams already know which one it is.</p>
+      </div>
+
+      <div class="m-switch hb-switch" data-switch style="--m-switch-duration:8s">
+        <div class="m-switch-nav" role="tablist" aria-label="The role you are hiring">
+          <button class="m-switch-tab is-active" role="tab" aria-selected="true" aria-controls="role-0" id="rtab-0">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Hiring a GTM engineer
+          </button>
+          <button class="m-switch-tab" role="tab" aria-selected="false" aria-controls="role-1" id="rtab-1">
+            <span class="m-switch-progress" aria-hidden="true"></span>
+            Hiring RevOps or sales ops
+          </button>
+        </div>
+        <div class="m-switch-panels">
+          <div class="m-switch-panel is-active" role="tabpanel" id="role-0" aria-labelledby="rtab-0">
+            <div class="section-label">// GTM engineer</div>
+            <h3>The systems pipeline runs on</h3>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> Signal queues that tell reps which accounts to work this week, and why</li>
+              <li><span class="check">&#10003;</span> Account research, enrichment and CRM updates running as AI workflows, with no manual entry</li>
+              <li><span class="check">&#10003;</span> Outbound running at predictable volume, every contact checked and given a reason to hear from you</li>
+            </ul>
+          </div>
+          <div class="m-switch-panel" role="tabpanel" id="role-1" aria-labelledby="rtab-1">
+            <div class="section-label">// RevOps</div>
+            <h3>The foundation your RevOps engine runs on</h3>
+            <ul class="m-switch-points">
+              <li><span class="check">&#10003;</span> A CRM data standard that holds, with records enriched and kept current automatically</li>
+              <li><span class="check">&#10003;</span> One funnel and one forecast leadership trusts, pulled from the CRM itself</li>
+              <li><span class="check">&#10003;</span> Inbound leads scored and routed to the right owner within minutes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       THE QUARTER. How the first system gets installed.
+       ============================================ -->
+  <section class="hb-section" id="days">
+    <div class="container">
+      <div class="hb-head">
+        <div class="section-label">// build.plan</div>
+        <h2 class="section-title">What the quarter looks like</h2>
+        <p class="m-lede">A committed quarter of building, inside the tools you already pay for. The first system is live in month one.</p>
+      </div>
+
+      <div class="terminal hb-plan">
+        <div class="terminal-header">
+          <div class="terminal-dots"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span></div>
+          <span class="terminal-title">build.plan</span>
+        </div>
+        <div class="process-list">
+          <div class="process-item">
+            <span class="process-number">01</span>
+            <div class="process-content">
+              <div class="process-filename">First call <span class="tag">first system scoped</span></div>
+              <p class="process-desc">We pick the first system together. Building starts in week one.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <span class="process-number">02</span>
+            <div class="process-content">
+              <div class="process-filename">Month 1 <span class="tag">first system live</span></div>
+              <p class="process-desc">Running in your stack, on real accounts, by about day 30.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <span class="process-number">03</span>
+            <div class="process-content">
+              <div class="process-filename">Months 2 to 3 <span class="tag">build and train</span></div>
+              <p class="process-desc">The next systems built, and your team trained to run them.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <span class="process-number">04</span>
+            <div class="process-content">
+              <div class="process-filename">Ownership <span class="tag">your hire&rsquo;s first day</span></div>
+              <p class="process-desc">Your hire starts ahead, with it running. The ownership plan is agreed up front.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <span class="process-number">05</span>
+            <div class="process-content">
+              <div class="process-filename">After <span class="tag">optional</span></div>
+              <p class="process-desc">Support if you want it. Everything keeps running without it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       OWNERSHIP. The ad's rail, resolved.
+       ============================================ -->
+  <section class="hb-section" id="ownership">
+    <div class="container">
+      <div class="hb-head">
+        <div class="section-label">// Ownership</div>
+        <h2 class="section-title">Built for your hire to own</h2>
+        <p class="m-lede">The person you hire starts ahead, with a running system that is theirs to run and extend.</p>
+      </div>
+
+      <div class="hb-ownership">
+        <div class="hb-rail" role="img" aria-label="The same running system, now owned by your new hire">
+          <svg viewBox="0 0 950 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g class="sys-glow"><rect x="0.5" y="0.5" width="519" height="299" rx="12" fill="#161B22" stroke="rgba(74,158,206,0.32)"/><path d="M12.5,0.5 H507.5 A12,12 0 0 1 519.5,12.5 V46 H0.5 V12.5 A12,12 0 0 1 12.5,0.5 Z" fill="#1C2333"/><line x1="0.5" y1="46" x2="519.5" y2="46" stroke="#30363D"/><circle cx="24" cy="23" r="5.5" fill="#30363D"/><circle cx="44" cy="23" r="5.5" fill="#30363D"/><circle cx="64" cy="23" r="5.5" fill="#30363D"/><circle cx="496" cy="23" r="11" fill="#98C379" fill-opacity="0.18"/><circle cx="496" cy="23" r="6" fill="#98C379"/></g><path d="M135,125 C146,125 146,221 156,221" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><path d="M260,221 C270,221 270,125 281,125" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><path d="M385,125 C390,125 390,221 395,221" fill="none" stroke="#4A9ECE" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="8 7"/><rect x="31" y="82" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="46" y="118" width="74" height="8" rx="4" fill="#30363D"/><rect x="46" y="139" width="54" height="8" rx="4" fill="#30363D"/><circle cx="121" cy="96" r="4.5" fill="#98C379"/><rect x="156" y="178" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="171" y="214" width="74" height="8" rx="4" fill="#30363D"/><rect x="171" y="235" width="54" height="8" rx="4" fill="#30363D"/><circle cx="246" cy="192" r="4.5" fill="#98C379"/><rect x="281" y="82" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="296" y="118" width="74" height="8" rx="4" fill="#30363D"/><rect x="296" y="139" width="54" height="8" rx="4" fill="#30363D"/><circle cx="371" cy="96" r="4.5" fill="#98C379"/><rect x="395" y="178" width="104" height="86" rx="8" fill="#21262D" stroke="#30363D"/><rect x="410" y="214" width="74" height="8" rx="4" fill="#30363D"/><rect x="410" y="235" width="54" height="8" rx="4" fill="#30363D"/><circle cx="485" cy="192" r="4.5" fill="#98C379"/><line x1="540" y1="150" x2="626" y2="150" stroke="#98C379" stroke-width="3"/><polygon points="624,140 642,150 624,160" fill="#98C379"/><rect x="651" y="1" width="298" height="298" rx="12" fill="rgba(152,195,121,0.06)" stroke="#98C379" stroke-width="2"/><g transform="translate(750,36)"><circle cx="50" cy="34" r="19" fill="rgba(152,195,121,0.22)" stroke="#98C379" stroke-width="4"/><path d="M14,92 C14,66 30,58 50,58 C70,58 86,66 86,92 Z" fill="rgba(152,195,121,0.22)" stroke="#98C379" stroke-width="4"/></g><text x="800" y="186" text-anchor="middle" font-family="DM Sans, sans-serif" font-weight="500" font-size="36" fill="#E6EDF3">Your new hire</text><rect x="747" y="214" width="106" height="46" rx="7" fill="none" stroke="rgba(152,195,121,0.6)" stroke-width="1.5"/><text x="800" y="245" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="27" fill="#98C379">owned</text></svg>
+        </div>
+        <div class="hb-own">
+          <div class="m-own-item"><h3>Your stack</h3><p>Built in HubSpot or Salesforce and the tools you already run. Your team works it from Slack or Teams.</p></div>
+          <div class="m-own-item"><h3>Documented</h3><p>A runbook that explains what it does, why each choice was made, and how to change it.</p></div>
+          <div class="m-own-item"><h3>Your hire runs it and owns it</h3><p>Designed for internal ownership from day one. Your hire runs it, changes it and extends it.</p></div>
+          <div class="m-own-item"><h3>Nothing to rent</h3><p>No license to renew. The code and configuration are yours.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROOF. Below the fold, anonymous, the two cleared results only.
+       ============================================ -->
+  <section class="hb-section" id="proof">
+    <div class="container">
+      <div class="hb-head">
+        <div class="section-label">// production.log</div>
+        <h2 class="section-title">What the first system changed</h2>
+        <p class="m-lede">From two recent client engagements.</p>
+      </div>
+
+      <div class="hb-proof">
+        <div class="hb-stat">
+          <span class="tag">GTM engineering work</span>
+          <div class="num"><span class="from">days &rarr;</span> ~20 min</div>
+          <p>Research on 40 target accounts used to take the team days. It now runs in about 20 minutes, and their own people run it.</p>
+        </div>
+        <div class="hb-stat">
+          <span class="tag">RevOps work</span>
+          <div class="num"><span class="from">~4 hrs &rarr;</span> minutes</div>
+          <p>Inbound response went from about four hours to minutes. Four of the five people on that queue moved to outbound, and conversion held.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       QUESTIONS a skeptical hiring leader asks.
+       ============================================ -->
+  <section class="hb-section" id="questions">
+    <div class="container">
+      <div class="hb-head">
+        <div class="section-label">// Fair questions</div>
+        <h2 class="section-title">What hiring leaders ask first</h2>
+      </div>
+
+      <dl class="hb-qa">
+        <div>
+          <dt>Why not wait for the hire?</dt>
+          <dd>The wait runs past the search. A new hire still has to learn your stack and build the system before it produces. Starting now means they start ahead.</dd>
+        </div>
+        <div>
+          <dt>Does this replace the role?</dt>
+          <dd>No. Keep the search running. Everything is built for the person who fills the seat to run and own.</dd>
+        </div>
+        <div>
+          <dt>Aren&rsquo;t we paying twice once the hire starts?</dt>
+          <dd>What you pay for is a running system in your stack. It keeps producing after the salary starts, and your hire spends their first months running and extending it.</dd>
+        </div>
+        <div>
+          <dt>What if we hire mid-build?</dt>
+          <dd>They join the build and own it from their first day.</dd>
+        </div>
+        <div>
+          <dt>How much of our time does this take?</dt>
+          <dd>One call to pick the first system, then a short review each week. Access to your CRM and tools is set up in week one.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FIT.
+       ============================================ -->
+  <section class="hb-section" id="fit">
+    <div class="container">
+      <div class="hb-head">
+        <div class="section-label">// Fit</div>
+        <h2 class="section-title">Who this is for</h2>
+      </div>
+      <div class="hb-fit">
+        <div class="m-col yes">
+          <h3>A fit</h3>
+          <ul>
+            <li>You have a GTM engineer or RevOps role open.</li>
+            <li>You want a running system in your own stack that your team keeps.</li>
+            <li>You can name the first thing that hire should build.</li>
+          </ul>
+        </div>
+        <div class="m-col no">
+          <h3>Probably a different call</h3>
+          <ul>
+            <li>You want a study or a roadmap before anything is built.</li>
+            <li>You want a one-off build with nobody to own it after.</li>
+            <li>There is no role open and no owner in sight.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA.
+       ============================================ -->
+  <section class="cta-section hb-cta" id="cta">
+    <div class="cta-inner">
+      <div class="section-label">// Get started</div>
+      <h2 class="section-title" style="margin-bottom:28px">Start the first system before your hire lands.</h2>
+
+      <div class="cta-terminal">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-dots"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span></div>
+            <span class="terminal-title">terminal · magnetiz</span>
+          </div>
+          <div class="cta-prompt">
+            <span class="path">magnetiz.ai</span><span class="dollar">&nbsp;$&nbsp;</span><span class="cmd">start</span>&nbsp;<span class="flag">--before-the-hire</span>
+          </div>
+          <div class="terminal-status">
+            <div class="status-group"><span>SEAT <span class="status-amber">OPEN</span></span></div>
+            <span>awaiting input...</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="cta-text">Twenty-five minutes. Bring the job post. See one running, then pick the first system it was meant to build.</p>
+
+      <div class="hero-ctas" style="justify-content:center">
+        <a href="#cta" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule Call
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer hb-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <a href="#hero" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- The [data-switch] role tabs -->
+  <script src="/js/maestro.js"></script>
+
+  <!-- Any "Schedule Call" link opens the Calendly popup (same wiring as index.html).
+       If the widget has not loaded yet, the link falls through to #cta instead of dead-clicking. -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (link && /Schedule\s*Call/i.test(link.textContent.trim()) && window.Calendly) {
+        e.preventDefault();
+        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+      }
+    });
+  </script>
+  <!-- LinkedIn Insight Tag (partner 7176748) + booking conversion 28668108 on Calendly's event_scheduled postMessage -->
+  <script src="/js/linkedin-insight.js" async></script>
+  <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
+</body>
+</html>
