@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/pdf-src/playbook.css">
+</head>
+<body>
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 09</p>
+    <h1>The ICP<br>You Can<br>Prove</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">Most ICP models get one test, a backtest on deals you already won. This playbook tests the verdict your routing runs on today, gives the accounts your data cannot decide a place to go, and reads outcomes by tier so the evidence says when to widen or pull back.</p>
+    <div style="margin-top: 26px;"><span class="chip c-green">Sales</span><span class="chip">October 2026</span></div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>A fit score that was only ever tested on history routes every new account as if it were proven.<br><span style="font-style: normal; font-size: 10px; color: var(--t3);">The failure this playbook fixes</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap"><img src="/assets/diagrams/provable-icp.svg" alt="Workflow diagram"></div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps. The runnable versions ship as the markdown files in this kit.</p>
+  <hr class="rule">
+  <div class="step">
+    <h3><span class="stepnum">01</span>Write the ICP as one verdict field</h3>
+    <p><strong style="color: var(--t1);">Routing reads one field per account, so write the ICP as that field.</strong> Four values. Fit, marginal, no_fit, and unknown, for a missing source, two sources that disagree, or a verdict that flipped. Each rule names the page that checks it, so a stranger gets your answer. Fit and intent stay in separate fields.</p>
+    <table>
+      <tr><th>Verdict</th><th>What it means</th><th>Routing</th></tr>
+      <tr><td><strong style="color: var(--green);">fit</strong></td><td>every checkable rule passes, with a source for each</td><td>Tier 1, a person</td></tr>
+      <tr><td><strong style="color: var(--amber);">marginal</strong></td><td>near the rules, a real company where the offer could land</td><td>Tier 2, a sequence</td></tr>
+      <tr><td><strong style="color: var(--coral);">no_fit</strong></td><td>wrong kind of entity, or a rule plainly fails</td><td>nothing, reason kept</td></tr>
+      <tr><td><strong style="color: var(--purple);">unknown</strong></td><td>a source missing, sources in conflict, or a flip</td><td>its own queue, an owner</td></tr>
+    </table>
+    <p class="watch">Watch for the missing fourth value. Without unknown, a thin account gets forced into a tier, and the guess routes like a fact.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">02</span>Label a golden set blind</h3>
+    <p>Twenty to thirty accounts drawn from where your routing draws, with clear no_fits and hard cases mixed in on purpose. A person labels each one against the written definition before seeing any agent output. Unknown is a valid label. A blank cell is an error.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">03</span>An agent returns one sourced verdict</h3>
+    <p>Only the name and domain go in. The agent finds each rule's value on the web, with the page and its date, and returns fixed JSON. A short check runs before the CRM reads it. A fit missing a source drops to unknown, and so does stale evidence.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">04</span>Check agreement against the labels</h3>
+    <p>Score the agent on the golden set. Read every disagreement by hand and fix the prompt, the rule, or the label. Accept a run, call its agreement the baseline, and set the threshold about 0.15 under it. A run that scores fewer accounts than the minimum is unreadable, and unreadable fails.</p>
+    <p class="watch">Watch for a threshold at the baseline. It fails on ordinary noise and gets ignored within a month.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">05</span>Check that the verdict holds still</h3>
+    <p><strong style="color: var(--t1);">A backtest runs once, so it never sees a verdict change.</strong> Run the golden set three times, then once on a second model. A verdict that flips goes to unknown with the reason "unstable", even when most runs agreed. The flipped accounts usually share one rule, and that rule gets rewritten.</p>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">06</span>Route by tier, with unknown as its own queue</h3>
+    <p>Code maps verdicts to the tiers in the table on the previous page. The model never picks a channel. The unknown queue has a named owner who works it. Every verdict is appended to a dated log, because the readout in step 07 needs the verdict that was in force, and a re-score overwrites the current one.</p>
+  </div>
+  <div class="step">
+    <h3><span class="stepnum">07</span>Read outcomes by the tier that routed them</h3>
+    <p>Monthly, credit each meeting, opportunity, win and loss to the verdict in force before the month opened. Under ten accounts, the cell prints a refusal in place of a rate. If you hold a declared and an evidenced profile, score both until the readout picks one.</p>
+  </div>
+  <hr class="rule">
+  <h2 style="margin-top: 18px;">Widen, Hold, or Pull Back</h2>
+  <p style="margin-bottom: 4px;">Written before the first readout, so the readout decides. Read only at or above the minimum count.</p>
+  <table>
+    <tr><th>The readout shows</th><th>Decision</th></tr>
+    <tr><td>Tier 1 converts clearly above Tier 2</td><td><strong style="color: var(--green);">Hold.</strong> The tiering works</td></tr>
+    <tr><td>Tier 2 matches Tier 1 for two months running</td><td><strong style="color: var(--amber);">Widen.</strong> Tier 2 gets Tier 1 treatment</td></tr>
+    <tr><td>Tier 1 converts no better than Tier 2 for two months</td><td><strong style="color: var(--coral);">Pull back.</strong> Rework the definition</td></tr>
+    <tr><td>Unknown holds more outcomes than any tier</td><td><strong style="color: var(--purple);">Work the unknown queue.</strong> The rules miss the buyers</td></tr>
+    <tr><td>Every rate refuses</td><td><strong>Keep recording.</strong> Decide nothing yet</td></tr>
+  </table>
+  <div class="box">
+    <h3>The terms, as this kit uses them</h3>
+    <ul>
+      <li><strong>Baseline.</strong> The agreement of the run a person read and accepted.</li>
+      <li><strong>Minimum count.</strong> Below it the run is unreadable, and unreadable fails.</li>
+      <li><strong>Flip.</strong> A verdict that changed across three runs or a second model.</li>
+      <li><strong>Verdict in force.</strong> The last verdict logged before the month opened.</li>
+      <li><strong>Covered-through date.</strong> Every outcome up to this day is entered.</li>
+    </ul>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Files</h2>
+  <p>Markdown files, ready to run against your own accounts. Start in this order.</p>
+  <div class="box"><h3>1 &nbsp;fit-definition.md</h3><p>The four verdicts, the rules with how each is checked, and the declared and evidenced profiles side by side.</p></div>
+  <div class="box"><h3>2 &nbsp;golden-set-labelling.md &nbsp;+&nbsp; sample-golden-set.md</h3><p>How to pick and label the set blind, and ten sample companies with the answer key.</p></div>
+  <div class="box"><h3>3 &nbsp;verdict-prompt.md</h3><p>The verdict prompt, its JSON shape, and the output check that runs before the CRM.</p></div>
+  <div class="box"><h3>4 &nbsp;agreement-and-stability-check.md</h3><p>The threshold, the minimum count, the flip rule, and the run record.</p></div>
+  <div class="box"><h3>5 &nbsp;outcomes-by-tier-readout.md</h3><p>The monthly table, the refusals, and the widen, hold, or pull back rule.</p></div>
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff. You don't pay in full unless the work takes less time.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color: var(--blue); font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color: var(--t3);">&nbsp;&#183;&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color: var(--blue); font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: var(--t3); font-size: 10.5px;">Test the verdict your routing runs on, every time it changes.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 09</span></div>
+</div>
+</body>
+</html>

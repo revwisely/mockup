@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="The ICP you can prove: the fit definition is written as one verdict field with four values, an agent returns one sourced verdict per account, an agreement check against a blind golden set and a stability check across runs and models gate the routing, accounts route by tier with unknown as its own queue, outcomes are read monthly by the tier that routed each account, and a person widens, holds, or pulls back by a rule written in advance.">
+  <defs>
+    <marker id="p-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="p-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="p-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="p-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#p-dots)"/>
+
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- definition -> agent -->
+    <path d="M262,90 V128" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- golden set -> agreement -->
+    <path d="M597,90 V232" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- agent -> both checks -->
+    <path d="M262,194 V212" stroke="#4A9ECE"/>
+    <path d="M242,212 H562"/>
+    <path d="M242,212 V232" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M562,212 V232" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- checks -> gate -->
+    <path d="M242,306 V324 H562 V306"/>
+    <path d="M372,324 V346" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- gate held -->
+    <path d="M572,379 H596" marker-end="url(#p-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <!-- gate -> tier bus -->
+    <path d="M372,412 V434" stroke="#4A9ECE"/>
+    <path d="M140,434 H650"/>
+    <path d="M140,434 V460" marker-end="url(#p-arrdim)" stroke="#98C379"/>
+    <path d="M310,434 V460" marker-end="url(#p-arrdim)" stroke="#E5C07B"/>
+    <path d="M480,434 V460" marker-end="url(#p-arrdim)" stroke="#E06C75"/>
+    <path d="M650,434 V460" marker-end="url(#p-arrdim)" stroke="#C678DD"/>
+    <!-- tiers -> outcomes -->
+    <path d="M140,522 V544 H650 V522"/>
+    <path d="M310,522 V544"/>
+    <path d="M480,522 V544"/>
+    <path d="M372,544 V580" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- outcomes -> decide -->
+    <path d="M372,660 V700" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- loop: the readout sends the definition back for rework -->
+    <path id="n-loopback" d="M172,736 H36 V60 H97" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#p-arrdim)"/>
+  </g>
+
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#p-glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M262,90 V212 H242 V324 H372 V434 H140 V544 H372 V700"/>
+  </circle>
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#p-glow)">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M597,90 V232"/>
+  </circle>
+
+  <!-- the definition -->
+  <g id="n-definition" class="dx">
+    <rect x="97" y="30" width="330" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="262" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">FIT DEFINITION</text>
+    <text class="dx" x="262" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">one verdict field, four values</text>
+    <text class="dx" x="262" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">declared and evidenced, side by side</text>
+  </g>
+  <g id="n-golden" class="dx">
+    <rect x="487" y="30" width="220" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="597" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">GOLDEN SET</text>
+    <text class="dx" x="597" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">20 to 30 accounts</text>
+    <text class="dx" x="597" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">labelled blind by a person</text>
+  </g>
+
+  <!-- agent -->
+  <g id="n-agent" class="dx">
+    <rect x="97" y="128" width="330" height="66" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="262" y="153" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">AGENT &#183; ONE VERDICT</text>
+    <text class="dx" x="262" y="170" text-anchor="middle" fill="#4A9ECE" font-size="10.5">name and domain in, a source per rule</text>
+    <text class="dx" x="262" y="184" text-anchor="middle" fill="#8B949E" font-size="9.5">output checked before the CRM reads it</text>
+  </g>
+
+  <!-- the two checks -->
+  <g id="n-stability" class="dx">
+    <rect x="97" y="232" width="290" height="74" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="242" y="256" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="600">STABILITY CHECK</text>
+    <text class="dx" x="242" y="274" text-anchor="middle" fill="#4A9ECE" font-size="10.5">three runs, then a second model</text>
+    <text class="dx" x="242" y="292" text-anchor="middle" fill="#8B949E" font-size="9.5">a verdict that flips is unknown</text>
+  </g>
+  <g id="n-agreement" class="dx">
+    <rect x="417" y="232" width="290" height="74" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="562" y="256" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="600">AGREEMENT CHECK</text>
+    <text class="dx" x="562" y="274" text-anchor="middle" fill="#4A9ECE" font-size="10.5">verdicts against the blind labels</text>
+    <text class="dx" x="562" y="288" text-anchor="middle" fill="#8B949E" font-size="9.5">threshold ~0.15 under the baseline</text>
+    <text class="dx" x="562" y="300" text-anchor="middle" fill="#8B949E" font-size="9">too few scored reads as unreadable</text>
+  </g>
+
+  <!-- human gate 1: routing allowed or held -->
+  <g id="n-gate" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="172" y="346" width="400" height="66" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="373" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+    <text class="dx" x="372" y="393" text-anchor="middle" fill="#8B949E" font-size="10">reads every flip and every disagreement,</text>
+    <text class="dx" x="372" y="406" text-anchor="middle" fill="#8B949E" font-size="10">then allows or holds the routing</text>
+  </g>
+  <g id="n-held" class="dx">
+    <rect x="598" y="351" width="132" height="56" rx="9" fill="#1c2333" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <text class="dx" x="664" y="373" text-anchor="middle" fill="#E5C07B" font-size="10.5" font-weight="700">HELD</text>
+    <text class="dx" x="664" y="388" text-anchor="middle" fill="#8B949E" font-size="8.5">name the rule, fix it,</text>
+    <text class="dx" x="664" y="400" text-anchor="middle" fill="#8B949E" font-size="8.5">run the set again</text>
+  </g>
+
+  <!-- routing tiers -->
+  <g id="n-fit" class="dx">
+    <rect x="70" y="460" width="140" height="62" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="140" y="483" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">FIT</text>
+    <text class="dx" x="140" y="499" text-anchor="middle" fill="#8B949E" font-size="9">Tier 1</text>
+    <text class="dx" x="140" y="512" text-anchor="middle" fill="#8B949E" font-size="9">a person reaches out</text>
+  </g>
+  <g id="n-marginal" class="dx">
+    <rect x="240" y="460" width="140" height="62" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="310" y="483" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">MARGINAL</text>
+    <text class="dx" x="310" y="499" text-anchor="middle" fill="#8B949E" font-size="9">Tier 2</text>
+    <text class="dx" x="310" y="512" text-anchor="middle" fill="#8B949E" font-size="9">automated sequence</text>
+  </g>
+  <g id="n-nofit" class="dx">
+    <rect x="410" y="460" width="140" height="62" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text class="dx" x="480" y="483" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NO_FIT</text>
+    <text class="dx" x="480" y="499" text-anchor="middle" fill="#8B949E" font-size="9">no outreach</text>
+    <text class="dx" x="480" y="512" text-anchor="middle" fill="#8B949E" font-size="9">the reason is kept</text>
+  </g>
+  <g id="n-unknown" class="dx">
+    <rect x="580" y="460" width="140" height="62" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text class="dx" x="650" y="483" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">UNKNOWN</text>
+    <text class="dx" x="650" y="499" text-anchor="middle" fill="#8B949E" font-size="9">its own queue</text>
+    <text class="dx" x="650" y="512" text-anchor="middle" fill="#8B949E" font-size="9">with a named owner</text>
+  </g>
+
+  <!-- outcomes readout -->
+  <g id="n-outcomes" class="dx">
+    <rect x="147" y="580" width="450" height="80" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="372" y="606" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">OUTCOMES BY TIER &#183; MONTHLY</text>
+    <text class="dx" x="372" y="625" text-anchor="middle" fill="#4A9ECE" font-size="10.5">credited to the verdict in force before the month</text>
+    <text class="dx" x="372" y="641" text-anchor="middle" fill="#8B949E" font-size="9.5">meetings, opportunities, wins, losses</text>
+    <text class="dx" x="372" y="654" text-anchor="middle" fill="#8B949E" font-size="9.5">under n=10 the cell prints a refusal</text>
+  </g>
+
+  <!-- human gate 2: widen, hold, pull back -->
+  <g id="n-decide" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="172" y="700" width="400" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="728" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; HUMAN GATE &#9608;&#9608;</text>
+    <text class="dx" x="372" y="748" text-anchor="middle" fill="#8B949E" font-size="10">widen &#183; hold &#183; pull back</text>
+    <text class="dx" x="372" y="762" text-anchor="middle" fill="#8B949E" font-size="10">by the rule written before the first readout</text>
+  </g>
+
+  <text class="dx" x="26" y="400" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(-90 26 400)">TIERS STOP SEPARATING BUYERS &#183; BACK TO THE DEFINITION</text>
+
+  <text class="dx" x="372" y="850" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 09 &#183; THE ICP YOU CAN PROVE</text>
+</svg>

@@ -11,7 +11,7 @@
 
 import { guardSubmission } from './_lib/guard.js';
 
-const KNOWN_PLAYBOOKS = new Set(['meeting-intelligence', 'stalled-build-handoff', 'ai-ready-data', 'inbound-signup-routing', 'reply-triage', 'crm-enrichment-review', 'brand-voice-context-layer', 'target-account-ads']);
+const KNOWN_PLAYBOOKS = new Set(['meeting-intelligence', 'stalled-build-handoff', 'ai-ready-data', 'inbound-signup-routing', 'reply-triage', 'crm-enrichment-review', 'brand-voice-context-layer', 'target-account-ads', 'provable-icp']);
 const KNOWN_SOURCES = new Set(['linkedin', 'newsletter', 'search', 'ai-assistant', 'colleague', 'other']);
 
 // beehiiv's "Added by API" trigger does NOT mean "a subscriber was created
