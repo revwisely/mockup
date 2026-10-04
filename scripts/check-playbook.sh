@@ -68,6 +68,19 @@ for slug in "${slugs[@]}"; do
   if [ -f "$page" ] && grep -q "data-playbook=\"$slug\"" "$page"; then ok "form data-playbook matches"
   elif [ -f "$page" ]; then bad "form data-playbook matches" "the form on playbook-$slug.html must carry data-playbook=\"$slug\""; fi
 
+  # 8b. the clean routes. The delivery email links to /k/<slug>, so without that
+  #     rewrite the kit link 404s even though the zip is deployed.
+  if grep -q "\"/playbook/$slug\"" "$ROOT/vercel.json" 2>/dev/null; then ok "vercel.json /playbook/$slug rewrite"
+  else bad "vercel.json /playbook/$slug rewrite" "add { \"source\": \"/playbook/$slug\", \"destination\": \"/playbook-$slug.html\" } to rewrites"; fi
+  if grep -q "\"/k/$slug\"" "$ROOT/vercel.json" 2>/dev/null; then ok "vercel.json /k/$slug rewrite"
+  else bad "vercel.json /k/$slug rewrite" "add { \"source\": \"/k/$slug\", \"destination\": \"/assets/kits/$slug-kit.zip\" }, or the delivery email's kit link 404s"; fi
+
+  # 8c. the share image, or LinkedIn renders a title-only card
+  if [ -f "$ROOT/assets/og/$slug.jpg" ]; then ok "share image assets/og/$slug.jpg"
+  else bad "share image assets/og/$slug.jpg" "render a 1200x627 jpg from the diagram (copy the layout of an existing one)"; fi
+  if [ -f "$page" ] && grep -q "assets/og/$slug.jpg" "$page"; then ok "page og:image points at its own share image"
+  elif [ -f "$page" ]; then bad "page og:image points at its own share image" "set og:image and twitter:image on playbook-$slug.html to /assets/og/$slug.jpg"; fi
+
   # 9. every worksheet is named on the PDF's "In this kit" page
   pdf="$ROOT/assets/kits/pdf/$slug-playbook.pdf"
   if [ -f "$pdf" ] && command -v pdftotext >/dev/null; then
