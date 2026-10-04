@@ -48,6 +48,8 @@ Nine wiring points, across two repos plus beehiiv:
 | 6 | Index card | `playbooks.html` | the page exists but nobody reaches it |
 | 7 | `KNOWN_PLAYBOOKS` | `api/kit-request.js` | **every kit request 400s** |
 | 8 | Form slug | `data-playbook="<slug>"` on the page's form | same 400 |
+| 8b | `/playbook/<slug>` and `/k/<slug>` rewrites | `vercel.json` | **the delivery email's kit link 404s** |
+| 8c | Share image, and the page's `og:image` | `assets/og/<slug>.jpg` | LinkedIn shows a title-only card |
 | 9 | beehiiv automation + its id in `BEEHIIV_KIT_AUTOMATIONS` | beehiiv, then Vercel env | the form succeeds and **no email ever sends** |
 
 Then the three commands, and the preflight once more to confirm.
