@@ -5,6 +5,7 @@
     { "source": "/blog/new-playbook-target-account-ads", "destination": "/blog/linkedin-playbook-target-account-ads", "permanent": true }
   ],
   "rewrites": [
+    { "source": "/seat-open", "destination": "/seat-open.html" },
     { "source": "/playbooks", "destination": "/playbooks.html" },
     { "source": "/playbook/meeting-intelligence", "destination": "/playbook-meeting-intelligence.html" },
     { "source": "/playbook/stalled-build-handoff", "destination": "/playbook-stalled-build-handoff.html" },

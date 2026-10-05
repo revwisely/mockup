@@ -275,3 +275,18 @@ Rules in vercel.json, in order:
 Campaign names must not end in `.html` and must not be `css`, `js`, `assets`,
 or `data`. To add a campaign: add its rewrite above the catch-all, deploy,
 then use `https://www.magnetiz.ai/a/<campaign>` as the ad's destination URL.
+
+---
+
+## Campaign landing pages
+
+### /seat-open (October 2026, LinkedIn ad R1 "The seat is open.")
+
+- File `seat-open.html`, routed by the `/seat-open` rewrite in `vercel.json`. `noindex, nofollow`, not in `sitemap.xml`.
+- Copy source of truth is the October message house (life_os `magnetiz/gtm/2026-10-open-seat/messaging/outreach-message-house-2026-10-01.md`, v4). Edit the house first, then the page.
+- Tracking is the same as `index.html`: GA4 `G-2NB89Q3REZ`, Clarity `rfeny36y07`, RB2B, the Calendly popup on every "Schedule Call" link, and `js/linkedin-insight.js` (partner 7176748, booking conversion 28668108 fired on Calendly's `event_scheduled` message).
+- R1 destination URL, set `{creative}` to `image` or `video`:
+
+  `https://magnetiz.ai/seat-open?utm_source=linkedin&utm_medium=paid&utm_campaign=oct-r1-bridge&utm_content={creative}`
+
+  After the ad is live, read the URL back off the ad in Campaign Manager, not off an analytics campaign card.
