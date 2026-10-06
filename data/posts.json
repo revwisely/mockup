@@ -1,5 +1,15 @@
 [
   {
+    "slug": "icp-playbook-test-your-fit-score",
+    "title": "ICP Playbook: Test Your Fit Score",
+    "date": "2026-10-08",
+    "author": "Magnetiz.ai",
+    "excerpt": "Most ICP models get one test, a backtest on deals already won. Playbook 09 tests the fit verdict your routing runs on today, every time the prompt, the model or the market changes, and reads meetings and wins by the tier that routed each account.",
+    "image": "assets/images/posts/icp-playbook-test-your-fit-score-hero.jpeg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "linkedin-playbook-target-account-ads",
     "title": "LinkedIn Playbook: Target Account Ads",
     "date": "2026-10-01",
