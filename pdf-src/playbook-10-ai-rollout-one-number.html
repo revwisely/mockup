@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/pdf-src/playbook.css">
+</head>
+<body>
+
+<!-- ============ 1. COVER ============ -->
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 10</p>
+    <h1>AI Rollout<br>Changed Nothing?<br>Make It Move<br>One Number</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">You rolled out an AI tool, people use it, and nobody can say what changed. This playbook names the one number the rollout is for, measures it before launch, writes down what counts as moved, and decides at day 30 whether to keep it, fix it or kill it.</p>
+    <div style="margin-top: 26px;">
+      <span class="chip c-amber">RevOps</span><span class="chip">October 2026</span>
+    </div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>A rollout judged by usage reads as done the day it ships, whether the number moved or not.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The failure this playbook fixes</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+
+<!-- ============ 2. THE SYSTEM, END TO END ============ -->
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap">
+    <img src="/assets/diagrams/ai-rollout-one-number.svg" alt="Workflow diagram">
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+
+<!-- ============ 3. THE METHOD (steps 01 to 04) ============ -->
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Seven steps in 30 days. The worksheets for every one of them ship as the markdown files in this kit.</p>
+  <hr class="rule">
+
+  <div class="step">
+    <h3><span class="stepnum">01</span>Name the one number the rollout is for</h3>
+    <p><strong style="color:#E6EDF3">One number, one owner, written before launch.</strong> Pick the result the owner of the number already answers for, such as second meetings per week or time from inbound to first touch. Write exactly what counts and where it is read from, so two people get the same count.</p>
+    <p class="watch">Watch for a usage number in disguise. Logins, drafts generated and seats activated rise when people use the tool, whether the result moves or not.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">02</span>Measure four weeks before</h3>
+    <p>Read the number the same way for the four weeks before launch. Keep the lowest and highest week, because the gap between them is how much the number swings with no tool at all.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">03</span>Write what counts as moved</h3>
+    <p>The line sits past the baseline's swing, in the direction the number should go. Write the read date, launch plus 30 days, and a minimum count below which the read is too thin to decide. Both owners sign before launch.</p>
+    <p class="watch">Watch for a line inside the normal swing. A good week then reads as the tool working.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">04</span>Pick a comparison</h3>
+    <p>A holdout is strongest. One team, segment or region works without the tool for the same 30 days. With only one team, compare it against its own baseline, and list anything else planned that could move the number, such as a campaign, hiring or a price change.</p>
+  </div>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+
+<!-- ============ 4. THE METHOD (05 to 07) + THE DECISION TABLE ============ -->
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Log it every week</h3>
+    <p>One row a week, about five minutes. The number, the holdout's number, usage, whether it is past the line, and anything on the "what else" list that happened.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">06</span>Read it on day 30 against the signed rule</h3>
+    <p>The rule was written before anyone knew the result, so the readout applies it and does not reopen it.</p>
+    <table>
+      <tr><th>On day 30 the log shows</th><th>Decision</th></tr>
+      <tr><td>Past the line, and the holdout is not</td><td><strong style="color:#98C379">Keep.</strong> Pick the next number</td></tr>
+      <tr><td>Past the line, but the holdout moved too</td><td><strong style="color:#E5C07B">Hold.</strong> 30 more days, a cleaner comparison</td></tr>
+      <tr><td>Not past the line, usage high</td><td><strong style="color:#E5C07B">Fix.</strong> One change to what it does</td></tr>
+      <tr><td>Not past the line, usage low</td><td><strong style="color:#E5C07B">Fix adoption, or kill</strong></td></tr>
+      <tr><td>Moved the wrong way</td><td><strong style="color:#E06C75">Kill or roll back</strong></td></tr>
+      <tr><td>Below the minimum count</td><td>Keep recording. Decide nothing yet</td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">07</span>Record the decision and start the next charter</h3>
+    <p>Both owners sign the readout. A kept tool names the next number it should move, because one moved number earns the next test, never a pass for life.</p>
+  </div>
+
+  <hr class="rule">
+  <div class="box">
+    <h3>The terms, as this kit uses them</h3>
+    <ul>
+      <li><strong>The number.</strong> The one result the rollout exists to move.</li>
+      <li><strong>Baseline.</strong> The four weeks before launch, read the same way.</li>
+      <li><strong>The line.</strong> The level past the baseline's swing that counts as moved.</li>
+      <li><strong>Holdout.</strong> A group doing the same work without the tool for the same 30 days.</li>
+      <li><strong>Minimum count.</strong> Below it the read is too thin, and nothing is decided.</li>
+    </ul>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+
+<!-- ============ 5. IN THIS KIT + CTA ============ -->
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Worksheets</h2>
+  <p>Markdown files, ready to fill against your own rollout. Start in this order.</p>
+
+  <div class="box"><h3>1 &nbsp;one-number-charter.md</h3><p>The number, its owner, exactly what counts, the usage check, and the test that it is really a result.</p></div>
+  <div class="box"><h3>2 &nbsp;baseline-log.md</h3><p>Four weeks before launch, with the lowest week, the highest week and the swing.</p></div>
+  <div class="box"><h3>3 &nbsp;rollout-rule.md</h3><p>The line, the read date, the minimum count, the comparison, and the keep, fix or kill rule, signed before launch.</p></div>
+  <div class="box"><h3>4 &nbsp;weekly-log.md &nbsp;+&nbsp; day-30-readout.md</h3><p>One row a week for 30 days, then the read, the decision and the record.</p></div>
+  <div class="box"><h3>5 &nbsp;sample-filled-charter.md</h3><p>A worked example, every number illustrative, from the charter to the day-30 decision.</p></div>
+
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;·&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">Name the number before the tool, and let the number decide.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 10</span></div>
+</div>
+
+</body>
+</html>
