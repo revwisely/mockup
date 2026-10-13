@@ -16,6 +16,7 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 - [ai solutions](https://www.magnetiz.ai/ai-solutions.html)
 - [assessment quiz](https://www.magnetiz.ai/assessment-quiz.html)
 - [assessment](https://www.magnetiz.ai/assessment.html)
+- [case studies](https://www.magnetiz.ai/case-studies)
 - [case study content system](https://www.magnetiz.ai/case-study/content-system)
 - [case study operational visibility](https://www.magnetiz.ai/case-study/operational-visibility)
 - [case study signal detection](https://www.magnetiz.ai/case-study/signal-detection)
