@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="AI rollout changed nothing, make it move one number: name the number and measure four weeks before, sign the rule before launch, run the rollout beside a holdout, log weekly, and decide at day 30 to keep, hold, fix or kill">
+  <defs>
+    <marker id="p-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="p-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="p-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="p-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#p-dots)"/>
+
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- charter and baseline -> rule -->
+    <path d="M262,90 V128" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M597,90 V128" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- rule -> rollout and holdout -->
+    <path d="M372,200 V218" stroke="#4A9ECE"/>
+    <path d="M242,218 H562"/>
+    <path d="M242,218 V238" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M562,218 V238" marker-end="url(#p-arrdim)" stroke="#8B949E" stroke-dasharray="4 4"/>
+    <!-- both -> weekly log -->
+    <path d="M242,308 V326 H562 V308"/>
+    <path d="M372,326 V346" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- log -> day 30 gate -->
+    <path d="M372,412 V440" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- gate -> decision bus -->
+    <path d="M372,512 V538" stroke="#4A9ECE"/>
+    <path d="M92,538 H652"/>
+    <path d="M92,538 V560" marker-end="url(#p-arrdim)" stroke="#98C379"/>
+    <path d="M232,538 V560" marker-end="url(#p-arrdim)" stroke="#E5C07B"/>
+    <path d="M372,538 V560" marker-end="url(#p-arrdim)" stroke="#E5C07B"/>
+    <path d="M512,538 V560" marker-end="url(#p-arrdim)" stroke="#E06C75"/>
+    <path d="M652,538 V560" marker-end="url(#p-arrdim)" stroke="#C678DD"/>
+    <!-- hold and fix run another 30 days -->
+    <path d="M302,660 H442" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <path d="M372,660 V680" marker-end="url(#p-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <!-- loop: keep names the next number and starts a new charter -->
+    <path id="n-loopback" d="M92,622 V780 H36 V60 H97" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#p-arrdim)"/>
+  </g>
+
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#p-glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M262,90 V218 H242 V326 H372 V538 H92 V560"/>
+  </circle>
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#p-glow)">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M597,90 V128"/>
+  </circle>
+
+  <!-- charter and baseline -->
+  <g id="n-charter" class="dx">
+    <rect x="97" y="30" width="330" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="262" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">ONE NUMBER CHARTER</text>
+    <text class="dx" x="262" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">one number, one owner</text>
+    <text class="dx" x="262" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">exactly what counts, where it is read</text>
+  </g>
+  <g id="n-baseline" class="dx">
+    <rect x="487" y="30" width="220" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="597" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">BASELINE</text>
+    <text class="dx" x="597" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">four weeks before launch</text>
+    <text class="dx" x="597" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">lowest, highest, the swing</text>
+  </g>
+
+  <!-- the rule, signed: human gate 1 -->
+  <g id="n-rule" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="122" y="128" width="500" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="154" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; THE RULE &#183; SIGNED BEFORE LAUNCH &#9608;&#9608;</text>
+    <text class="dx" x="372" y="174" text-anchor="middle" fill="#8B949E" font-size="10">the line past the swing, the day-30 read date,</text>
+    <text class="dx" x="372" y="188" text-anchor="middle" fill="#8B949E" font-size="10">the minimum count, keep or kill written now</text>
+  </g>
+
+  <!-- rollout and holdout -->
+  <g id="n-rollout" class="dx">
+    <rect x="97" y="238" width="290" height="70" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="242" y="263" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="700">ROLLOUT GROUP</text>
+    <text class="dx" x="242" y="281" text-anchor="middle" fill="#4A9ECE" font-size="10.5">uses the tool for 30 days</text>
+    <text class="dx" x="242" y="296" text-anchor="middle" fill="#8B949E" font-size="9.5">usage tracked, never the verdict</text>
+  </g>
+  <g id="n-holdout" class="dx">
+    <rect x="417" y="238" width="290" height="70" rx="9" fill="#1c2333" stroke="#8B949E" stroke-dasharray="4 4"/>
+    <text class="dx" x="562" y="263" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="600">HOLDOUT</text>
+    <text class="dx" x="562" y="281" text-anchor="middle" fill="#8B949E" font-size="10.5">same work, no tool, same 30 days</text>
+    <text class="dx" x="562" y="296" text-anchor="middle" fill="#8B949E" font-size="9.5">one team? compare to its baseline</text>
+  </g>
+
+  <!-- weekly log -->
+  <g id="n-log" class="dx">
+    <rect x="147" y="346" width="450" height="66" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="372" y="371" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="700">WEEKLY LOG &#183; FIVE MINUTES</text>
+    <text class="dx" x="372" y="389" text-anchor="middle" fill="#4A9ECE" font-size="10.5">the number, the holdout, usage</text>
+    <text class="dx" x="372" y="403" text-anchor="middle" fill="#8B949E" font-size="9.5">and anything else that could move it</text>
+  </g>
+
+  <!-- day 30: human gate 2 -->
+  <g id="n-read" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="172" y="440" width="400" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="468" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; DAY 30 READOUT &#9608;&#9608;</text>
+    <text class="dx" x="372" y="488" text-anchor="middle" fill="#8B949E" font-size="10">read against the signed rule,</text>
+    <text class="dx" x="372" y="502" text-anchor="middle" fill="#8B949E" font-size="10">never reopened after the result</text>
+  </g>
+
+  <!-- decisions -->
+  <g id="n-keep" class="dx">
+    <rect x="32" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="92" y="583" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">KEEP</text>
+    <text class="dx" x="92" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">past the line,</text>
+    <text class="dx" x="92" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">holdout is not</text>
+  </g>
+  <g id="n-hold" class="dx">
+    <rect x="172" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="232" y="583" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">HOLD</text>
+    <text class="dx" x="232" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">holdout moved too,</text>
+    <text class="dx" x="232" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">cleaner comparison</text>
+  </g>
+  <g id="n-fix" class="dx">
+    <rect x="312" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="372" y="583" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">FIX</text>
+    <text class="dx" x="372" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">used, number flat,</text>
+    <text class="dx" x="372" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">one change</text>
+  </g>
+  <g id="n-kill" class="dx">
+    <rect x="452" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text class="dx" x="512" y="583" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">KILL</text>
+    <text class="dx" x="512" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">moved the wrong way,</text>
+    <text class="dx" x="512" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">or nobody uses it</text>
+  </g>
+  <g id="n-record" class="dx">
+    <rect x="592" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text class="dx" x="652" y="583" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">KEEP RECORDING</text>
+    <text class="dx" x="652" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">below the minimum,</text>
+    <text class="dx" x="652" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">decide nothing yet</text>
+  </g>
+  <g class="dx">
+    <path d="M232,622 V660" stroke="#E5C07B" stroke-dasharray="4 4" fill="none"/>
+    <path d="M372,622 V660" stroke="#E5C07B" stroke-dasharray="4 4" fill="none"/>
+  </g>
+  <g id="n-again" class="dx">
+    <rect x="262" y="680" width="220" height="50" rx="9" fill="#1c2333" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <text class="dx" x="372" y="701" text-anchor="middle" fill="#E5C07B" font-size="10.5" font-weight="700">30 MORE DAYS</text>
+    <text class="dx" x="372" y="717" text-anchor="middle" fill="#8B949E" font-size="8.5">same rule, read again</text>
+  </g>
+
+  <text class="dx" x="26" y="420" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(-90 26 420)">KEEP &#183; NAME THE NEXT NUMBER &#183; NEW CHARTER</text>
+
+  <text class="dx" x="372" y="850" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 10 &#183; AI ROLLOUT CHANGED NOTHING?</text>
+</svg>
