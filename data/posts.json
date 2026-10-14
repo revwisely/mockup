@@ -1,5 +1,15 @@
 [
   {
+    "slug": "did-your-ai-rollout-change-anything",
+    "title": "Did Your AI Rollout Change Anything?",
+    "date": "2026-10-15",
+    "author": "Magnetiz.ai",
+    "excerpt": "Usage rises whenever people use the tool, whether the result moves or not. Playbook 10 names the one number a rollout is for, measures it before launch, and lets a rule signed in advance decide at day 30 whether to keep it, fix it or kill it.",
+    "image": "assets/images/posts/did-your-ai-rollout-change-anything-hero.jpg",
+    "tags": [],
+    "featured": true
+  },
+  {
     "slug": "who-checks-the-ais-work",
     "title": "Who Checks the AI's Work?",
     "date": "2026-10-08",
