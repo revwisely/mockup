@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="The Buying Signal Testing Playbook workflow diagram">
+  <defs>
+    <marker id="p-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="p-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="p-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="p-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#p-dots)"/>
+
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- shortlist -> card -->
+    <path d="M427,60 H485" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- card -> plan -->
+    <path d="M597,90 V109 H372 V126" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- plan -> signal arm (via the check) and comparison arm (around the right edge) -->
+    <path d="M372,200 V218" stroke="#4A9ECE"/>
+    <path d="M242,218 H726"/>
+    <path d="M242,218 V236" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M726,218 V379 H709" marker-end="url(#p-arrdim)" stroke="#8B949E" stroke-dasharray="4 4"/>
+    <!-- check -> held (cannot tell) and -> signal arm -->
+    <path d="M387,273 H415" marker-end="url(#p-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <path d="M242,308 V344" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- both arms -> readout -->
+    <path d="M242,412 V426 H562 V412"/>
+    <path d="M372,426 V438" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- readout -> decision bus -->
+    <path d="M372,512 V538" stroke="#4A9ECE"/>
+    <path d="M92,538 H652"/>
+    <path d="M92,538 V558" marker-end="url(#p-arrdim)" stroke="#98C379"/>
+    <path d="M232,538 V558" marker-end="url(#p-arrdim)" stroke="#E5C07B"/>
+    <path d="M372,538 V558" marker-end="url(#p-arrdim)" stroke="#E5C07B"/>
+    <path d="M512,538 V558" marker-end="url(#p-arrdim)" stroke="#E06C75"/>
+    <path d="M652,538 V558" marker-end="url(#p-arrdim)" stroke="#C678DD"/>
+    <!-- hold and fix run one more period -->
+    <path d="M302,660 H442" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <path d="M372,660 V678" marker-end="url(#p-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <!-- loop: keep reads again next quarter, retire takes the next signal off the shortlist -->
+    <path d="M512,622 V780 H92"/>
+    <path id="n-loopback" d="M92,622 V780 H36 V60 H95" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#p-arrdim)"/>
+  </g>
+
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#p-glow)">
+    <animateMotion dur="9s" repeatCount="indefinite" path="M427,60 H485 M597,90 V109 H372 V218 H242 V426 H372 V538 H92 V558"/>
+  </circle>
+  <circle class="dx" r="3.2" fill="#8B949E" filter="url(#p-glow)">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M372,218 H726 V379 H709"/>
+  </circle>
+
+  <!-- shortlist and card -->
+  <g id="n-shortlist" class="dx">
+    <rect x="97" y="30" width="330" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="262" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">SIGNAL SHORTLIST</text>
+    <text class="dx" x="262" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">two or three, seen from outside</text>
+    <text class="dx" x="262" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">rated by how many teams use them</text>
+  </g>
+  <g id="n-card" class="dx">
+    <rect x="487" y="30" width="220" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="597" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">SIGNAL CARD</text>
+    <text class="dx" x="597" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">the fact that must stay true</text>
+    <text class="dx" x="597" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">fresh window, retirement rule</text>
+  </g>
+
+  <!-- the plan, signed: human gate 1 -->
+  <g id="n-plan" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="122" y="128" width="500" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="154" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; THE TEST PLAN &#183; SIGNED FIRST &#9608;&#9608;</text>
+    <text class="dx" x="372" y="174" text-anchor="middle" fill="#8B949E" font-size="10">100 accounts per arm, about 10 replies to read,</text>
+    <text class="dx" x="372" y="188" text-anchor="middle" fill="#8B949E" font-size="10">the gap that counts, keep or retire written now</text>
+  </g>
+
+  <!-- pre-send check: human gate 2 -->
+  <g id="n-check" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="97" y="238" width="290" height="70" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="242" y="263" text-anchor="middle" fill="#4A9ECE" font-size="12.5" font-weight="800">PRE-SEND CHECK</text>
+    <text class="dx" x="242" y="281" text-anchor="middle" fill="#E6EDF3" font-size="10">still true? inside its window?</text>
+    <text class="dx" x="242" y="296" text-anchor="middle" fill="#8B949E" font-size="9.5">every account, every batch</text>
+  </g>
+  <g id="n-hold" class="dx">
+    <rect x="417" y="238" width="290" height="70" rx="9" fill="#1c2333" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <text class="dx" x="562" y="263" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">HELD</text>
+    <text class="dx" x="562" y="281" text-anchor="middle" fill="#8B949E" font-size="10">"cannot tell" is its own answer</text>
+    <text class="dx" x="562" y="296" text-anchor="middle" fill="#8B949E" font-size="9.5">an unchecked signal never sends</text>
+  </g>
+
+  <!-- the two arms -->
+  <g id="n-signal" class="dx">
+    <rect x="97" y="346" width="290" height="66" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="242" y="371" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="700">SIGNAL ARM</text>
+    <text class="dx" x="242" y="389" text-anchor="middle" fill="#4A9ECE" font-size="10.5">shows the signal, passed the check</text>
+    <text class="dx" x="242" y="403" text-anchor="middle" fill="#8B949E" font-size="9.5">gets the message the signal makes possible</text>
+  </g>
+  <g id="n-compare" class="dx">
+    <rect x="417" y="346" width="290" height="66" rx="9" fill="#1c2333" stroke="#8B949E" stroke-dasharray="4 4"/>
+    <text class="dx" x="562" y="371" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="600">COMPARISON</text>
+    <text class="dx" x="562" y="389" text-anchor="middle" fill="#8B949E" font-size="10.5">same band, no sign of the signal</text>
+    <text class="dx" x="562" y="403" text-anchor="middle" fill="#8B949E" font-size="9.5">your usual message, same sender and days</text>
+  </g>
+
+  <!-- readout: human gate 3 -->
+  <g id="n-read" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="172" y="440" width="400" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="468" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; READOUT &#9608;&#9608;</text>
+    <text class="dx" x="372" y="488" text-anchor="middle" fill="#8B949E" font-size="10">replies and meetings per arm, against</text>
+    <text class="dx" x="372" y="502" text-anchor="middle" fill="#8B949E" font-size="10">the signed rule, reported as directional</text>
+  </g>
+
+  <!-- decisions -->
+  <g id="n-keep" class="dx">
+    <rect x="32" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="92" y="583" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">KEEP</text>
+    <text class="dx" x="92" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">the gap that counts,</text>
+    <text class="dx" x="92" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">minimum met</text>
+  </g>
+  <g id="n-another" class="dx">
+    <rect x="172" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="232" y="583" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">HOLD</text>
+    <text class="dx" x="232" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">something else could</text>
+    <text class="dx" x="232" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">explain the gap</text>
+  </g>
+  <g id="n-fix" class="dx">
+    <rect x="312" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="372" y="583" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">FIX</text>
+    <text class="dx" x="372" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">too close to call,</text>
+    <text class="dx" x="372" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">one message change</text>
+  </g>
+  <g id="n-retire" class="dx">
+    <rect x="452" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text class="dx" x="512" y="583" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">RETIRE</text>
+    <text class="dx" x="512" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">no gap, or the card's</text>
+    <text class="dx" x="512" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">retirement rule hit</text>
+  </g>
+  <g id="n-record" class="dx">
+    <rect x="592" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text class="dx" x="652" y="583" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">KEEP RECORDING</text>
+    <text class="dx" x="652" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">below the minimum,</text>
+    <text class="dx" x="652" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">decide nothing yet</text>
+  </g>
+  <g class="dx">
+    <path d="M232,622 V660" stroke="#E5C07B" stroke-dasharray="4 4" fill="none"/>
+    <path d="M372,622 V660" stroke="#E5C07B" stroke-dasharray="4 4" fill="none"/>
+  </g>
+  <g id="n-again" class="dx">
+    <rect x="262" y="680" width="220" height="50" rx="9" fill="#1c2333" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <text class="dx" x="372" y="701" text-anchor="middle" fill="#E5C07B" font-size="10.5" font-weight="700">ONE MORE PERIOD</text>
+    <text class="dx" x="372" y="717" text-anchor="middle" fill="#8B949E" font-size="8.5">same plan, read again</text>
+  </g>
+
+  <text class="dx" x="26" y="420" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(-90 26 420)">KEEP &#183; READ AGAIN NEXT QUARTER &#183; RETIRE &#183; NEXT SIGNAL</text>
+
+  <text class="dx" x="372" y="850" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 11 &#183; BUYING SIGNAL TESTING</text>
+</svg>

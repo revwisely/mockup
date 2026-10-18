@@ -27,6 +27,8 @@
     { "source": "/k/provable-icp", "destination": "/assets/kits/provable-icp-kit.zip" },
     { "source": "/playbook/ai-rollout-one-number", "destination": "/playbook-ai-rollout-one-number.html" },
     { "source": "/k/ai-rollout-one-number", "destination": "/assets/kits/ai-rollout-one-number-kit.zip" },
+    { "source": "/playbook/buying-signal-testing", "destination": "/playbook-buying-signal-testing.html" },
+    { "source": "/k/buying-signal-testing", "destination": "/assets/kits/buying-signal-testing-kit.zip" },
     { "source": "/case-studies", "destination": "/case-studies.html" },
     { "source": "/case-study", "destination": "/case-studies.html" },
     { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },
