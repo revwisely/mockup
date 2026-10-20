@@ -27,6 +27,18 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 - [newsletter](https://www.magnetiz.ai/newsletter.html)
 - [our ai agents](https://www.magnetiz.ai/our-ai-agents.html)
 - [outcome pricing](https://www.magnetiz.ai/a/outcome)
+- [playbook ai ready data](https://www.magnetiz.ai/playbook/ai-ready-data)
+- [playbook ai rollout one number](https://www.magnetiz.ai/playbook/ai-rollout-one-number)
+- [playbook brand voice context layer](https://www.magnetiz.ai/playbook/brand-voice-context-layer)
+- [playbook buying signal testing](https://www.magnetiz.ai/playbook/buying-signal-testing)
+- [playbook crm enrichment review](https://www.magnetiz.ai/playbook/crm-enrichment-review)
+- [playbook inbound signup routing](https://www.magnetiz.ai/playbook/inbound-signup-routing)
+- [playbook meeting intelligence](https://www.magnetiz.ai/playbook/meeting-intelligence)
+- [playbook provable icp](https://www.magnetiz.ai/playbook/provable-icp)
+- [playbook reply triage](https://www.magnetiz.ai/playbook/reply-triage)
+- [playbook stalled build handoff](https://www.magnetiz.ai/playbook/stalled-build-handoff)
+- [playbook target account ads](https://www.magnetiz.ai/playbook/target-account-ads)
+- [playbooks](https://www.magnetiz.ai/playbooks)
 - [privacy policy](https://www.magnetiz.ai/privacy-policy.html)
 - [talent apply](https://www.magnetiz.ai/talent-apply.html)
 - [talent](https://www.magnetiz.ai/talent.html)
@@ -34,11 +46,16 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 
 ## Writing
 
-152 articles. Most recent first.
+157 articles. Most recent first.
 
+- [Did Your AI Rollout Change Anything?](https://www.magnetiz.ai/blog/did-your-ai-rollout-change-anything) (2026-10-15): 80% of people say AI made them more productive. 37% of companies see it in EBIT. Here is why a rollout reads as done the day it ships, and the seven-step playbook that measures one number before launch and lets a signed rule decide at day 30.
+- [ICP Playbook: Test Your Fit Score](https://www.magnetiz.ai/blog/icp-playbook-test-your-fit-score) (2026-10-08): Most ICP models get one test, a backtest on deals already won. Playbook 09 tests the fit verdict your routing runs on today, every time the prompt, the model or the market changes, and reads meetings and wins by the tier that routed each account.
+- [Who Checks the AI's Work?](https://www.magnetiz.ai/blog/who-checks-the-ais-work) (2026-10-08): Something in your GTM motion already drafts, scores or sends work you never watched get made. Asking the AI to check its own work has a known bias. Here is the review setup that holds up, and the three questions to ask any vendor.
+- [LinkedIn Playbook: Target Account Ads](https://www.magnetiz.ai/blog/linkedin-playbook-target-account-ads) (2026-10-01): Upload a list of target companies to LinkedIn and one row with a parent company's domain can match that parent's entire workforce, while the dashboard looks normal. Playbook 08 is the workflow that catches it, with an AI agent checking the list, the campaign and the weekly numbers before a person spends a dollar.
+- [Why Does AI Make Bad Data Worse?](https://www.magnetiz.ai/blog/same-company-four-times) (2026-09-24): A person reading a messy CRM merges the duplicates in their head without being asked. That silent repair is why the mess has been survivable. An AI workflow does not stop compensating, it compensates at the write instead, and the correction that used to absorb the mess starts spreading it.
 - [Your AI Scorer Disagrees With Itself](https://www.magnetiz.ai/blog/the-scorer-that-disagrees-with-itself) (2026-09-17): We ran one of our own quality judges nine times on the same draft. Four runs said publish. Five said kill. Every AI score in your GTM stack is the same kind of instrument until someone runs it twice. Here is the ten-minute test and the discipline that follows it.
 - [Did Your Agent's Checks Actually Run?](https://www.magnetiz.ai/blog/the-check-that-never-ran) (2026-09-10): A video pipeline released finished assets straight to a live production site. That pipeline carries several required checks, two of which name a person as the input. None of them ran, and nothing reported that none of them ran.
-- [Taste Does Not Fit in a Document](https://www.magnetiz.ai/blog/taste-does-not-fit-in-a-document) (2026-09-03): You wrote the messaging guideline, shared it with every agency, and loaded it into AI. The drafts still come back needing you. Here is what a context layer holds that a guideline cannot, and the rules that keep it honest once it exists.
+- [Taste Does Not Fit in a Document](https://www.magnetiz.ai/blog/taste-does-not-fit-in-a-document) (2026-09-03): You wrote the messaging guideline, shared it with everyone who writes for you, and loaded it into AI. The drafts still come back needing you. Here is what a context layer holds that a guideline cannot, and the rules that keep it honest once it exists.
 - [One System, Four Different Jobs](https://www.magnetiz.ai/blog/one-system-four-different-jobs) (2026-08-27): A ten-person deep-tech company and a thousand-person operation can evaluate the same AI revenue system in the same week. They are not buying the same thing. Here is the map, four stages, and the first move that fits each one.
 - [Has Your AI Agent Earned Autonomy?](https://www.magnetiz.ai/blog/has-your-ai-agent-earned-autonomy) (2026-08-20): Most agents get promoted to autonomous informally. The last ten outputs looked clean, someone flipped the setting. Here is the mechanical gate that replaces the vibe, in three parts.
 - [What Is Your AI Agent Reading Before It Acts?](https://www.magnetiz.ai/blog/crm-data-quality-ai-agents) (2026-08-13): Agent evaluation grades the output. The record the agent read before it acted gets graded by nobody. Here is where the trust gap actually sits, and the two numbers that measure it.

@@ -62,7 +62,7 @@ function personalizeCta(ctaHtml, post) {
 // The markup below mirrors renderPost() in js/blog-post.js exactly so the same
 // CSS applies. If one changes, change the other. post.content is already HTML
 // and is inserted verbatim, same as the client does.
-function renderArticle(post, cta = '') {
+function renderArticle(post, cta = '', related = '') {
   const tags = (Array.isArray(post.tags) ? post.tags : [])
     .map(t => `<span class="post-tag">${esc(t)}</span>`).join('');
 
@@ -80,10 +80,55 @@ function renderArticle(post, cta = '') {
       ${renderHero(post)}
       <div class="post-body">${post.content || ''}</div>
 ${cta}
+${related}
       <div class="post-footer">
         <a href="/content.html" class="post-footer-back">Back to Content Hub</a>
       </div>
     </div>`;
+}
+
+// Related reading, rendered on the server. Before this, a post linked only back
+// to the Content Hub, so the newest posts sat one hop from nothing and Search
+// Console showed eight of the last ten with zero impressions. Each post now
+// links to three others and to the playbook library.
+//
+// Relatedness is word overlap between titles and excerpts. Crude on purpose:
+// no tags are filled in, and a ranking nobody can explain is worse than a
+// plain one. Recent posts break ties so new work gets linked first.
+const STOP = new Set(('a an and are as at be but by can do does for from has have how ' +
+  'i if in into is it its not of on or our so that the their them then there these ' +
+  'this to up was we what when where which who why will with you your ai').split(' '));
+
+function words(s) {
+  return new Set(String(s || '').toLowerCase().replace(/<[^>]+>/g, ' ')
+    .match(/[a-z][a-z0-9-]{2,}/g)?.filter(w => !STOP.has(w)) || []);
+}
+
+function pickRelated(post, slug, index, n = 3) {
+  const mine = words(`${post.title} ${post.title} ${post.excerpt}`);
+  return index
+    .filter(p => p.slug !== slug)
+    .map((p, i) => {
+      let overlap = 0;
+      for (const w of words(`${p.title} ${p.title} ${p.excerpt}`)) if (mine.has(w)) overlap++;
+      return { p, overlap, i };
+    })
+    .sort((a, b) => b.overlap - a.overlap || a.i - b.i)
+    .slice(0, n)
+    .map(x => x.p);
+}
+
+function renderRelated(related) {
+  if (!related.length) return '';
+  const items = related.map(p =>
+    `          <li><a href="/blog/${esc(p.slug)}">${esc(p.title)}</a></li>`).join('\n');
+  return `      <nav class="post-related" aria-label="Related reading">
+        <h2 class="post-related-label">// Related reading</h2>
+        <ul class="post-related-list">
+${items}
+        </ul>
+        <a href="/playbooks" class="post-related-more">Browse the playbooks</a>
+      </nav>`;
 }
 
 // Canonical plus BlogPosting structured data, built from fields the post JSON
@@ -146,6 +191,18 @@ export default async function handler(req, res) {
     }
   }
 
+  // The post index feeds Related reading. A failure here costs the links, never
+  // the page.
+  let index = [];
+  if (post) {
+    try {
+      const r = await fetch(`${base}/data/posts.json`);
+      if (r.ok) index = await r.json();
+    } catch (e) {
+      index = [];
+    }
+  }
+
   let html = template;
 
   if (post) {
@@ -182,7 +239,11 @@ export default async function handler(req, res) {
     const head = `  ${tags}\n  ${canonicalAndSchema(post, pageUrl, image)}\n</head>`;
     // Same CTA the browser clones from <template id="post-cta"> in the shell.
     const ctaMatch = html.match(/<template id="post-cta">([\s\S]*?)<\/template>/i);
-    const article = renderArticle(post, ctaMatch ? personalizeCta(ctaMatch[1], post) : '');
+    const article = renderArticle(
+      post,
+      ctaMatch ? personalizeCta(ctaMatch[1], post) : '',
+      renderRelated(pickRelated(post, slug, Array.isArray(index) ? index : [])),
+    );
 
     html = html
       .replace(/<title>[\s\S]*?<\/title>\s*/i, '')
