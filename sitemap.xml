@@ -89,6 +89,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.magnetiz.ai/playbook/buying-signal-testing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.magnetiz.ai/playbook/crm-enrichment-review</loc>
     <priority>0.7</priority>
   </url>
