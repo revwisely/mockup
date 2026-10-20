@@ -77,6 +77,50 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.magnetiz.ai/playbook/ai-ready-data</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/ai-rollout-one-number</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/brand-voice-context-layer</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/crm-enrichment-review</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/inbound-signup-routing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/meeting-intelligence</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/provable-icp</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/reply-triage</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/stalled-build-handoff</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbook/target-account-ads</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/playbooks</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.magnetiz.ai/privacy-policy.html</loc>
     <priority>0.7</priority>
   </url>
@@ -91,6 +135,31 @@
   <url>
     <loc>https://www.magnetiz.ai/video-direction.html</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/did-your-ai-rollout-change-anything</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/icp-playbook-test-your-fit-score</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/who-checks-the-ais-work</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/linkedin-playbook-target-account-ads</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/same-company-four-times</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.magnetiz.ai/blog/the-scorer-that-disagrees-with-itself</loc>
