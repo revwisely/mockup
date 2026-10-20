@@ -2,7 +2,7 @@
   {
     "slug": "ai-consulting-firms-vs-ai-automation-agencies-which-fits-a-revenue-team",
     "title": "AI Consulting Firms vs AI Automation Agencies: Which Fits a Revenue Team?",
-    "date": "2026-10-22",
+    "date": "2026-10-20",
     "author": "Magnetiz.ai",
     "excerpt": "Four ways to get your first AI system into sales and RevOps, compared on what you get, how fast it runs and what you own at the end.",
     "image": "assets/images/posts/ai-consulting-firms-vs-ai-automation-agencies-which-fits-a-revenue-team-hero.jpeg",
@@ -11,7 +11,7 @@
   {
     "slug": "questions-to-ask-before-hiring-an-ai-consultant-or-automation-agency",
     "title": "Questions to Ask Before Hiring an AI Consultant or Automation Agency",
-    "date": "2026-10-21",
+    "date": "2026-10-20",
     "author": "Magnetiz.ai",
     "excerpt": "Twelve questions for comparing AI consultants and automation agencies on agents that will write to your CRM and send under your reps' names.",
     "image": "assets/images/posts/questions-to-ask-before-hiring-an-ai-consultant-or-automation-agency-hero.jpeg",
@@ -204,16 +204,6 @@
     "author": "Magnetiz.ai",
     "excerpt": "Gartner's new research note maps four AI agent autonomy levels. The Agent Build Lifecycle absorbs the taxonomy by parameterizing the governance phase per tier.",
     "image": "assets/images/posts/tiered-governance-the-architectural-answer-to-gartners-warning-hero.jpeg",
-    "tags": [],
-    "featured": true
-  },
-  {
-    "slug": "five-questions-that-separate-production-ai-partners-from-demo-shops",
-    "title": "Five Questions That Separate Production AI Partners From Demo Shops",
-    "date": "2026-06-10",
-    "author": "Magnetiz.ai",
-    "excerpt": "The buyer's diagnostic for evaluating AI implementation partners.",
-    "image": "assets/images/posts/five-questions-that-separate-production-ai-partners-from-demo-shops-hero.jpeg",
     "tags": [],
     "featured": true
   },
@@ -1194,16 +1184,6 @@
     "author": "Magnetiz.ai",
     "excerpt": "AI promises to change how we work and solve problems. But, knowing how to use its potential can be hard. Many want to use AI to be more efficient and...",
     "image": "assets/images/posts/embracing-an-ai-first-mindset-hero.webp",
-    "tags": [],
-    "featured": false
-  },
-  {
-    "slug": "how-do-you-know-its-time-to-bring-in-an-ai-consultant",
-    "title": "When Should You Hire an AI Consultant?",
-    "date": "2024-07-11",
-    "author": "Magnetiz.ai",
-    "excerpt": "Artificial Intelligence (AI) promises to revolutionize how businesses operate, but knowing when to bring in expert help can be challenging. Many enterprises...",
-    "image": "assets/images/posts/how-do-you-know-its-time-to-bring-in-an-ai-consultant-hero.png",
     "tags": [],
     "featured": false
   },

@@ -181,11 +181,15 @@ export default async function handler(req, res) {
     return res.end();
   }
 
+  // notFound only when the post file is confirmed missing. A failed fetch keeps
+  // the 200 shell so a transient error never caches a real post as a 404.
   let post = null;
+  let notFound = !slug;
   if (slug) {
     try {
       const r = await fetch(`${base}/data/posts/${slug}.json`);
       if (r.ok) post = await r.json();
+      else if (r.status === 404) notFound = true;
     } catch (e) {
       post = null;
     }
@@ -256,8 +260,14 @@ export default async function handler(req, res) {
       );
   }
 
-  res.statusCode = 200;
+  // A slug with no post is a real 404, so search engines drop it instead of
+  // indexing the empty shell under every made-up address.
+  if (notFound) {
+    html = html.replace('</head>', () => '  <meta name="robots" content="noindex">\n</head>');
+  }
+
+  res.statusCode = notFound ? 404 : 200;
   res.setHeader('Content-Type', 'text/html; charset=utf-8');
-  res.setHeader('Cache-Control', 's-maxage=600, stale-while-revalidate=86400');
+  res.setHeader('Cache-Control', notFound ? 's-maxage=60' : 's-maxage=600, stale-while-revalidate=86400');
   return res.end(html);
 }
