@@ -141,6 +141,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.magnetiz.ai/blog/ai-consulting-firms-vs-ai-automation-agencies-which-fits-a-revenue-team</loc>
+    <lastmod>2026-10-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/questions-to-ask-before-hiring-an-ai-consultant-or-automation-agency</loc>
+    <lastmod>2026-10-20</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.magnetiz.ai/blog/did-your-ai-rollout-change-anything</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.6</priority>
@@ -233,11 +243,6 @@
   <url>
     <loc>https://www.magnetiz.ai/blog/tiered-governance-the-architectural-answer-to-gartners-warning</loc>
     <lastmod>2026-06-17</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.magnetiz.ai/blog/five-questions-that-separate-production-ai-partners-from-demo-shops</loc>
-    <lastmod>2026-06-10</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -728,11 +733,6 @@
   <url>
     <loc>https://www.magnetiz.ai/blog/embracing-an-ai-first-mindset</loc>
     <lastmod>2024-07-18</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.magnetiz.ai/blog/how-do-you-know-its-time-to-bring-in-an-ai-consultant</loc>
-    <lastmod>2024-07-11</lastmod>
     <priority>0.6</priority>
   </url>
   <url>

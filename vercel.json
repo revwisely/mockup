@@ -1,5 +1,7 @@
 {
   "redirects": [
+    { "source": "/blog/five-questions-that-separate-production-ai-partners-from-demo-shops", "destination": "/blog/questions-to-ask-before-hiring-an-ai-consultant-or-automation-agency", "permanent": true },
+    { "source": "/blog/how-do-you-know-its-time-to-bring-in-an-ai-consultant", "destination": "/blog/questions-to-ask-before-hiring-an-ai-consultant-or-automation-agency", "permanent": true },
     { "source": "/blog", "destination": "/content.html", "permanent": true },
     { "source": "/content", "destination": "/content.html", "permanent": true },
     { "source": "/blog-post.html", "has": [{ "type": "query", "key": "slug", "value": "(?<slug>[a-zA-Z0-9-]+)" }], "destination": "/blog/:slug", "permanent": true },
