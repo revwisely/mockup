@@ -75,7 +75,7 @@
     </g>
     <text class="dx" x="372" y="154" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; THE RULE &#183; SIGNED BEFORE LAUNCH &#9608;&#9608;</text>
     <text class="dx" x="372" y="174" text-anchor="middle" fill="#8B949E" font-size="10">the line past the swing, the day-30 read date,</text>
-    <text class="dx" x="372" y="188" text-anchor="middle" fill="#8B949E" font-size="10">the minimum count, keep or kill written now</text>
+    <text class="dx" x="372" y="188" text-anchor="middle" fill="#8B949E" font-size="10">a holdout if you have one, keep or kill written now</text>
   </g>
 
   <!-- rollout and holdout -->
@@ -138,7 +138,7 @@
   <g id="n-record" class="dx">
     <rect x="592" y="560" width="120" height="62" rx="9" fill="#1c2333" stroke="#C678DD"/>
     <text class="dx" x="652" y="583" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">KEEP RECORDING</text>
-    <text class="dx" x="652" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">below the minimum,</text>
+    <text class="dx" x="652" y="599" text-anchor="middle" fill="#8B949E" font-size="8.5">before day 30,</text>
     <text class="dx" x="652" y="611" text-anchor="middle" fill="#8B949E" font-size="8.5">decide nothing yet</text>
   </g>
   <g class="dx">
