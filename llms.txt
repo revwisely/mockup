@@ -31,6 +31,7 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 - [playbook ai rollout one number](https://www.magnetiz.ai/playbook/ai-rollout-one-number)
 - [playbook brand voice context layer](https://www.magnetiz.ai/playbook/brand-voice-context-layer)
 - [playbook buying signal testing](https://www.magnetiz.ai/playbook/buying-signal-testing)
+- [playbook champion job change](https://www.magnetiz.ai/playbook/champion-job-change)
 - [playbook crm enrichment review](https://www.magnetiz.ai/playbook/crm-enrichment-review)
 - [playbook inbound signup routing](https://www.magnetiz.ai/playbook/inbound-signup-routing)
 - [playbook meeting intelligence](https://www.magnetiz.ai/playbook/meeting-intelligence)

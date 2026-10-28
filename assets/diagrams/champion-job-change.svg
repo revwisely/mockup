@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="The Champion Job Change Playbook workflow diagram">
+  <defs>
+    <marker id="p-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="p-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="p-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="p-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#p-dots)"/>
+
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- champion list -> watch list -->
+    <path d="M427,60 H485" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- watch list -> move check -->
+    <path d="M597,90 V109 H372 V126" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- move check -> three answers -->
+    <path d="M372,200 V218" stroke="#4A9ECE"/>
+    <path d="M138,218 H606"/>
+    <path d="M138,218 V236" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M372,218 V236" marker-end="url(#p-arrdim)" stroke="#E06C75" stroke-dasharray="4 4"/>
+    <path d="M606,218 V236" marker-end="url(#p-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <!-- verified -> tier rules and -> the old account -->
+    <path d="M138,304 V326 H562" />
+    <path d="M242,326 V344" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M562,326 V344" marker-end="url(#p-arrdim)" stroke="#8B949E" stroke-dasharray="4 4"/>
+    <!-- tier rules -> send check -->
+    <path d="M242,410 V438" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- send check and cold baseline -> readout -->
+    <path d="M242,504 V522 H562 V504"/>
+    <path d="M372,522 V536" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- readout -> decision bus -->
+    <path d="M372,610 V628" stroke="#4A9ECE"/>
+    <path d="M92,628 H652"/>
+    <path d="M92,628 V646" marker-end="url(#p-arrdim)" stroke="#98C379"/>
+    <path d="M232,628 V646" marker-end="url(#p-arrdim)" stroke="#E5C07B"/>
+    <path d="M372,628 V646" marker-end="url(#p-arrdim)" stroke="#E5C07B"/>
+    <path d="M512,628 V646" marker-end="url(#p-arrdim)" stroke="#E06C75"/>
+    <path d="M652,628 V646" marker-end="url(#p-arrdim)" stroke="#C678DD"/>
+    <!-- loop: fix the source and tighten the list go back to the start -->
+    <path d="M232,708 V780 H372 V708" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <path id="n-loopback" d="M232,780 H36 V60 H95" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#p-arrdim)"/>
+  </g>
+
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#p-glow)">
+    <animateMotion dur="9s" repeatCount="indefinite" path="M427,60 H485 M597,90 V109 H372 V218 H138 V326 H242 V522 H372 V628 H92 V646"/>
+  </circle>
+  <circle class="dx" r="3.2" fill="#8B949E" filter="url(#p-glow)">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M242,326 H562 V344"/>
+  </circle>
+
+  <!-- champion list and watch list -->
+  <g id="n-define" class="dx">
+    <rect x="97" y="30" width="330" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="262" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">CHAMPION LIST</text>
+    <text class="dx" x="262" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">who signed, ran it, or argued for you</text>
+    <text class="dx" x="262" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">evidence on every name, not a title</text>
+  </g>
+  <g id="n-watch" class="dx">
+    <rect x="487" y="30" width="220" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="597" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">WATCH + RULE</text>
+    <text class="dx" x="597" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">a 90-day window</text>
+    <text class="dx" x="597" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">the read rule signed first</text>
+  </g>
+
+  <!-- the move check: human gate 1 -->
+  <g id="n-verify" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="122" y="128" width="500" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="154" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; MOVE CHECK &#183; EVERY ALERT &#9608;&#9608;</text>
+    <text class="dx" x="372" y="174" text-anchor="middle" fill="#8B949E" font-size="10">a different company? a second source?</text>
+    <text class="dx" x="372" y="188" text-anchor="middle" fill="#8B949E" font-size="10">inside the window? a role that buys?</text>
+  </g>
+
+  <!-- the three answers -->
+  <g id="n-verified" class="dx">
+    <rect x="32" y="238" width="212" height="66" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="138" y="262" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="700">VERIFIED MOVE</text>
+    <text class="dx" x="138" y="279" text-anchor="middle" fill="#4A9ECE" font-size="9.5">confirmed at two sources</text>
+    <text class="dx" x="138" y="293" text-anchor="middle" fill="#8B949E" font-size="9">inside the window</text>
+  </g>
+  <g id="n-notmove" class="dx">
+    <rect x="266" y="238" width="212" height="66" rx="9" fill="#1c2333" stroke="#E06C75" stroke-dasharray="4 4"/>
+    <text class="dx" x="372" y="262" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NOT A MOVE</text>
+    <text class="dx" x="372" y="279" text-anchor="middle" fill="#8B949E" font-size="9.5">promotion, side role, stale</text>
+    <text class="dx" x="372" y="293" text-anchor="middle" fill="#8B949E" font-size="9">profile, renamed company</text>
+  </g>
+  <g id="n-hold" class="dx">
+    <rect x="500" y="238" width="212" height="66" rx="9" fill="#1c2333" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <text class="dx" x="606" y="262" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">HELD</text>
+    <text class="dx" x="606" y="279" text-anchor="middle" fill="#8B949E" font-size="9.5">"cannot tell" has an owner</text>
+    <text class="dx" x="606" y="293" text-anchor="middle" fill="#8B949E" font-size="9">never a tier, never a send</text>
+  </g>
+
+  <!-- tier rules and the old account -->
+  <g id="n-tier" class="dx">
+    <rect x="97" y="346" width="290" height="64" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="242" y="370" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="700">TIER RULES</text>
+    <text class="dx" x="242" y="387" text-anchor="middle" fill="#4A9ECE" font-size="10">written before the first move</text>
+    <text class="dx" x="242" y="400" text-anchor="middle" fill="#8B949E" font-size="9.5">a rule picks the tier, never the model</text>
+  </g>
+  <g id="n-old" class="dx">
+    <rect x="417" y="346" width="290" height="64" rx="9" fill="#1c2333" stroke="#8B949E" stroke-dasharray="4 4"/>
+    <text class="dx" x="562" y="370" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="600">THE OLD ACCOUNT</text>
+    <text class="dx" x="562" y="387" text-anchor="middle" fill="#8B949E" font-size="10">just lost its champion</text>
+    <text class="dx" x="562" y="400" text-anchor="middle" fill="#8B949E" font-size="9.5">its owner gets a task, not a send</text>
+  </g>
+
+  <!-- send check: human gate 2, beside the cold baseline -->
+  <g id="n-send" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="97" y="440" width="290" height="64" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="242" y="464" text-anchor="middle" fill="#4A9ECE" font-size="12.5" font-weight="800">SEND CHECK</text>
+    <text class="dx" x="242" y="481" text-anchor="middle" fill="#E6EDF3" font-size="10">still there? message read in full?</text>
+    <text class="dx" x="242" y="495" text-anchor="middle" fill="#8B949E" font-size="9.5">written from the person, no alert</text>
+  </g>
+  <g id="n-baseline" class="dx">
+    <rect x="417" y="440" width="290" height="64" rx="9" fill="#1c2333" stroke="#8B949E" stroke-dasharray="4 4"/>
+    <text class="dx" x="562" y="464" text-anchor="middle" fill="#E6EDF3" font-size="13" font-weight="600">COLD BASELINE</text>
+    <text class="dx" x="562" y="481" text-anchor="middle" fill="#8B949E" font-size="10">your usual outreach</text>
+    <text class="dx" x="562" y="495" text-anchor="middle" fill="#8B949E" font-size="9.5">same band, same weeks</text>
+  </g>
+
+  <!-- readout: human gate 3 -->
+  <g id="n-read" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="172" y="538" width="400" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="566" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; QUARTERLY READOUT &#9608;&#9608;</text>
+    <text class="dx" x="372" y="586" text-anchor="middle" fill="#8B949E" font-size="10">meetings per verified move against cold,</text>
+    <text class="dx" x="372" y="600" text-anchor="middle" fill="#8B949E" font-size="10">as a chance and a range</text>
+  </g>
+
+  <!-- decisions -->
+  <g id="n-keep" class="dx">
+    <rect x="32" y="648" width="120" height="60" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="92" y="671" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">KEEP</text>
+    <text class="dx" x="92" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">a 90% chance</text>
+    <text class="dx" x="92" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">or better</text>
+  </g>
+  <g id="n-fix" class="dx">
+    <rect x="172" y="648" width="120" height="60" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="232" y="671" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">FIX SOURCE</text>
+    <text class="dx" x="232" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">too many alerts</text>
+    <text class="dx" x="232" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">that are not moves</text>
+  </g>
+  <g id="n-tighten" class="dx">
+    <rect x="312" y="648" width="120" height="60" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="372" y="671" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">TIGHTEN</text>
+    <text class="dx" x="372" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">real moves, still</text>
+    <text class="dx" x="372" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">no better than cold</text>
+  </g>
+  <g id="n-retire" class="dx">
+    <rect x="452" y="648" width="120" height="60" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text class="dx" x="512" y="671" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">RETIRE</text>
+    <text class="dx" x="512" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">no better than cold</text>
+    <text class="dx" x="512" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">two quarters running</text>
+  </g>
+  <g id="n-record" class="dx">
+    <rect x="592" y="648" width="120" height="60" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text class="dx" x="652" y="671" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">KEEP RECORDING</text>
+    <text class="dx" x="652" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">before the read date,</text>
+    <text class="dx" x="652" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">decide nothing yet</text>
+  </g>
+
+  <text class="dx" x="26" y="420" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(-90 26 420)">FIX THE SOURCE &#183; TIGHTEN THE LIST &#183; WATCH AGAIN</text>
+
+  <text class="dx" x="372" y="850" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 12 &#183; CHAMPION JOB CHANGE</text>
+</svg>
