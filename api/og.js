@@ -151,8 +151,21 @@ function canonicalAndSchema(post, pageUrl, image) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
     keywords: Array.isArray(post.tags) ? post.tags.join(', ') : undefined,
   };
+  // A post with an FAQ block also carries it as FAQPage data, so each question
+  // and its answer reach an answer engine as a pair. Posts without one are unchanged.
+  const faq = Array.isArray(post.faq) ? post.faq.filter(f => f && f.question && f.answer) : [];
+  const faqSchema = faq.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null;
   return `<link rel="canonical" href="${esc(pageUrl)}">\n  ` +
-         `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
+         `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>` +
+         (faqSchema ? `\n  <script type="application/ld+json">${JSON.stringify(faqSchema).replace(/</g, '\\u003c')}</script>` : '');
 }
 
 export default async function handler(req, res) {
