@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The HubSpot Lead Scoring Playbook | Magnetiz.ai</title>
+  <meta name="description" content="A playbook for HubSpot lead scoring that ranks the accounts that buy. Build fit and engagement scores from your closed-won and closed-lost deals, name what each grade from A1 to C3 triggers, send records with missing fit data to a person, and backtest the score before anything routes on it.">
+  <meta property="og:title" content="The HubSpot Lead Scoring Playbook | Magnetiz.ai">
+  <meta property="og:description" content="Build HubSpot fit and engagement scores from your closed deals, and test the score against wins and losses before anything routes on it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.magnetiz.ai/playbook/hubspot-lead-scoring">
+  <meta property="og:image" content="https://www.magnetiz.ai/assets/og/hubspot-lead-scoring.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="The HubSpot Lead Scoring Playbook | Magnetiz.ai workflow diagram">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.magnetiz.ai/assets/og/hubspot-lead-scoring.jpg">
+  <link rel="canonical" href="https://www.magnetiz.ai/playbook/hubspot-lead-scoring">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="/css/tailwind-shim.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+
+  <!-- Custom Terminal CSS -->
+  <link rel="stylesheet" href="/css/terminal.css">
+  <link rel="stylesheet" href="/css/blog-post.css?v=20260923b">
+  <link rel="stylesheet" href="/css/playbooks.css?v=20260916">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NB89Q3REZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2NB89Q3REZ');
+  </script>
+
+  <!-- RB2B -->
+  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("W7N850HV9EN1");</script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rfeny36y07");
+  </script>
+</head>
+<body>
+
+  <!-- Grid Background -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner container">
+      <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a class="nav-dropdown-trigger" role="button" aria-haspopup="true" tabindex="0">
+            Maestro <span class="chevron">&#9662;</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="/maestro-marketing.html">Maestro for Marketing</a>
+            <a href="/maestro-sales.html">Maestro for Sales</a>
+            <a href="/maestro-operations.html">Maestro for Operations</a>
+          </div>
+        </li>
+        <li><a href="/playbooks.html">Playbooks</a></li>
+        <li><a href="/content.html">Content</a></li>
+      </ul>
+
+      <a href="/index.html#cta" class="nav-cta">Schedule Call</a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <span class="mobile-heading">Maestro</span>
+    <a href="/maestro-marketing.html" class="mobile-sub">Maestro for Marketing</a>
+    <a href="/maestro-sales.html" class="mobile-sub">Maestro for Sales</a>
+    <a href="/maestro-operations.html" class="mobile-sub">Maestro for Operations</a>
+    <a href="/playbooks.html">Playbooks</a>
+    <a href="/content.html">Content</a>
+    <a href="/index.html#cta">Schedule Call</a>
+  </div>
+
+  <!-- Mobile diagram hero -->
+  <div class="pb-diagram-mobile" aria-hidden="true">
+    <img src="/assets/diagrams/hubspot-lead-scoring.svg?v=20261028" alt="" loading="eager">
+  </div>
+
+  <!-- ============================================
+       PLAYBOOK - SPLIT LAYOUT
+       ============================================ -->
+  <div class="pb-split">
+
+    <!-- ================= LEFT ================= -->
+    <main class="pb-left">
+      <a href="/playbooks.html" class="pb-back">&#8592; Playbooks</a>
+
+      <h1 class="pb-title">The HubSpot Lead Scoring Playbook</h1>
+
+      <div class="pb-meta-row">
+        <span class="pb-chip pb-chip--green">Sales</span>
+        <span class="pb-date">Playbook 13 &middot; October 2026</span>
+      </div>
+
+      <p class="pb-eyebrow">Works with</p>
+      <div class="pb-tools">
+        <span class="pb-chip">HubSpot</span>
+        <span class="pb-chip">Marketing Hub or Sales Hub</span>
+        <span class="pb-chip">Professional or Enterprise</span>
+      </div>
+
+      <!-- kit gate -->
+      <div class="pb-kit" id="kit">
+        <p class="pb-eyebrow">Implementation kit</p>
+        <ul class="pb-kit-list">
+          <li>The fit rules sheet, with disqualifiers and the fields a score needs</li>
+          <li>The engagement evidence sheet, event by event against wins and losses</li>
+          <li>The HubSpot build sheet, with a change log</li>
+          <li>The grade actions, A1 to C3, and the review list for missing data</li>
+          <li>The backtest and the monthly readout, with lookup tables</li>
+          <li>Ten sample records with an answer key. Four are traps</li>
+        </ul>
+        <form method="POST" action="/api/kit-request" id="kit-form" data-playbook="hubspot-lead-scoring">
+          <div class="pb-kit-row">
+            <input type="email" name="email" placeholder="Work email" required aria-label="Work email">
+            <button type="submit">Send Me the Kit</button>
+          </div>
+          <select name="source" required aria-label="Where did you hear about this?">
+            <option value="" disabled selected>Where did you hear about this?</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="newsletter">The newsletter</option>
+            <option value="search">Search</option>
+            <option value="ai-assistant">An AI assistant</option>
+            <option value="colleague">A colleague</option>
+            <option value="other">Somewhere else</option>
+          </select>
+          <p class="pb-kit-consent">Requesting the kit subscribes you to our weekly release email. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <p class="pb-lede"><strong>Top-scored leads that never buy? Build fit and engagement scores from your closed deals, name what each grade triggers, and test the score before anything routes on it.</strong></p>
+      <p class="pb-lede-sub">The full method is below. Fit rules and engagement points earned from the deals you won and lost, a HubSpot score built beside the old one, an action for every grade, and two tests that read it as a chance and a range.</p>
+
+      <blockquote class="pb-quote">
+        <p>A score can be calculated exactly as designed and still rank the wrong people first.</p>
+        <cite>The failure this playbook fixes</cite>
+      </blockquote>
+
+      <p class="pb-eyebrow" id="how-it-works">How it works</p>
+      <div class="pb-steps">
+
+        <details class="pb-step" open data-highlight="n-deals">
+          <summary><span class="pb-step-num">01</span>Pull the deals you won and lost</summary>
+          <div class="pb-step-body">
+            <p>Export closed-won and closed-lost deals from the last 12 months, with each associated company. For every one, record its size, industry and region, the title of the person who signed or led it, and the lost reason.</p>
+            <p>Your closed deals show who actually buys. Set them beside the profile in your strategy deck, and let the backtest in step 06 pick.</p>
+          </div>
+        </details>
+        <details class="pb-step" data-highlight="n-fit">
+          <summary><span class="pb-step-num">02</span>Write fit rules a stranger can check</summary>
+          <div class="pb-step-body">
+            <p><strong>"Mid-market and growing" is an opinion. "Employee count between 100 and 500, checked on the LinkedIn company page" is a rule.</strong> Write each rule so two people applying it get the same answer, and note how many of your wins match it.</p>
+            <p>Schools, government bodies and competitors get large negative points, so no amount of engagement lifts them into a top grade. Then list the fit properties that must be filled before a score is trusted.</p>
+          </div>
+        </details>
+        <details class="pb-step" data-highlight="n-engage">
+          <summary><span class="pb-step-num">03</span>Earn engagement points from what came before wins</summary>
+          <div class="pb-step-body">
+            <p>For each event, count how often it happened in the 90 days before a deal was created, on wins and on losses. An event earns points when it shows up more often before wins.</p>
+            <p>A pricing page view that appears on 70% of wins and 70% of losses tells you someone was shopping, and little about who buys.</p>
+            <p>Cap each group so one noisy event cannot fill the score, and set decay to match your sales cycle. HubSpot offers decay intervals of 1, 3, 6 or 12 months.</p>
+            <p><em>Watch for the busiest records in the portal. Students, job seekers and competitors click more than buyers, and without the disqualifiers they rise to the top.</em></p>
+          </div>
+        </details>
+        <details class="pb-step" data-highlight="n-build">
+          <summary><span class="pb-step-num">04</span>Build it in HubSpot, beside the old score</summary>
+          <div class="pb-step-body">
+            <p>HubSpot's lead scoring tool sits under Marketing, then Lead Scoring, on Marketing Hub or Sales Hub at Professional or Enterprise. It allows more than one score per object, so the new model runs beside the old one until the backtest reads.</p>
+            <p>Build it as a combined score. Grades run from A1 to C3. The letter is fit, from A for high fit, and the number is engagement.</p>
+            <p>HubSpot's test record and distribution preview confirm the arithmetic. Whether the score ranks buyers is the job of step 06.</p>
+          </div>
+        </details>
+        <details class="pb-step" data-highlight="n-ga n-gb n-gc n-review">
+          <summary><span class="pb-step-num">05</span>Name the action for every grade</summary>
+          <div class="pb-step-body">
+            <p>A1 and A2 go to a rep within a set number of days. A3 is the right company gone quiet, so it goes to nurture and gets reviewed monthly. B1 gets a rep review before any outreach.</p>
+            <p>C1 is very active at a company that cannot buy, so it gets the resource it asked for and no sales outreach.</p>
+            <p><strong>HubSpot points cannot tell a blank field apart from a failed rule.</strong> Both score zero. So records missing a required fit property go to a review list, where a person looks it up, instead of to a grade.</p>
+            <p><em>Watch for a threshold with no action attached. When the customer definition changes, it keeps sorting accounts the old way.</em></p>
+          </div>
+        </details>
+        <details class="pb-step" data-highlight="n-backtest">
+          <summary><span class="pb-step-num">06</span>Backtest the fit letter before anything routes</summary>
+          <div class="pb-step-body">
+            <p>Grade last year's wins and losses and compare the share of each that lands in A. Read the fit letter, since a won customer keeps engaging after the deal and inflates the number on every win.</p>
+            <p>Sign how sure you need to be before you look. We use a 90% chance that wins really grade A more often.</p>
+            <p>With 40 wins and 60 losses, 28 of 40 against 24 of 60 is a 99.8% chance, with the real gap somewhere from 13 to 44 points. 24 of 40 against 33 of 60 is 69%, too close to call, so rewrite the fit rules and run it again.</p>
+          </div>
+        </details>
+        <details class="pb-step" data-highlight="n-read n-keep n-record n-rewrite n-data n-loopback">
+          <summary><span class="pb-step-num">07</span>Read opportunities by grade every month</summary>
+          <div class="pb-step-body">
+            <p>Credit each opportunity to the grade the account held on the first of the month. A meeting raises engagement, so crediting the new grade would let the outcome promote the account after the fact.</p>
+            <p>Compare A1 and A2 against A3 and B. One month is often too few accounts to call, so pool the months until the chance passes the line.</p>
+            <p>No difference after three pooled months sends you back to the fit rules. A review list that grows every month means fix the data before the weights.</p>
+          </div>
+        </details>
+
+      
+</div>
+
+      <p class="pb-lede">Score from the deals you closed, and let those deals grade the score.</p>
+      <p class="pb-lede-sub">The implementation kit above packages the fit rules, the engagement evidence, the HubSpot build sheet, the grade actions, the backtest, the monthly readout and ten sample records with an answer key.</p>
+    </main>
+
+    <!-- ================= RIGHT: the diagram ================= -->
+    <aside class="pb-right" aria-label="Workflow diagram">
+      <div class="pb-right-sticky" id="pb-diagram" data-diagram="/assets/diagrams/hubspot-lead-scoring.svg?v=20261028">
+        <img src="/assets/diagrams/hubspot-lead-scoring.svg?v=20261028" alt="The HubSpot Lead Scoring Playbook workflow diagram" style="max-height:100%; max-width:100%;">
+      </div>
+    </aside>
+  </div>
+
+  <!-- ============================================
+       RELATED PLAYBOOKS
+       ============================================ -->
+  <section class="pb-related">
+    <div class="pb-related-head">
+      <p class="pb-eyebrow">More from the library</p>
+      <h2>Related Playbooks</h2>
+    </div>
+    <div class="pb-grid">
+      <a class="pb-card" href="/playbook-inbound-signup-routing.html">
+        <div class="pb-card-viz">
+          <img src="/assets/diagrams/inbound-signup-routing.svg?v=20260916" alt="Inbound Sign-Up Qualification and Routing workflow diagram" loading="lazy">
+        </div>
+        <div class="pb-card-body">
+          <h3>Inbound Sign-Up Qualification and Routing</h3>
+          <p>A form submission becomes an account brief, a qualification decision, and an assigned next step, with fit and intent scored apart.</p>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--green">Sales</span>
+            <span class="pb-date">Playbook 04</span>
+          </div>
+        </div>
+      </a>
+      <a class="pb-card" href="/playbook-provable-icp.html">
+        <div class="pb-card-viz">
+          <img src="/assets/diagrams/provable-icp.svg?v=20261009" alt="The ICP You Can Prove workflow diagram" loading="lazy">
+        </div>
+        <div class="pb-card-body">
+          <h3>The ICP You Can Prove</h3>
+          <p>Test the fit verdict your routing runs on today, give unknown accounts an owner, and let outcomes by tier decide when to widen.</p>
+          <div class="pb-card-meta">
+            <span class="pb-chip pb-chip--green">Sales</span>
+            <span class="pb-date">Playbook 09</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+<div class="pb-related-more">
+      <a href="/playbooks.html" class="pb-back">View all playbooks &#8594;</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BOTTOM CTA
+       ============================================ -->
+  <section class="pb-cta">
+    <p class="pb-eyebrow">Maestro for Sales</p>
+    <h2>Want This Running in Your Stack?</h2>
+    <p>Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff.</p>
+    <a href="/index.html#cta" class="btn-primary schedule-cta">Schedule Call</a>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="nav-logo">magnetiz<span class="accent">.ai</span></a>
+          <p>AI workflows built into production, with the evaluation frameworks that keep them correct.</p>
+        </div>
+
+        <div>
+          <h4>Maestro</h4>
+          <ul class="footer-links">
+            <li><a href="/index.html">Maestro AI Revenue System</a></li>
+            <li><a href="/maestro-marketing.html">Maestro for Marketing</a></li>
+            <li><a href="/maestro-sales.html">Maestro for Sales</a></li>
+            <li><a href="/maestro-operations.html">Maestro for Operations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="/playbooks.html">Playbooks</a></li>
+            <li><a href="/content.html">Content Hub</a></li>
+            <li><a href="/our-ai-agents.html">Our AI Agents</a></li>
+            <li><a href="/assessment.html">AI Readiness Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/outcome-pricing.html">Outcome Pricing&trade;</a></li>
+            <li><a href="/talent.html">Talent</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/ai-code-of-conduct.html">AI Code of Conduct</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Magnetiz.ai (Revwisely LLC). All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/magnetiz-ai/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/animations.js"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- Calendly popup -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && (/Schedule\s*Call|^Contact$/i.test(link.textContent.trim()) || link.classList.contains('schedule-cta'))) {
+        e.preventDefault();
+        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+      }
+    });
+  </script>
+  <script src="/js/linkedin-insight.js" async></script>
+  <noscript><img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7176748&fmt=gif"></noscript>
+
+  <script src="/js/form-guard.js?v=20260916f"></script>
+  <!-- Kit request -->
+  <script>
+    (function () {
+      var form = document.getElementById('kit-form');
+      if (!form) return;
+
+      // No automation for this playbook yet, so there is nothing to deliver.
+      // Say so instead of taking an address and returning a 500. Remove the
+      // data-kit-gated attribute on this page once its automation is built.
+      if (form.hasAttribute('data-kit-gated')) {
+        form.innerHTML = '<p class="pb-kit-consent"><strong>This kit opens with the next release.</strong> The method above is complete and you can run it today. The <a href="/playbook/meeting-intelligence">Meeting Intelligence kit</a> is available now.</p>';
+        return;
+      }
+
+      var guard = MagnetizFormGuard.arm(form);
+
+      function fail(message) {
+        var btn = form.querySelector('button[type="submit"]');
+        btn.disabled = false;
+        btn.textContent = 'Send Me the Kit';
+        var err = form.querySelector('.kit-error');
+        if (!err) {
+          err = document.createElement('p');
+          err.className = 'pb-kit-consent kit-error';
+          form.appendChild(err);
+        }
+        err.textContent = message;
+        MagnetizFormGuard.reset(guard);
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var email = form.querySelector('input[name="email"]').value;
+        var source = form.querySelector('select[name="source"]').value;
+
+        if (MagnetizFormGuard.awaitingChallenge(guard)) {
+          fail('Verifying you are human. One moment, then press the button again.');
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+        fetch('/api/kit-request', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(MagnetizFormGuard.payload(guard, {
+            email: email, source: source, playbook: form.dataset.playbook
+          }))
+        }).then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (d) {
+            return { ok: r.ok, data: d };
+          });
+        }).then(function (result) {
+          if (!result.ok) {
+            // The guard returns a usable sentence for the cases a person can
+            // act on, so show it rather than a generic failure.
+            fail(result.data.error || 'That did not go through. Try again, or email us and we will send it by hand.');
+            return;
+          }
+          form.innerHTML = '<p class="pb-lede"><strong>Check your inbox.</strong></p><p class="pb-kit-consent">The kit is on its way. If it has not arrived in a few minutes, check spam, then reply to any Magnetiz email and a person will sort it out.</p>';
+          MagnetizFormGuard.teardown(guard);
+          if (typeof gtag === 'function') gtag('event', 'kit_request', { playbook: form.dataset.playbook, source: source });
+        }).catch(function () {
+          fail('Connection error. Please try again.');
+        });
+      });
+    })();
+  </script>
+
+  <!-- Diagram focus: opening a step illuminates the part of the system it describes.
+       The SVG is fetched from the same file the <img> uses, so there is still one
+       source on disk; injecting it only makes the nodes addressable. -->
+  <script>
+    (function () {
+      var host = document.getElementById('pb-diagram');
+      if (!host || !host.dataset.diagram) return;
+      var DESKTOP = window.matchMedia('(min-width: 981px)');
+      var svg = null, stack = [];
+
+      function paint() {
+        if (!svg) return;
+        var current = stack[stack.length - 1];
+        svg.querySelectorAll('.dx.is-on').forEach(function (n) { n.classList.remove('is-on'); });
+        if (!current || !DESKTOP.matches) { svg.classList.remove('is-focused'); return; }
+        var found = 0;
+        current.dataset.highlight.split(/\s+/).forEach(function (id) {
+          var node = svg.getElementById(id);
+          if (node) { node.classList.add('is-on'); found++; }
+        });
+        svg.classList.toggle('is-focused', found > 0);
+      }
+
+      fetch(host.dataset.diagram)
+        .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+        .then(function (markup) {
+          host.innerHTML = markup;
+          svg = host.querySelector('svg');
+          if (!svg) return;
+          svg.setAttribute('aria-hidden', 'true');
+          // Step 01 ships open so the column is not a wall of closed bars, but that
+          // is the page's choice, not the reader's. Seeding the stack from it would
+          // dim the diagram before anyone touched anything, and the first look at a
+          // workflow should be the whole workflow. Focus starts on the first toggle.
+          document.querySelectorAll('.pb-step[data-highlight]').forEach(function (step) {
+            step.addEventListener('toggle', function () {
+              stack = stack.filter(function (s) { return s !== step; });
+              if (step.open) stack.push(step);
+              paint();
+            });
+          });
+          paint();
+        })
+        .catch(function () { /* the <img> fallback is already on screen */ });
+
+      DESKTOP.addEventListener('change', paint);
+    })();
+  </script>
+</body>
+</html>

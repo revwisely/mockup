@@ -36,6 +36,8 @@
     { "source": "/k/buying-signal-testing", "destination": "/assets/kits/buying-signal-testing-kit.zip" },
     { "source": "/playbook/champion-job-change", "destination": "/playbook-champion-job-change.html" },
     { "source": "/k/champion-job-change", "destination": "/assets/kits/champion-job-change-kit.zip" },
+    { "source": "/playbook/hubspot-lead-scoring", "destination": "/playbook-hubspot-lead-scoring.html" },
+    { "source": "/k/hubspot-lead-scoring", "destination": "/assets/kits/hubspot-lead-scoring-kit.zip" },
     { "source": "/case-studies", "destination": "/case-studies.html" },
     { "source": "/case-study", "destination": "/case-studies.html" },
     { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },
