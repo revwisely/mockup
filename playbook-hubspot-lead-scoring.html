@@ -177,8 +177,9 @@
         <details class="pb-step" open data-highlight="n-deals">
           <summary><span class="pb-step-num">01</span>Pull the deals you won and lost</summary>
           <div class="pb-step-body">
-            <p>Export closed-won and closed-lost deals from the last 12 months, with each associated company. For every one, record its size, industry and region, the title of the person who signed or led it, and the lost reason.</p>
-            <p>Your closed deals show who actually buys. Set them beside the profile in your strategy deck, and let the backtest in step 06 pick.</p>
+            <p>Export closed-won and closed-lost deals with each associated company, 12 to 24 months back. Sort them by close date and set the newest third aside as test deals before you read anything. Every rule and every point comes from the oldest two thirds, the build deals.</p>
+            <p>For each build deal, record its size, industry and region, the title of the person who signed or led it, and the lost reason.</p>
+            <p>Your closed deals show who actually buys. Set them beside the profile in your strategy deck, and let the backtest in step 06 pick. Rules written from the deals that test them would pass whether or not they describe your buyers, which is why the test deals stay unread.</p>
           </div>
         </details>
         <details class="pb-step" data-highlight="n-fit">
@@ -191,7 +192,7 @@
         <details class="pb-step" data-highlight="n-engage">
           <summary><span class="pb-step-num">03</span>Earn engagement points from what came before wins</summary>
           <div class="pb-step-body">
-            <p>For each event, count how often it happened in the 90 days before a deal was created, on wins and on losses. An event earns points when it shows up more often before wins.</p>
+            <p>For each event, count how often it happened in the 90 days before a build deal was created, on wins and on losses. An event earns points when it shows up more often before wins.</p>
             <p>A pricing page view that appears on 70% of wins and 70% of losses tells you someone was shopping, and little about who buys.</p>
             <p>Cap each group so one noisy event cannot fill the score, and set decay to match your sales cycle. HubSpot offers decay intervals of 1, 3, 6 or 12 months.</p>
             <p><em>Watch for the busiest records in the portal. A student, a job seeker or a competitor can out-click a real buyer, and without the disqualifiers they rise to the top.</em></p>
@@ -210,16 +211,16 @@
           <div class="pb-step-body">
             <p>A1 and A2 go to a rep within a set number of days. A3 is the right company gone quiet, so it goes to nurture and gets reviewed monthly. B1 gets a rep review before any outreach.</p>
             <p>C1 is very active at a company that cannot buy, so it gets the resource it asked for and no sales outreach.</p>
-            <p><strong>HubSpot points cannot tell a blank field apart from a failed rule.</strong> Both score zero. So records missing a required fit property go to a review list, where a person looks it up, instead of to a grade.</p>
+            <p><strong>A blank field and a failed rule both add zero.</strong> A record that does not meet a rule gets 0 points, and a blank property does not meet a rule that looks for a value, unless you score blank on purpose. So records missing a required fit property go to a review list, where a person looks it up, instead of to a grade.</p>
             <p><em>Watch for a threshold with no action attached. When the customer definition changes, it keeps sorting accounts the old way.</em></p>
           </div>
         </details>
         <details class="pb-step" data-highlight="n-backtest">
           <summary><span class="pb-step-num">06</span>Backtest the fit letter before anything routes</summary>
           <div class="pb-step-body">
-            <p>Grade last year's wins and losses and compare the share of each that lands in A. Read the fit letter, since a won customer keeps engaging after the deal and inflates the number on every win.</p>
-            <p>Sign how sure you need to be before you look. We use a 90% chance that wins really grade A more often.</p>
-            <p>With 40 wins and 60 losses, 28 of 40 against 24 of 60 is a 99.8% chance, with the real gap somewhere from 13 to 44 points. 24 of 40 against 33 of 60 is 69%, too close to call, so rewrite the fit rules and run it again.</p>
+            <p>Grade the test deals, the newest third that no rule was written from, and compare the share of wins and of losses that land in A. Read the fit letter, since a won customer keeps engaging after the deal and inflates the number on every win. Read fit as it stood at the close where HubSpot's property history allows, or flag the deals whose size or industry has changed since.</p>
+            <p>Sign the pass line before you look. Ours is a 90% probability, worked out from the counts, that won deals land in A at a higher rate than lost deals.</p>
+            <p>With 40 wins and 60 losses, 28 of 40 against 24 of 60 is a 99.8% chance, with the real gap somewhere from 13 to 44 points. 24 of 40 against 33 of 60 is 69%, too close to call, so rewrite the fit rules from the build deals and read again on deals that close after the rewrite.</p>
           </div>
         </details>
         <details class="pb-step" data-highlight="n-read n-keep n-record n-rewrite n-data n-loopback">
