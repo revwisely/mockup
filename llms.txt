@@ -36,6 +36,7 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 - [playbook hubspot lead scoring](https://www.magnetiz.ai/playbook/hubspot-lead-scoring)
 - [playbook inbound signup routing](https://www.magnetiz.ai/playbook/inbound-signup-routing)
 - [playbook meeting intelligence](https://www.magnetiz.ai/playbook/meeting-intelligence)
+- [playbook pipeline slip report](https://www.magnetiz.ai/playbook/pipeline-slip-report)
 - [playbook provable icp](https://www.magnetiz.ai/playbook/provable-icp)
 - [playbook reply triage](https://www.magnetiz.ai/playbook/reply-triage)
 - [playbook stalled build handoff](https://www.magnetiz.ai/playbook/stalled-build-handoff)
