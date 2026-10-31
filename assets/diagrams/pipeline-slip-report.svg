@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="The Pipeline Slip Report Playbook workflow diagram">
+  <defs>
+    <marker id="p-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="p-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <filter id="p-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="p-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#p-dots)"/>
+
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- won deals -> your lines and deal evidence -->
+    <path d="M372,90 V108 H227 V124" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M372,108 H517 V124" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- both -> the slip rules -->
+    <path d="M227,190 V208 H517 V190"/>
+    <path d="M372,208 V224" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- rules -> weekly report -->
+    <path d="M372,298 V324" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- report -> the four outcomes -->
+    <path d="M372,398 V414" stroke="#4A9ECE"/>
+    <path d="M112,414 H637"/>
+    <path d="M112,414 V428" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M287,414 V428" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <path d="M462,414 V428" marker-end="url(#p-arrdim)" stroke="#E06C75" stroke-dasharray="4 4"/>
+    <path d="M637,414 V428" marker-end="url(#p-arrdim)" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <!-- outcomes -> quarterly check -->
+    <path d="M112,496 V518 H637 V496"/>
+    <path d="M287,496 V518"/>
+    <path d="M462,496 V518"/>
+    <path d="M372,518 V536" marker-end="url(#p-arr)" stroke="#4A9ECE"/>
+    <!-- check -> decision bus -->
+    <path d="M372,610 V628" stroke="#4A9ECE"/>
+    <path d="M122,628 H632"/>
+    <path d="M122,628 V646" marker-end="url(#p-arrdim)" stroke="#98C379"/>
+    <path d="M292,628 V646" marker-end="url(#p-arrdim)" stroke="#C678DD"/>
+    <path d="M462,628 V646" marker-end="url(#p-arrdim)" stroke="#E5C07B"/>
+    <path d="M632,628 V646" marker-end="url(#p-arrdim)" stroke="#E06C75"/>
+    <!-- loop: back to your lines -->
+    <path id="n-loopback" d="M462,708 V780 H36 V158 H95" stroke="#484F58" stroke-dasharray="5 5" marker-end="url(#p-arrdim)"/>
+  </g>
+
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#p-glow)">
+    <animateMotion dur="9s" repeatCount="indefinite" path="M372,90 V108 H227 V190 V208 H372 V398 V414 H462 V496 V518 H372 V628 H122 V646"/>
+  </circle>
+
+  <!-- won deals -->
+  <g id="n-deals" class="dx">
+    <rect x="222" y="30" width="300" height="60" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="372" y="52" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="600">WON DEALS</text>
+    <text class="dx" x="372" y="68" text-anchor="middle" fill="#8B949E" font-size="9.5">the last four quarters</text>
+    <text class="dx" x="372" y="81" text-anchor="middle" fill="#8B949E" font-size="9.5">days in each stage, who signed</text>
+  </g>
+
+  <!-- your lines and deal evidence -->
+  <g id="n-lines" class="dx">
+    <rect x="97" y="126" width="260" height="64" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="227" y="150" text-anchor="middle" fill="#E6EDF3" font-size="12.5" font-weight="700">YOUR LINES</text>
+    <text class="dx" x="227" y="167" text-anchor="middle" fill="#4A9ECE" font-size="9.5">1.5x won days per stage</text>
+    <text class="dx" x="227" y="180" text-anchor="middle" fill="#8B949E" font-size="9">and the titles that sign</text>
+  </g>
+  <g id="n-fields" class="dx">
+    <rect x="387" y="126" width="260" height="64" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="517" y="150" text-anchor="middle" fill="#E6EDF3" font-size="12.5" font-weight="700">DEAL EVIDENCE</text>
+    <text class="dx" x="517" y="167" text-anchor="middle" fill="#4A9ECE" font-size="9.5">fields your CRM already keeps</text>
+    <text class="dx" x="517" y="180" text-anchor="middle" fill="#8B949E" font-size="9">close date history on</text>
+  </g>
+
+  <!-- the slip rules -->
+  <g id="n-rules" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="122" y="226" width="500" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="252" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; SLIP RULES R1 TO R7 &#9608;&#9608;</text>
+    <text class="dx" x="372" y="272" text-anchor="middle" fill="#8B949E" font-size="10">stuck in stage, gone quiet, pushed, no signer,</text>
+    <text class="dx" x="372" y="286" text-anchor="middle" fill="#8B949E" font-size="10">one contact, no critical event, no signature path</text>
+  </g>
+
+  <!-- weekly report -->
+  <g id="n-report" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="172" y="326" width="400" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="352" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; WEEKLY SLIP REPORT &#9608;&#9608;</text>
+    <text class="dx" x="372" y="372" text-anchor="middle" fill="#8B949E" font-size="10">every Commit and Best Case deal,</text>
+    <text class="dx" x="372" y="386" text-anchor="middle" fill="#8B949E" font-size="10">flagged deals first, one question per flag</text>
+  </g>
+
+  <!-- the outcomes -->
+  <g id="n-none" class="dx">
+    <rect x="32" y="430" width="160" height="66" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="112" y="454" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="700">NO FLAGS</text>
+    <text class="dx" x="112" y="471" text-anchor="middle" fill="#4A9ECE" font-size="9.5">stays where it is</text>
+    <text class="dx" x="112" y="485" text-anchor="middle" fill="#8B949E" font-size="9">no time on the call</text>
+  </g>
+  <g id="n-one" class="dx">
+    <rect x="207" y="430" width="160" height="66" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.5"/>
+    <text class="dx" x="287" y="454" text-anchor="middle" fill="#E6EDF3" font-size="12" font-weight="700">ONE FLAG</text>
+    <text class="dx" x="287" y="471" text-anchor="middle" fill="#4A9ECE" font-size="9.5">the owner answers</text>
+    <text class="dx" x="287" y="485" text-anchor="middle" fill="#8B949E" font-size="9">before the call</text>
+  </g>
+  <g id="n-two" class="dx">
+    <rect x="382" y="430" width="160" height="66" rx="9" fill="#1c2333" stroke="#E06C75" stroke-dasharray="4 4"/>
+    <text class="dx" x="462" y="454" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">TWO OR MORE</text>
+    <text class="dx" x="462" y="471" text-anchor="middle" fill="#8B949E" font-size="9.5">Commit to Best Case</text>
+    <text class="dx" x="462" y="485" text-anchor="middle" fill="#8B949E" font-size="9">unless evidence clears it</text>
+  </g>
+  <g id="n-cleared" class="dx">
+    <rect x="557" y="430" width="160" height="66" rx="9" fill="#1c2333" stroke="#E5C07B" stroke-dasharray="4 4"/>
+    <text class="dx" x="637" y="454" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">CLEARED</text>
+    <text class="dx" x="637" y="471" text-anchor="middle" fill="#8B949E" font-size="9.5">evidence, not hope</text>
+    <text class="dx" x="637" y="485" text-anchor="middle" fill="#8B949E" font-size="9">a date on the calendar</text>
+  </g>
+
+  <!-- quarterly check -->
+  <g id="n-check" class="dx">
+    <g filter="url(#p-glow)">
+      <rect x="172" y="538" width="400" height="72" rx="9" fill="#0d1117" stroke="#4A9ECE" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="566" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="800">&#9608;&#9608; QUARTERLY CALIBRATION &#9608;&#9608;</text>
+    <text class="dx" x="372" y="586" text-anchor="middle" fill="#8B949E" font-size="10">the snapshot from week one against what closed,</text>
+    <text class="dx" x="372" y="600" text-anchor="middle" fill="#8B949E" font-size="10">by category and by rule</text>
+  </g>
+
+  <!-- decisions -->
+  <g id="n-keep" class="dx">
+    <rect x="47" y="648" width="150" height="60" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="122" y="671" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">KEEP THE RULE</text>
+    <text class="dx" x="122" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">flagged deals closed</text>
+    <text class="dx" x="122" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">less often</text>
+  </g>
+  <g id="n-tighten" class="dx">
+    <rect x="217" y="648" width="150" height="60" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text class="dx" x="292" y="671" text-anchor="middle" fill="#C678DD" font-size="12" font-weight="700">TIGHTEN</text>
+    <text class="dx" x="292" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">flags too many deals</text>
+    <text class="dx" x="292" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">that closed anyway</text>
+  </g>
+  <g id="n-drop" class="dx">
+    <rect x="387" y="648" width="150" height="60" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="462" y="671" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">BACK TO THE LINES</text>
+    <text class="dx" x="462" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">no difference after</text>
+    <text class="dx" x="462" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">two quarters</text>
+  </g>
+  <g id="n-data" class="dx">
+    <rect x="557" y="648" width="150" height="60" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text class="dx" x="632" y="671" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">FIX THE DATA</text>
+    <text class="dx" x="632" y="687" text-anchor="middle" fill="#8B949E" font-size="8.5">a field the rule needs</text>
+    <text class="dx" x="632" y="699" text-anchor="middle" fill="#8B949E" font-size="8.5">is mostly empty</text>
+  </g>
+
+  <text class="dx" x="26" y="460" text-anchor="middle" fill="#484F58" font-size="9" transform="rotate(-90 26 460)">RESET THE LINES &#183; RUN THE NEXT QUARTER</text>
+
+  <text class="dx" x="372" y="850" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; PLAYBOOK 14 &#183; PIPELINE SLIP REPORT</text>
+</svg>
