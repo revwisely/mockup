@@ -197,7 +197,7 @@
       // Open Calendly popup instead of navigating
       e.preventDefault();
       if (typeof Calendly !== 'undefined') {
-        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+        if (window.MagnetizCalendly) { MagnetizCalendly.open('https://calendly.com/chrisp-oymm/25min'); } else { Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min'); }
       }
     });
   }

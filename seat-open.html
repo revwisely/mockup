@@ -590,13 +590,14 @@
 
   <!-- Any "Schedule Call" link opens the Calendly popup (same wiring as index.html).
        If the widget has not loaded yet, the link falls through to #cta instead of dead-clicking. -->
+  <script src="/js/calendly-utm.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
     document.addEventListener('click', function (e) {
       var link = e.target.closest('a');
       if (link && /Schedule\s*Call/i.test(link.textContent.trim()) && window.Calendly) {
         e.preventDefault();
-        Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min');
+        if (window.MagnetizCalendly) { MagnetizCalendly.open('https://calendly.com/chrisp-oymm/25min'); } else { Calendly.showPopupWidget('https://calendly.com/chrisp-oymm/25min'); }
       }
     });
   </script>
