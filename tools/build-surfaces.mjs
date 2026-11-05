@@ -5,7 +5,7 @@
 //   node tools/build-surfaces.mjs
 //
 // Writes sitemap.xml and llms.txt at the repo root, which is what Vercel serves
-// for this project, and the static post archive inside content.html. Run it
+// for this project. Run it
 // after adding or removing a page or a post, and commit the output alongside
 // the content change.
 //
@@ -177,50 +177,11 @@ function htmlEscape(s) {
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-// The Content Hub grid is drawn by js/content.js, 12 posts at a time behind
-// pagination buttons. A crawler that does not run JavaScript saw no post links
-// at all, and one that does saw 13. This archive is plain HTML, written here,
-// so every post is one link away from a page every nav links to.
-const ARCHIVE_START = '<!-- BUILD:archive (tools/build-surfaces.mjs, do not edit by hand) -->';
-const ARCHIVE_END = '<!-- /BUILD:archive -->';
-
-function buildArchive(posts) {
-  const items = posts.map(p => {
-    const date = iso(p.date);
-    return `            <li><a href="/blog/${htmlEscape(p.slug)}">${htmlEscape(p.title)}</a>` +
-      (date ? `<time datetime="${date}">${date}</time>` : '') + '</li>';
-  }).join('\n');
-  return `${ARCHIVE_START}
-      <section class="blog-archive" aria-labelledby="blog-archive-label">
-        <div class="blog-grid-header">
-          <h2 class="blog-grid-label" id="blog-archive-label">// Archive</h2>
-          <span class="blog-grid-count">${posts.length} posts</span>
-        </div>
-        <ul class="blog-archive-list">
-${items}
-        </ul>
-      </section>
-      ${ARCHIVE_END}`;
-}
-
-function writeArchive(posts) {
-  const file = join(ROOT, 'content.html');
-  const html = readFileSync(file, 'utf8');
-  const start = html.indexOf(ARCHIVE_START);
-  const end = html.indexOf(ARCHIVE_END);
-  if (start === -1 || end === -1) {
-    throw new Error('content.html is missing the BUILD:archive markers');
-  }
-  writeFileSync(file, html.slice(0, start) + buildArchive(posts) + html.slice(end + ARCHIVE_END.length));
-}
-
 const pages = collectPages();
 const posts = collectPosts();
 
 writeFileSync(join(ROOT, 'sitemap.xml'), buildSitemap(pages, posts));
 writeFileSync(join(ROOT, 'llms.txt'), buildLlmsTxt(pages, posts));
-writeArchive(posts);
 
 console.log(`sitemap.xml  ${pages.length} pages + ${posts.length} posts`);
 console.log(`llms.txt     ${pages.length} pages + ${posts.length} posts`);
-console.log(`content.html archive of ${posts.length} posts`);
