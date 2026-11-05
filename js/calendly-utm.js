@@ -78,7 +78,37 @@
     return true;
   }
 
-  var api = { extractUtm: extractUtm, appendUtm: appendUtm, captureFirstTouch: captureFirstTouch, open: open, STORAGE_KEY: STORAGE_KEY };
+  // Booking -> GA4. Calendly's popup never redirects; it posts calendly.event_scheduled
+  // to the page when a call is booked (the same moment js/linkedin-insight.js counts).
+  // GA4 attributes the event to the session's own source and campaign; the first-touch
+  // UTMs ride along as parameters so a visitor who browsed before booking keeps their
+  // original source. Mark book_call as a key event in GA4 (Admin, Key events).
+  var BOOK_EVENT = 'book_call';
+
+  // Pure: the GA4 parameters for one booking. GA4 records the page itself (page_location).
+  function bookingParams(utm) {
+    var p = { method: 'calendly' };
+    KEYS.forEach(function (k) { if (utm && utm[k[1]]) p['first_touch_' + k[0].slice(4)] = utm[k[1]]; });
+    return p;
+  }
+
+  var booked = false;
+  // Returns true when a booking event was sent.
+  function onMessage(e, ctx) {
+    ctx = ctx || root;
+    if (!e || typeof e.origin !== 'string' || e.origin.indexOf('calendly.com') === -1) return false;
+    if (!e.data || e.data.event !== 'calendly.event_scheduled') return false;
+    if (booked) return false; // one booking, one event, even if Calendly posts twice
+    if (typeof ctx.gtag !== 'function') return false;
+    booked = true;
+    var utm = captureFirstTouch((ctx.location || {}).search, storage());
+    ctx.gtag('event', BOOK_EVENT, bookingParams(utm));
+    return true;
+  }
+  function resetForTest() { booked = false; }
+
+  var api = { extractUtm: extractUtm, appendUtm: appendUtm, captureFirstTouch: captureFirstTouch, open: open, STORAGE_KEY: STORAGE_KEY,
+              bookingParams: bookingParams, onMessage: onMessage, BOOK_EVENT: BOOK_EVENT, _reset: resetForTest };
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = api;
@@ -86,5 +116,6 @@
     root.MagnetizCalendly = api;
     // Capture on page load so a visitor who lands with UTMs and books on a later page keeps them.
     try { captureFirstTouch((root.location || {}).search, storage()); } catch (e) { /* never break the page */ }
+    try { root.addEventListener('message', function (e) { try { onMessage(e); } catch (err) { /* never break the page */ } }); } catch (e) { /* no window */ }
   }
 })(typeof window !== 'undefined' ? window : this);
