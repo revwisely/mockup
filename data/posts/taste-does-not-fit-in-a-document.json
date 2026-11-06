@@ -12,5 +12,35 @@
   "cta": {
     "title": "Drafts still coming back needing you?",
     "body": "Magnetiz builds the context layer behind your brand voice, with the gates that prove it works, and trains a named person on your team to keep it current."
-  }
+  },
+  "faq": [
+    {
+      "question": "How do you teach AI your brand voice?",
+      "answer": "Give it examples with verdicts attached. A library of ten to twenty real pieces, sorted into what worked and what did not, each carrying one line explaining the sort, transfers more of your brand voice than a page of adjectives. The reasons are what let the system generalize to new work. Principles alone are unfalsifiable, so an AI can satisfy every one and still produce something you would not ship."
+    },
+    {
+      "question": "Why does AI not follow our brand guidelines?",
+      "answer": "It usually does follow them, and the guidelines were never the constraint that mattered. A brand guideline encodes rules, and the judgment that decides whether a compliant draft is actually good was never written down. Output that breaks no rule and still reads wrong is the standard symptom. The fix is adding the judgment layer. The guideline can stay as it is."
+    },
+    {
+      "question": "What is a context layer for AI agents?",
+      "answer": "A context layer is a small, curated, human-approved file that an AI system reads before it produces anything. For marketing it holds sorted examples with verdicts, the current messaging angle, and a precedence rule stating that this file outranks general best practice. It differs from a brand guideline in carrying decisions and their reasons rather than constraints alone."
+    },
+    {
+      "question": "How do you stop messaging drift across channels?",
+      "answer": "Give the current angle a single address that every channel reads before it writes, and update that address when the angle changes. Messaging drift is a distribution failure, which is why it shows up on small teams as readily as large ones. A change announced in a meeting lives in the memory of whoever attended, and every channel not represented in that room keeps shipping the previous angle."
+    },
+    {
+      "question": "How long does it take to build an AI context layer?",
+      "answer": "A usable first version takes an afternoon when you build it from work that already shipped. Pull twenty pieces that already went out, sort them into worked and did not work, and write one line per piece naming the reason. The judgment was already applied when each piece was approved or killed, so the work is recovery."
+    },
+    {
+      "question": "Should AI be allowed to update its own context file?",
+      "answer": "No. Entries should arrive as proposed diffs that a human approves before they land. A context file that writes to itself will eventually propagate a wrong call into published work through a path nobody inspects, and a file updated automatically for a month is a file nobody is still reading carefully. The approval step is what makes the file safe for everything downstream to read by default."
+    },
+    {
+      "question": "What makes a context entry auditable?",
+      "answer": "One claim, one supporting example, and the address that example came from. An entry carrying all three can be checked, corroborated by a second instance, or retired when it stops being true. An entry stating a general truth with no source cannot be evaluated by anyone who was not in the room when it was written, which is how a context layer decays into folklore."
+    }
+  ]
 }

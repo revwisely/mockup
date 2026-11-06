@@ -11,5 +11,39 @@
   "cta": {
     "title": "Want video that looks like your brand every week?",
     "body": "Magnetiz builds the direction layer into your production workflow and trains a named person on your team to run it."
-  }
+  },
+  "faq": [
+    {
+      "question": "Why do AI generated videos all look the same?",
+      "answer": "Because an unbriefed render returns the statistical average of its training data, and that average is identical for every person prompting it. The model was never given the look decisions that distinguish one brand from another, so it defaults to the middle of everything it has seen. The generic result is a briefing failure rather than a model limitation."
+    },
+    {
+      "question": "How do you make AI video match your brand?",
+      "answer": "Write the brand down in a form the process reads before every render. That means a single file holding world, typography, accent rules, motion style, and audio defaults, plus a process that consults it at the style stage rather than hoping a prompt carries it. Brand consistency in video comes from a persistent brand file, the same way it came from a style guide for copy."
+    },
+    {
+      "question": "What is a motion brand system?",
+      "answer": "A motion brand system is the video equivalent of a written style guide. It records what a brand looks like in motion, which world it lives in, what type it uses, where the accent color is allowed to appear, and what it sounds like. It exists so every video inherits the same decisions instead of re-deciding them under deadline."
+    },
+    {
+      "question": "Do you need design experience to use it?",
+      "answer": "No. The brand interview is built as A or B comparisons, so it asks which of two options feels right rather than asking for a typeface or a hex value. A beta user with no prior Claude Code experience completed it and rendered an on-brand video unaided."
+    },
+    {
+      "question": "What does the styleframe gate do?",
+      "answer": "It puts a human decision in front of the expensive step. Two finished still frames get rendered and reviewed against a reference deck, and a person picks one before any animation begins. Catching a look problem at a still costs seconds, while catching it after the render costs the render and the review cycle around it."
+    },
+    {
+      "question": "How does it keep a series of videos from repeating?",
+      "answer": "Every completed video writes a row to a style ledger, and the next video reads that ledger before choosing its approach. It varies composition and pacing on purpose while holding the brand constants fixed, which is what keeps a quarter of videos recognizable without making them interchangeable."
+    },
+    {
+      "question": "Does it work in Claude Cowork?",
+      "answer": "Yes. The same two install commands work in Claude Cowork, and the fifteen-minute brand interview runs there end to end, including the proof frame it renders in your new brand at the finish. Cowork is the easier starting point for anyone who does not spend the day in a terminal."
+    },
+    {
+      "question": "What does it cost?",
+      "answer": "The plugin is free and open. It installs in both Claude Code and Claude Cowork, runs inside your own Claude subscription, and renders locally through an open renderer, so the videos and the brand file stay on your machine."
+    }
+  ]
 }

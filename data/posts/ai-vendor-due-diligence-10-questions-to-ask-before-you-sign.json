@@ -10,5 +10,31 @@
   "cta": {
     "title": "Buying AI for your revenue team?",
     "body": "Magnetiz builds revenue agents inside your own stack, owned by your team with no licence. Book a call and we will walk you through one already running."
-  }
+  },
+  "faq": [
+    {
+      "question": "What is AI vendor due diligence?",
+      "answer": "AI vendor due diligence is the process of confirming an AI vendor's claims before you sign. It checks what the AI actually does, what it can access and send, how its output is tested, how your data is used, what it costs, and how you exit."
+    },
+    {
+      "question": "What questions should you ask an AI vendor before signing?",
+      "answer": "Ask what the AI does step by step, which systems and fields it can change, and what it can send without approval. Ask how output quality is tested on your data, whether your data trains their models, and what you keep if you cancel."
+    },
+    {
+      "question": "How do you spot AI washing?",
+      "answer": "Ask the vendor to walk through one task and say which steps a model performs and which are fixed rules. Vague answers are the signal. Regulators have acted on it, with the SEC settling two AI washing cases in March 2024 for $400,000 combined."
+    },
+    {
+      "question": "What should an AI vendor contract say about data?",
+      "answer": "An AI vendor contract should state whether your data, prompts and outputs can be used to train the vendor's models, with an opt-out in the contract itself. It should also set a deletion timeline and an export format for when the contract ends."
+    },
+    {
+      "question": "How do you evaluate AI vendors for a sales team?",
+      "answer": "Add three checks to a standard AI vendor due diligence checklist. Find out which CRM fields the tool can change, what it can send to prospects without a rep approving, and how sending volume is limited. Then test it on your own records during the trial."
+    },
+    {
+      "question": "What is an AI vendor due diligence checklist?",
+      "answer": "An AI vendor due diligence checklist is a set of questions to answer before buying an AI product. For revenue teams the ten that matter most cover the AI, permissions, sending, output testing, monitoring, data training, data at exit, total cost, cancellation and references."
+    }
+  ]
 }

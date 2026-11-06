@@ -11,5 +11,27 @@
   "cta": {
     "title": "Want review built into your AI workflows?",
     "body": "Magnetiz builds the criteria, the cold reviewer and the standing rules into your stack, trains a named person on your team to run them, and hands them over."
-  }
+  },
+  "faq": [
+    {
+      "question": "How do you review AI agent output?",
+      "answer": "Write acceptance criteria before the work starts, then give the output to a separate reviewer with only the criteria and the evidence. Add a standing list of rules every output must follow. Findings block the output until it is fixed."
+    },
+    {
+      "question": "Why shouldn’t an AI review its own work?",
+      "answer": "An AI reviewing its own work starts with the assumptions that produced it, so it tends to miss the same mistakes. A NeurIPS 2024 study found AI judges recognize and favor their own output."
+    },
+    {
+      "question": "What are acceptance criteria for AI agents?",
+      "answer": "Acceptance criteria for AI agents are the written conditions a passing output must meet, set when the task is created. Written first, they cannot bend to fit the output."
+    },
+    {
+      "question": "Do automated tests catch AI agent mistakes?",
+      "answer": "Automated tests catch the mistakes they were written to catch. Failures like a credential in a shared file or a message to an account in an open deal often sit outside them. A reviewer with standing rules covers that gap."
+    },
+    {
+      "question": "What should you ask an AI vendor about quality control?",
+      "answer": "Ask who checks the work and whether they built it, what they check it against and when that was written, and what the check looks for beyond the tests."
+    }
+  ]
 }

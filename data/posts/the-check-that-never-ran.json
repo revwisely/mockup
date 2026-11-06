@@ -11,5 +11,31 @@
   "cta": {
     "title": "Do you know which of your checks actually ran?",
     "body": "Magnetiz wires your required checks so a skipped one stops the release and names itself, and hands the record to a named person on your team."
-  }
+  },
+  "faq": [
+    {
+      "question": "How do you know an AI agent actually followed its process?",
+      "answer": "You know an AI agent followed its process when each control emits a record and the next stage depends on that record existing. Without an artifact, a skipped step and a completed step produce the same evidence, which is forward progress and no complaint. Process documents describe what should happen, while records establish what did. Any control you can only verify by asking the agent is unverified."
+    },
+    {
+      "question": "Why do AI agent guardrails fail even when they are written down?",
+      "answer": "Guardrails written only into instruction files behave as requests rather than limits, because the agent is optimizing to complete the task and a pause costs progress. The deeper failure is silence. When a bypass leaves no trace, the team continues believing the process runs, and the belief goes uncorrected until someone inspects the finished output. Enforcement belongs in the execution path, and detection belongs in the record."
+    },
+    {
+      "question": "What is a silent failure in an AI agent pipeline?",
+      "answer": "A silent failure is one that produces no error, no alert, and no obviously bad output. A required check that never executes is the clearest example, because the run completes normally and the logs show work moving forward. Site reliability engineering has long held that a silent alert is a dead alert, and the same principle applies to agent controls that cannot report their own absence."
+    },
+    {
+      "question": "What should an AI agent audit record contain?",
+      "answer": "An audit record should name which control ran, when it ran, what it examined, what it returned, and who was asked if a human input was required. Each record needs a timestamp and needs to be current for the run in question. The record then becomes the dependency for the next stage, so work proceeds on the presence of evidence rather than on the absence of an objection."
+    },
+    {
+      "question": "What should happen when a control record is missing?",
+      "answer": "A missing record should block the run as firmly as a failed check does. Treating absent evidence as an unknown to be waved through recreates the original problem, since skipping a check and passing it would once again lead to the same outcome. Early on this will block runs for plumbing reasons rather than quality reasons, and each of those blocks is a control demonstrating that it exists."
+    },
+    {
+      "question": "Do passing evals prove an AI agent's guardrails are working?",
+      "answer": "No. Evals score the outputs that reach them and have no visibility into runs that bypassed the gates entirely. A dashboard can stay green while several controls have not fired in weeks, because nothing failed and nothing was measured as missing. Gate coverage and output quality are two separate measurements, and a board that has never displayed a control failure is a board worth auditing."
+    }
+  ]
 }

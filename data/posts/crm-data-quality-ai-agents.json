@@ -11,5 +11,35 @@
   "cta": {
     "title": "Who grades what your agents read before they act?",
     "body": "Magnetiz builds the input checks and the two numbers that measure the trust gap, and trains a named person on your team to act on them."
-  }
+  },
+  "faq": [
+    {
+      "question": "What is a CRM discrepancy rate?",
+      "answer": "A CRM discrepancy rate is the percentage of records where the CRM disagrees with the system of record for that data, such as billing, finance or the product database. It is measured by sampling an agreed dataset and comparing field by field against the authoritative source. Discrepancy rate is the cleanest single indicator of whether a CRM can be trusted as an input to an AI agent. Baseline it before any agent is built so the improvement is provable afterward."
+    },
+    {
+      "question": "Why do AI agents fail on CRM data quality?",
+      "answer": "AI agents fail on CRM data quality because they act on records without the hesitation a human applies to something that looks wrong. A stale close date or a departed contact produces a pause in a rep and an action in an agent. The failure is not in the model's reasoning, so observability traces come back clean while the outcome is still incorrect. Evaluating the input record is what catches this class of failure."
+    },
+    {
+      "question": "Is observability the same as evals for AI agents?",
+      "answer": "Observability and evals answer different questions. Observability records what the agent did, including reasoning, tool calls, latency and cost. Evals score whether what the agent did was correct against a defined standard. LangChain found 89% of practitioners have implemented observability and 52% have adopted evals, which leaves a large gap between what a team can watch and what it can prove."
+    },
+    {
+      "question": "How do you measure manual reconciliation time?",
+      "answer": "Manual reconciliation time is the hours per month a team spends resolving disagreements between systems by hand, most visibly during the close. Measure it by scoping one dataset, asking the people who do the work to log the hours for one full reporting cycle, and recording the total as a baseline. Manual reconciliation time pairs with discrepancy rate to give an AI project two numbers it can be held to."
+    },
+    {
+      "question": "Should an AI agent be allowed to write to a CRM?",
+      "answer": "An AI agent should be allowed to flag and reconcile freely and to write to a system of record only behind a human approval gate until the eval gates pass. Autonomous deletion or overwriting of source-of-truth records should stay off the table at every maturity level. Every write and every correction belongs in an audit trail, because an action you cannot trace is an action you cannot defend after an incident."
+    },
+    {
+      "question": "What is the 2027 Gartner warning about AI agents?",
+      "answer": "Gartner projects that 40% of enterprises will demote or decommission AI agents by 2027 because of governance gaps discovered after production incidents. The gaps named are the absence of a measured baseline, the absence of input evaluation and the absence of an audit trail. Agents built with those three in place from the start are the ones positioned to survive the review that follows an incident."
+    },
+    {
+      "question": "How much time do sales reps spend on CRM admin?",
+      "answer": "Salesforce State of Sales 2026 reports that reps spend 60% of the week on admin, data entry and CRM upkeep, and 40% actually selling. That time is spent maintaining a system that still produces forecast errors, which is why data trust shows up as a revenue problem before it shows up as an AI problem. Automating on top of an unreliable CRM moves the same errors downstream at higher speed."
+    }
+  ]
 }

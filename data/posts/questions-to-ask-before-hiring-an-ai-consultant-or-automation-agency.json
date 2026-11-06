@@ -10,5 +10,31 @@
   "cta": {
     "title": "Comparing proposals right now?",
     "body": "Magnetiz builds revenue agents inside your own stack and hands them to a named person on your team. Book a call and we will walk you through one already running."
-  }
+  },
+  "faq": [
+    {
+      "question": "What questions should you ask an AI agency before hiring them?",
+      "answer": "Ask where the agent will run and what it will write to, what changes from their standard build for your team, and to see a system they built that is running today. Ask what a passing output looks like, who reviews the work, and what happens when the agent is wrong in front of a prospect. Then ask what you own when the engagement ends."
+    },
+    {
+      "question": "How do you choose an AI agency for sales and RevOps?",
+      "answer": "Score each proposal on the same twelve questions, with 2 points for a specific answer backed by evidence. Weight the answers about production history, review and ownership most heavily, because those decide whether the agent is still useful after the agency leaves. Then call two of each finalist's clients."
+    },
+    {
+      "question": "What are the red flags when hiring an AI agency?",
+      "answer": "The clearest red flags are proposals you could swap the logos on, a success metric that only counts agent activity, a review step run by the same agent that did the work, and admin access requested for a narrow job. A handover plan that is a single final meeting is another."
+    },
+    {
+      "question": "Who should own the code and prompts an AI agency builds?",
+      "answer": "Your company should own the code, prompts, evaluation criteria and the workspaces the agent runs in, written into the contract with no ongoing licence. If the agent depends on the agency's own platform, ask what happens to it if you stop paying."
+    },
+    {
+      "question": "How do you evaluate an AI implementation partner's production experience?",
+      "answer": "Ask for a walkthrough of a live system with real volumes, and ask what broke in the first 30 days of their last build. A partner with production experience answers both specifically. Reference calls with past clients confirm it."
+    },
+    {
+      "question": "Should you build AI sales agents in-house or hire an agency?",
+      "answer": "Build in-house when you already have someone who can build agents and will stay to run them. Hire an agency when you need the first system working sooner than you can hire, as long as the engagement ends with a named person on your team owning it."
+    }
+  ]
 }

@@ -10,5 +10,31 @@
   "cta": {
     "title": "Is an agent running unsupervised on a hunch?",
     "body": "Magnetiz builds the promotion gate, the outputs it scores and the rollback path, and trains a named person on your team to decide when an agent graduates."
-  }
+  },
+  "faq": [
+    {
+      "question": "What does it mean for an AI agent to earn autonomy?",
+      "answer": "An AI agent earns autonomy when it clears a recorded gate rather than an informal decision. The gate combines deterministic floor rules that block unsafe output, advisory rubric scores that measure quality, and a consecutive-pass streak that must reach a written threshold under an unchanged configuration. Earned autonomy is auditable after the fact, which is what separates it from a setting someone flipped."
+    },
+    {
+      "question": "What is a deterministic floor in AI agent governance?",
+      "answer": "A deterministic floor is a non-negotiable rule that runs before any quality scoring and blocks output regardless of how well it scores. Examples include a missing opt-out line, an unresolved merge token, or a write to a source-of-truth record. Deterministic floors behave like tests, so they are reproducible and immune to persuasion, which is why compliance belongs in floors rather than in prompts or judges."
+    },
+    {
+      "question": "Can an LLM judge be fooled by prompt injection?",
+      "answer": "Yes. The JudgeDeceiver research from Shi et al. demonstrated that optimized injected sequences can flip an LLM judge’s verdict reliably, and Lakera’s prompt injection research shows the same class of exposure. Because a judge reads the content it grades, adversarial content can steer the grade. LLM judge scores should therefore stay advisory, with compliance enforced by deterministic floors that run first."
+    },
+    {
+      "question": "How many consecutive passes should an AI agent need before running autonomously?",
+      "answer": "The threshold is set per autonomy tier and written down before the agent ships. More important than the number are the reset rules. A blocked run resets the streak to zero, and any change to the rules resets it to zero, because passes earned under old rules prove nothing about new ones. The reset check should compare rule content, never just the configuration’s name."
+    },
+    {
+      "question": "Does AI agent autonomy transfer between workflows?",
+      "answer": "No. Autonomy is earned per workflow and per configuration, so an agent promoted on one workflow starts back at supervised status when it takes on new work. The model and scaffolding may be identical, but the data and failure surface are different, and the streak that justified autonomy was never earned against them."
+    },
+    {
+      "question": "When should an autonomous AI agent be demoted?",
+      "answer": "An autonomous agent should be demoted the moment a deterministic floor fires during autonomous operation, automatically and with its streak reset. Floors keep running on every output after promotion, and rubric scores keep feeding sampled review. Gartner predicts 40% of enterprises will demote or decommission agents by 2027 after incidents, and a gate that demotes early is what keeps an agent off that list."
+    }
+  ]
 }

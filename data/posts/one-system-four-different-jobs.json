@@ -12,5 +12,31 @@
   "cta": {
     "title": "Which of the four jobs is yours?",
     "body": "Magnetiz builds the first workflow that fits your stage, trains a named person on your team to run it, and hands it over."
-  }
+  },
+  "faq": [
+    {
+      "question": "What does an AI revenue system do for a small company?",
+      "answer": "For a company under roughly fifty people, an AI revenue system buys back the founders’ selling hours. It takes the workflow carrying the most manual load, such as account research, list building, or meeting prep, and runs it end to end so the people who close deals spend their time closing. The design bar is that anyone on the team can run it, because small companies have no ops bench to absorb complexity."
+    },
+    {
+      "question": "How do you restart a stalled AI initiative?",
+      "answer": "Restarting a stalled AI initiative starts with measurement. Run the existing builds against the quality thresholds they were meant to meet, keep the agents that pass or can be fixed, and retire the rest. Then close the gap that stalled the initiative in the first place, which is usually operational ownership. Name the person who runs the system daily and train them as part of the revival, so the builds no longer depend on the original builder."
+    },
+    {
+      "question": "What is the first AI workflow a sales team should build?",
+      "answer": "The first AI workflow should be the one carrying the most manual load, built alone, with a baseline captured before the build starts. A single workflow that runs in production and shows its numbers against the baseline creates more momentum than a wide roadmap. Parallel builds at the start are the most common reason AI initiatives stall."
+    },
+    {
+      "question": "How does AI adoption change for enterprise sales teams?",
+      "answer": "For sales teams of fifty seats or more, AI adoption is a change-management problem before it is a technology problem. The workflow has to clear a security review, fit a legacy stack, and win daily use from people with established habits. Governance goes first, including approval paths, logging, and token spend per workflow. A single team then adopts the workflow as a beachhead, and the evaluation record makes the case for replication."
+    },
+    {
+      "question": "Should you rebuild or revive stalled AI agents?",
+      "answer": "Revive first. Stalled agents usually failed on operations rather than capability, which means the learning inside them is worth keeping. Reviving means running real evaluations against the original quality bars, fixing the top failure modes, and standing up the monitoring and ownership the first attempt skipped. Rebuilding from zero costs more, takes longer, and tends to repeat the exact gap that stalled version one."
+    },
+    {
+      "question": "How do you know which AI adoption stage your company is in?",
+      "answer": "Ignore headcount and ask three questions. Who would run the system tomorrow, what AI builds already exist, and how many people touch the workflow you want to change. A company with stalled builds is in the revival stage regardless of size. A company with nothing built is buying its first proof. A company where the workflow spans dozens of people is managing change before it is managing technology."
+    }
+  ]
 }

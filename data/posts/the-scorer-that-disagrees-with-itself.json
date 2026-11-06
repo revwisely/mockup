@@ -11,5 +11,31 @@
   "cta": {
     "title": "Would your scores survive a second run?",
     "body": "Magnetiz tests the scorers already inside your stack, adds the vote and the escalation path, and trains a named person on your team to read the splits."
-  }
+  },
+  "faq": [
+    {
+      "question": "How reliable are LLM-as-judge scores?",
+      "answer": "Less reliable than their formatting suggests, and the spread is measurable. In a nine-run Magnetiz test on identical input, a content judge returned publishable four times and kill five times, with reported confidence between 0.64 and 0.76 either way. Reliability varies by task and rubric, so the honest answer for your stack comes from running your own scorer several times on identical input and counting agreement."
+    },
+    {
+      "question": "How do I test an AI scoring system for consistency?",
+      "answer": "Pick one recently scored item, ideally near a decision threshold, and run the scorer on the identical input five times with nothing changed. Count how many runs agree on the action the score would trigger. High agreement earns the instrument trust. Frequent disagreement means single runs near the boundary have been deciding by coin flip, and the system needs majority voting before its scores act on anything."
+    },
+    {
+      "question": "What is majority voting for LLM judges?",
+      "answer": "Running the same judge three times on the same input and letting the majority verdict stand. It reduces variance at triple the inference cost, which is usually trivial next to the cost of a wrong decision. Record all three verdicts rather than just the winner, treat unanimous results as actionable, and route two-to-one splits to a human, since majority voting narrows noise without making the judge precise."
+    },
+    {
+      "question": "Should AI evals use binary scoring or a 1-10 scale?",
+      "answer": "Binary checks per axis reproduce better and localize failures. A blended 1-to-10 score hides which part of the judgment wobbled, and a pass threshold written to one decimal implies precision the instrument has not demonstrated. Magnetiz scores each axis as a yes or no, so a re-run shows exactly which axes are stable, and the axes that flip get rewritten or removed from the rubric."
+    },
+    {
+      "question": "Can I trust AI lead scoring?",
+      "answer": "Trust it after it passes a reproducibility test, and trust its patterns before its individual numbers. Re-score a handful of accounts on identical input and check whether the scores would route each account the same way twice. Aggregate direction, like a segment consistently scoring above another, is far more robust than any single account's number sitting near a threshold."
+    },
+    {
+      "question": "When is a single AI verdict still enough?",
+      "answer": "When the margin is wide or the stakes are low. A verdict far from the threshold survives instrument noise, and a low-cost reversible action does not warrant triple-running. Near a boundary, on a kill decision, or on anything expensive to undo, one run is one sample, and sampling again costs pennies against deciding wrong."
+    }
+  ]
 }
