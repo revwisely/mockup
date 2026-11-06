@@ -10,6 +10,34 @@
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://www.magnetiz.ai/">
 
+  <!-- Entity data. Every blog post names https://www.magnetiz.ai/#organization as
+       its publisher; this is where that id is defined. alternateName covers the
+       "magnetize ai" spelling people search for. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.magnetiz.ai/#organization",
+        "name": "Magnetiz.ai",
+        "alternateName": ["Magnetiz", "Magnetiz AI", "Magnetize AI"],
+        "url": "https://www.magnetiz.ai/",
+        "logo": "https://www.magnetiz.ai/assets/favicon_io/android-chrome-512x512.png",
+        "description": "Magnetiz builds AI agents that run GTM workflows in production, inside the systems you already own.",
+        "sameAs": ["https://www.linkedin.com/company/magnetiz-ai/"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.magnetiz.ai/#website",
+        "name": "Magnetiz.ai",
+        "url": "https://www.magnetiz.ai/",
+        "publisher": { "@id": "https://www.magnetiz.ai/#organization" }
+      }
+    ]
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

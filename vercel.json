@@ -1,5 +1,14 @@
 {
   "redirects": [
+    { "source": "/post/:slug", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/newsletters/:slug", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/blog/", "destination": "/content.html", "permanent": true },
+    { "source": "/ai-code-of-conduct", "destination": "/ai-code-of-conduct.html", "permanent": true },
+    { "source": "/ai-ops-lab", "destination": "/", "permanent": true },
+    { "source": "/experience-sessions", "destination": "/", "permanent": true },
+    { "source": "/product/:slug", "destination": "/", "permanent": true },
+    { "source": "/playbook-:slug.html", "destination": "/playbook/:slug", "permanent": true },
+    { "source": "/case-study-:slug.html", "destination": "/case-study/:slug", "permanent": true },
     { "source": "/blog/five-questions-that-separate-production-ai-partners-from-demo-shops", "destination": "/blog/questions-to-ask-before-hiring-an-ai-consultant-or-automation-agency", "permanent": true },
     { "source": "/blog/how-do-you-know-its-time-to-bring-in-an-ai-consultant", "destination": "/blog/questions-to-ask-before-hiring-an-ai-consultant-or-automation-agency", "permanent": true },
     { "source": "/blog", "destination": "/content.html", "permanent": true },
