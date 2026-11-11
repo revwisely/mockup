@@ -50,8 +50,9 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 
 ## Writing
 
-159 articles. Most recent first.
+160 articles. Most recent first.
 
+- [Answer Engine Optimization That the Research Supports](https://www.magnetiz.ai/blog/answer-engine-optimization-that-the-research-supports) (2026-11-12): What answer engine optimization is, the six steps to do it, which tactics the published research supports and which it does not, and how to measure whether AI answers name you.
 - [How to Run a Pipeline Review That Catches Deals Before They Slip](https://www.magnetiz.ai/blog/how-to-run-a-pipeline-review-that-catches-deals-before-they-slip) (2026-11-04): What a weekly pipeline review should check on every Commit deal, the seven evidence rules that flag slips early, and how to test whether your forecast categories mean what they say.
 - [How to Build HubSpot Lead Scoring That Predicts Closed Deals](https://www.magnetiz.ai/blog/how-to-build-hubspot-lead-scoring-that-predicts-closed-deals) (2026-10-28): How HubSpot lead scoring works, how to build fit and engagement scores from closed deals, and how to test the score before it routes anything.
 - [AI Consulting Firms vs AI Automation Agencies: Which Fits a Revenue Team?](https://www.magnetiz.ai/blog/ai-consulting-firms-vs-ai-automation-agencies-which-fits-a-revenue-team) (2026-10-20): Four ways to get your first AI system into sales and RevOps, compared on what you get, how fast it runs and what you own at the end.
