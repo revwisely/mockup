@@ -43,6 +43,7 @@ names=(
   "12:champion-job-change:5"
   "13:hubspot-lead-scoring:5"
   "14:pipeline-slip-report:5"
+  "15:answer-engine-optimization:5"
 )
 
 [ -x "$CHROME" ] || { echo "Chrome not found at $CHROME" >&2; exit 1; }

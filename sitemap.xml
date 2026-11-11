@@ -105,6 +105,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.magnetiz.ai/playbook/answer-engine-optimization</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.magnetiz.ai/playbook/inbound-signup-routing</loc>
     <priority>0.7</priority>
   </url>

@@ -27,6 +27,7 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 - [newsletter](https://www.magnetiz.ai/newsletter.html)
 - [our ai agents](https://www.magnetiz.ai/our-ai-agents.html)
 - [outcome pricing](https://www.magnetiz.ai/a/outcome)
+- [playbook answer engine optimization](https://www.magnetiz.ai/playbook/answer-engine-optimization)
 - [playbook ai ready data](https://www.magnetiz.ai/playbook/ai-ready-data)
 - [playbook ai rollout one number](https://www.magnetiz.ai/playbook/ai-rollout-one-number)
 - [playbook brand voice context layer](https://www.magnetiz.ai/playbook/brand-voice-context-layer)

@@ -49,6 +49,8 @@
     { "source": "/k/hubspot-lead-scoring", "destination": "/assets/kits/hubspot-lead-scoring-kit.zip" },
     { "source": "/playbook/pipeline-slip-report", "destination": "/playbook-pipeline-slip-report.html" },
     { "source": "/k/pipeline-slip-report", "destination": "/assets/kits/pipeline-slip-report-kit.zip" },
+    { "source": "/playbook/answer-engine-optimization", "destination": "/playbook-answer-engine-optimization.html" },
+    { "source": "/k/answer-engine-optimization", "destination": "/assets/kits/answer-engine-optimization-kit.zip" },
     { "source": "/case-studies", "destination": "/case-studies.html" },
     { "source": "/case-study", "destination": "/case-studies.html" },
     { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },
