@@ -57,7 +57,7 @@ for slug in "${slugs[@]}"; do
   else bad "web page" "cp an existing playbook-*.html to playbook-$slug.html and rewrite the content"; fi
 
   # 6. linked from the library index
-  if grep -q "playbook-$slug.html" "$ROOT/playbooks.html" 2>/dev/null; then ok "card on playbooks.html"
+  if grep -qE "playbook-$slug.html|/playbook/$slug\"" "$ROOT/playbooks.html" 2>/dev/null; then ok "card on playbooks.html"
   else bad "card on playbooks.html" "add a card linking playbook-$slug.html, or nobody can reach it"; fi
 
   # 7. the kit endpoint will reject an unlisted slug with a 400
