@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="Lead routing: list every lead source, score fit and intent apart, route by band with review checked first, assign a named owner with a fallback, check every day that each lead landed by comparing the source count with the CRM, and read weekly whether routing is working.">
+  <defs>
+    <marker id="s-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="s-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <marker id="s-arramb" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#E5C07B" stroke-width="1.4"/>
+    </marker>
+    <filter id="s-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="s-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#s-dots)"/>
+
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- sources -> fit/intent split -->
+    <path d="M372,98 V112" stroke="#4A9ECE"/>
+    <path d="M222,112 H522"/>
+    <path d="M222,112 V130" marker-end="url(#s-arrdim)"/>
+    <path d="M522,112 V130" marker-end="url(#s-arrdim)"/>
+    <!-- fit/intent -> route bus -->
+    <path d="M222,198 V220"/>
+    <path d="M522,198 V220"/>
+    <path d="M104,220 H616"/>
+    <path d="M104,220 V244" marker-end="url(#s-arrdim)" stroke="#98C379"/>
+    <path d="M274,220 V244" marker-end="url(#s-arrdim)" stroke="#E5C07B"/>
+    <path d="M446,220 V244" marker-end="url(#s-arrdim)" stroke="#56B6C2"/>
+    <path d="M616,220 V244" marker-end="url(#s-arrdim)" stroke="#E06C75"/>
+    <!-- the review lane: checked first, one dashed drop from the bus -->
+    <path d="M360,220 V350" marker-end="url(#s-arrdim)" stroke="#484F58" stroke-dasharray="4 4"/>
+    <!-- qualified -> owner, review -> owner -->
+    <path d="M104,312 V496 H216" stroke="#98C379" marker-end="url(#s-arrdim)"/>
+    <path d="M372,430 V456" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+    <!-- owner -> landed lead check -> routing read -->
+    <path d="M372,530 V560" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+    <path d="M372,640 V670" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+  </g>
+
+  <!-- the source count, carried around the system to the check -->
+  <path id="n-count" class="dx" d="M142,66 H18 V603 H146" fill="none" stroke="#E5C07B" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#s-arramb)"/>
+
+  <!-- the read changes the rules -->
+  <path id="n-loop" class="dx" d="M542,710 H727 V164 H633" fill="none" stroke="#484F58" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#s-arrdim)"/>
+
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#s-glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M372,50 V112 H222 V220 H104 V312 V496 H216 M372,530 V676"/>
+  </circle>
+  <circle class="dx" r="2.8" fill="#E5C07B" filter="url(#s-glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M142,66 H18 V603 H146"/>
+  </circle>
+
+  <!-- 1 every source -->
+  <g id="n-sources" class="dx">
+    <rect x="142" y="34" width="460" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="372" y="60" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">EVERY LEAD SOURCE</text>
+    <text class="dx" x="372" y="78" text-anchor="middle" fill="#8B949E" font-size="10">forms &#183; chat &#183; bookings &#183; sign-ups &#183; inbox &#183; lists</text>
+    <text class="dx" x="372" y="91" text-anchor="middle" fill="#E5C07B" font-size="9">each one counted where it first lands</text>
+  </g>
+
+  <!-- 2 fit / intent -->
+  <g id="n-fit" class="dx">
+    <rect x="117" y="130" width="210" height="68" rx="9" fill="#1c2333" stroke="#56B6C2"/>
+    <text class="dx" x="222" y="156" text-anchor="middle" fill="#56B6C2" font-size="13" font-weight="700">FIT &#183; WHO THEY ARE</text>
+    <text class="dx" x="222" y="174" text-anchor="middle" fill="#8B949E" font-size="9.5">role, company, shape &#183; 0-50</text>
+    <text class="dx" x="222" y="188" text-anchor="middle" fill="#8B949E" font-size="8.5">unverified scores null, never zero</text>
+  </g>
+  <g id="n-intent" class="dx">
+    <rect x="417" y="130" width="210" height="68" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text class="dx" x="522" y="156" text-anchor="middle" fill="#C678DD" font-size="13" font-weight="700">INTENT &#183; WHAT THEY DID</text>
+    <text class="dx" x="522" y="174" text-anchor="middle" fill="#8B949E" font-size="9.5">requests, returns, replies &#183; 0-50</text>
+    <text class="dx" x="522" y="188" text-anchor="middle" fill="#8B949E" font-size="9.5">old signals expire</text>
+  </g>
+  <text id="n-apart" class="dx" x="372" y="214" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="2">SCORED APART &#183; NEVER ONE NUMBER</text>
+
+  <!-- 3 routes, four lanes -->
+  <g id="n-qualified" class="dx">
+    <rect x="34" y="244" width="140" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="104" y="270" text-anchor="middle" fill="#98C379" font-size="12" font-weight="700">QUALIFIED</text>
+    <text class="dx" x="104" y="288" text-anchor="middle" fill="#8B949E" font-size="9">fit and intent</text>
+    <text class="dx" x="104" y="301" text-anchor="middle" fill="#8B949E" font-size="9">both clear the bands</text>
+  </g>
+  <g id="n-nurture" class="dx">
+    <rect x="204" y="244" width="140" height="68" rx="9" fill="#1c2333" stroke="#E5C07B"/>
+    <text class="dx" x="274" y="270" text-anchor="middle" fill="#E5C07B" font-size="12" font-weight="700">NURTURE</text>
+    <text class="dx" x="274" y="288" text-anchor="middle" fill="#8B949E" font-size="9">right fit, not ready</text>
+    <text class="dx" x="274" y="301" text-anchor="middle" fill="#8B949E" font-size="9">emails, no outreach</text>
+  </g>
+  <g id="n-monitor" class="dx">
+    <rect x="376" y="244" width="140" height="68" rx="9" fill="#1c2333" stroke="#56B6C2"/>
+    <text class="dx" x="446" y="270" text-anchor="middle" fill="#56B6C2" font-size="12" font-weight="700">MONITOR</text>
+    <text class="dx" x="446" y="288" text-anchor="middle" fill="#8B949E" font-size="8">intent high, fit known low</text>
+    <text class="dx" x="446" y="301" text-anchor="middle" fill="#8B949E" font-size="9">watched, never sold to</text>
+  </g>
+  <g id="n-nofit" class="dx">
+    <rect x="546" y="244" width="140" height="68" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text class="dx" x="616" y="270" text-anchor="middle" fill="#E06C75" font-size="12" font-weight="700">NO FIT</text>
+    <text class="dx" x="616" y="288" text-anchor="middle" fill="#8B949E" font-size="7.5">students, recruiters, vendors</text>
+    <text class="dx" x="616" y="301" text-anchor="middle" fill="#8B949E" font-size="8.5">served, never sold to</text>
+  </g>
+
+  <!-- 4 human review, checked first -->
+  <g id="n-review" class="dx">
+    <rect x="202" y="356" width="340" height="74" rx="9" fill="#161b22" stroke="#4A9ECE" stroke-opacity="0.6"/>
+    <text class="dx" x="372" y="382" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="700">HUMAN REVIEW</text>
+    <text class="dx" x="372" y="402" text-anchor="middle" fill="#8B949E" font-size="9.5">checked first, before any band</text>
+    <text class="dx" x="372" y="416" text-anchor="middle" fill="#8B949E" font-size="9.5">nulls, conflicts, duplicates, close calls</text>
+  </g>
+
+  <!-- 5 owner -->
+  <g id="n-owner" class="dx">
+    <rect x="222" y="462" width="300" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="372" y="488" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">NAMED OWNER, DATED STEP</text>
+    <text class="dx" x="372" y="506" text-anchor="middle" fill="#8B949E" font-size="10">assignment rules checked in order,</text>
+    <text class="dx" x="372" y="520" text-anchor="middle" fill="#8B949E" font-size="10">a fallback owner when none match</text>
+  </g>
+
+  <!-- 6 landed lead check -->
+  <g id="n-check" class="dx">
+    <g filter="url(#s-glow)">
+      <rect x="152" y="566" width="440" height="74" rx="9" fill="#0d1117" stroke="#E5C07B" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="592" text-anchor="middle" fill="#E5C07B" font-size="14" font-weight="800">&#9608;&#9608; LANDED LEAD CHECK &#9608;&#9608;</text>
+    <text class="dx" x="372" y="612" text-anchor="middle" fill="#8B949E" font-size="9.5">source count &#183; in the CRM &#183; routed &#183; owned &#183; touched</text>
+    <text class="dx" x="372" y="626" text-anchor="middle" fill="#8B949E" font-size="9.5">every day, and every gap gets a name</text>
+  </g>
+
+  <!-- 7 routing read -->
+  <g id="n-read" class="dx">
+    <rect x="202" y="676" width="340" height="68" rx="9" fill="#1c2333" stroke="#4A9ECE"/>
+    <text class="dx" x="372" y="702" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="700">ROUTING READ</text>
+    <text class="dx" x="372" y="720" text-anchor="middle" fill="#8B949E" font-size="10">weekly, time to first touch by lane</text>
+    <text class="dx" x="372" y="734" text-anchor="middle" fill="#8B949E" font-size="10">monthly, outcomes by lane &#183; rules change here</text>
+  </g>
+
+  <text class="dx" x="372" y="800" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"A quiet week and a broken path look the same."</text>
+  <text class="dx" x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; LEAD ROUTING</text>
+</svg>

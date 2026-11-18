@@ -27,15 +27,16 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 - [newsletter](https://www.magnetiz.ai/newsletter.html)
 - [our ai agents](https://www.magnetiz.ai/our-ai-agents.html)
 - [outcome pricing](https://www.magnetiz.ai/a/outcome)
-- [playbook answer engine optimization](https://www.magnetiz.ai/playbook/answer-engine-optimization)
 - [playbook ai ready data](https://www.magnetiz.ai/playbook/ai-ready-data)
 - [playbook ai rollout one number](https://www.magnetiz.ai/playbook/ai-rollout-one-number)
+- [playbook answer engine optimization](https://www.magnetiz.ai/playbook/answer-engine-optimization)
 - [playbook brand voice context layer](https://www.magnetiz.ai/playbook/brand-voice-context-layer)
 - [playbook buying signal testing](https://www.magnetiz.ai/playbook/buying-signal-testing)
 - [playbook champion job change](https://www.magnetiz.ai/playbook/champion-job-change)
 - [playbook crm enrichment review](https://www.magnetiz.ai/playbook/crm-enrichment-review)
 - [playbook hubspot lead scoring](https://www.magnetiz.ai/playbook/hubspot-lead-scoring)
 - [playbook inbound signup routing](https://www.magnetiz.ai/playbook/inbound-signup-routing)
+- [playbook lead routing](https://www.magnetiz.ai/playbook/lead-routing)
 - [playbook meeting intelligence](https://www.magnetiz.ai/playbook/meeting-intelligence)
 - [playbook pipeline slip report](https://www.magnetiz.ai/playbook/pipeline-slip-report)
 - [playbook provable icp](https://www.magnetiz.ai/playbook/provable-icp)
@@ -50,8 +51,9 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 
 ## Writing
 
-160 articles. Most recent first.
+161 articles. Most recent first.
 
+- [How to Set Up Lead Routing and Check That Every Lead Landed](https://www.magnetiz.ai/blog/how-to-set-up-lead-routing-and-check-that-every-lead-landed) (2026-11-19): What lead routing is, how it works in HubSpot and Salesforce, what routing software should do, and how to check each day that every lead reached a person.
 - [Answer Engine Optimization That the Research Supports](https://www.magnetiz.ai/blog/answer-engine-optimization-that-the-research-supports) (2026-11-12): What answer engine optimization is, the six steps to do it, which tactics the published research supports and which it does not, and how to measure whether AI answers name you.
 - [How to Run a Pipeline Review That Catches Deals Before They Slip](https://www.magnetiz.ai/blog/how-to-run-a-pipeline-review-that-catches-deals-before-they-slip) (2026-11-04): What a weekly pipeline review should check on every Commit deal, the seven evidence rules that flag slips early, and how to test whether your forecast categories mean what they say.
 - [How to Build HubSpot Lead Scoring That Predicts Closed Deals](https://www.magnetiz.ai/blog/how-to-build-hubspot-lead-scoring-that-predicts-closed-deals) (2026-10-28): How HubSpot lead scoring works, how to build fit and engagement scores from closed deals, and how to test the score before it routes anything.

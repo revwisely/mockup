@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/pdf-src/playbook.css">
+</head>
+<body>
+
+<!-- ============ 1. COVER ============ -->
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 16</p>
+    <h1>The<br>Lead Routing<br>Playbook</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">How do you know your lead routing worked yesterday? List every way a lead comes in, write the rules that pick an owner, and check each day that every lead reached a person.</p>
+    <div style="margin-top: 26px;">
+      <span class="chip c-green">Sales</span><span class="chip">November 2026</span>
+    </div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>A demo request sits in a spam folder for two weeks, and the dashboard shows a quiet month.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The failure this playbook fixes</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+
+<!-- ============ 2. THE SYSTEM, END TO END ============ -->
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap">
+    <img src="/assets/diagrams/lead-routing.svg" alt="Workflow diagram">
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+
+<!-- ============ 3. THE METHOD (steps 01 to 04) ============ -->
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Six steps. The first four are set up once, the fifth runs every business day and the sixth every week. The worksheets for every one of them ship as the markdown files in this kit.</p>
+  <hr class="rule">
+
+  <div class="step">
+    <h3><span class="stepnum">01</span>List every way a lead comes in</h3>
+    <p>Routing rules only act on leads that reach them. List every source, including demo forms, resource forms, chat, meeting bookings, product sign-ups, shared inboxes, event lists and referrals. For each one, write where the lead is first counted, how it travels to the CRM hop by hop, and who owns that connection.</p>
+    <p class="watch">Watch for a source with no count of its own. It cannot be checked, so fix that before writing a rule.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">02</span>Score fit and intent apart</h3>
+    <p>Fit scores who the lead is. Intent scores what they did. The two are never added into one number. A signal you could not verify scores null, never zero, and two or more nulls on the fit side send the lead to a person. Every lead gets a one-screen brief with the source of each fact.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">03</span>Write the routes and the assignment order</h3>
+    <p>Qualified gets a named owner, a dated next step and an alert with the brief. Nurture gets marketing emails. Monitor is watched and never sold to. No fit gets what they asked for and nothing else. Assignment rules are checked in order and the first match wins. If an AI model helps, it proposes a score, and the rules set the route and the owner.</p>
+    <p class="watch">Watch for the last rule. Name a fallback owner for the lead that matches nothing, or it gets no owner and no alert.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">04</span>Send the close calls to a person</h3>
+    <p>Review is checked first, before any band. Conflicting evidence, an unclear duplicate, a score near a band edge and an identity that cannot be verified go to a person with the reason attached. A lane runs unattended only after a streak of confirmed routes, and one changed route sets the streak back to zero.</p>
+  </div>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+
+<!-- ============ 4. THE METHOD (05 to 06) + THE FIVE PLACES ============ -->
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Check every day that each lead landed</h3>
+    <p>A routing failure rarely shows an error. Count the leads where they were first recorded, count them again in the CRM, and compare. Every lead in the gap gets a name and a reason before the read is closed. A source that normally sends leads and sent none gets a test submission the same day.</p>
+    <p class="watch">Watch for a check that starts from the CRM's own count. That compares the CRM with itself.</p>
+  </div>
+
+  <table>
+    <tr><th>Where a lead stops</th><th>What it looks like</th><th>How to see it</th></tr>
+    <tr><td>1 At the source</td><td>The form tool holds the submission or files it as spam</td><td>Read the source's own log and its held folder</td></tr>
+    <tr><td>2 Between tools</td><td>The connector reports success and the CRM has no record</td><td>Compare the source count with the CRM count</td></tr>
+    <tr><td>3 In the CRM, no route</td><td>The record exists and no rule matched it</td><td>List yesterday's records with no route value</td></tr>
+    <tr><td>4 Routed, no owner</td><td>A route is set and the owner is blank or inactive</td><td>List routed records with no active owner</td></tr>
+    <tr><td>5 Owned, untouched</td><td>An owner is set and nothing happened inside the limit</td><td>List qualified records past the limit with no activity</td></tr>
+  </table>
+
+  <div class="step" style="margin-top: 14px;">
+    <h3><span class="stepnum">06</span>Read weekly whether routing is working</h3>
+    <p>Write down what "working" means before the first read. Each week, read time from arrival to first touch, the share of qualified leads touched inside the limit, leads with no active owner, the age of the review queue and the routes a person changed, lane by lane. Once a month, join each route to what happened next. Rules change at this read and nowhere else.</p>
+  </div>
+
+  <hr class="rule">
+  <div class="box">
+    <h3>Three rules for the daily read</h3>
+    <ul>
+      <li><strong>Count at the source first.</strong> The CRM's count only covers the records it holds.</li>
+      <li><strong>Read the held folder every time.</strong> A real lead filed as spam exists at the source and is absent everywhere else.</li>
+      <li><strong>A zero is a finding until explained.</strong> Write down each source's normal range so a zero stands out.</li>
+    </ul>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+
+<!-- ============ 5. IN THIS KIT + CTA ============ -->
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Worksheets</h2>
+  <p>Markdown files, ready to fill against your own sources and rules. Start in this order.</p>
+
+  <div class="box"><h3>1 &nbsp;sample-leads-and-answer-key.md</h3><p>Five invented leads with the route each should get, and a sample day where the landed lead check finds three misses.</p></div>
+  <div class="box"><h3>2 &nbsp;lead-source-inventory.md</h3><p>Every way a lead comes in, where each is first counted, the path to the CRM and who owns the connection.</p></div>
+  <div class="box"><h3>3 &nbsp;qualification-rules.md &nbsp;+&nbsp; lead-brief-template.md</h3><p>Fit and intent scored apart, the null rule, the bands in the order they are checked, and the one-screen brief.</p></div>
+  <div class="box"><h3>4 &nbsp;routing-rules.md &nbsp;+&nbsp; review-queue-criteria.md</h3><p>What each route does, the assignment order with a fallback owner, what goes to a person, and how a lane earns unattended routing.</p></div>
+  <div class="box"><h3>5 &nbsp;landed-lead-check.md &nbsp;+&nbsp; routing-read.md</h3><p>The daily read against the source count, the weekly test lead, then the weekly and monthly read of whether routing is working.</p></div>
+
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;·&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">Every lead counted at the source, and every one accounted for the next morning.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 16</span></div>
+</div>
+
+</body>
+</html>
