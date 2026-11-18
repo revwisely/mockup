@@ -1,5 +1,6 @@
 {
   "redirects": [
+    { "source": "/blog/how-to-set-up-lead-routing-and-check-that-every-lead-landed", "destination": "/blog/how-to-set-up-lead-routing", "permanent": true },
     { "source": "/post/:slug", "destination": "/blog/:slug", "permanent": true },
     { "source": "/newsletters/:slug", "destination": "/blog/:slug", "permanent": true },
     { "source": "/blog/", "destination": "/content.html", "permanent": true },
