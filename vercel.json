@@ -54,6 +54,8 @@
     { "source": "/k/answer-engine-optimization", "destination": "/assets/kits/answer-engine-optimization-kit.zip" },
     { "source": "/playbook/lead-routing", "destination": "/playbook-lead-routing.html" },
     { "source": "/k/lead-routing", "destination": "/assets/kits/lead-routing-kit.zip" },
+    { "source": "/playbook/account-research", "destination": "/playbook-account-research.html" },
+    { "source": "/k/account-research", "destination": "/assets/kits/account-research-kit.zip" },
     { "source": "/case-studies", "destination": "/case-studies.html" },
     { "source": "/case-study", "destination": "/case-studies.html" },
     { "source": "/case-study/signal-detection", "destination": "/case-study-signal-detection.html" },

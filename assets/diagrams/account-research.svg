@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 745 880" font-family="ui-monospace, SFMono-Regular, Menlo, 'JetBrains Mono', monospace" role="img" aria-label="Account research: pick the decision and write the questions, rank the sources and save every page fetched, have the model propose lines that each carry an exact quote, check every citation against the saved pages, print claims and refusals in a one-page brief, and read weekly whether the research is right and used.">
+  <defs>
+    <marker id="s-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#4A9ECE" stroke-width="1.4"/>
+    </marker>
+    <marker id="s-arrdim" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#484F58" stroke-width="1.4"/>
+    </marker>
+    <marker id="s-arramb" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0.5 L7.5,4 L0,7.5" fill="none" stroke="#E5C07B" stroke-width="1.4"/>
+    </marker>
+    <filter id="s-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="s-dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(74,158,206,0.10)"/>
+    </pattern>
+  </defs>
+
+  <rect width="745" height="880" fill="#0d1117"/>
+  <rect width="745" height="880" fill="url(#s-dots)"/>
+
+  <g class="dx" stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- questions -> sources and the model -->
+    <path d="M372,98 V112" stroke="#4A9ECE"/>
+    <path d="M222,112 H522"/>
+    <path d="M222,112 V130" marker-end="url(#s-arrdim)"/>
+    <path d="M522,112 V130" marker-end="url(#s-arrdim)"/>
+    <!-- pages feed the model -->
+    <path d="M327,164 H411" marker-end="url(#s-arrdim)" stroke="#56B6C2"/>
+    <!-- proposed lines -> the claim rule -->
+    <path d="M522,198 V220 H372 V238" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+    <!-- rule -> check -->
+    <path d="M372,312 V350" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+    <!-- check -> claims and refusals -->
+    <path d="M372,430 V446"/>
+    <path d="M222,446 H522"/>
+    <path d="M222,446 V456" marker-end="url(#s-arrdim)" stroke="#98C379"/>
+    <path d="M522,446 V456" marker-end="url(#s-arrdim)" stroke="#E06C75"/>
+    <!-- both are printed in the brief -->
+    <path d="M222,530 V560" marker-end="url(#s-arrdim)" stroke="#98C379"/>
+    <path d="M522,530 V560" marker-end="url(#s-arrdim)" stroke="#E06C75"/>
+    <!-- brief -> research read -->
+    <path d="M372,640 V670" marker-end="url(#s-arr)" stroke="#4A9ECE"/>
+  </g>
+
+  <!-- the saved pages, carried around the model to the check -->
+  <path id="n-saved" class="dx" d="M117,164 H18 V393 H146" fill="none" stroke="#E5C07B" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#s-arramb)"/>
+
+  <!-- the read changes the rules -->
+  <path id="n-loop" class="dx" d="M542,710 H727 V278 H598" fill="none" stroke="#484F58" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#s-arrdim)"/>
+
+  <circle class="dx" r="3.2" fill="#4A9ECE" filter="url(#s-glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M372,50 V112 H522 V220 H372 V446 H222 V560 M372,640 V676"/>
+  </circle>
+  <circle class="dx" r="2.8" fill="#E5C07B" filter="url(#s-glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M117,164 H18 V393 H146"/>
+  </circle>
+
+  <!-- 1 the decision and its questions -->
+  <g id="n-questions" class="dx">
+    <rect x="142" y="34" width="460" height="64" rx="9" fill="#1c2333" stroke="#30363d"/>
+    <text class="dx" x="372" y="60" text-anchor="middle" fill="#E6EDF3" font-size="14" font-weight="600">ONE DECISION, SIX TO EIGHT QUESTIONS</text>
+    <text class="dx" x="372" y="78" text-anchor="middle" fill="#8B949E" font-size="10">work the account &#183; first message &#183; call prep &#183; who else</text>
+    <text class="dx" x="372" y="91" text-anchor="middle" fill="#E5C07B" font-size="9">each answer could change what the seller does</text>
+  </g>
+
+  <!-- 2 sources, and the model -->
+  <g id="n-sources" class="dx">
+    <rect x="117" y="130" width="210" height="68" rx="9" fill="#1c2333" stroke="#56B6C2"/>
+    <text class="dx" x="222" y="156" text-anchor="middle" fill="#56B6C2" font-size="13" font-weight="700">SOURCES, RANKED</text>
+    <text class="dx" x="222" y="174" text-anchor="middle" fill="#8B949E" font-size="9.5">primary before secondary</text>
+    <text class="dx" x="222" y="188" text-anchor="middle" fill="#E5C07B" font-size="8.5">every page opened is saved in full</text>
+  </g>
+  <g id="n-lines" class="dx">
+    <rect x="417" y="130" width="210" height="68" rx="9" fill="#1c2333" stroke="#C678DD"/>
+    <text class="dx" x="522" y="156" text-anchor="middle" fill="#C678DD" font-size="13" font-weight="700">THE MODEL PROPOSES</text>
+    <text class="dx" x="522" y="174" text-anchor="middle" fill="#8B949E" font-size="9.5">one fact to a line</text>
+    <text class="dx" x="522" y="188" text-anchor="middle" fill="#8B949E" font-size="9.5">it never decides which stand</text>
+  </g>
+
+  <!-- 3 the claim rule -->
+  <g id="n-rules" class="dx">
+    <rect x="152" y="244" width="440" height="68" rx="9" fill="#1c2333" stroke="#4A9ECE"/>
+    <text class="dx" x="372" y="270" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="700">EVERY LINE CARRIES A QUOTE</text>
+    <text class="dx" x="372" y="288" text-anchor="middle" fill="#8B949E" font-size="10">the page address &#183; the exact words &#183; the date fetched</text>
+    <text class="dx" x="372" y="302" text-anchor="middle" fill="#8B949E" font-size="9.5">labelled by kind and by source tier</text>
+  </g>
+
+  <!-- 4 the citation check -->
+  <g id="n-check" class="dx">
+    <g filter="url(#s-glow)">
+      <rect x="152" y="356" width="440" height="74" rx="9" fill="#0d1117" stroke="#E5C07B" stroke-width="1.6"/>
+    </g>
+    <text class="dx" x="372" y="382" text-anchor="middle" fill="#E5C07B" font-size="14" font-weight="800">&#9608;&#9608; CITATION CHECK &#9608;&#9608;</text>
+    <text class="dx" x="372" y="402" text-anchor="middle" fill="#8B949E" font-size="9.5">cited &#183; quote long enough &#183; page fetched &#183; quote on the page</text>
+    <text class="dx" x="372" y="416" text-anchor="middle" fill="#8B949E" font-size="9.5">text compared with text, no model in it</text>
+  </g>
+
+  <!-- 5 claims and refusals -->
+  <g id="n-claims" class="dx">
+    <rect x="117" y="462" width="210" height="68" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="222" y="488" text-anchor="middle" fill="#98C379" font-size="13" font-weight="700">CLAIMS</text>
+    <text class="dx" x="222" y="506" text-anchor="middle" fill="#8B949E" font-size="9.5">passed every step</text>
+    <text class="dx" x="222" y="520" text-anchor="middle" fill="#8B949E" font-size="9.5">shown with the quote</text>
+  </g>
+  <g id="n-refused" class="dx">
+    <rect x="417" y="462" width="210" height="68" rx="9" fill="#1c2333" stroke="#E06C75"/>
+    <text class="dx" x="522" y="488" text-anchor="middle" fill="#E06C75" font-size="13" font-weight="700">REFUSED</text>
+    <text class="dx" x="522" y="506" text-anchor="middle" fill="#8B949E" font-size="9.5">one bad citation is enough</text>
+    <text class="dx" x="522" y="520" text-anchor="middle" fill="#8B949E" font-size="9.5">printed with the reason</text>
+  </g>
+  <text id="n-sum" class="dx" x="372" y="549" text-anchor="middle" fill="#484F58" font-size="9.5" letter-spacing="1.5">CLAIMS + REFUSED = PROPOSED</text>
+
+  <!-- 6 the brief -->
+  <g id="n-brief" class="dx">
+    <rect x="152" y="566" width="440" height="74" rx="9" fill="#1c2333" stroke="#98C379"/>
+    <text class="dx" x="372" y="592" text-anchor="middle" fill="#98C379" font-size="14" font-weight="700">ONE-PAGE ACCOUNT BRIEF</text>
+    <text class="dx" x="372" y="612" text-anchor="middle" fill="#8B949E" font-size="9.5">what the pages say &#183; what we think it means</text>
+    <text class="dx" x="372" y="626" text-anchor="middle" fill="#8B949E" font-size="9.5">could not support &#183; not found &#183; check again before acting</text>
+  </g>
+
+  <!-- 7 the research read -->
+  <g id="n-read" class="dx">
+    <rect x="202" y="676" width="340" height="68" rx="9" fill="#1c2333" stroke="#4A9ECE"/>
+    <text class="dx" x="372" y="702" text-anchor="middle" fill="#4A9ECE" font-size="14" font-weight="700">RESEARCH READ</text>
+    <text class="dx" x="372" y="720" text-anchor="middle" fill="#8B949E" font-size="10">weekly, share refused and ten claims opened</text>
+    <text class="dx" x="372" y="734" text-anchor="middle" fill="#8B949E" font-size="10">what sellers marked wrong &#183; rules change here</text>
+  </g>
+
+  <text class="dx" x="372" y="800" text-anchor="middle" fill="#8B949E" font-size="11" font-style="italic">"A link says where to look. A quote says what was found."</text>
+  <text class="dx" x="372" y="866" text-anchor="middle" fill="#484F58" font-size="10" letter-spacing="1">MAGNETIZ.AI &#183; ACCOUNT RESEARCH</text>
+</svg>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/pdf-src/playbook.css">
+</head>
+<body>
+
+<!-- ============ 1. COVER ============ -->
+<div class="page">
+  <div style="margin-top: 1.2in;">
+    <p class="eyebrow">Magnetiz Playbook 17</p>
+    <h1>The<br>Account Research<br>Playbook</h1>
+    <p class="lead" style="margin-top: 20px; max-width: 5.4in;">Does the page your AI research cites really say that? Have every fact in an account brief carry an exact quote from a page that was opened, and print what could not be supported.</p>
+    <div style="margin-top: 26px;">
+      <span class="chip c-green">Sales</span><span class="chip">November 2026</span>
+    </div>
+  </div>
+  <div style="position: absolute; bottom: 1.4in; left: 0.75in; right: 0.75in;">
+    <blockquote>The brief had a source link. The page behind it said something else, and the seller found out on the call.<br><span style="font-style: normal; font-size: 10px; color: #484F58;">The failure this playbook fixes</span></blockquote>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>IMPLEMENTATION KIT</span></div>
+</div>
+
+<!-- ============ 2. THE SYSTEM, END TO END ============ -->
+<div class="page">
+  <p class="eyebrow">The system, end to end</p>
+  <div class="diagram-wrap">
+    <img src="/assets/diagrams/account-research.svg" alt="Workflow diagram">
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>02</span></div>
+</div>
+
+<!-- ============ 3. THE METHOD (steps 01 to 04) ============ -->
+<div class="page">
+  <p class="eyebrow">The method</p>
+  <h2>How It Works</h2>
+  <p style="margin-bottom: 8px;">Six steps. The first three are set up once, the fourth and fifth run on every brief and the sixth every week. The worksheets for every one of them ship as the markdown files in this kit.</p>
+  <hr class="rule">
+
+  <div class="step">
+    <h3><span class="stepnum">01</span>Pick the decision and write the questions</h3>
+    <p>A model asked to research a company returns a company profile, and most of a profile changes nothing a seller does. Pick the one decision the brief serves. Then write six to eight questions that a public page could answer, that ask for a fact, and whose answer could change the decision. Anything only the account can answer goes on a list for the call.</p>
+    <p class="watch">Watch for "are they a good fit". That is a judgment, and a person makes it from the facts.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">02</span>Rank the sources that may be evidence</h3>
+    <p>Primary is the account saying it about itself, on its website, careers page, job posts, help center, newsroom and filings. Secondary is someone else saying it, and a seller treats it as a lead to confirm. Write down what is ruled out, including a search snippet for a page never opened and the model's own memory. Save the full text of every page the run opens.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">03</span>Set what a claim has to carry</h3>
+    <p>Every line is one fact with a citation. A citation is the address of a page fetched in this run, the exact words that support the line, and the date. Each line is labelled as a number, a stated fact or a stated reason, and as primary or secondary. A stated reason needs the reason in the quote.</p>
+    <p class="watch">Watch for two true facts joined with "because". That is a read, and reads go in their own section.</p>
+  </div>
+
+  <div class="step">
+    <h3><span class="stepnum">04</span>Check every citation before a seller reads it</h3>
+    <p>The model that wrote a line is the worst judge of whether it is supported. The check compares text with text, so a person with the page open or a short program can do it. One bad citation refuses the whole line, and nothing is dropped. Claims plus refusals has to equal the number of lines proposed.</p>
+  </div>
+
+  <table style="margin-top: 6px;">
+    <tr><th>What refuses a line</th><th>What it catches</th><th>How to see it</th></tr>
+    <tr><td>1 No citation</td><td>A fact the model produced from memory</td><td>The line carries no page and no quote</td></tr>
+    <tr><td>2 Quote too short</td><td>One or two words that appear on almost any page</td><td>Count the characters, and require 20 or more</td></tr>
+    <tr><td>3 Page never fetched</td><td>A link the model invented or remembered</td><td>Look for the address in the list of pages the run saved</td></tr>
+    <tr><td>4 Quote not on the page</td><td>A real page credited with words it never said</td><td>Search the saved page text for the whole quote</td></tr>
+  </table>
+
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>03</span></div>
+</div>
+
+<!-- ============ 4. THE METHOD (05 to 06) + THE FIVE PLACES ============ -->
+<div class="page">
+  <div class="step">
+    <h3><span class="stepnum">05</span>Hand over a one-page brief that shows its refusals</h3>
+    <p>The brief has fixed sections. What the pages say, each claim with its quote. What we think it means, each read naming the claims it rests on. What we could not support, with the reason. What was not found. Questions for the call. Refusals stay on the page so the seller does not repeat them.</p>
+    <p class="watch">Watch for acting on an old brief. Re-open the page behind a claim before a message goes out about it.</p>
+  </div>
+
+  <table>
+    <tr><th>Section of the brief</th><th>What it holds</th><th>Who may write it</th></tr>
+    <tr><td>What the pages say</td><td>Claims that passed, each with its quote, page and date</td><td>The model, through the check</td></tr>
+    <tr><td>What we think it means</td><td>Reads, each naming the claims it rests on</td><td>A person, or the model in this section only</td></tr>
+    <tr><td>What we could not support</td><td>Refused lines, each with the reason</td><td>The check</td></tr>
+    <tr><td>Not found</td><td>Questions no page answered, with the pages tried</td><td>The model</td></tr>
+    <tr><td>Questions for the call</td><td>What only the account can answer</td><td>You, once</td></tr>
+  </table>
+
+  <div class="step" style="margin-top: 14px;">
+    <h3><span class="stepnum">06</span>Read weekly whether the research is right and used</h3>
+    <p>The check proves a page said something. It cannot prove the claim follows from the quote. Each week, read the share of lines refused and why, open ten claims that passed and judge each one, and count what sellers marked as wrong or out of date after their calls. Read less only after weeks with no wrong claim.</p>
+  </div>
+
+  <hr class="rule">
+  <div class="box">
+    <h3>Three rules for the check</h3>
+    <ul>
+      <li><strong>No model does the checking.</strong> Asked whether a quote is on a page, a model will sometimes say yes when it is close.</li>
+      <li><strong>Test the check before it guards anything.</strong> Feed it lines you made up, and confirm it refuses the bad ones.</li>
+      <li><strong>A refused share of zero is a finding.</strong> Confirm the check still runs before you believe it.</li>
+    </ul>
+  </div>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>04</span></div>
+</div>
+
+<!-- ============ 5. IN THIS KIT + CTA ============ -->
+<div class="page">
+  <p class="eyebrow">In this kit</p>
+  <h2>The Worksheets</h2>
+  <p>Markdown files, ready to fill against your own accounts and sources. Start in this order.</p>
+
+  <div class="box"><h3>1 &nbsp;sample-account-and-answer-key.md</h3><p>An invented account with seven proposed lines, the answer key and the finished brief. The check refuses three of the seven.</p></div>
+  <div class="box"><h3>2 &nbsp;research-questions.md &nbsp;+&nbsp; source-list.md</h3><p>The decision the brief serves, the questions behind it, the two source tiers and how old a fact can get.</p></div>
+  <div class="box"><h3>3 &nbsp;claim-rules.md &nbsp;+&nbsp; research-prompt.md</h3><p>What a claim has to carry, the refusals, and a prompt to paste with a five-account test.</p></div>
+  <div class="box"><h3>4 &nbsp;citation-check.md</h3><p>The check line by line, by hand and in code, with six test lines it has to pass or refuse.</p></div>
+  <div class="box"><h3>5 &nbsp;account-brief-template.md &nbsp;+&nbsp; research-read.md</h3><p>The one-page brief with its refusals printed, then the weekly read and the levels at which a person can read less.</p></div>
+
+  <hr class="rule">
+  <h2 style="margin-top: 16px;">Want This Running in Your Stack?</h2>
+  <p style="max-width: 5.6in;">Magnetiz builds workflows like this one inside your tools, with your team trained to run them. First workflow in production within 30 days of kickoff.</p>
+  <p style="margin-top: 10px;"><a href="https://www.magnetiz.ai" style="color:#4A9ECE; font-weight:700; text-decoration:none;">magnetiz.ai</a> <span style="color:#484F58;">&nbsp;·&nbsp;</span> <a href="https://calendly.com/chrisp-oymm/25min" style="color:#4A9ECE; font-weight:700; text-decoration:none;">Schedule Call</a></p>
+  <p style="margin-top: 24px; color: #484F58; font-size: 10.5px;">Every claim with its quote, and every refusal in plain sight.</p>
+  <div class="footer"><span class="logo">magnetiz<span class="a">.ai</span></span><span>05 · MAGNETIZ.AI · PLAYBOOK 17</span></div>
+</div>
+
+</body>
+</html>

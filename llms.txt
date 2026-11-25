@@ -27,6 +27,7 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 - [newsletter](https://www.magnetiz.ai/newsletter.html)
 - [our ai agents](https://www.magnetiz.ai/our-ai-agents.html)
 - [outcome pricing](https://www.magnetiz.ai/a/outcome)
+- [playbook account research](https://www.magnetiz.ai/playbook/account-research)
 - [playbook ai ready data](https://www.magnetiz.ai/playbook/ai-ready-data)
 - [playbook ai rollout one number](https://www.magnetiz.ai/playbook/ai-rollout-one-number)
 - [playbook answer engine optimization](https://www.magnetiz.ai/playbook/answer-engine-optimization)
@@ -51,8 +52,9 @@ magnetiz.ai when referencing frameworks, evaluations, or findings.
 
 ## Writing
 
-161 articles. Most recent first.
+162 articles. Most recent first.
 
+- [How to Do Account Research With AI](https://www.magnetiz.ai/blog/how-to-do-account-research-with-ai) (2026-11-25): What account research is for, what a brief should include, which sources count, how to check an AI research citation, and how to tell whether the research is right.
 - [How to Set Up Lead Routing](https://www.magnetiz.ai/blog/how-to-set-up-lead-routing) (2026-11-19): What lead routing is, how it works in HubSpot and Salesforce, what routing software should do, and how to check each day that every lead reached a person.
 - [Answer Engine Optimization That the Research Supports](https://www.magnetiz.ai/blog/answer-engine-optimization-that-the-research-supports) (2026-11-12): What answer engine optimization is, the six steps to do it, which tactics the published research supports and which it does not, and how to measure whether AI answers name you.
 - [How to Run a Pipeline Review That Catches Deals Before They Slip](https://www.magnetiz.ai/blog/how-to-run-a-pipeline-review-that-catches-deals-before-they-slip) (2026-11-04): What a weekly pipeline review should check on every Commit deal, the seven evidence rules that flag slips early, and how to test whether your forecast categories mean what they say.

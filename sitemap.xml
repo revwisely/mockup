@@ -77,6 +77,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.magnetiz.ai/playbook/account-research</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.magnetiz.ai/playbook/ai-ready-data</loc>
     <priority>0.7</priority>
   </url>
@@ -159,6 +163,11 @@
   <url>
     <loc>https://www.magnetiz.ai/video-direction.html</loc>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.magnetiz.ai/blog/how-to-do-account-research-with-ai</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.magnetiz.ai/blog/how-to-set-up-lead-routing</loc>
